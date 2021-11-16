@@ -1,5 +1,5 @@
 Package: tsukuba.segregation
-Title: What the Package Does (One Line, Title Case)
+Title: Functions and data for segregation and Tsukuba
 Version: 0.0.0.9000
 Authors@R: 
     person(given = "First",
