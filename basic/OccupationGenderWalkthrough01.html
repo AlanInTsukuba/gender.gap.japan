@@ -93,7 +93,11 @@ target="_blank">Elbers</a></cite>
 </article>
 <article>
 <h2>Data and data format</h2>
-<p>Elbers's walkthrough uses data about racial groups and schools. This walkthrough uses data about gender and 
+<p>Elbers's <a href="https://elbersb.github.io/segregation/articles/segregation.html" 
+target="_blank">walkthrough</a> uses data about racial groups and schools. Elbers (2021) contains and example 
+applied to occupational segregation, but his walkthrough contains more detail about the functions in the 
+segregation package.</p>
+<p>This walkthrough uses data about gender and 
 occupation taken from the 1995 and 2000 Japan Population Censuses. This dataset can be downloaded from 
 this project's <a href="https://github.com/AlanInTsukuba/tsukuba-segregation/tree/main/inst/extdata">repository</a>. 
 The original data for this dataset is from <a href="https://www.e-stat.go.jp/stat-search/files?page=1&layout=datalist&toukei=00200521&tstat=000000030001&cycle=0&tclass1=000000030439&tclass2=000000030440&tclass3=000000030441&stat_infid=000000034D0D&tclass4val=0" 
@@ -103,12 +107,48 @@ Japanese Population Censuses conducted in 2010 and 2015, but not for earlier yea
 was reformatted from 1995 and 2000 census data; the English occupation titles were obtained from the 
 <a href="https://www.stat.go.jp/english/data/kokusei/2000/syokugyo.html" target="blank">Statistics Bureau of 
 Japan</a>.</p>
+<p>The R code below loads the segregation library and then reads the data into data frame <i>occgen</i>. The 
+first column of <i>occgen</i> contains the census year. The next three columns list different levels of the 
+occupation classification. There are 10 top level classes, 61 mid-level groups, and 293 bottom level groups. 
+The SBJ classification also subdivides top level I (PRODUCTION PROCESS WORKERS AND LABOURERS) into 3 subclasses. 
+Including the total of all occupations, there are a total of 5 levels. This workthrough will ignore the 3 subclasses of I. 
+(This organization may seem odd to some readers, but allows direct copying of the census table into the csv file.)</p>
+<pre><code class="language-html">#' OccupationGenderWalkthrough01.R
+#' R code to go with OccupationGenderWalkthrough01.html
+#' if not yet installed
+install.packages("segregation")
+
+library(segregation)
+#' Load occupation vs gender for all Japan 1995 and 2000
+occgen <- read.csv("Data/OccGen1995-2000.csv",header=T,
+colClasses=c("integer","character","integer","integer","integer",
+"character","character","integer"))
+
+#' look at the top rows
+head(occgen)
+#>   CensusYear OccMajor OccMid OccMinor Level
+#> 1       1995       JP     NA       NA     0
+#> 2       1995        A     NA       NA     1
+#> 3       1995        A      1       NA     3
+#> 4       1995        A     NA        1     4
+#> 5       1995        A     NA        2     4
+#> 6       1995        A      2       NA     3
+#>                                     Title Gender   Number
+#> 1              All Japan, all occupations Female 25635727
+#> 2      PROFESSIONAL AND TECHNICAL WORKERS Female  3405801
+#> 3                  SCIENTIFIC RESEARCHERS Female    23312
+#> 4             Natural science researchers Female    21596
+#> 5 Cultural and social science researchers Female     1716
+#> 6               ENGINEERS AND TECHNICIANS Female   143166
+</code></pre>
 </article>
 </main>
 <div id="references" class="section level2">
 <h2 class="hasAnchor">
 <a href="#references" class="anchor"></a>References</h2>
-<p>Elbers, Benjamin (2021). A Method for Studying Differences in Segregation Across Time and Space. Sociological Methods &amp; Research. <a href="https://doi.org/10.1177/0049124121986204" class="uri">https://doi.org/10.1177/0049124121986204</a></p>
+<p>Elbers, Benjamin (2021). A Method for Studying Differences in Segregation Across Time and Space. 
+Sociological Methods &amp; Research. <a href="https://doi.org/10.1177/0049124121986204" 
+class="uri" target="blank">https://doi.org/10.1177/0049124121986204</a></p>
 </div>
 </body>
 </html>
