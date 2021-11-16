@@ -1,0 +1,1473 @@
+CensusYear,OccMajor,OccMid,OccMinor,Level,Title,Gender,Number
+1995,JP,,,0,"All Japan, all occupations",Female,25635727 
+1995,A,,,1,PROFESSIONAL AND TECHNICAL WORKERS,Female,3405801 
+1995,A,1,,3,SCIENTIFIC RESEARCHERS,Female,23312 
+1995,A,,1,4,Natural science researchers,Female,21596 
+1995,A,,2,4,Cultural and social science researchers,Female,1716 
+1995,A,2,,3,ENGINEERS AND TECHNICIANS,Female,143166 
+1995,A,,3,4,"Agricultural, forestry and fisheries and food processing technicians",Female,6065 
+1995,A,,4,4,Metallurgical engineers,Female,458 
+1995,A,,5,4,"Mechanical, aircraft and shipbuilding engineers",Female,7216 
+1995,A,,6,4,Electrical and electronic engineers,Female,8662 
+1995,A,,7,4,Chemical engineers,Female,6069 
+1995,A,,8,4,Architects,Female,20568 
+1995,A,,9,4,Civil and surveying engineers,Female,6723 
+1995,A,,10,4,Computer processing technicians,Female,83064 
+1995,A,,11,4,Other engineers and technicians,Female,4341 
+1995,A,3,,3,PUBLIC HEALTH AND MEDICAL WORKERS,Female,1558494 
+1995,A,,12,4,Physicians,Female,32373 
+1995,A,,13,4,Dentists,Female,12314 
+1995,A,,14,4,Veterinarians,Female,2550 
+1995,A,,15,4,Pharmacists,Female,82920 
+1995,A,,16,4,Public health nurses,Female,31953 
+1995,A,,17,4,Midwives,Female,16006 
+1995,A,,18,4,Nurses,Female,876316 
+1995,A,,19,4,Medical radiation and X-ray technicians,Female,3937 
+1995,A,,20,4,Clinical and sanitary experts,Female,37271 
+1995,A,,21,4,Dental hygienists,Female,53353 
+1995,A,,22,4,Dental technicians,Female,7577 
+1995,A,,23,4,Nutritionists,Female,73014 
+1995,A,,24,4,"Chiropractors, masseurs, acupuncturists and osteopaths",Female,23570 
+1995,A,,25,4,Other public health and medical workers,Female,305340 
+1995,A,4,,3,SOCIAL AND WELFARE WORKERS,Female,432172 
+1995,A,,26,4,Kindergarteners,Female,302575 
+1995,A,,27,4,Other social and welfare workers,Female,129597 
+1995,A,5,,3,JUDICIAL WORKERS,Female,6040 
+1995,A,,28,4,"Judges, prosecutors and lawyers",Female,1213 
+1995,A,,29,4,Patent attorneys and judicial scriveners,Female,1264 
+1995,A,,30,4,Other judicial workers,Female,3563 
+1995,A,6,,3,MANAGEMENT PROFESSIONALS,Female,9003 
+1995,A,,31,4,Registered accountants and licensed tax accountants,Female,4751 
+1995,A,,32,4,Public consultants on social and labor insurance,Female,1455 
+1995,A,,33,4,Other management professionals,Female,2797 
+1995,A,7,,3,PROFESSORS AND TEACHERS,Female,649456 
+1995,A,,34,4,Kindergarten teachers,Female,90187 
+1995,A,,35,4,Primary school teachers,Female,263646 
+1995,A,,36,4,Secondary school teachers,Female,107755 
+1995,A,,37,4,High school teachers,Female,89162 
+1995,A,,38,4,Professors; college and university,Female,31324 
+1995,A,,39,4,"Teachers of blind, dumb and protective schools",Female,29337 
+1995,A,,40,4,Other teachers,Female,38045 
+1995,A,8,,3,RELIGIOUS WORKERS,Female,20635 
+1995,A,,41,4,Religious workers,Female,20635 
+1995,A,9,,3,"AUTHORS, REPORTERS AND EDITORS",Female,36619 
+1995,A,,42,4,Authors,Female,10756 
+1995,A,,43,4,Reporters and editors,Female,25863 
+1995,A,10,,3,"FINE ARTISTS, PHOTOGRAPHERS AND DESIGNERS",Female,89656 
+1995,A,,44,4,"Sculptors, painters and artists",Female,12895 
+1995,A,,45,4,Designers,Female,66422 
+1995,A,,46,4,Photographers,Female,10339 
+1995,A,11,,3,MUSICIANS AND STAGE ARTISTS,Female,132031 
+1995,A,,47,4,Musicians (except for private lessons),Female,8051 
+1995,A,,48,4,Musicians (for private lessons),Female,94371 
+1995,A,,49,4,"Actors, stage dancers and performers (except for private lessons)",Female,17783 
+1995,A,,50,4,"Actors, stage dancers and performers (for private lessons)",Female,11826 
+1995,A,12,,3,OTHER PROFESSIONAL AND TECHNICAL WORKERS,Female,305217 
+1995,A,,51,4,Private teachers (for study),Female,92467 
+1995,A,,52,4,Private teachers not elsewhere classified,Female,98992 
+1995,A,,53,4,Professional athletes (except for private lessons),Female,944 
+1995,A,,54,4,Professional athletes (for private lessons),Female,34489 
+1995,A,,55,4,Professional and technical workers not elsewhere classified,Female,78325 
+1995,B,,,1,MANAGERS AND OFFICIALS,Female,259564 
+1995,B,13,,3,GOVERNMENT OFFICIALS,Female,5392 
+1995,B,,56,4,Government officials,Female,5392 
+1995,B,14,,3,DIRECTORS OF COMPANIES AND CORPORATIONS,Female,230010 
+1995,B,,57,4,Directors of companies,Female,223771 
+1995,B,,58,4,Directors of other corporations,Female,6239 
+1995,B,15,,3,OTHER MANAGERS AND ADMINISTRATORS,Female,24162 
+1995,B,,59,4,Managers of companies and corporations,Female,16420 
+1995,B,,60,4,Managers and administrators not elsewhere classified,Female,7742 
+1995,C,,,1,CLERICAL AND RELATED WORKERS,Female,7684111 
+1995,C,16,,3,GENERAL CLERICAL WORKERS,Female,7346912 
+1995,C,,61,4,General clerical workers,Female,5251072 
+1995,C,,62,4,Accounting clerks,Female,2095840 
+1995,C,17,,3,OUT-DOOR CLERICAL WORKERS,Female,62266 
+1995,C,,63,4,Bill and account collectors,Female,37624 
+1995,C,,64,4,Other out-door clerical workers,Female,24642 
+1995,C,18,,3,CLERICAL WORKERS IN TRANSPORTATION AND COMMUNICATION,Female,71404 
+1995,C,,65,4,Clerical workers in transportation ,Female,18394 
+1995,C,,66,4,Clerical workers in post and communication,Female,53010 
+1995,C,19,,3,OFFICE EQUIPMENT OPERATORS,Female,203529 
+1995,C,,67,4,"Stenographers, typists and word processor operators",Female,39730 
+1995,C,,68,4,Key punchers,Female,50379 
+1995,C,,69,4,Operators of electronic machinery,Female,113420 
+1995,D,,,1,SALES WORKERS,Female,3542046 
+1995,D,20,,3,SALES WORKERS OF COMMODITIES,Female,2883047 
+1995,D,,70,4,Retail dealers,Female,263652 
+1995,D,,71,4,Wholesale dealers,Female,14152 
+1995,D,,72,4,Restaurant operators,Female,209079 
+1995,D,,73,4,Shop salespersons and sales clerks,Female,2160651 
+1995,D,,74,4,Door to door salespersons and street venders,Female,52507 
+1995,D,,75,4,Junk dealers,Female,4781 
+1995,D,,76,4,Travelling commodity salespersons,Female,177855 
+1995,D,,77,4,Commodity brokers,Female,370 
+1995,D,21,,3,SALES RELATED WORKERS,Female,658999 
+1995,D,,78,4,Real estate agents and brokers,Female,74792 
+1995,D,,79,4,Insurance agents,Female,359438 
+1995,D,,80,4,Pawn brokers,Female,2618 
+1995,D,,81,4,"Travelling salespersons (except commodity, insurance and real estate)",Female,128936 
+1995,D,,82,4,Other sales related workers,Female,93215 
+1995,E,,,1,SERVICE WORKERS,Female,3250063 
+1995,E,22,,3,FAMILY - LIFE SUPPORTING SERVICE WORKERS,Female,86359 
+1995,E,,83,4,Housekeepers and maids,Female,33355 
+1995,E,,84,4,Home helpers,Female,32717 
+1995,E,,85,4,Other family - life supporting service workers,Female,20287 
+1995,E,23,,3,PERSONAL SANITARY SERVICE WORKERS,Female,573854 
+1995,E,,86,4,Barbers,Female,120670 
+1995,E,,87,4,Beauticians,Female,338203 
+1995,E,,88,4,Bathhouse workers,Female,18733 
+1995,E,,89,4,Launderers and dry cleaners,Female,96248 
+1995,E,24,,3,FOOD AND BEVERAGES PREPARING WORKERS,Female,988262 
+1995,E,,90,4,Cooks,Female,987146 
+1995,E,,91,4,Bartenders,Female,1116 
+1995,E,25,,3,SERVING WORKERS,Female,1220898 
+1995,E,,92,4,"Servants, waiters and waitresses",Female,844699 
+1995,E,,93,4,"Barmaids, club hosts and hostesses",Female,81193 
+1995,E,,94,4,Geisha and dancing partners,Female,7686 
+1995,E,,95,4,Recreation and amusement park workers,Female,269187 
+1995,E,,96,4,"Masters, managers and Banto (attendants) of hotel",Female,18133 
+1995,E,26,,3,SUPERINTENDENTS OF RESIDENCES AND BUILDINGS,Female,80883 
+1995,E,,97,4,"Superintendents of lodgings, apartment houses and matrons",Female,60746 
+1995,E,,98,4,Superintendents of buildings,Female,8569 
+1995,E,,99,4,Superintendents of parking lots,Female,11568 
+1995,E,27,,3,OTHER SERVICE WORKERS,Female,299807 
+1995,E,,100,4,Travel attendants,Female,11984 
+1995,E,,101,4,Temporary keepers,Female,4767 
+1995,E,,102,4,Commodity lessors,Female,25830 
+1995,E,,103,4,Advertising workers,Female,55737 
+1995,E,,104,4,Undertakers and crematory workers,Female,5359 
+1995,E,,105,4,Care workers,Female,111178 
+1995,E,,106,4,Service workers not elsewhere classified,Female,84952 
+1995,F,,,1,PROTECTIVE SERVICE WORKERS,Female,43896 
+1995,F,28,,3,PROTECTIVE SERVICE WORKERS,Female,43896 
+1995,F,,107,4,Members of the Self - Defence Forces,Female,11974 
+1995,F,,108,4,Police officers including marine,Female,11385 
+1995,F,,109,4,Prison guards and other police officers,Female,671 
+1995,F,,110,4,Fire fighters,Female,1147 
+1995,F,,111,4,Watchpersons and janitors,Female,10457 
+1995,F,,112,4,Other protective service workers,Female,8262 
+1995,G,,,1,"AGRICULTURAL, FORESTRY AND FISHERIES WORKERS",Female,1645543 
+1995,G,29,,3,AGRICULTURAL WORKERS,Female,1567742 
+1995,G,,113,4,Farmers and sericulturists,Female,1454441 
+1995,G,,114,4,Livestock raisers,Female,98564 
+1995,G,,115,4,Gardeners and landscape gardeners,Female,13486 
+1995,G,,116,4,Other agricultural workers,Female,1251 
+1995,G,30,,3,FORESTRY WORKERS,Female,10468 
+1995,G,,117,4,Forest rangers,Female,7806 
+1995,G,,118,4,Timber fellers and loggers,Female,1309 
+1995,G,,119,4,Timber collectors and log transporters,Female,386 
+1995,G,,120,4,Charcoal makers and firewood choppers,Female,495 
+1995,G,,121,4,Other forestry workers,Female,472 
+1995,G,31,,3,FISHERIES WORKERS,Female,67333 
+1995,G,,122,4,Fishermen and fisherwomen,Female,21957 
+1995,G,,123,4,"Skippers, chief engineers and engineers of fishing boat",Female,61 
+1995,G,,124,4,Seaweed and shell gatherers,Female,8942 
+1995,G,,125,4,Aquiculture workers,Female,25669 
+1995,G,,126,4,Other fisheries workers,Female,10704 
+1995,H,,,1,WORKERS IN TRANSPORT AND COMMUNICATIONS OCCUPATIONS,Female,128540 
+1995,H,32,,3,WORKERS OPERATING LAND TRANSPORT,Female,20 
+1995,H,,127,4,Electric and diesel engineers,Female,-
+1995,H,,128,4,Train drivers,Female,20 
+1995,H,33,,3,AUTOMOBILE DRIVERS,Female,48067 
+1995,H,,129,4,Automobile drivers,Female,48067 
+1995,H,34,,3,WORKERS OPERATING MARINE AND AIR TRANSPORT,Female,420 
+1995,H,,130,4,Ship captains and navigators (except fishing boats) and pilots,Female,152 
+1995,H,,131,4,Chief ship engineers and ship engineers (except fishing boats),Female,223 
+1995,H,,132,4,"Pilots, aircraft navigators and engineers",Female,45 
+1995,H,35,,3,OTHER WORKERS OPERATING TRANSPORT,Female,23816 
+1995,H,,133,4,Conductors,Female,21918 
+1995,H,,134,4,Railroad - transportation - related workers,Female,-
+1995,H,,135,4,Deckhands,Female,319 
+1995,H,,136,4,Engine-cleaners,Female,27 
+1995,H,,137,4,Workers operating other transport not elsewhere classified,Female,1552 
+1995,H,36,,3,COMMUNICATION WORKERS,Female,56217 
+1995,H,,138,4,Radiotelegraphists,Female,1061 
+1995,H,,139,4,Wiretelegraphists,Female,1025 
+1995,H,,140,4,Telephone operators,Female,42913 
+1995,H,,141,4,Mail and telegram deliverers,Female,10707 
+1995,H,,142,4,Other communication workers,Female,511 
+1995,I,,,1,PRODUCTION PROCESS WORKERS AND LABOURERS,Female,5504893 
+1995,I-1,,,2,MANUFACTURERS,Female,4049434 
+1995,I-1,37,,3,METAL MATERIAL WORKERS,Female,20712 
+1995,I-1,,143,4,Iron and steel furnace operators and pourers,Female,644 
+1995,I-1,,144,4,Nonferrous metal smelters and pourers,Female,965 
+1995,I-1,,145,4,Molders,Female,4379 
+1995,I-1,,146,4,Forgers and hammersmiths,Female,685 
+1995,I-1,,147,4,Tempering workers,Female,713 
+1995,I-1,,148,4,Metal rollingmill operators,Female,1375 
+1995,I-1,,149,4,Wire drawing machine operators,Female,455 
+1995,I-1,,150,4,Other metal material workers,Female,11496 
+1995,I-1,38,,3,CHEMICAL PRODUCTS WORKERS,Female,59955 
+1995,I-1,,151,4,Chemical operatives,Female,12568 
+1995,I-1,,152,4,Oil and fat processing workers,Female,1183 
+1995,I-1,,153,4,Other chemical products workers,Female,46204 
+1995,I-1,39,,3,"CERAMIC, CLAY AND STONE PRODUCTS WORKERS",Female,83848 
+1995,I-1,,154,4,Ceramic raw material workers,Female,749 
+1995,I-1,,155,4,Glass formers,Female,3931 
+1995,I-1,,156,4,"Brick, tile and earthen pipe makers",Female,3389 
+1995,I-1,,157,4,Potters,Female,18547 
+1995,I-1,,158,4,Ceramic decorators,Female,10040 
+1995,I-1,,159,4,Cement workers,Female,323 
+1995,I-1,,160,4,Cement products makers,Female,9120 
+1995,I-1,,161,4,Stone cutters,Female,5670 
+1995,I-1,,162,4,"Other ceramic, clay and stone products workers",Female,32079 
+1995,I-1,40,,3,METAL PROCESSING WORKERS,Female,288655 
+1995,I-1,,163,4,Metal cutting machine operators,Female,25659 
+1995,I-1,,164,4,Metal press machine operators,Female,29755 
+1995,I-1,,165,4,Welders and framecutters,Female,16469 
+1995,I-1,,166,4,Boiler makers and riveters,Female,1202 
+1995,I-1,,167,4,"Tinsmiths, coppersmiths and sheet metal workers",Female,10313 
+1995,I-1,,168,4,Metal engravers,Female,1256 
+1995,I-1,,169,4,Galvanizers,Female,5728 
+1995,I-1,,170,4,Other metal processing workers,Female,198273 
+1995,I-1,41,,3,GENERAL MACHINE ASSEMBLING AND REPAIRING WORKERS,Female,119077 
+1995,I-1,,171,4,General machine assemblers,Female,110267 
+1995,I-1,,172,4,General machine repairers,Female,8810 
+1995,I-1,42,,3,ELECTRIC MACHINE ASSEMBLING AND REPAIRING WORKERS,Female,623370 
+1995,I-1,,173,4,Electric machine assemblers,Female,380997 
+1995,I-1,,174,4,Electric machine repairers,Female,5843 
+1995,I-1,,175,4,Electric lamp and electronic tube assemblers,Female,7369 
+1995,I-1,,176,4,Electric wire and cable makers,Female,8898 
+1995,I-1,,177,4,Semi-conductor products makers,Female,32345 
+1995,I-1,,178,4,Other electric machine assembling and repairing workers,Female,187918 
+1995,I-1,43,,3,TRANSPORTATION EQUIPMENT ASSEMBLING AND REPAIRING WORKERS,Female,22705 
+1995,I-1,,179,4,Automobile assemblers,Female,5491 
+1995,I-1,,180,4,Automobile repairers,Female,8432 
+1995,I-1,,181,4,Aircraft assemblers and repairers,Female,371 
+1995,I-1,,182,4,Railway car assemblers and repairers,Female,247 
+1995,I-1,,183,4,Bicycle assemblers and repairers,Female,3490 
+1995,I-1,,184,4,Ship assemblers and repairers not elsewhere classified,Female,349 
+1995,I-1,,185,4,Other transportation equipment assembling and repairing workers,Female,4325 
+1995,I-1,44,,3,MEASURING AND OPTICAL INSTRUMENT ASSEMBLING AND REPAIRING WORKERS,Female,63870 
+1995,I-1,,186,4,Measuring instrument assemblers and adjusters,Female,11779 
+1995,I-1,,187,4,Lens grinders and adjusters,Female,6629 
+1995,I-1,,188,4,Optical instrument assemblers and repairers,Female,15634 
+1995,I-1,,189,4,Meter assemblers and adjusters,Female,5253 
+1995,I-1,,190,4,Other measuring and optical instrument assembling and repairing workers,Female,24575 
+1995,I-1,45,,3,FOOD MANUFACTURING WORKERS,Female,667289 
+1995,I-1,,191,4,Grain polishers and millers,Female,3433 
+1995,I-1,,192,4,Sugar makers,Female,527 
+1995,I-1,,193,4,Miso makers and soy makers,Female,4621 
+1995,I-1,,194,4,Oil and fat of animals or plants makers,Female,760 
+1995,I-1,,195,4,Macaroni and other noodle makers,Female,24069 
+1995,I-1,,196,4,Bakers and confectioners,Female,142483 
+1995,I-1,,197,4,"Tofu, paste of arum root and other allied products makers",Female,27246 
+1995,I-1,,198,4,Canned and bottled food makers,Female,11853 
+1995,I-1,,199,4,Dairy products makers,Female,4640 
+1995,I-1,,200,4,Aquatic products processing workers,Female,111349 
+1995,I-1,,201,4,Other food manufacturing makers,Female,336308 
+1995,I-1,46,,3,BEVERAGE AND TOBACCO MANUFACTURING WORKERS,Female,18582 
+1995,I-1,,202,4,Tea processing workers,Female,2430 
+1995,I-1,,203,4,"Sake, beer and other alcoholic beverage makers",Female,3449 
+1995,I-1,,204,4,Non-alcoholic beverage makers,Female,2566 
+1995,I-1,,205,4,Tobacco workers,Female,2330 
+1995,I-1,,206,4,Other beverage and tobacco manufacturing workers,Female,7807 
+1995,I-1,47,,3,TEXTILE WORKERS,Female,164889 
+1995,I-1,,207,4,Spinners,Female,11738 
+1995,I-1,,208,4,Doublers and thread and yarn twister,Female,12524 
+1995,I-1,,209,4,Loom preparers,Female,5606 
+1995,I-1,,210,4,Weavers,Female,44020 
+1995,I-1,,211,4,Textile and yarn washers and bleachers,Female,1977 
+1995,I-1,,212,4,Textile dyers,Female,15616 
+1995,I-1,,213,4,Knitters,Female,16649 
+1995,I-1,,214,4,Net and rope makers (except metal and straw,Female,6698 
+1995,I-1,,215,4,Other textile workers,Female,50061 
+1995,I-1,48,,3,CLOTHING AND TEXTILE PRODUCTS WORKERS,Female,727674 
+1995,I-1,,216,4,Dress makers for ladies and children,Female,27203 
+1995,I-1,,217,4,Tailors,Female,6405 
+1995,I-1,,218,4,Kimono makers,Female,35634 
+1995,I-1,,219,4,Embroiderers,Female,13096 
+1995,I-1,,220,4,Sewing machinists,Female,470789 
+1995,I-1,,221,4,Cutters,Female,23251 
+1995,I-1,,222,4,"Other clothing, textile products workers",Female,151296 
+1995,I-1,49,,3,"WOOD, BAMBOO, GRASS AND VINE PRODUCTS WORKERS",Female,94674 
+1995,I-1,,223,4,Sawers,Female,11531 
+1995,I-1,,224,4,Chippers,Female,528 
+1995,I-1,,225,4,Veneer makers,Female,8315 
+1995,I-1,,226,4,Wood workers,Female,8681 
+1995,I-1,,227,4,Wooden furniture makers and related workers,Female,38077 
+1995,I-1,,228,4,Ship carpenters,Female,-
+1995,I-1,,229,4,Bamboo products makers,Female,2184 
+1995,I-1,,230,4,Grass and vine products makers,Female,5148 
+1995,I-1,,231,4,"Other wood, bamboo, grass and vine products workers",Female,20210 
+1995,I-1,50,,3,"PULP, PAPER AND PAPER PRODUCTS WORKERS",Female,73605 
+1995,I-1,,232,4,Pulp makers and paper makers,Female,945 
+1995,I-1,,233,4,Paper millers,Female,4358 
+1995,I-1,,234,4,Paper container makers,Female,28948 
+1995,I-1,,235,4,Paper products workers,Female,9816 
+1995,I-1,,236,4,"Other pulp, paper and paper products workers",Female,29538 
+1995,I-1,51,,3,PRINTING AND BOOK-BINDING WORKERS,Female,125068 
+1995,I-1,,237,4,Type-setters,Female,14607 
+1995,I-1,,238,4,General stereotypers,Female,14266 
+1995,I-1,,239,4,Printers,Female,37296 
+1995,I-1,,240,4,Book-binders,Female,23674 
+1995,I-1,,241,4,Other printing and book-binding workers,Female,35225 
+1995,I-1,52,,3,RUBBER AND PLASTIC PRODUCTS WORKERS,Female,187857 
+1995,I-1,,242,4,Rubber makers,Female,531 
+1995,I-1,,243,4,Rubber products formers,Female,17549 
+1995,I-1,,244,4,Plastic products formers and finishers,Female,100343 
+1995,I-1,,245,4,Other rubber and plastic products workers,Female,69434 
+1995,I-1,53,,3,LEATHER AND LEATHER PRODUCTS WORKERS,Female,31688 
+1995,I-1,,246,4,Leather tanners,Female,1599 
+1995,I-1,,247,4,Shoemakers and shoe repairers,Female,22801 
+1995,I-1,,248,4,Other leather and leather products makers,Female,7288 
+1995,I-1,54,,3,OTHER MANUFACTURERS,Female,675916 
+1995,I-1,,249,4,Luggage and handbag makers,Female,20610 
+1995,I-1,,250,4,Toy makers,Female,10298 
+1995,I-1,,251,4,Japanese lantern and fan makers,Female,1418 
+1995,I-1,,252,4,Lacquerers,Female,6430 
+1995,I-1,,253,4,"Jewelers, goldsmiths, silversmiths, shell, horn and tusk makers",Female,10870 
+1995,I-1,,254,4,Stamp engravers,Female,2531 
+1995,I-1,,255,4,Upholsterers,Female,3580 
+1995,I-1,,256,4,Paperhangers,Female,10987 
+1995,I-1,,257,4,Painters,Female,39524 
+1995,I-1,,258,4,Photographic workers,Female,14173 
+1995,I-1,,259,4,Drawers,Female,107485 
+1995,I-1,,260,4,Loftsmen,Female,273 
+1995,I-1,,261,4,Package wrappers,Female,337985 
+1995,I-1,,262,4,Other manufacturers not elsewhere classified,Female,109752 
+1995,I-2,,,2,STATIONARY ENGINE AND CONSTRUCTION MACHINERY OPERATORS AND ELECTRICAL WORKERS,Female,12251 
+1995,I-2,55,,3,"STATIONARY ENGINE, MACHINERY AND CONSTRUCTION MACHINERY OPERATORS",Female,2437 
+1995,I-2,,263,4,Boiler operators,Female,25 
+1995,I-2,,264,4,Crane and winch operators,Female,413 
+1995,I-2,,265,4,Construction machinery operators,Female,1005 
+1995,I-2,,266,4,"Other stationary engine, machinery and construction machinery operators",Female,994 
+1995,I-2,56,,3,ELECTRICAL WORKERS,Female,9814 
+1995,I-2,,267,4,Electric power station and substation operators,Female,214 
+1995,I-2,,268,4,Line builders,Female,86 
+1995,I-2,,269,4,Telecommunication facility builders,Female,1292 
+1995,I-2,,270,4,Electrical equipment fitters,Female,6661 
+1995,I-2,,271,4,Other electrical workers,Female,1561 
+1995,I-3,,,2,MINING AND CONSTRUCTION WORKERS AND LABOURERS,Female,1443208 
+1995,I-3,57,,3,MINING WORKERS,Female,1503 
+1995,I-3,,272,4,Metal ore diggers,Female,6 
+1995,I-3,,273,4,Quarriers,Female,84 
+1995,I-3,,274,4,"Sand, gravel and clay collectors",Female,339 
+1995,I-3,,275,4,Other mining workers,Female,1074 
+1995,I-3,58,,3,CONSTRUCTION WORKERS,Female,133138 
+1995,I-3,,276,4,House carpenters,Female,7699 
+1995,I-3,,277,4,Construction assistants (Tobishoku),Female,1005 
+1995,I-3,,278,4,Brick layers and tile setters,Female,2840 
+1995,I-3,,279,4,Roofers ,Female,2706 
+1995,I-3,,280,4,Plasterers,Female,7337 
+1995,I-3,,281,4,Pipe fitters,Female,6400 
+1995,I-3,,282,4,Tatami installers,Female,4817 
+1995,I-3,,283,4,Construction labourers,Female,63764 
+1995,I-3,,284,4,Trackmen and Trackwomen,Female,-
+1995,I-3,,285,4,Other construction workers,Female,36570 
+1995,I-3,59,,3,CARRYING LABOURERS,Female,418188 
+1995,I-3,,286,4,Ship stevedores,Female,591 
+1995,I-3,,287,4,Land stevedores,Female,21886 
+1995,I-3,,288,4,Warehouse labourers,Female,47375 
+1995,I-3,,289,4,Deliverers,Female,230687 
+1995,I-3,,290,4,Packers and wrappers,Female,117649 
+1995,I-3,60,,3,OTHER LABOURERS,Female,890379 
+1995,I-3,,291,4,Sweepers and garbage collectors,Female,425828 
+1995,I-3,,292,4,Labourers not elsewhere classified,Female,464551 
+1995,J,,,1,WORKERS NOT CLASSIFIABLE BY OCCUPATION,Female,171270 
+1995,J,61,,3, WORKERS NOT CLASSIFIABLE BY OCCUPATION,Female,171270 
+1995,J,,293,4,Workers not classifiable by occupation,Female,171270 
+1995,JP,,,0,"All Japan, all occupations",Male,38546166 
+1995,A,,,1,PROFESSIONAL AND TECHNICAL WORKERS,Male,4720131 
+1995,A,1,,3,SCIENTIFIC RESEARCHERS,Male,152649 
+1995,A,,1,4,Natural science researchers,Male,146028 
+1995,A,,2,4,Cultural and social science researchers,Male,6621 
+1995,A,2,,3,ENGINEERS AND TECHNICIANS,Male,2227137 
+1995,A,,3,4,"Agricultural, forestry and fisheries and food processing technicians",Male,59539 
+1995,A,,4,4,Metallurgical engineers,Male,21426 
+1995,A,,5,4,"Mechanical, aircraft and shipbuilding engineers",Male,285396 
+1995,A,,6,4,Electrical and electronic engineers,Male,336021 
+1995,A,,7,4,Chemical engineers,Male,62218 
+1995,A,,8,4,Architects,Male,398054 
+1995,A,,9,4,Civil and surveying engineers,Male,474422 
+1995,A,,10,4,Computer processing technicians,Male,521290 
+1995,A,,11,4,Other engineers and technicians,Male,68771 
+1995,A,3,,3,PUBLIC HEALTH AND MEDICAL WORKERS,Male,592972 
+1995,A,,12,4,Physicians,Male,195707 
+1995,A,,13,4,Dentists,Male,68761 
+1995,A,,14,4,Veterinarians,Male,16054 
+1995,A,,15,4,Pharmacists,Male,41518 
+1995,A,,16,4,Public health nurses,Male,-
+1995,A,,17,4,Midwives,Male,-
+1995,A,,18,4,Nurses,Male,32221 
+1995,A,,19,4,Medical radiation and X-ray technicians,Male,33530 
+1995,A,,20,4,Clinical and sanitary experts,Male,23445 
+1995,A,,21,4,Dental hygienists,Male,-
+1995,A,,22,4,Dental technicians,Male,43470 
+1995,A,,23,4,Nutritionists,Male,3141 
+1995,A,,24,4,"Chiropractors, masseurs, acupuncturists and osteopaths",Male,69385 
+1995,A,,25,4,Other public health and medical workers,Male,65740 
+1995,A,4,,3,SOCIAL AND WELFARE WORKERS,Male,74568 
+1995,A,,26,4,Kindergarteners,Male,2515 
+1995,A,,27,4,Other social and welfare workers,Male,72053 
+1995,A,5,,3,JUDICIAL WORKERS,Male,45780 
+1995,A,,28,4,"Judges, prosecutors and lawyers",Male,17339 
+1995,A,,29,4,Patent attorneys and judicial scriveners,Male,16136 
+1995,A,,30,4,Other judicial workers,Male,12305 
+1995,A,6,,3,MANAGEMENT PROFESSIONALS,Male,99090 
+1995,A,,31,4,Registered accountants and licensed tax accountants,Male,60023 
+1995,A,,32,4,Public consultants on social and labor insurance,Male,8743 
+1995,A,,33,4,Other management professionals,Male,30324 
+1995,A,7,,3,PROFESSORS AND TEACHERS,Male,784012 
+1995,A,,34,4,Kindergarten teachers,Male,5992 
+1995,A,,35,4,Primary school teachers,Male,166545 
+1995,A,,36,4,Secondary school teachers,Male,161409 
+1995,A,,37,4,High school teachers,Male,239264 
+1995,A,,38,4,Professors; college and university,Male,130118 
+1995,A,,39,4,"Teachers of blind, dumb and protective schools",Male,22730 
+1995,A,,40,4,Other teachers,Male,57954 
+1995,A,8,,3,RELIGIOUS WORKERS,Male,103266 
+1995,A,,41,4,Religious workers,Male,103266 
+1995,A,9,,3,"AUTHORS, REPORTERS AND EDITORS",Male,89517 
+1995,A,,42,4,Authors,Male,20512 
+1995,A,,43,4,Reporters and editors,Male,69005 
+1995,A,10,,3,"FINE ARTISTS, PHOTOGRAPHERS AND DESIGNERS",Male,165237 
+1995,A,,44,4,"Sculptors, painters and artists",Male,24169 
+1995,A,,45,4,Designers,Male,85502 
+1995,A,,46,4,Photographers,Male,55566 
+1995,A,11,,3,MUSICIANS AND STAGE ARTISTS,Male,67026 
+1995,A,,47,4,Musicians (except for private lessons),Male,14792 
+1995,A,,48,4,Musicians (for private lessons),Male,8356 
+1995,A,,49,4,"Actors, stage dancers and performers (except for private lessons)",Male,39129 
+1995,A,,50,4,"Actors, stage dancers and performers (for private lessons)",Male,4749 
+1995,A,12,,3,OTHER PROFESSIONAL AND TECHNICAL WORKERS,Male,318877 
+1995,A,,51,4,Private teachers (for study),Male,104119 
+1995,A,,52,4,Private teachers not elsewhere classified,Male,24817 
+1995,A,,53,4,Professional athletes (except for private lessons),Male,13240 
+1995,A,,54,4,Professional athletes (for private lessons),Male,31720 
+1995,A,,55,4,Professional and technical workers not elsewhere classified,Male,144981 
+1995,B,,,1,MANAGERS AND OFFICIALS,Male,2457010 
+1995,B,13,,3,GOVERNMENT OFFICIALS,Male,143650 
+1995,B,,56,4,Government officials,Male,143650 
+1995,B,14,,3,DIRECTORS OF COMPANIES AND CORPORATIONS,Male,1456917 
+1995,B,,57,4,Directors of companies,Male,1399715 
+1995,B,,58,4,Directors of other corporations,Male,57202 
+1995,B,15,,3,OTHER MANAGERS AND ADMINISTRATORS,Male,856443 
+1995,B,,59,4,Managers of companies and corporations,Male,796299 
+1995,B,,60,4,Managers and administrators not elsewhere classified,Male,60144 
+1995,C,,,1,CLERICAL AND RELATED WORKERS,Male,4702367 
+1995,C,16,,3,GENERAL CLERICAL WORKERS,Male,4355139 
+1995,C,,61,4,General clerical workers,Male,3701070 
+1995,C,,62,4,Accounting clerks,Male,654069 
+1995,C,17,,3,OUT-DOOR CLERICAL WORKERS,Male,36773 
+1995,C,,63,4,Bill and account collectors,Male,27353 
+1995,C,,64,4,Other out-door clerical workers,Male,9420 
+1995,C,18,,3,CLERICAL WORKERS IN TRANSPORTATION AND COMMUNICATION,Male,207042 
+1995,C,,65,4,Clerical workers in transportation ,Male,129298 
+1995,C,,66,4,Clerical workers in post and communication,Male,77744 
+1995,C,19,,3,OFFICE EQUIPMENT OPERATORS,Male,103413 
+1995,C,,67,4,"Stenographers, typists and word processor operators",Male,4249 
+1995,C,,68,4,Key punchers,Male,6273 
+1995,C,,69,4,Operators of electronic machinery,Male,92891 
+1995,D,,,1,SALES WORKERS,Male,6033281 
+1995,D,20,,3,SALES WORKERS OF COMMODITIES,Male,4545128 
+1995,D,,70,4,Retail dealers,Male,761317 
+1995,D,,71,4,Wholesale dealers,Male,138082 
+1995,D,,72,4,Restaurant operators,Male,180723 
+1995,D,,73,4,Shop salespersons and sales clerks,Male,1184887 
+1995,D,,74,4,Door to door salespersons and street venders,Male,32408 
+1995,D,,75,4,Junk dealers,Male,30121 
+1995,D,,76,4,Travelling commodity salespersons,Male,2210777 
+1995,D,,77,4,Commodity brokers,Male,6813 
+1995,D,21,,3,SALES RELATED WORKERS,Male,1488153 
+1995,D,,78,4,Real estate agents and brokers,Male,234817 
+1995,D,,79,4,Insurance agents,Male,171779 
+1995,D,,80,4,Pawn brokers,Male,3082 
+1995,D,,81,4,"Travelling salespersons (except commodity, insurance and real estate)",Male,983699 
+1995,D,,82,4,Other sales related workers,Male,94776 
+1995,E,,,1,SERVICE WORKERS,Male,1840248 
+1995,E,22,,3,FAMILY - LIFE SUPPORTING SERVICE WORKERS,Male,1576 
+1995,E,,83,4,Housekeepers and maids,Male,-
+1995,E,,84,4,Home helpers,Male,93 
+1995,E,,85,4,Other family - life supporting service workers,Male,1483 
+1995,E,23,,3,PERSONAL SANITARY SERVICE WORKERS,Male,287933 
+1995,E,,86,4,Barbers,Male,140341 
+1995,E,,87,4,Beauticians,Male,58703 
+1995,E,,88,4,Bathhouse workers,Male,15355 
+1995,E,,89,4,Launderers and dry cleaners,Male,73534 
+1995,E,24,,3,FOOD AND BEVERAGES PREPARING WORKERS,Male,842714 
+1995,E,,90,4,Cooks,Male,830641 
+1995,E,,91,4,Bartenders,Male,12073 
+1995,E,25,,3,SERVING WORKERS,Male,452683 
+1995,E,,92,4,"Servants, waiters and waitresses",Male,212100 
+1995,E,,93,4,"Barmaids, club hosts and hostesses",Male,4884 
+1995,E,,94,4,Geisha and dancing partners,Male,346 
+1995,E,,95,4,Recreation and amusement park workers,Male,197432 
+1995,E,,96,4,"Masters, managers and Banto (attendants) of hotel",Male,37921 
+1995,E,26,,3,SUPERINTENDENTS OF RESIDENCES AND BUILDINGS,Male,128523 
+1995,E,,97,4,"Superintendents of lodgings, apartment houses and matrons",Male,52252 
+1995,E,,98,4,Superintendents of buildings,Male,31363 
+1995,E,,99,4,Superintendents of parking lots,Male,44908 
+1995,E,27,,3,OTHER SERVICE WORKERS,Male,126819 
+1995,E,,100,4,Travel attendants,Male,16196 
+1995,E,,101,4,Temporary keepers,Male,7027 
+1995,E,,102,4,Commodity lessors,Male,34216 
+1995,E,,103,4,Advertising workers,Male,5968 
+1995,E,,104,4,Undertakers and crematory workers,Male,16290 
+1995,E,,105,4,Care workers,Male,21320 
+1995,E,,106,4,Service workers not elsewhere classified,Male,25802 
+1995,F,,,1,PROTECTIVE SERVICE WORKERS,Male,911782 
+1995,F,28,,3,PROTECTIVE SERVICE WORKERS,Male,911782 
+1995,F,,107,4,Members of the Self - Defence Forces,Male,238243 
+1995,F,,108,4,Police officers including marine,Male,232136 
+1995,F,,109,4,Prison guards and other police officers,Male,14792 
+1995,F,,110,4,Fire fighters,Male,141245 
+1995,F,,111,4,Watchpersons and janitors,Male,251661 
+1995,F,,112,4,Other protective service workers,Male,33705 
+1995,G,,,1,"AGRICULTURAL, FORESTRY AND FISHERIES WORKERS",Male,2167533 
+1995,G,29,,3,AGRICULTURAL WORKERS,Male,1874674 
+1995,G,,113,4,Farmers and sericulturists,Male,1624581 
+1995,G,,114,4,Livestock raisers,Male,140215 
+1995,G,,115,4,Gardeners and landscape gardeners,Male,106146 
+1995,G,,116,4,Other agricultural workers,Male,3732 
+1995,G,30,,3,FORESTRY WORKERS,Male,71096 
+1995,G,,117,4,Forest rangers,Male,41150 
+1995,G,,118,4,Timber fellers and loggers,Male,20846 
+1995,G,,119,4,Timber collectors and log transporters,Male,4887 
+1995,G,,120,4,Charcoal makers and firewood choppers,Male,1416 
+1995,G,,121,4,Other forestry workers,Male,2797 
+1995,G,31,,3,FISHERIES WORKERS,Male,221763 
+1995,G,,122,4,Fishermen and fisherwomen,Male,129782 
+1995,G,,123,4,"Skippers, chief engineers and engineers of fishing boat",Male,24129 
+1995,G,,124,4,Seaweed and shell gatherers,Male,19001 
+1995,G,,125,4,Aquiculture workers,Male,45122 
+1995,G,,126,4,Other fisheries workers,Male,3729 
+1995,H,,,1,WORKERS IN TRANSPORT AND COMMUNICATIONS OCCUPATIONS,Male,2313628 
+1995,H,32,,3,WORKERS OPERATING LAND TRANSPORT,Male,44410 
+1995,H,,127,4,Electric and diesel engineers,Male,2100 
+1995,H,,128,4,Train drivers,Male,42310 
+1995,H,33,,3,AUTOMOBILE DRIVERS,Male,1971978 
+1995,H,,129,4,Automobile drivers,Male,1971978 
+1995,H,34,,3,WORKERS OPERATING MARINE AND AIR TRANSPORT,Male,52604 
+1995,H,,130,4,Ship captains and navigators (except fishing boats) and pilots,Male,28887 
+1995,H,,131,4,Chief ship engineers and ship engineers (except fishing boats),Male,16545 
+1995,H,,132,4,"Pilots, aircraft navigators and engineers",Male,7172 
+1995,H,35,,3,OTHER WORKERS OPERATING TRANSPORT,Male,125190 
+1995,H,,133,4,Conductors,Male,25983 
+1995,H,,134,4,Railroad - transportation - related workers,Male,6215 
+1995,H,,135,4,Deckhands,Male,23148 
+1995,H,,136,4,Engine-cleaners,Male,4048 
+1995,H,,137,4,Workers operating other transport not elsewhere classified,Male,65796 
+1995,H,36,,3,COMMUNICATION WORKERS,Male,119446 
+1995,H,,138,4,Radiotelegraphists,Male,16087 
+1995,H,,139,4,Wiretelegraphists,Male,4253 
+1995,H,,140,4,Telephone operators,Male,1311 
+1995,H,,141,4,Mail and telegram deliverers,Male,93714 
+1995,H,,142,4,Other communication workers,Male,4081 
+1995,I,,,1,PRODUCTION PROCESS WORKERS AND LABOURERS,Male,13187560 
+1995,I-1,,,2,MANUFACTURERS,Male,7528418 
+1995,I-1,37,,3,METAL MATERIAL WORKERS,Male,238877 
+1995,I-1,,143,4,Iron and steel furnace operators and pourers,Male,43181 
+1995,I-1,,144,4,Nonferrous metal smelters and pourers,Male,15663 
+1995,I-1,,145,4,Molders,Male,43263 
+1995,I-1,,146,4,Forgers and hammersmiths,Male,16848 
+1995,I-1,,147,4,Tempering workers,Male,17479 
+1995,I-1,,148,4,Metal rollingmill operators,Male,36310 
+1995,I-1,,149,4,Wire drawing machine operators,Male,6276 
+1995,I-1,,150,4,Other metal material workers,Male,59857 
+1995,I-1,38,,3,CHEMICAL PRODUCTS WORKERS,Male,223462 
+1995,I-1,,151,4,Chemical operatives,Male,120855 
+1995,I-1,,152,4,Oil and fat processing workers,Male,4344 
+1995,I-1,,153,4,Other chemical products workers,Male,98263 
+1995,I-1,39,,3,"CERAMIC, CLAY AND STONE PRODUCTS WORKERS",Male,263062 
+1995,I-1,,154,4,Ceramic raw material workers,Male,4714 
+1995,I-1,,155,4,Glass formers,Male,22247 
+1995,I-1,,156,4,"Brick, tile and earthen pipe makers",Male,10633 
+1995,I-1,,157,4,Potters,Male,31863 
+1995,I-1,,158,4,Ceramic decorators,Male,3640 
+1995,I-1,,159,4,Cement workers,Male,6128 
+1995,I-1,,160,4,Cement products makers,Male,56441 
+1995,I-1,,161,4,Stone cutters,Male,49071 
+1995,I-1,,162,4,"Other ceramic, clay and stone products workers",Male,78325 
+1995,I-1,40,,3,METAL PROCESSING WORKERS,Male,1486676 
+1995,I-1,,163,4,Metal cutting machine operators,Male,193359 
+1995,I-1,,164,4,Metal press machine operators,Male,104451 
+1995,I-1,,165,4,Welders and framecutters,Male,264228 
+1995,I-1,,166,4,Boiler makers and riveters,Male,110146 
+1995,I-1,,167,4,"Tinsmiths, coppersmiths and sheet metal workers",Male,123210 
+1995,I-1,,168,4,Metal engravers,Male,4636 
+1995,I-1,,169,4,Galvanizers,Male,35409 
+1995,I-1,,170,4,Other metal processing workers,Male,651237 
+1995,I-1,41,,3,GENERAL MACHINE ASSEMBLING AND REPAIRING WORKERS,Male,901438 
+1995,I-1,,171,4,General machine assemblers,Male,481214 
+1995,I-1,,172,4,General machine repairers,Male,420224 
+1995,I-1,42,,3,ELECTRIC MACHINE ASSEMBLING AND REPAIRING WORKERS,Male,786292 
+1995,I-1,,173,4,Electric machine assemblers,Male,363725 
+1995,I-1,,174,4,Electric machine repairers,Male,137776 
+1995,I-1,,175,4,Electric lamp and electronic tube assemblers,Male,14113 
+1995,I-1,,176,4,Electric wire and cable makers,Male,18017 
+1995,I-1,,177,4,Semi-conductor products makers,Male,83152 
+1995,I-1,,178,4,Other electric machine assembling and repairing workers,Male,169509 
+1995,I-1,43,,3,TRANSPORTATION EQUIPMENT ASSEMBLING AND REPAIRING WORKERS,Male,726111 
+1995,I-1,,179,4,Automobile assemblers,Male,104395 
+1995,I-1,,180,4,Automobile repairers,Male,468465 
+1995,I-1,,181,4,Aircraft assemblers and repairers,Male,22013 
+1995,I-1,,182,4,Railway car assemblers and repairers,Male,30359 
+1995,I-1,,183,4,Bicycle assemblers and repairers,Male,22442 
+1995,I-1,,184,4,Ship assemblers and repairers not elsewhere classified,Male,19033 
+1995,I-1,,185,4,Other transportation equipment assembling and repairing workers,Male,59404 
+1995,I-1,44,,3,MEASURING AND OPTICAL INSTRUMENT ASSEMBLING AND REPAIRING WORKERS,Male,92596 
+1995,I-1,,186,4,Measuring instrument assemblers and adjusters,Male,29862 
+1995,I-1,,187,4,Lens grinders and adjusters,Male,9177 
+1995,I-1,,188,4,Optical instrument assemblers and repairers,Male,15838 
+1995,I-1,,189,4,Meter assemblers and adjusters,Male,8816 
+1995,I-1,,190,4,Other measuring and optical instrument assembling and repairing workers,Male,28903 
+1995,I-1,45,,3,FOOD MANUFACTURING WORKERS,Male,471019 
+1995,I-1,,191,4,Grain polishers and millers,Male,14591 
+1995,I-1,,192,4,Sugar makers,Male,2181 
+1995,I-1,,193,4,Miso makers and soy makers,Male,8566 
+1995,I-1,,194,4,Oil and fat of animals or plants makers,Male,3409 
+1995,I-1,,195,4,Macaroni and other noodle makers,Male,20494 
+1995,I-1,,196,4,Bakers and confectioners,Male,156078 
+1995,I-1,,197,4,"Tofu, paste of arum root and other allied products makers",Male,26165 
+1995,I-1,,198,4,Canned and bottled food makers,Male,4081 
+1995,I-1,,199,4,Dairy products makers,Male,14103 
+1995,I-1,,200,4,Aquatic products processing workers,Male,53285 
+1995,I-1,,201,4,Other food manufacturing makers,Male,168066 
+1995,I-1,46,,3,BEVERAGE AND TOBACCO MANUFACTURING WORKERS,Male,37503 
+1995,I-1,,202,4,Tea processing workers,Male,4798 
+1995,I-1,,203,4,"Sake, beer and other alcoholic beverage makers",Male,13074 
+1995,I-1,,204,4,Non-alcoholic beverage makers,Male,8864 
+1995,I-1,,205,4,Tobacco workers,Male,2665 
+1995,I-1,,206,4,Other beverage and tobacco manufacturing workers,Male,8102 
+1995,I-1,47,,3,TEXTILE WORKERS,Male,142091 
+1995,I-1,,207,4,Spinners,Male,6126 
+1995,I-1,,208,4,Doublers and thread and yarn twister,Male,8585 
+1995,I-1,,209,4,Loom preparers,Male,3438 
+1995,I-1,,210,4,Weavers,Male,29955 
+1995,I-1,,211,4,Textile and yarn washers and bleachers,Male,5211 
+1995,I-1,,212,4,Textile dyers,Male,37622 
+1995,I-1,,213,4,Knitters,Male,15217 
+1995,I-1,,214,4,Net and rope makers (except metal and straw,Male,4457 
+1995,I-1,,215,4,Other textile workers,Male,31480 
+1995,I-1,48,,3,CLOTHING AND TEXTILE PRODUCTS WORKERS,Male,160094 
+1995,I-1,,216,4,Dress makers for ladies and children,Male,4968 
+1995,I-1,,217,4,Tailors,Male,15280 
+1995,I-1,,218,4,Kimono makers,Male,2612 
+1995,I-1,,219,4,Embroiderers,Male,5525 
+1995,I-1,,220,4,Sewing machinists,Male,62694 
+1995,I-1,,221,4,Cutters,Male,23770 
+1995,I-1,,222,4,"Other clothing, textile products workers",Male,45245 
+1995,I-1,49,,3,"WOOD, BAMBOO, GRASS AND VINE PRODUCTS WORKERS",Male,306050 
+1995,I-1,,223,4,Sawers,Male,58264 
+1995,I-1,,224,4,Chippers,Male,1555 
+1995,I-1,,225,4,Veneer makers,Male,22266 
+1995,I-1,,226,4,Wood workers,Male,29621 
+1995,I-1,,227,4,Wooden furniture makers and related workers,Male,142538 
+1995,I-1,,228,4,Ship carpenters,Male,3226 
+1995,I-1,,229,4,Bamboo products makers,Male,3629 
+1995,I-1,,230,4,Grass and vine products makers,Male,5582 
+1995,I-1,,231,4,"Other wood, bamboo, grass and vine products workers",Male,39369 
+1995,I-1,50,,3,"PULP, PAPER AND PAPER PRODUCTS WORKERS",Male,124289 
+1995,I-1,,232,4,Pulp makers and paper makers,Male,11610 
+1995,I-1,,233,4,Paper millers,Male,21484 
+1995,I-1,,234,4,Paper container makers,Male,32017 
+1995,I-1,,235,4,Paper products workers,Male,7388 
+1995,I-1,,236,4,"Other pulp, paper and paper products workers",Male,51790 
+1995,I-1,51,,3,PRINTING AND BOOK-BINDING WORKERS,Male,292882 
+1995,I-1,,237,4,Type-setters,Male,17288 
+1995,I-1,,238,4,General stereotypers,Male,49862 
+1995,I-1,,239,4,Printers,Male,161127 
+1995,I-1,,240,4,Book-binders,Male,26063 
+1995,I-1,,241,4,Other printing and book-binding workers,Male,38542 
+1995,I-1,52,,3,RUBBER AND PLASTIC PRODUCTS WORKERS,Male,305580 
+1995,I-1,,242,4,Rubber makers,Male,4994 
+1995,I-1,,243,4,Rubber products formers,Male,60258 
+1995,I-1,,244,4,Plastic products formers and finishers,Male,194168 
+1995,I-1,,245,4,Other rubber and plastic products workers,Male,46160 
+1995,I-1,53,,3,LEATHER AND LEATHER PRODUCTS WORKERS,Male,34337 
+1995,I-1,,246,4,Leather tanners,Male,4179 
+1995,I-1,,247,4,Shoemakers and shoe repairers,Male,23827 
+1995,I-1,,248,4,Other leather and leather products makers,Male,6331 
+1995,I-1,54,,3,OTHER MANUFACTURERS,Male,936059 
+1995,I-1,,249,4,Luggage and handbag makers,Male,14559 
+1995,I-1,,250,4,Toy makers,Male,6877 
+1995,I-1,,251,4,Japanese lantern and fan makers,Male,1004 
+1995,I-1,,252,4,Lacquerers,Male,9480 
+1995,I-1,,253,4,"Jewelers, goldsmiths, silversmiths, shell, horn and tusk makers",Male,20640 
+1995,I-1,,254,4,Stamp engravers,Male,6798 
+1995,I-1,,255,4,Upholsterers,Male,9766 
+1995,I-1,,256,4,Paperhangers,Male,84922 
+1995,I-1,,257,4,Painters,Male,314566 
+1995,I-1,,258,4,Photographic workers,Male,17003 
+1995,I-1,,259,4,Drawers,Male,260010 
+1995,I-1,,260,4,Loftsmen,Male,2576 
+1995,I-1,,261,4,Package wrappers,Male,46800 
+1995,I-1,,262,4,Other manufacturers not elsewhere classified,Male,141058 
+1995,I-2,,,2,STATIONARY ENGINE AND CONSTRUCTION MACHINERY OPERATORS AND ELECTRICAL WORKERS,Male,1040989 
+1995,I-2,55,,3,"STATIONARY ENGINE, MACHINERY AND CONSTRUCTION MACHINERY OPERATORS",Male,391705 
+1995,I-2,,263,4,Boiler operators,Male,34327 
+1995,I-2,,264,4,Crane and winch operators,Male,83012 
+1995,I-2,,265,4,Construction machinery operators,Male,166934 
+1995,I-2,,266,4,"Other stationary engine, machinery and construction machinery operators",Male,107432 
+1995,I-2,56,,3,ELECTRICAL WORKERS,Male,649284 
+1995,I-2,,267,4,Electric power station and substation operators,Male,51955 
+1995,I-2,,268,4,Line builders,Male,61747 
+1995,I-2,,269,4,Telecommunication facility builders,Male,90727 
+1995,I-2,,270,4,Electrical equipment fitters,Male,429720 
+1995,I-2,,271,4,Other electrical workers,Male,15135 
+1995,I-3,,,2,MINING AND CONSTRUCTION WORKERS AND LABOURERS,Male,4618153 
+1995,I-3,57,,3,MINING WORKERS,Male,42673 
+1995,I-3,,272,4,Metal ore diggers,Male,4070 
+1995,I-3,,273,4,Quarriers,Male,2858 
+1995,I-3,,274,4,"Sand, gravel and clay collectors",Male,7729 
+1995,I-3,,275,4,Other mining workers,Male,28016 
+1995,I-3,58,,3,CONSTRUCTION WORKERS,Male,2947548 
+1995,I-3,,276,4,House carpenters,Male,754123 
+1995,I-3,,277,4,Construction assistants (Tobishoku),Male,111512 
+1995,I-3,,278,4,Brick layers and tile setters,Male,65586 
+1995,I-3,,279,4,Roofers ,Male,38767 
+1995,I-3,,280,4,Plasterers,Male,180503 
+1995,I-3,,281,4,Pipe fitters,Male,349927 
+1995,I-3,,282,4,Tatami installers,Male,26845 
+1995,I-3,,283,4,Construction labourers,Male,853315 
+1995,I-3,,284,4,Trackmen and Trackwomen,Male,29268 
+1995,I-3,,285,4,Other construction workers,Male,537702 
+1995,I-3,59,,3,CARRYING LABOURERS,Male,1019653 
+1995,I-3,,286,4,Ship stevedores,Male,19639 
+1995,I-3,,287,4,Land stevedores,Male,142281 
+1995,I-3,,288,4,Warehouse labourers,Male,187625 
+1995,I-3,,289,4,Deliverers,Male,538820 
+1995,I-3,,290,4,Packers and wrappers,Male,131288 
+1995,I-3,60,,3,OTHER LABOURERS,Male,608279 
+1995,I-3,,291,4,Sweepers and garbage collectors,Male,300037 
+1995,I-3,,292,4,Labourers not elsewhere classified,Male,308242 
+1995,J,,,1,WORKERS NOT CLASSIFIABLE BY OCCUPATION,Male,212626 
+1995,J,61,,3, WORKERS NOT CLASSIFIABLE BY OCCUPATION,Male,212626 
+1995,J,,293,4,Workers not classifiable by occupation,Male,212626 
+2000,JP,,,0,"All Japan, all occupations",Female,25760125 
+2000,A,,,1,PROFESSIONAL AND TECHNICAL WORKERS,Female,3719132 
+2000,A,1,,3,SCIENTIFIC RESEARCHERS,Female,22598 
+2000,A,,1,4,Natural science researchers,Female,21084 
+2000,A,,2,4,Cultural and social science researchers,Female,1514 
+2000,A,2,,3,ENGINEERS AND TECHNICIANS,Female,170934 
+2000,A,,3,4,"Agricultural, forestry and fisheries and food processing technicians",Female,6943 
+2000,A,,4,4,Metallurgical engineers,Female,446 
+2000,A,,5,4,"Mechanical, aircraft and shipbuilding engineers",Female,7075 
+2000,A,,6,4,Electrical and electronic engineers,Female,9399 
+2000,A,,7,4,Chemical engineers,Female,5956 
+2000,A,,8,4,Architects,Female,21672 
+2000,A,,9,4,Civil and surveying engineers,Female,9036 
+2000,A,,10,4,Computer processing technicians,Female,106584 
+2000,A,,11,4,Other engineers and technicians,Female,3823 
+2000,A,3,,3,PUBLIC HEALTH AND MEDICAL WORKERS,Female,1757312 
+2000,A,,12,4,Physicians,Female,36984 
+2000,A,,13,4,Dentists,Female,14068 
+2000,A,,14,4,Veterinarians,Female,3842 
+2000,A,,15,4,Pharmacists,Female,100130 
+2000,A,,16,4,Public health nurses,Female,33022 
+2000,A,,17,4,Midwives,Female,17461 
+2000,A,,18,4,Nurses,Female,936708 
+2000,A,,19,4,Medical radiation and X-ray technicians,Female,5477 
+2000,A,,20,4,Clinical and sanitary experts,Female,38278 
+2000,A,,21,4,Dental hygienists,Female,62581 
+2000,A,,22,4,Dental technicians,Female,7793 
+2000,A,,23,4,Nutritionists,Female,81963 
+2000,A,,24,4,"Chiropractors, masseurs, acupuncturists and osteopaths",Female,25858 
+2000,A,,25,4,Other public health and medical workers,Female,393147 
+2000,A,4,,3,SOCIAL AND WELFARE WORKERS,Female,492470 
+2000,A,,26,4,Kindergarteners,Female,356822 
+2000,A,,27,4,Other social and welfare workers,Female,135648 
+2000,A,5,,3,JUDICIAL WORKERS,Female,7896 
+2000,A,,28,4,"Judges, prosecutors and lawyers",Female,1699 
+2000,A,,29,4,Patent attorneys and judicial scriveners,Female,2112 
+2000,A,,30,4,Other judicial workers,Female,4085 
+2000,A,6,,3,MANAGEMENT PROFESSIONALS,Female,11664 
+2000,A,,31,4,Registered accountants and licensed tax accountants,Female,6084 
+2000,A,,32,4,Public consultants on social and labor insurance,Female,2595 
+2000,A,,33,4,Other management professionals,Female,2985 
+2000,A,7,,3,PROFESSORS AND TEACHERS,Female,656128 
+2000,A,,34,4,Kindergarten teachers,Female,90908 
+2000,A,,35,4,Primary school teachers,Female,253197 
+2000,A,,36,4,Secondary school teachers,Female,108089 
+2000,A,,37,4,High school teachers,Female,90518 
+2000,A,,38,4,Professors; college and university,Female,36876 
+2000,A,,39,4,"Teachers of blind, dumb and protective schools",Female,34289 
+2000,A,,40,4,Other teachers,Female,42251 
+2000,A,8,,3,RELIGIOUS WORKERS,Female,18484 
+2000,A,,41,4,Religious workers,Female,18484 
+2000,A,9,,3,"AUTHORS, REPORTERS AND EDITORS",Female,41812 
+2000,A,,42,4,Authors,Female,12144 
+2000,A,,43,4,Reporters and editors,Female,29668 
+2000,A,10,,3,"FINE ARTISTS, PHOTOGRAPHERS AND DESIGNERS",Female,96821 
+2000,A,,44,4,"Sculptors, painters and artists",Female,15465 
+2000,A,,45,4,Designers,Female,68449 
+2000,A,,46,4,Photographers,Female,12907 
+2000,A,11,,3,MUSICIANS AND STAGE ARTISTS,Female,129422 
+2000,A,,47,4,Musicians (except for private lessons),Female,8733 
+2000,A,,48,4,Musicians (for private lessons),Female,89555 
+2000,A,,49,4,"Actors, stage dancers and performers (except for private lessons)",Female,18642 
+2000,A,,50,4,"Actors, stage dancers and performers (for private lessons)",Female,12492 
+2000,A,12,,3,OTHER PROFESSIONAL AND TECHNICAL WORKERS,Female,313591 
+2000,A,,51,4,Private teachers (for study),Female,92644 
+2000,A,,52,4,Private teachers not elsewhere classified,Female,94106 
+2000,A,,53,4,Professional athletes (except for private lessons),Female,608 
+2000,A,,54,4,Professional athletes (for private lessons),Female,38335 
+2000,A,,55,4,Professional and technical workers not elsewhere classified,Female,87898 
+2000,B,,,1,MANAGERS AND OFFICIALS,Female,205857 
+2000,B,13,,3,GOVERNMENT OFFICIALS,Female,6263 
+2000,B,,56,4,Government officials,Female,6263 
+2000,B,14,,3,DIRECTORS OF COMPANIES AND CORPORATIONS,Female,177098 
+2000,B,,57,4,Directors of companies,Female,169984 
+2000,B,,58,4,Directors of other corporations,Female,7114 
+2000,B,15,,3,OTHER MANAGERS AND ADMINISTRATORS,Female,22496 
+2000,B,,59,4,Managers of companies and corporations,Female,13894 
+2000,B,,60,4,Managers and administrators not elsewhere classified,Female,8602 
+2000,C,,,1,CLERICAL AND RELATED WORKERS,Female,7624294 
+2000,C,16,,3,GENERAL CLERICAL WORKERS,Female,7204009 
+2000,C,,61,4,General clerical workers,Female,5170432 
+2000,C,,62,4,Accounting clerks,Female,2033577 
+2000,C,17,,3,OUT-DOOR CLERICAL WORKERS,Female,60651 
+2000,C,,63,4,Bill and account collectors,Female,36471 
+2000,C,,64,4,Other out-door clerical workers,Female,24180 
+2000,C,18,,3,CLERICAL WORKERS IN TRANSPORTATION AND COMMUNICATION,Female,96955 
+2000,C,,65,4,Clerical workers in transportation ,Female,24180 
+2000,C,,66,4,Clerical workers in post and communication,Female,72775 
+2000,C,19,,3,OFFICE EQUIPMENT OPERATORS,Female,262679 
+2000,C,,67,4,"Stenographers, typists and word processor operators",Female,11213 
+2000,C,,68,4,Key punchers,Female,52070 
+2000,C,,69,4,Operators of electronic machinery,Female,199396 
+2000,D,,,1,SALES WORKERS,Female,3406700 
+2000,D,20,,3,SALES WORKERS OF COMMODITIES,Female,2751327 
+2000,D,,70,4,Retail dealers,Female,214136 
+2000,D,,71,4,Wholesale dealers,Female,12718 
+2000,D,,72,4,Restaurant operators,Female,171449 
+2000,D,,73,4,Shop salespersons and sales clerks,Female,2119068 
+2000,D,,74,4,Door to door salespersons and street venders,Female,47934 
+2000,D,,75,4,Junk dealers,Female,3740 
+2000,D,,76,4,Travelling commodity salespersons,Female,182034 
+2000,D,,77,4,Commodity brokers,Female,248 
+2000,D,21,,3,SALES RELATED WORKERS,Female,655373 
+2000,D,,78,4,Real estate agents and brokers,Female,78651 
+2000,D,,79,4,Insurance agents,Female,288808 
+2000,D,,80,4,Pawn brokers,Female,2519 
+2000,D,,81,4,"Travelling salespersons (except commodity, insurance and real estate)",Female,150786 
+2000,D,,82,4,Other sales related workers,Female,134609 
+2000,E,,,1,SERVICE WORKERS,Female,3639208 
+2000,E,22,,3,FAMILY - LIFE SUPPORTING SERVICE WORKERS,Female,172584 
+2000,E,,83,4,Housekeepers and maids,Female,27740 
+2000,E,,84,4,Home helpers,Female,133040 
+2000,E,,85,4,Other family - life supporting service workers,Female,11804 
+2000,E,23,,3,PERSONAL SANITARY SERVICE WORKERS,Female,574845 
+2000,E,,86,4,Barbers,Female,114658 
+2000,E,,87,4,Beauticians,Female,348990 
+2000,E,,88,4,Bathhouse workers,Female,20139 
+2000,E,,89,4,Launderers and dry cleaners,Female,91058 
+2000,E,24,,3,FOOD AND BEVERAGES PREPARING WORKERS,Female,1066326 
+2000,E,,90,4,Cooks,Female,1064579 
+2000,E,,91,4,Bartenders,Female,1747 
+2000,E,25,,3,SERVING WORKERS,Female,1208723 
+2000,E,,92,4,"Servants, waiters and waitresses",Female,882180 
+2000,E,,93,4,"Barmaids, club hosts and hostesses",Female,67264 
+2000,E,,94,4,Geisha and dancing partners,Female,6909 
+2000,E,,95,4,Recreation and amusement park workers,Female,237609 
+2000,E,,96,4,"Masters, managers and Banto (attendants) of hotel",Female,14761 
+2000,E,26,,3,SUPERINTENDENTS OF RESIDENCES AND BUILDINGS,Female,92483 
+2000,E,,97,4,"Superintendents of lodgings, apartment houses and matrons",Female,63670 
+2000,E,,98,4,Superintendents of buildings,Female,15857 
+2000,E,,99,4,Superintendents of parking lots,Female,12956 
+2000,E,27,,3,OTHER SERVICE WORKERS,Female,524247 
+2000,E,,100,4,Travel attendants,Female,12467 
+2000,E,,101,4,Temporary keepers,Female,2626 
+2000,E,,102,4,Commodity lessors,Female,27703 
+2000,E,,103,4,Advertising workers,Female,55382 
+2000,E,,104,4,Undertakers and crematory workers,Female,8653 
+2000,E,,105,4,Care workers,Female,291604 
+2000,E,,106,4,Service workers not elsewhere classified,Female,125812 
+2000,F,,,1,PROTECTIVE SERVICE WORKERS,Female,51177 
+2000,F,28,,3,PROTECTIVE SERVICE WORKERS,Female,51177 
+2000,F,,107,4,Members of the Self - Defence Forces,Female,12051 
+2000,F,,108,4,Police officers including marine,Female,13408 
+2000,F,,109,4,Prison guards and other police officers,Female,775 
+2000,F,,110,4,Fire fighters,Female,1469 
+2000,F,,111,4,Watchpersons and janitors,Female,12795 
+2000,F,,112,4,Other protective service workers,Female,10679 
+2000,G,,,1,"AGRICULTURAL, FORESTRY AND FISHERIES WORKERS",Female,1359265 
+2000,G,29,,3,AGRICULTURAL WORKERS,Female,1295657 
+2000,G,,113,4,Farmers and sericulturists,Female,1193650 
+2000,G,,114,4,Livestock raisers,Female,86688 
+2000,G,,115,4,Gardeners and landscape gardeners,Female,13680 
+2000,G,,116,4,Other agricultural workers,Female,1639 
+2000,G,30,,3,FORESTRY WORKERS,Female,8006 
+2000,G,,117,4,Forest rangers,Female,5780 
+2000,G,,118,4,Timber fellers and loggers,Female,1017 
+2000,G,,119,4,Timber collectors and log transporters,Female,277 
+2000,G,,120,4,Charcoal makers and firewood choppers,Female,457 
+2000,G,,121,4,Other forestry workers,Female,475 
+2000,G,31,,3,FISHERIES WORKERS,Female,55602 
+2000,G,,122,4,Fishermen and fisherwomen,Female,18615 
+2000,G,,123,4,"Skippers, chief engineers and engineers of fishing boat",Female,26 
+2000,G,,124,4,Seaweed and shell gatherers,Female,6955 
+2000,G,,125,4,Aquiculture workers,Female,22460 
+2000,G,,126,4,Other fisheries workers,Female,7546 
+2000,H,,,1,WORKERS IN TRANSPORT AND COMMUNICATIONS OCCUPATIONS,Female,108929 
+2000,H,32,,3,WORKERS OPERATING LAND TRANSPORT,Female,49 
+2000,H,,127,4,Electric and diesel engineers,Female,9 
+2000,H,,128,4,Train drivers,Female,40 
+2000,H,33,,3,AUTOMOBILE DRIVERS,Female,51894 
+2000,H,,129,4,Automobile drivers,Female,51894 
+2000,H,34,,3,WORKERS OPERATING MARINE AND AIR TRANSPORT,Female,338 
+2000,H,,130,4,Ship captains and navigators (except fishing boats) and pilots,Female,158 
+2000,H,,131,4,Chief ship engineers and ship engineers (except fishing boats),Female,148 
+2000,H,,132,4,"Pilots, aircraft navigators and engineers",Female,32 
+2000,H,35,,3,OTHER WORKERS OPERATING TRANSPORT,Female,18131 
+2000,H,,133,4,Conductors,Female,15672 
+2000,H,,134,4,Railroad - transportation - related workers,Female,-
+2000,H,,135,4,Deckhands,Female,257 
+2000,H,,136,4,Engine-cleaners,Female,13 
+2000,H,,137,4,Workers operating other transport not elsewhere classified,Female,2189 
+2000,H,36,,3,COMMUNICATION WORKERS,Female,38517 
+2000,H,,138,4,Radiotelegraphists,Female,887 
+2000,H,,139,4,Wiretelegraphists,Female,791 
+2000,H,,140,4,Telephone operators,Female,20576 
+2000,H,,141,4,Mail and telegram deliverers,Female,15264 
+2000,H,,142,4,Other communication workers,Female,999 
+2000,I,,,1,PRODUCTION PROCESS WORKERS AND LABOURERS,Female,5320527 
+2000,I-1,,,2,MANUFACTURERS,Female,3709908 
+2000,I-1,37,,3,METAL MATERIAL WORKERS,Female,16449 
+2000,I-1,,143,4,Iron and steel furnace operators and pourers,Female,364 
+2000,I-1,,144,4,Nonferrous metal smelters and pourers,Female,673 
+2000,I-1,,145,4,Molders,Female,3308 
+2000,I-1,,146,4,Forgers and hammersmiths,Female,353 
+2000,I-1,,147,4,Tempering workers,Female,730 
+2000,I-1,,148,4,Metal rollingmill operators,Female,1067 
+2000,I-1,,149,4,Wire drawing machine operators,Female,351 
+2000,I-1,,150,4,Other metal material workers,Female,9603 
+2000,I-1,38,,3,CHEMICAL PRODUCTS WORKERS,Female,64219 
+2000,I-1,,151,4,Chemical operatives,Female,14774 
+2000,I-1,,152,4,Oil and fat processing workers,Female,920 
+2000,I-1,,153,4,Other chemical products workers,Female,48525 
+2000,I-1,39,,3,"CERAMIC, CLAY AND STONE PRODUCTS WORKERS",Female,66370 
+2000,I-1,,154,4,Ceramic raw material workers,Female,628 
+2000,I-1,,155,4,Glass formers,Female,3711 
+2000,I-1,,156,4,"Brick, tile and earthen pipe makers",Female,2169 
+2000,I-1,,157,4,Potters,Female,15313 
+2000,I-1,,158,4,Ceramic decorators,Female,6925 
+2000,I-1,,159,4,Cement workers,Female,298 
+2000,I-1,,160,4,Cement products makers,Female,6296 
+2000,I-1,,161,4,Stone cutters,Female,3855 
+2000,I-1,,162,4,"Other ceramic, clay and stone products workers",Female,27175 
+2000,I-1,40,,3,METAL PROCESSING WORKERS,Female,250601 
+2000,I-1,,163,4,Metal cutting machine operators,Female,29491 
+2000,I-1,,164,4,Metal press machine operators,Female,22966 
+2000,I-1,,165,4,Welders and framecutters,Female,13876 
+2000,I-1,,166,4,Boiler makers and riveters,Female,4633 
+2000,I-1,,167,4,"Tinsmiths, coppersmiths and sheet metal workers",Female,8137 
+2000,I-1,,168,4,Metal engravers,Female,1225 
+2000,I-1,,169,4,Galvanizers,Female,5527 
+2000,I-1,,170,4,Other metal processing workers,Female,164746 
+2000,I-1,41,,3,GENERAL MACHINE ASSEMBLING AND REPAIRING WORKERS,Female,127384 
+2000,I-1,,171,4,General machine assemblers,Female,118053 
+2000,I-1,,172,4,General machine repairers,Female,9331 
+2000,I-1,42,,3,ELECTRIC MACHINE ASSEMBLING AND REPAIRING WORKERS,Female,561331 
+2000,I-1,,173,4,Electric machine assemblers,Female,347465 
+2000,I-1,,174,4,Electric machine repairers,Female,7397 
+2000,I-1,,175,4,Electric lamp and electronic tube assemblers,Female,6662 
+2000,I-1,,176,4,Electric wire and cable makers,Female,8304 
+2000,I-1,,177,4,Semi-conductor products makers,Female,22013 
+2000,I-1,,178,4,Other electric machine assembling and repairing workers,Female,169490 
+2000,I-1,43,,3,TRANSPORTATION EQUIPMENT ASSEMBLING AND REPAIRING WORKERS,Female,22974 
+2000,I-1,,179,4,Automobile assemblers,Female,5281 
+2000,I-1,,180,4,Automobile repairers,Female,8537 
+2000,I-1,,181,4,Aircraft assemblers and repairers,Female,537 
+2000,I-1,,182,4,Railway car assemblers and repairers,Female,260 
+2000,I-1,,183,4,Bicycle assemblers and repairers,Female,3240 
+2000,I-1,,184,4,Ship assemblers and repairers not elsewhere classified,Female,226 
+2000,I-1,,185,4,Other transportation equipment assembling and repairing workers,Female,4893 
+2000,I-1,44,,3,MEASURING AND OPTICAL INSTRUMENT ASSEMBLING AND REPAIRING WORKERS,Female,62216 
+2000,I-1,,186,4,Measuring instrument assemblers and adjusters,Female,11548 
+2000,I-1,,187,4,Lens grinders and adjusters,Female,4906 
+2000,I-1,,188,4,Optical instrument assemblers and repairers,Female,15675 
+2000,I-1,,189,4,Meter assemblers and adjusters,Female,5914 
+2000,I-1,,190,4,Other measuring and optical instrument assembling and repairing workers,Female,24173 
+2000,I-1,45,,3,FOOD MANUFACTURING WORKERS,Female,788545 
+2000,I-1,,191,4,Grain polishers and millers,Female,3403 
+2000,I-1,,192,4,Sugar makers,Female,560 
+2000,I-1,,193,4,Miso makers and soy makers,Female,4807 
+2000,I-1,,194,4,Oil and fat of animals or plants makers,Female,499 
+2000,I-1,,195,4,Macaroni and other noodle makers,Female,23076 
+2000,I-1,,196,4,Bakers and confectioners,Female,162792 
+2000,I-1,,197,4,"Tofu, paste of arum root and other allied products makers",Female,24833 
+2000,I-1,,198,4,Canned and bottled food makers,Female,10180 
+2000,I-1,,199,4,Dairy products makers,Female,4837 
+2000,I-1,,200,4,Aquatic products processing workers,Female,115457 
+2000,I-1,,201,4,Other food manufacturing makers,Female,438101 
+2000,I-1,46,,3,BEVERAGE AND TOBACCO MANUFACTURING WORKERS,Female,16831 
+2000,I-1,,202,4,Tea processing workers,Female,2440 
+2000,I-1,,203,4,"Sake, beer and other alcoholic beverage makers",Female,3408 
+2000,I-1,,204,4,Non-alcoholic beverage makers,Female,2620 
+2000,I-1,,205,4,Tobacco workers,Female,1533 
+2000,I-1,,206,4,Other beverage and tobacco manufacturing workers,Female,6830 
+2000,I-1,47,,3,TEXTILE WORKERS,Female,109966 
+2000,I-1,,207,4,Spinners,Female,5062 
+2000,I-1,,208,4,Doublers and thread and yarn twister,Female,8477 
+2000,I-1,,209,4,Loom preparers,Female,4304 
+2000,I-1,,210,4,Weavers,Female,28961 
+2000,I-1,,211,4,Textile and yarn washers and bleachers,Female,1391 
+2000,I-1,,212,4,Textile dyers,Female,10670 
+2000,I-1,,213,4,Knitters,Female,10600 
+2000,I-1,,214,4,Net and rope makers (except metal and straw,Female,5422 
+2000,I-1,,215,4,Other textile workers,Female,35079 
+2000,I-1,48,,3,CLOTHING AND TEXTILE PRODUCTS WORKERS,Female,505419 
+2000,I-1,,216,4,Dress makers for ladies and children,Female,18092 
+2000,I-1,,217,4,Tailors,Female,5122 
+2000,I-1,,218,4,Kimono makers,Female,24996 
+2000,I-1,,219,4,Embroiderers,Female,8026 
+2000,I-1,,220,4,Sewing machinists,Female,313510 
+2000,I-1,,221,4,Cutters,Female,17333 
+2000,I-1,,222,4,"Other clothing, textile products workers",Female,118340 
+2000,I-1,49,,3,"WOOD, BAMBOO, GRASS AND VINE PRODUCTS WORKERS",Female,67120 
+2000,I-1,,223,4,Sawers,Female,7737 
+2000,I-1,,224,4,Chippers,Female,318 
+2000,I-1,,225,4,Veneer makers,Female,5478 
+2000,I-1,,226,4,Wood workers,Female,6177 
+2000,I-1,,227,4,Wooden furniture makers and related workers,Female,26963 
+2000,I-1,,228,4,Ship carpenters,Female,-
+2000,I-1,,229,4,Bamboo products makers,Female,1645 
+2000,I-1,,230,4,Grass and vine products makers,Female,3821 
+2000,I-1,,231,4,"Other wood, bamboo, grass and vine products workers",Female,14981 
+2000,I-1,50,,3,"PULP, PAPER AND PAPER PRODUCTS WORKERS",Female,67145 
+2000,I-1,,232,4,Pulp makers and paper makers,Female,596 
+2000,I-1,,233,4,Paper millers,Female,3877 
+2000,I-1,,234,4,Paper container makers,Female,26324 
+2000,I-1,,235,4,Paper products workers,Female,8656 
+2000,I-1,,236,4,"Other pulp, paper and paper products workers",Female,27692 
+2000,I-1,51,,3,PRINTING AND BOOK-BINDING WORKERS,Female,109922 
+2000,I-1,,237,4,Type-setters,Female,5154 
+2000,I-1,,238,4,General stereotypers,Female,18344 
+2000,I-1,,239,4,Printers,Female,36938 
+2000,I-1,,240,4,Book-binders,Female,20734 
+2000,I-1,,241,4,Other printing and book-binding workers,Female,28752 
+2000,I-1,52,,3,RUBBER AND PLASTIC PRODUCTS WORKERS,Female,178954 
+2000,I-1,,242,4,Rubber makers,Female,296 
+2000,I-1,,243,4,Rubber products formers,Female,16194 
+2000,I-1,,244,4,Plastic products formers and finishers,Female,89987 
+2000,I-1,,245,4,Other rubber and plastic products workers,Female,72477 
+2000,I-1,53,,3,LEATHER AND LEATHER PRODUCTS WORKERS,Female,22015 
+2000,I-1,,246,4,Leather tanners,Female,1185 
+2000,I-1,,247,4,Shoemakers and shoe repairers,Female,16084 
+2000,I-1,,248,4,Other leather and leather products makers,Female,4746 
+2000,I-1,54,,3,OTHER MANUFACTURERS,Female,672447 
+2000,I-1,,249,4,Luggage and handbag makers,Female,13526 
+2000,I-1,,250,4,Toy makers,Female,7264 
+2000,I-1,,251,4,Japanese lantern and fan makers,Female,1384 
+2000,I-1,,252,4,Lacquerers,Female,3872 
+2000,I-1,,253,4,"Jewelers, goldsmiths, silversmiths, shell, horn and tusk makers",Female,8124 
+2000,I-1,,254,4,Stamp engravers,Female,2429 
+2000,I-1,,255,4,Upholsterers,Female,3888 
+2000,I-1,,256,4,Paperhangers,Female,9050 
+2000,I-1,,257,4,Painters,Female,35222 
+2000,I-1,,258,4,Photographic workers,Female,22294 
+2000,I-1,,259,4,Drawers,Female,96203 
+2000,I-1,,260,4,Loftsmen,Female,154 
+2000,I-1,,261,4,Package wrappers,Female,329727 
+2000,I-1,,262,4,Other manufacturers not elsewhere classified,Female,139310 
+2000,I-2,,,2,STATIONARY ENGINE AND CONSTRUCTION MACHINERY OPERATORS AND ELECTRICAL WORKERS,Female,13531 
+2000,I-2,55,,3,"STATIONARY ENGINE, MACHINERY AND CONSTRUCTION MACHINERY OPERATORS",Female,2671 
+2000,I-2,,263,4,Boiler operators,Female,30 
+2000,I-2,,264,4,Crane and winch operators,Female,462 
+2000,I-2,,265,4,Construction machinery operators,Female,903 
+2000,I-2,,266,4,"Other stationary engine, machinery and construction machinery operators",Female,1276 
+2000,I-2,56,,3,ELECTRICAL WORKERS,Female,10860 
+2000,I-2,,267,4,Electric power station and substation operators,Female,16 
+2000,I-2,,268,4,Line builders,Female,130 
+2000,I-2,,269,4,Telecommunication facility builders,Female,1532 
+2000,I-2,,270,4,Electrical equipment fitters,Female,7212 
+2000,I-2,,271,4,Other electrical workers,Female,1970 
+2000,I-3,,,2,MINING AND CONSTRUCTION WORKERS AND LABOURERS,Female,1597088 
+2000,I-3,57,,3,MINING WORKERS,Female,1113 
+2000,I-3,,272,4,Metal ore diggers,Female,19 
+2000,I-3,,273,4,Quarriers,Female,31 
+2000,I-3,,274,4,"Sand, gravel and clay collectors",Female,263 
+2000,I-3,,275,4,Other mining workers,Female,800 
+2000,I-3,58,,3,CONSTRUCTION WORKERS,Female,105396 
+2000,I-3,,276,4,House carpenters,Female,7427 
+2000,I-3,,277,4,Construction assistants (Tobishoku),Female,1594 
+2000,I-3,,278,4,Brick layers and tile setters,Female,2349 
+2000,I-3,,279,4,Roofers ,Female,2291 
+2000,I-3,,280,4,Plasterers,Female,5723 
+2000,I-3,,281,4,Pipe fitters,Female,6344 
+2000,I-3,,282,4,Tatami installers,Female,4041 
+2000,I-3,,283,4,Construction labourers,Female,42586 
+2000,I-3,,284,4,Trackmen and Trackwomen,Female,-
+2000,I-3,,285,4,Other construction workers,Female,33041 
+2000,I-3,59,,3,CARRYING LABOURERS,Female,482083 
+2000,I-3,,286,4,Ship stevedores,Female,331 
+2000,I-3,,287,4,Land stevedores,Female,35657 
+2000,I-3,,288,4,Warehouse labourers,Female,65769 
+2000,I-3,,289,4,Deliverers,Female,252541 
+2000,I-3,,290,4,Packers and wrappers,Female,127785 
+2000,I-3,60,,3,OTHER LABOURERS,Female,1008496 
+2000,I-3,,291,4,Sweepers and garbage collectors,Female,526960 
+2000,I-3,,292,4,Labourers not elsewhere classified,Female,481536 
+2000,J,,,1,WORKERS NOT CLASSIFIABLE BY OCCUPATION,Female,325036 
+2000,J,61,,3, WORKERS NOT CLASSIFIABLE BY OCCUPATION,Female,325036 
+2000,J,,293,4,Workers not classifiable by occupation,Female,325036 
+2000,JP,,,0,"All Japan, all occupations",Male,37272146 
+2000,A,,,1,PROFESSIONAL AND TECHNICAL WORKERS,Male,4848559 
+2000,A,1,,3,SCIENTIFIC RESEARCHERS,Male,136832 
+2000,A,,1,4,Natural science researchers,Male,131258 
+2000,A,,2,4,Cultural and social science researchers,Male,5574 
+2000,A,2,,3,ENGINEERS AND TECHNICIANS,Male,2352951 
+2000,A,,3,4,"Agricultural, forestry and fisheries and food processing technicians",Male,51660 
+2000,A,,4,4,Metallurgical engineers,Male,18462 
+2000,A,,5,4,"Mechanical, aircraft and shipbuilding engineers",Male,275860 
+2000,A,,6,4,Electrical and electronic engineers,Male,342165 
+2000,A,,7,4,Chemical engineers,Male,60957 
+2000,A,,8,4,Architects,Male,365612 
+2000,A,,9,4,Civil and surveying engineers,Male,501160 
+2000,A,,10,4,Computer processing technicians,Male,670903 
+2000,A,,11,4,Other engineers and technicians,Male,66172 
+2000,A,3,,3,PUBLIC HEALTH AND MEDICAL WORKERS,Male,636705 
+2000,A,,12,4,Physicians,Male,201158 
+2000,A,,13,4,Dentists,Male,71847 
+2000,A,,14,4,Veterinarians,Male,15045 
+2000,A,,15,4,Pharmacists,Male,49974 
+2000,A,,16,4,Public health nurses,Male,312 
+2000,A,,17,4,Midwives,Male,-
+2000,A,,18,4,Nurses,Male,39506 
+2000,A,,19,4,Medical radiation and X-ray technicians,Male,34795 
+2000,A,,20,4,Clinical and sanitary experts,Male,21456 
+2000,A,,21,4,Dental hygienists,Male,-
+2000,A,,22,4,Dental technicians,Male,42034 
+2000,A,,23,4,Nutritionists,Male,3302 
+2000,A,,24,4,"Chiropractors, masseurs, acupuncturists and osteopaths",Male,72166 
+2000,A,,25,4,Other public health and medical workers,Male,85110 
+2000,A,4,,3,SOCIAL AND WELFARE WORKERS,Male,81455 
+2000,A,,26,4,Kindergarteners,Male,4666 
+2000,A,,27,4,Other social and welfare workers,Male,76789 
+2000,A,5,,3,JUDICIAL WORKERS,Male,48051 
+2000,A,,28,4,"Judges, prosecutors and lawyers",Male,18837 
+2000,A,,29,4,Patent attorneys and judicial scriveners,Male,18125 
+2000,A,,30,4,Other judicial workers,Male,11089 
+2000,A,6,,3,MANAGEMENT PROFESSIONALS,Male,107369 
+2000,A,,31,4,Registered accountants and licensed tax accountants,Male,60055 
+2000,A,,32,4,Public consultants on social and labor insurance,Male,8973 
+2000,A,,33,4,Other management professionals,Male,38341 
+2000,A,7,,3,PROFESSORS AND TEACHERS,Male,747417 
+2000,A,,34,4,Kindergarten teachers,Male,5937 
+2000,A,,35,4,Primary school teachers,Male,151266 
+2000,A,,36,4,Secondary school teachers,Male,149531 
+2000,A,,37,4,High school teachers,Male,221179 
+2000,A,,38,4,Professors; college and university,Male,133459 
+2000,A,,39,4,"Teachers of blind, dumb and protective schools",Male,23482 
+2000,A,,40,4,Other teachers,Male,62563 
+2000,A,8,,3,RELIGIOUS WORKERS,Male,97012 
+2000,A,,41,4,Religious workers,Male,97012 
+2000,A,9,,3,"AUTHORS, REPORTERS AND EDITORS",Male,87687 
+2000,A,,42,4,Authors,Male,21456 
+2000,A,,43,4,Reporters and editors,Male,66231 
+2000,A,10,,3,"FINE ARTISTS, PHOTOGRAPHERS AND DESIGNERS",Male,169087 
+2000,A,,44,4,"Sculptors, painters and artists",Male,22638 
+2000,A,,45,4,Designers,Male,92944 
+2000,A,,46,4,Photographers,Male,53505 
+2000,A,11,,3,MUSICIANS AND STAGE ARTISTS,Male,68137 
+2000,A,,47,4,Musicians (except for private lessons),Male,13963 
+2000,A,,48,4,Musicians (for private lessons),Male,9535 
+2000,A,,49,4,"Actors, stage dancers and performers (except for private lessons)",Male,39402 
+2000,A,,50,4,"Actors, stage dancers and performers (for private lessons)",Male,5237 
+2000,A,12,,3,OTHER PROFESSIONAL AND TECHNICAL WORKERS,Male,315856 
+2000,A,,51,4,Private teachers (for study),Male,92688 
+2000,A,,52,4,Private teachers not elsewhere classified,Male,26910 
+2000,A,,53,4,Professional athletes (except for private lessons),Male,12823 
+2000,A,,54,4,Professional athletes (for private lessons),Male,35688 
+2000,A,,55,4,Professional and technical workers not elsewhere classified,Male,147747 
+2000,B,,,1,MANAGERS AND OFFICIALS,Male,1651121 
+2000,B,13,,3,GOVERNMENT OFFICIALS,Male,112527 
+2000,B,,56,4,Government officials,Male,112527 
+2000,B,14,,3,DIRECTORS OF COMPANIES AND CORPORATIONS,Male,1086070 
+2000,B,,57,4,Directors of companies,Male,1037695 
+2000,B,,58,4,Directors of other corporations,Male,48375 
+2000,B,15,,3,OTHER MANAGERS AND ADMINISTRATORS,Male,452524 
+2000,B,,59,4,Managers of companies and corporations,Male,413012 
+2000,B,,60,4,Managers and administrators not elsewhere classified,Male,39512 
+2000,C,,,1,CLERICAL AND RELATED WORKERS,Male,4671554 
+2000,C,16,,3,GENERAL CLERICAL WORKERS,Male,4316406 
+2000,C,,61,4,General clerical workers,Male,3772767 
+2000,C,,62,4,Accounting clerks,Male,543639 
+2000,C,17,,3,OUT-DOOR CLERICAL WORKERS,Male,32023 
+2000,C,,63,4,Bill and account collectors,Male,22499 
+2000,C,,64,4,Other out-door clerical workers,Male,9524 
+2000,C,18,,3,CLERICAL WORKERS IN TRANSPORTATION AND COMMUNICATION,Male,211147 
+2000,C,,65,4,Clerical workers in transportation ,Male,128429 
+2000,C,,66,4,Clerical workers in post and communication,Male,82718 
+2000,C,19,,3,OFFICE EQUIPMENT OPERATORS,Male,111978 
+2000,C,,67,4,"Stenographers, typists and word processor operators",Male,2137 
+2000,C,,68,4,Key punchers,Male,7401 
+2000,C,,69,4,Operators of electronic machinery,Male,102440 
+2000,D,,,1,SALES WORKERS,Male,5991437 
+2000,D,20,,3,SALES WORKERS OF COMMODITIES,Male,4332611 
+2000,D,,70,4,Retail dealers,Male,581155 
+2000,D,,71,4,Wholesale dealers,Male,118171 
+2000,D,,72,4,Restaurant operators,Male,139242 
+2000,D,,73,4,Shop salespersons and sales clerks,Male,1242042 
+2000,D,,74,4,Door to door salespersons and street venders,Male,40128 
+2000,D,,75,4,Junk dealers,Male,27573 
+2000,D,,76,4,Travelling commodity salespersons,Male,2178128 
+2000,D,,77,4,Commodity brokers,Male,6172 
+2000,D,21,,3,SALES RELATED WORKERS,Male,1658826 
+2000,D,,78,4,Real estate agents and brokers,Male,237535 
+2000,D,,79,4,Insurance agents,Male,171204 
+2000,D,,80,4,Pawn brokers,Male,3127 
+2000,D,,81,4,"Travelling salespersons (except commodity, insurance and real estate)",Male,1131251 
+2000,D,,82,4,Other sales related workers,Male,115709 
+2000,E,,,1,SERVICE WORKERS,Male,1980408 
+2000,E,22,,3,FAMILY - LIFE SUPPORTING SERVICE WORKERS,Male,6606 
+2000,E,,83,4,Housekeepers and maids,Male,149 
+2000,E,,84,4,Home helpers,Male,5124 
+2000,E,,85,4,Other family - life supporting service workers,Male,1333 
+2000,E,23,,3,PERSONAL SANITARY SERVICE WORKERS,Male,291480 
+2000,E,,86,4,Barbers,Male,135919 
+2000,E,,87,4,Beauticians,Male,71187 
+2000,E,,88,4,Bathhouse workers,Male,14826 
+2000,E,,89,4,Launderers and dry cleaners,Male,69548 
+2000,E,24,,3,FOOD AND BEVERAGES PREPARING WORKERS,Male,882929 
+2000,E,,90,4,Cooks,Male,870853 
+2000,E,,91,4,Bartenders,Male,12076 
+2000,E,25,,3,SERVING WORKERS,Male,457828 
+2000,E,,92,4,"Servants, waiters and waitresses",Male,230979 
+2000,E,,93,4,"Barmaids, club hosts and hostesses",Male,4867 
+2000,E,,94,4,Geisha and dancing partners,Male,272 
+2000,E,,95,4,Recreation and amusement park workers,Male,191011 
+2000,E,,96,4,"Masters, managers and Banto (attendants) of hotel",Male,30699 
+2000,E,26,,3,SUPERINTENDENTS OF RESIDENCES AND BUILDINGS,Male,160458 
+2000,E,,97,4,"Superintendents of lodgings, apartment houses and matrons",Male,65029 
+2000,E,,98,4,Superintendents of buildings,Male,50401 
+2000,E,,99,4,Superintendents of parking lots,Male,45028 
+2000,E,27,,3,OTHER SERVICE WORKERS,Male,181107 
+2000,E,,100,4,Travel attendants,Male,11937 
+2000,E,,101,4,Temporary keepers,Male,6178 
+2000,E,,102,4,Commodity lessors,Male,36345 
+2000,E,,103,4,Advertising workers,Male,6127 
+2000,E,,104,4,Undertakers and crematory workers,Male,21330 
+2000,E,,105,4,Care workers,Male,66701 
+2000,E,,106,4,Service workers not elsewhere classified,Male,32489 
+2000,F,,,1,PROTECTIVE SERVICE WORKERS,Male,962743 
+2000,F,28,,3,PROTECTIVE SERVICE WORKERS,Male,962743 
+2000,F,,107,4,Members of the Self - Defence Forces,Male,233083 
+2000,F,,108,4,Police officers including marine,Male,232586 
+2000,F,,109,4,Prison guards and other police officers,Male,14634 
+2000,F,,110,4,Fire fighters,Male,145949 
+2000,F,,111,4,Watchpersons and janitors,Male,284412 
+2000,F,,112,4,Other protective service workers,Male,52079 
+2000,G,,,1,"AGRICULTURAL, FORESTRY AND FISHERIES WORKERS",Male,1815021 
+2000,G,29,,3,AGRICULTURAL WORKERS,Male,1571005 
+2000,G,,113,4,Farmers and sericulturists,Male,1327481 
+2000,G,,114,4,Livestock raisers,Male,128538 
+2000,G,,115,4,Gardeners and landscape gardeners,Male,110298 
+2000,G,,116,4,Other agricultural workers,Male,4688 
+2000,G,30,,3,FORESTRY WORKERS,Male,59552 
+2000,G,,117,4,Forest rangers,Male,36135 
+2000,G,,118,4,Timber fellers and loggers,Male,16346 
+2000,G,,119,4,Timber collectors and log transporters,Male,2974 
+2000,G,,120,4,Charcoal makers and firewood choppers,Male,1528 
+2000,G,,121,4,Other forestry workers,Male,2569 
+2000,G,31,,3,FISHERIES WORKERS,Male,184464 
+2000,G,,122,4,Fishermen and fisherwomen,Male,104555 
+2000,G,,123,4,"Skippers, chief engineers and engineers of fishing boat",Male,20204 
+2000,G,,124,4,Seaweed and shell gatherers,Male,15496 
+2000,G,,125,4,Aquiculture workers,Male,41446 
+2000,G,,126,4,Other fisheries workers,Male,2763 
+2000,H,,,1,WORKERS IN TRANSPORT AND COMMUNICATIONS OCCUPATIONS,Male,2196034 
+2000,H,32,,3,WORKERS OPERATING LAND TRANSPORT,Male,41532 
+2000,H,,127,4,Electric and diesel engineers,Male,1325 
+2000,H,,128,4,Train drivers,Male,40207 
+2000,H,33,,3,AUTOMOBILE DRIVERS,Male,1845220 
+2000,H,,129,4,Automobile drivers,Male,1845220 
+2000,H,34,,3,WORKERS OPERATING MARINE AND AIR TRANSPORT,Male,43233 
+2000,H,,130,4,Ship captains and navigators (except fishing boats) and pilots,Male,24161 
+2000,H,,131,4,Chief ship engineers and ship engineers (except fishing boats),Male,12218 
+2000,H,,132,4,"Pilots, aircraft navigators and engineers",Male,6854 
+2000,H,35,,3,OTHER WORKERS OPERATING TRANSPORT,Male,140316 
+2000,H,,133,4,Conductors,Male,24887 
+2000,H,,134,4,Railroad - transportation - related workers,Male,4262 
+2000,H,,135,4,Deckhands,Male,16245 
+2000,H,,136,4,Engine-cleaners,Male,2743 
+2000,H,,137,4,Workers operating other transport not elsewhere classified,Male,92179 
+2000,H,36,,3,COMMUNICATION WORKERS,Male,125733 
+2000,H,,138,4,Radiotelegraphists,Male,11102 
+2000,H,,139,4,Wiretelegraphists,Male,3757 
+2000,H,,140,4,Telephone operators,Male,366 
+2000,H,,141,4,Mail and telegram deliverers,Male,105116 
+2000,H,,142,4,Other communication workers,Male,5392 
+2000,I,,,1,PRODUCTION PROCESS WORKERS AND LABOURERS,Male,12738495 
+2000,I-1,,,2,MANUFACTURERS,Male,7182877 
+2000,I-1,37,,3,METAL MATERIAL WORKERS,Male,193540 
+2000,I-1,,143,4,Iron and steel furnace operators and pourers,Male,30505 
+2000,I-1,,144,4,Nonferrous metal smelters and pourers,Male,14992 
+2000,I-1,,145,4,Molders,Male,35536 
+2000,I-1,,146,4,Forgers and hammersmiths,Male,13440 
+2000,I-1,,147,4,Tempering workers,Male,14434 
+2000,I-1,,148,4,Metal rollingmill operators,Male,32166 
+2000,I-1,,149,4,Wire drawing machine operators,Male,4531 
+2000,I-1,,150,4,Other metal material workers,Male,47936 
+2000,I-1,38,,3,CHEMICAL PRODUCTS WORKERS,Male,216593 
+2000,I-1,,151,4,Chemical operatives,Male,115476 
+2000,I-1,,152,4,Oil and fat processing workers,Male,3728 
+2000,I-1,,153,4,Other chemical products workers,Male,97389 
+2000,I-1,39,,3,"CERAMIC, CLAY AND STONE PRODUCTS WORKERS",Male,231865 
+2000,I-1,,154,4,Ceramic raw material workers,Male,3885 
+2000,I-1,,155,4,Glass formers,Male,21464 
+2000,I-1,,156,4,"Brick, tile and earthen pipe makers",Male,8831 
+2000,I-1,,157,4,Potters,Male,29956 
+2000,I-1,,158,4,Ceramic decorators,Male,2648 
+2000,I-1,,159,4,Cement workers,Male,5436 
+2000,I-1,,160,4,Cement products makers,Male,48958 
+2000,I-1,,161,4,Stone cutters,Male,38375 
+2000,I-1,,162,4,"Other ceramic, clay and stone products workers",Male,72312 
+2000,I-1,40,,3,METAL PROCESSING WORKERS,Male,1381945 
+2000,I-1,,163,4,Metal cutting machine operators,Male,226210 
+2000,I-1,,164,4,Metal press machine operators,Male,92307 
+2000,I-1,,165,4,Welders and framecutters,Male,224625 
+2000,I-1,,166,4,Boiler makers and riveters,Male,90549 
+2000,I-1,,167,4,"Tinsmiths, coppersmiths and sheet metal workers",Male,113137 
+2000,I-1,,168,4,Metal engravers,Male,4252 
+2000,I-1,,169,4,Galvanizers,Male,34186 
+2000,I-1,,170,4,Other metal processing workers,Male,596679 
+2000,I-1,41,,3,GENERAL MACHINE ASSEMBLING AND REPAIRING WORKERS,Male,893496 
+2000,I-1,,171,4,General machine assemblers,Male,473718 
+2000,I-1,,172,4,General machine repairers,Male,419778 
+2000,I-1,42,,3,ELECTRIC MACHINE ASSEMBLING AND REPAIRING WORKERS,Male,803661 
+2000,I-1,,173,4,Electric machine assemblers,Male,401376 
+2000,I-1,,174,4,Electric machine repairers,Male,140806 
+2000,I-1,,175,4,Electric lamp and electronic tube assemblers,Male,12053 
+2000,I-1,,176,4,Electric wire and cable makers,Male,18403 
+2000,I-1,,177,4,Semi-conductor products makers,Male,84073 
+2000,I-1,,178,4,Other electric machine assembling and repairing workers,Male,146950 
+2000,I-1,43,,3,TRANSPORTATION EQUIPMENT ASSEMBLING AND REPAIRING WORKERS,Male,707787 
+2000,I-1,,179,4,Automobile assemblers,Male,97544 
+2000,I-1,,180,4,Automobile repairers,Male,465080 
+2000,I-1,,181,4,Aircraft assemblers and repairers,Male,21677 
+2000,I-1,,182,4,Railway car assemblers and repairers,Male,27199 
+2000,I-1,,183,4,Bicycle assemblers and repairers,Male,21189 
+2000,I-1,,184,4,Ship assemblers and repairers not elsewhere classified,Male,18426 
+2000,I-1,,185,4,Other transportation equipment assembling and repairing workers,Male,56672 
+2000,I-1,44,,3,MEASURING AND OPTICAL INSTRUMENT ASSEMBLING AND REPAIRING WORKERS,Male,94960 
+2000,I-1,,186,4,Measuring instrument assemblers and adjusters,Male,27616 
+2000,I-1,,187,4,Lens grinders and adjusters,Male,12043 
+2000,I-1,,188,4,Optical instrument assemblers and repairers,Male,16878 
+2000,I-1,,189,4,Meter assemblers and adjusters,Male,9552 
+2000,I-1,,190,4,Other measuring and optical instrument assembling and repairing workers,Male,28871 
+2000,I-1,45,,3,FOOD MANUFACTURING WORKERS,Male,506714 
+2000,I-1,,191,4,Grain polishers and millers,Male,14093 
+2000,I-1,,192,4,Sugar makers,Male,1897 
+2000,I-1,,193,4,Miso makers and soy makers,Male,8569 
+2000,I-1,,194,4,Oil and fat of animals or plants makers,Male,3245 
+2000,I-1,,195,4,Macaroni and other noodle makers,Male,19594 
+2000,I-1,,196,4,Bakers and confectioners,Male,157922 
+2000,I-1,,197,4,"Tofu, paste of arum root and other allied products makers",Male,24433 
+2000,I-1,,198,4,Canned and bottled food makers,Male,4317 
+2000,I-1,,199,4,Dairy products makers,Male,14840 
+2000,I-1,,200,4,Aquatic products processing workers,Male,62317 
+2000,I-1,,201,4,Other food manufacturing makers,Male,195487 
+2000,I-1,46,,3,BEVERAGE AND TOBACCO MANUFACTURING WORKERS,Male,40443 
+2000,I-1,,202,4,Tea processing workers,Male,5027 
+2000,I-1,,203,4,"Sake, beer and other alcoholic beverage makers",Male,13826 
+2000,I-1,,204,4,Non-alcoholic beverage makers,Male,10913 
+2000,I-1,,205,4,Tobacco workers,Male,2879 
+2000,I-1,,206,4,Other beverage and tobacco manufacturing workers,Male,7798 
+2000,I-1,47,,3,TEXTILE WORKERS,Male,108274 
+2000,I-1,,207,4,Spinners,Male,3878 
+2000,I-1,,208,4,Doublers and thread and yarn twister,Male,6378 
+2000,I-1,,209,4,Loom preparers,Male,3026 
+2000,I-1,,210,4,Weavers,Male,22935 
+2000,I-1,,211,4,Textile and yarn washers and bleachers,Male,3591 
+2000,I-1,,212,4,Textile dyers,Male,29006 
+2000,I-1,,213,4,Knitters,Male,10696 
+2000,I-1,,214,4,Net and rope makers (except metal and straw,Male,4329 
+2000,I-1,,215,4,Other textile workers,Male,24435 
+2000,I-1,48,,3,CLOTHING AND TEXTILE PRODUCTS WORKERS,Male,123115 
+2000,I-1,,216,4,Dress makers for ladies and children,Male,3529 
+2000,I-1,,217,4,Tailors,Male,9820 
+2000,I-1,,218,4,Kimono makers,Male,1987 
+2000,I-1,,219,4,Embroiderers,Male,4277 
+2000,I-1,,220,4,Sewing machinists,Male,48414 
+2000,I-1,,221,4,Cutters,Male,17400 
+2000,I-1,,222,4,"Other clothing, textile products workers",Male,37688 
+2000,I-1,49,,3,"WOOD, BAMBOO, GRASS AND VINE PRODUCTS WORKERS",Male,256732 
+2000,I-1,,223,4,Sawers,Male,45774 
+2000,I-1,,224,4,Chippers,Male,1615 
+2000,I-1,,225,4,Veneer makers,Male,18523 
+2000,I-1,,226,4,Wood workers,Male,26344 
+2000,I-1,,227,4,Wooden furniture makers and related workers,Male,119177 
+2000,I-1,,228,4,Ship carpenters,Male,2315 
+2000,I-1,,229,4,Bamboo products makers,Male,2742 
+2000,I-1,,230,4,Grass and vine products makers,Male,6001 
+2000,I-1,,231,4,"Other wood, bamboo, grass and vine products workers",Male,34241 
+2000,I-1,50,,3,"PULP, PAPER AND PAPER PRODUCTS WORKERS",Male,121457 
+2000,I-1,,232,4,Pulp makers and paper makers,Male,11784 
+2000,I-1,,233,4,Paper millers,Male,18078 
+2000,I-1,,234,4,Paper container makers,Male,32536 
+2000,I-1,,235,4,Paper products workers,Male,7617 
+2000,I-1,,236,4,"Other pulp, paper and paper products workers",Male,51442 
+2000,I-1,51,,3,PRINTING AND BOOK-BINDING WORKERS,Male,264785 
+2000,I-1,,237,4,Type-setters,Male,6748 
+2000,I-1,,238,4,General stereotypers,Male,46863 
+2000,I-1,,239,4,Printers,Male,156801 
+2000,I-1,,240,4,Book-binders,Male,24565 
+2000,I-1,,241,4,Other printing and book-binding workers,Male,29808 
+2000,I-1,52,,3,RUBBER AND PLASTIC PRODUCTS WORKERS,Male,291920 
+2000,I-1,,242,4,Rubber makers,Male,3090 
+2000,I-1,,243,4,Rubber products formers,Male,58237 
+2000,I-1,,244,4,Plastic products formers and finishers,Male,185493 
+2000,I-1,,245,4,Other rubber and plastic products workers,Male,45100 
+2000,I-1,53,,3,LEATHER AND LEATHER PRODUCTS WORKERS,Male,26918 
+2000,I-1,,246,4,Leather tanners,Male,3345 
+2000,I-1,,247,4,Shoemakers and shoe repairers,Male,18873 
+2000,I-1,,248,4,Other leather and leather products makers,Male,4700 
+2000,I-1,54,,3,OTHER MANUFACTURERS,Male,918672 
+2000,I-1,,249,4,Luggage and handbag makers,Male,11873 
+2000,I-1,,250,4,Toy makers,Male,5348 
+2000,I-1,,251,4,Japanese lantern and fan makers,Male,884 
+2000,I-1,,252,4,Lacquerers,Male,7389 
+2000,I-1,,253,4,"Jewelers, goldsmiths, silversmiths, shell, horn and tusk makers",Male,17130 
+2000,I-1,,254,4,Stamp engravers,Male,6261 
+2000,I-1,,255,4,Upholsterers,Male,10918 
+2000,I-1,,256,4,Paperhangers,Male,54720 
+2000,I-1,,257,4,Painters,Male,300811 
+2000,I-1,,258,4,Photographic workers,Male,16158 
+2000,I-1,,259,4,Drawers,Male,265903 
+2000,I-1,,260,4,Loftsmen,Male,1858 
+2000,I-1,,261,4,Package wrappers,Male,56424 
+2000,I-1,,262,4,Other manufacturers not elsewhere classified,Male,162995 
+2000,I-2,,,2,STATIONARY ENGINE AND CONSTRUCTION MACHINERY OPERATORS AND ELECTRICAL WORKERS,Male,1000192 
+2000,I-2,55,,3,"STATIONARY ENGINE, MACHINERY AND CONSTRUCTION MACHINERY OPERATORS",Male,371486 
+2000,I-2,,263,4,Boiler operators,Male,26081 
+2000,I-2,,264,4,Crane and winch operators,Male,71522 
+2000,I-2,,265,4,Construction machinery operators,Male,163561 
+2000,I-2,,266,4,"Other stationary engine, machinery and construction machinery operators",Male,110322 
+2000,I-2,56,,3,ELECTRICAL WORKERS,Male,628706 
+2000,I-2,,267,4,Electric power station and substation operators,Male,50795 
+2000,I-2,,268,4,Line builders,Male,55131 
+2000,I-2,,269,4,Telecommunication facility builders,Male,95926 
+2000,I-2,,270,4,Electrical equipment fitters,Male,409720 
+2000,I-2,,271,4,Other electrical workers,Male,17134 
+2000,I-3,,,2,MINING AND CONSTRUCTION WORKERS AND LABOURERS,Male,4555426 
+2000,I-3,57,,3,MINING WORKERS,Male,38428 
+2000,I-3,,272,4,Metal ore diggers,Male,2606 
+2000,I-3,,273,4,Quarriers,Male,1817 
+2000,I-3,,274,4,"Sand, gravel and clay collectors",Male,7138 
+2000,I-3,,275,4,Other mining workers,Male,26867 
+2000,I-3,58,,3,CONSTRUCTION WORKERS,Male,2775236 
+2000,I-3,,276,4,House carpenters,Male,639340 
+2000,I-3,,277,4,Construction assistants (Tobishoku),Male,110285 
+2000,I-3,,278,4,Brick layers and tile setters,Male,56065 
+2000,I-3,,279,4,Roofers ,Male,36517 
+2000,I-3,,280,4,Plasterers,Male,146550 
+2000,I-3,,281,4,Pipe fitters,Male,328585 
+2000,I-3,,282,4,Tatami installers,Male,24343 
+2000,I-3,,283,4,Construction labourers,Male,815999 
+2000,I-3,,284,4,Trackmen and Trackwomen,Male,26237 
+2000,I-3,,285,4,Other construction workers,Male,591315 
+2000,I-3,59,,3,CARRYING LABOURERS,Male,1017648 
+2000,I-3,,286,4,Ship stevedores,Male,16276 
+2000,I-3,,287,4,Land stevedores,Male,154707 
+2000,I-3,,288,4,Warehouse labourers,Male,170337 
+2000,I-3,,289,4,Deliverers,Male,548295 
+2000,I-3,,290,4,Packers and wrappers,Male,128033 
+2000,I-3,60,,3,OTHER LABOURERS,Male,724114 
+2000,I-3,,291,4,Sweepers and garbage collectors,Male,354593 
+2000,I-3,,292,4,Labourers not elsewhere classified,Male,369521 
+2000,J,,,1,WORKERS NOT CLASSIFIABLE BY OCCUPATION,Male,416774 
+2000,J,61,,3, WORKERS NOT CLASSIFIABLE BY OCCUPATION,Male,416774 
+2000,J,,293,4,Workers not classifiable by occupation,Male,416774 
