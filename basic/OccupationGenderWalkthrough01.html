@@ -258,6 +258,22 @@ H(\mathbf{T})=H(\mathbf{S}) + \sum_{s=1}^S \frac{E(\mathbf{T}_s)}{E(\mathbf{T})}
 </blockquote>
 <p>In this walkthrough, I substitute gender for race, occupations for schools, and major occupational groups for 
 states. </p>
+<pre><code class="language-html">#' total segregation
+(total <- with(occgen95, mutual_total(occgen95,"Gender","OccMinor",weight="Number")))
+#>    stat       est
+#> 1:    M 0.1921583
+#> 2:    H 0.2856683
+#' between-major group segregation
+#' 	how much does the gender distribution differ across major occupation groups
+(between <- with(occgen95, mutual_total(occgen95,"Gender","OccMajor",weight="Number")))
+#>    stat        est
+#> 1:    M 0.07042062
+#> 2:    H 0.10468943
+#' within major group segregation
+with(occgen95, mutual_total(occgen95,"Gender","OccMinor",within = "OccMajor",weight="Number"))
+#>    stat       est
+#> 1:    M 0.1217377
+#> 2:    H 0.1809789</code></pre>
 </article>
 </main>
 <div id="references" class="section level2">
