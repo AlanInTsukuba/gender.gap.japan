@@ -94,7 +94,8 @@ target="_blank">Elbers</a></cite>
 <article>
 <h2>Data and data format</h2>
 <p>Elbers's <a href="https://elbersb.github.io/segregation/articles/segregation.html" 
-target="_blank">walkthrough</a> uses data about racial groups and schools. Elbers (2021) contains and example 
+target="_blank">walkthrough</a> uses data about racial groups and schools. 
+<a href="https://osf.io/8uyej/" target="_blank">Supplemental materials</a> for Elbers (2021) contain and example 
 applied to occupational segregation, but his walkthrough contains more detail about the functions in the 
 segregation package.</p>
 <p>This walkthrough uses data about gender and 
@@ -140,6 +141,25 @@ head(occgen)
 #> 4             Natural science researchers Female    21596
 #> 5 Cultural and social science researchers Female     1716
 #> 6               ENGINEERS AND TECHNICIANS Female   143166
+</code></pre>
+<p>The code below selects occupation data from 1995 and omits unclassified occupations 
+and those with no data.</p>
+<pre><code class="language-html">#' Select bottom level data of interest
+with(occgen, head(occgen[Level == 4 & CensusYear==1995,c("OccMinor","Gender","Number")]))
+
+#>    OccMinor Gender Number
+#> 4         1 Female  21596
+#> 5         2 Female   1716
+#> 7         3 Female   6065
+#> 8         4 Female    458
+#> 9         5 Female   7216
+#> 10        6 Female   8662
+
+#' Exclude unclassified
+occgen95 <- with(occgen,occgen[Level == 4 & CensusYear==1995 & OccMinor != 293,
+c("OccMinor","Gender","Number")])
+#' Remove NA rows
+na.omit(occgen95)
 </code></pre>
 </article>
 </main>
