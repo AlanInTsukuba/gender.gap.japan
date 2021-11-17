@@ -200,12 +200,53 @@ with(occgen95, mutual_total(occgen95,"Gender","OccMinor",weight="Number",
 <h2>Between-Within decomposition</h2>
 <p>In his walkthough, Elbers looks at segregation by state. In Elbers(2021), he looks at gender 
 segregation by major occupation group in the United States. Here I look at gender segregation 
-by major occupational group in Japan using <i>occgen95</i>, showing just the M results for simplicity.</p>
+by major occupational group in Japan using <i>occgen95</i>.</p>
 <pre><code class="language-html">#'   between-within decompositon
 split_occgen95 <- with(occgen95, split(occgen95, occgen95$OccMajor))
 with(split_occgen95, mutual_total(split_occgen95$A,"Gender","OccMinor",weight="Number"))
 #>    stat       est
 #> 1:    M 0.3040988
+#> 2:    H 0.4471984
+with(split_occgen95, mutual_total(split_occgen95$B,"Gender","OccMinor",weight="Number"))
+#>    stat       est
+#> 1:    M 0.02105742
+#> 2:    H 0.06680864
+with(split_occgen95, mutual_total(split_occgen95$C,"Gender","OccMinor",weight="Number"))
+#>    stat       est
+#> 1:    M 0.02103788
+#> 2:    H 0.03168898
+with(split_occgen95, mutual_total(split_occgen95$D,"Gender","OccMinor",weight="Number"))
+#>    stat       est
+#> 1:    M 0.1556505
+#> 2:    H 0.2362243
+with(split_occgen95, mutual_total(split_occgen95$E,"Gender","OccMinor",weight="Number"))
+#>    stat       est
+#> 1:    M 0.06525243
+#> 2:    H 0.09973051
+with(split_occgen95, mutual_total(split_occgen95$F,"Gender","OccMinor",weight="Number"))
+#>    stat       est
+#> 1:    M 0.01030613
+#> 2:    H 0.05530293
+with(split_occgen95, mutual_total(split_occgen95$G,"Gender","OccMinor",weight="Number"))
+#>    stat       est
+#> 1:    M 0.02761960
+#> 2:    H 0.04039443
+with(split_occgen95, mutual_total(split_occgen95$H,"Gender","OccMinor",weight="Number"))
+#>    stat       est
+#> 1:    M 0.07490675
+#> 2:    H 0.36327622
+with(split_occgen95, mutual_total(split_occgen95$I_1,"Gender","OccMinor",weight="Number"))
+#>    stat       est
+#> 1:    M 0.1629745
+#> 2:    H 0.2517774
+with(split_occgen95, mutual_total(split_occgen95$I_2,"Gender","OccMinor",weight="Number"))
+#>    stat       est
+#> 1:    M 0.00346329
+#> 2:    H 0.05465039
+with(split_occgen95, mutual_total(split_occgen95$I_3,"Gender","OccMinor",weight="Number"))
+#>    stat       est
+#> 1:    M 0.1594596
+#> 2:    H 0.2905183
 </code></pre>
 </article>
 </main>
