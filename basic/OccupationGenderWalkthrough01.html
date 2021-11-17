@@ -96,8 +96,7 @@ target="_blank">Elbers</a></cite>
 <p>Elbers's <a href="https://elbersb.github.io/segregation/articles/segregation.html" 
 target="_blank">walkthrough</a> uses data about racial groups and schools. 
 <a href="https://osf.io/8uyej/" target="_blank">Supplemental materials</a> for Elbers (2021) contain and example 
-applied to occupational segregation, but his walkthrough contains more detail about the functions in the 
-segregation package.</p>
+applied to occupational segregation.</p>
 <p>This walkthrough uses data about gender and 
 occupation taken from the 1995 and 2000 Japan Population Censuses. This dataset can be downloaded from 
 this project's <a href="https://github.com/AlanInTsukuba/tsukuba-segregation/tree/main/inst/extdata">repository</a>. 
@@ -160,6 +159,31 @@ occgen95 <- with(occgen,occgen[Level == 4 & CensusYear==1995 & OccMinor != 293,
 c("OccMinor","Gender","Number")])
 #' Remove NA rows
 na.omit(occgen95)
+</code></pre>
+</article>
+<article>
+<h2>Computing M and H indices</h2>
+<p>Use <a href="https://elbersb.github.io/segregation/reference/mutual_total.html" target="blank">mutual_total()</a> to 
+compute M and H.</p>
+<pre><code class="language-html">#' Compute M and H indices
+with(occgen95, mutual_total(occgen95,"Gender","OccMinor",weight="Number"))
+
+#>    stat       est
+#> 1:    M 0.1921583
+#> 2:    H 0.2856683
+</code></pre>
+<p>M is not normalized so cannot be easily interpreted, but H is normalized and ranges between 0 and 1. 
+Elbers (2021) looked at occupational gender segregation in the United States between 1990 and 2016. For 369 
+occupations in 1990, he found an H of 31%, a value not very different from the 29% for 292 occupations in Japan 
+in 1995.</p>
+<p>H depends on the order of the groups and units in 
+<a href="https://elbersb.github.io/segregation/reference/mutual_total.html" target="blank">mutual_total()</a>. 
+Switching their order changes the H index, but not the M index.</p>
+<pre><code class="language-html">with(occgen95, mutual_total(occgen95,"OccMinor","Gender",weight="Number"))
+
+#>    stat        est
+#> 1:    M 0.19215829
+#> 2:    H 0.04423054
 </code></pre>
 </article>
 </main>
