@@ -304,6 +304,18 @@ The total within component can be obtained with the following sums:</p>
 #> [1] 0.1217377
 with(within, sum(M * p * ent_ratio))
 #> [1] 0.1149832</code></pre>
+<p>which is exactly the same as before. The quantity <span class="math inline">\(p_s M(\mathbf{T}_s)\)</span> 
+shows how much the major occupational groups contribute to the total segregation, when taking their size 
+into account. The contributions of all of the components can be obtained by adding the between component:</p>
+<pre><code class="language-html">#' add the between component and get all contributions
+#' merge into a vector
+components <- c(between$est[1], within$M * within$p)
+names(components) <- c("Between", "A", "B", "C","D","E","F","G","H","I_1","I_2","I_3")
+signif(100 * components / total$est[1], 3)
+#> Between       A       B       C       D       E       F       G       H 
+#> 36.6000 20.2000  0.4670  2.1300 12.2000  2.7100  0.0803  0.8590  1.4900 
+#>     I_1     I_2     I_3 
+#> 15.4000  0.0298  7.8800 </code></pre>
 </article>
 </main>
 <div id="references" class="section level2">
