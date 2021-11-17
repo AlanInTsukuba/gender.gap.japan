@@ -130,8 +130,8 @@ head(occgen)
 #> 1       1995       JP     NA       NA     0
 #> 2       1995        A     NA       NA     1
 #> 3       1995        A      1       NA     3
-#> 4       1995        A     NA        1     4
-#> 5       1995        A     NA        2     4
+#> 4       1995        A      1        1     4
+#> 5       1995        A      1        2     4
 #> 6       1995        A      2       NA     3
 #>                                     Title Gender   Number
 #> 1              All Japan, all occupations Female 25635727
@@ -146,13 +146,13 @@ and those with no data.</p>
 <pre><code class="language-html">#' Select bottom level data of interest
 with(occgen, head(occgen[Level == 4 & CensusYear==1995,c("OccMinor","Gender","Number")]))
 
-#>    OccMinor Gender Number
-#> 4         1 Female  21596
-#> 5         2 Female   1716
-#> 7         3 Female   6065
-#> 8         4 Female    458
-#> 9         5 Female   7216
-#> 10        6 Female   8662
+#>    OccMajor OccMinor Gender Number
+#> 4         A        1 Female  21596
+#> 5         A        2 Female   1716
+#> 7         A        3 Female   6065
+#> 8         A        4 Female    458
+#> 9         A        5 Female   7216
+#> 10        A        6 Female   8662
 
 #' Exclude unclassified
 occgen95 <- with(occgen,occgen[Level == 4 & CensusYear==1995 & OccMinor != 293,
@@ -192,8 +192,8 @@ with(occgen95, mutual_total(occgen95,"Gender","OccMinor",weight="Number",
 
 #> 500 bootstrap iterations on 63797997 observations
 #>    stat       est           se                  CI         bias
-#> 1:    M 0.1921549 6.299670e-05 0.1920412,0.1922746 3.373920e-06
-#> 2:    H 0.2856635 9.228568e-05 0.2854804,0.2858422 4.805942e-06
+#> 1:    M 0.1921595 6.237659e-05 0.1920392,0.1922847 -1.215691e-06
+#> 2:    H 0.2856696 9.163858e-05 0.2854912,0.2858595 -1.272759e-06
 </code></pre>
 </article>
 </main>
