@@ -185,6 +185,16 @@ Switching their order changes the H index, but not the M index.</p>
 #> 1:    M 0.19215829
 #> 2:    H 0.04423054
 </code></pre>
+<p>Standard errors and confidence intervals are obtained with bootstrapping.</p>
+<pre><code class="language-html">#' Using bootstrap error computation
+with(occgen95, mutual_total(occgen95,"Gender","OccMinor",weight="Number",
+             se = TRUE, CI = .95, n_bootstrap = 500))
+
+#> 500 bootstrap iterations on 63797997 observations
+#>    stat       est           se                  CI         bias
+#> 1:    M 0.1921549 6.299670e-05 0.1920412,0.1922746 3.373920e-06
+#> 2:    H 0.2856635 9.228568e-05 0.2854804,0.2858422 4.805942e-06
+</code></pre>
 </article>
 </main>
 <div id="references" class="section level2">
