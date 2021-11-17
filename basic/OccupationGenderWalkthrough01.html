@@ -196,6 +196,18 @@ with(occgen95, mutual_total(occgen95,"Gender","OccMinor",weight="Number",
 #> 2:    H 0.2856696 9.163858e-05 0.2854912,0.2858595 -1.272759e-06
 </code></pre>
 </article>
+<article>
+<h2>Between-Within decomposition</h2>
+<p>In his walkthough, Elbers looks at segregation by state. In Elbers(2021), he looks at gender 
+segregation by major occupation group in the United States. Here I look at gender segregation 
+by major occupational group in Japan using <i>occgen95</i>, showing just the M results for simplicity.</p>
+<pre><code class="language-html">#'   between-within decompositon
+split_occgen95 <- with(occgen95, split(occgen95, occgen95$OccMajor))
+with(split_occgen95, mutual_total(split_occgen95$A,"Gender","OccMinor",weight="Number"))
+#>    stat       est
+#> 1:    M 0.3040988
+</code></pre>
+</article>
 </main>
 <div id="references" class="section level2">
 <h2 class="hasAnchor">
