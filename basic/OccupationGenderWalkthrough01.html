@@ -462,6 +462,75 @@ local <- mutual_local(occgen95, "Gender", "OccMinor", weight = "Number",
 ls_occ <- attr(local, "bootstrap")[OccMinor == 36 & stat == "ls", boot_est]
 hist(ls_occ, main = "Bootstrap distribution for secondary school teachers")</code></pre>
 <p><img src="images/BootstrapDistSecondarySchoolTeachers.png" width="700"></p>
+<p>The bootstrap distribution is skewed for this occupation. The standard error should not 
+be interpreted for it for precise inference, and the confidence interval should only be 
+interpreted when the number of bootstrap iterations is large.</p>
+<p>If the contingency table is too small for reliable segregation estimates, the function 
+<code><a href="https://elbersb.github.io/segregation/reference/mutual_expected.html" target="blank">mutual_expected()</a></code> 
+simulates random cell counts independently of marginal distributions.</p>
+<pre><code class="language-html">with(occgen95, mutual_expected(occgen95, "Gender","OccMinor",weight="Number",
+	n_bootstrap = 500))
+#>    stat       est           se
+#> 1: M under 0 2.280157e-06 1.971651e-07
+#> 2: H under 0 3.389751e-06 2.931116e-07</code></pre>
+</article>
+<article>
+<h2>Decomposing differences in indices</h2>
+<blockquote>
+<p>The command 
+<code><a href="https://elbersb.github.io/segregation/reference/mutual_difference.html" target="blank">mutual_difference()</a></code> 
+can be used to decompose differences in segregation, as described in Elbers (2021). The default, and 
+recommended method, is to use <code>method = shapley</code> (or <code>method = shapley_detailed</code>). 
+The other methods (<code>mrc</code>, <code>km</code>) exist mostly for testing purposes, and are not 
+recommended. Details on the procedure and how to interpret the terms of the decomposition are found in 
+Elbers (2021).</p>
+<cite><a href="https://elbersb.github.io/segregation/articles/segregation.html" 
+target="_blank">Elbers</a></cite>
+</blockquote>
+<p>For this workthrough, I compare segregation for the 1995 and 2000 population censuses. 
+<code><a href="https://elbersb.github.io/segregation/reference/mutual_difference.html" target="blank">Mutual_difference()</a></code> 
+decomposes the difference into 5 components. <code>Additions</code> and <code>removals</code> give the contributions of 
+new and removed units, in this case occupations. The lists of occupations for 1995 and 2000 are the same 
+so there will be no contributions from these components in this example. Changes in total 
+gender composition are reflected in <code>group_marginal</code> and changes in 
+occupation membership composition are reflected in <code>unit_marginal</code>. Changes in gender 
+composition within occupations will be reflected in <code>structural</code>.</p>
+<pre><code class="language-html">#' Decomposing differences in indices
+#' Compare 1995 and 2000 censuses.
+#' First create the dataframe for 2000 
+occgen2000 <- with(occgen,occgen[Level == 4 & CensusYear==2000 & OccMinor != 293,
+c("OccMajor","OccMinor","Gender","Number")])
+#' Remove NA rows
+na.omit(occgen2000)
+
+mutual_difference(occgen95, occgen2000, "Gender","OccMinor",weight="Number")
+            
+#>              stat           est
+#> 1:             M1  0.1921582894
+#> 2:             M2  0.1890423190
+#> 3:           diff -0.0031159704
+#> 4:      additions  0.0000000000
+#> 5:       removals  0.0000000000
+#> 6: group_marginal  0.0023852848
+#> 7:  unit_marginal -0.0008030578
+#> 8:     structural -0.0046981974
+
+#' Get the confidence intervals
+mutual_difference(occgen95, occgen2000, "Gender","OccMinor",weight="Number",
+		se = TRUE, CI = 0.95, n_bootstrap = 500)
+#>    stat       est           se                  CI         bias
+#> 1:             M1  1.921598e-01 6.176532e-05       0.1920459,0.1922851 -1.502842e-06
+#> 2:             M2  1.890383e-01 6.719240e-05         0.188910,0.189166  4.067631e-06
+#> 3:           diff -3.121541e-03 9.412480e-05 -0.003295979,-0.002938425  5.570473e-06
+#> 4:      additions  5.551115e-20 1.241267e-18                       0,0 -5.551115e-20
+#> 5:       removals  0.000000e+00 0.000000e+00                       0,0  0.000000e+00
+#> 6: group_marginal  2.727083e-03 2.613274e-04   0.002271945,0.003253979 -9.003382e-05
+#> 7:  unit_marginal -1.147215e-03 2.602473e-04 -0.001657271,-0.000686574  9.239236e-05
+#> 8:     structural -4.701409e-03 8.364964e-05 -0.004863429,-0.004536118  3.211939e-06</code></pre>
+<p>These results show a small (1.6%) yest significant decrease in segregation. Marginal increases in 
+the share of women in the workforce produced an increase in segregation which was more than offset 
+by structural decreases in segregation within occupations.</p>
+<p>This completes this walkthrough. Now on to Tsukuba data.</p>
 </article>
 </main>
 <div id="references" class="section level2">
