@@ -363,6 +363,24 @@ localoccgen95se <-with(occgen95, mutual_local(occgen95, "Gender","OccMinor",weig
 localoccgen95se$lengthCI <- sapply(localoccgen95se$ls_CI, base::diff)
 with(localoccgen95se, plot(x = p, y = lengthCI, pch = 16, cex = 0.3))</code></pre>
 <p><img src="images/CI_vs_p_localoccgen95se.png" width="700"></p>
+<p>The largest occupations have the shortest confidence intervals. The 8 occupations with more than 2% 
+  population share are listed below.</p>
+<pre><code class="language-html">#' List occupations with shares greater than 2%
+merge(with(occgen,occgen[CensusYear == 1995 & Gender == "Female",c("OccMinor","Title")]),
+localoccgen95se[p > 0.02,c("OccMinor","ls","p")])
+#>   OccMinor                              Title         ls          p
+#> 1       57             Directors of companies 0.16476440 0.02544791
+#> 2       61           General clerical workers 0.07125314 0.14031904
+#> 3       62                  Accounting clerks 0.27254682 0.04310470
+#> 4       73 Shop salespersons and sales clerks 0.12359476 0.05244004
+#> 5       76  Travelling commodity salespersons 0.27483187 0.03744058
+#> 6       90                              Cooks 0.04209085 0.02849340
+#> 7      113         Farmers and sericulturists 0.01099404 0.04826190
+#> 8      129                 Automobile drivers 0.40667934 0.03166273
+
+#' To get confidence intervals, use
+merge(with(occgen,occgen[CensusYear == 1995 & Gender == "Female",c("OccMinor","Title")]),
+localoccgen95se[p > 0.02,c("OccMinor","ls","ls_CI","p","p_CI")])</code></pre>
 </article>
 </main>
 <div id="references" class="section level2">
