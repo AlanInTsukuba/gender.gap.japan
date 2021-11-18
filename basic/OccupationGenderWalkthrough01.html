@@ -362,6 +362,7 @@ localoccgen95se <-with(occgen95, mutual_local(occgen95, "Gender","OccMinor",weig
 #> 1000 bootstrap iterations on 63797997 observations
 localoccgen95se$lengthCI <- sapply(localoccgen95se$ls_CI, base::diff)
 with(localoccgen95se, plot(x = p, y = lengthCI, pch = 16, cex = 0.3))</code></pre>
+<p><img src="images/CI_vs_p_localoccgen95se.png" width="700"></p>
 </article>
 </main>
 <div id="references" class="section level2">
