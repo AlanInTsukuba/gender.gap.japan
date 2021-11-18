@@ -395,6 +395,73 @@ target="_blank">Elbers</a></cite></blockquote>
 #> 1: Female 0.2971974 0.399142
 #> 2:   Male 0.1223822 0.600858</code></pre>
 </article>
+<article>
+<h2>Inference</h2>
+<blockquote>
+<p>The four main functions of the packages, 
+<code><a href="https://elbersb.github.io/segregation/reference/mutual_total.html" target="blank">mutual_total()</a></code>, 
+<code><a href="https://elbersb.github.io/segregation/reference/mutual_within.html" target="blank">mutual_within()</a></code>, 
+<code><a href="https://elbersb.github.io/segregation/reference/mutual_local.html" target="blank">mutual_local()</a></code>, and 
+<code><a href="https://elbersb.github.io/segregation/reference/mutual_difference.html" target="blank">mutual_difference()</a></code> all support inference through 
+bootstrapping. Inference for segregation indices is tricky, and the standard error estimates and confidence 
+intervals should not be trusted too much when there is little data, and especially when the segregation index 
+is very close to either 0 or maximum segregation.</p>
+<p>To estimate standard errors and confidence intervals, use <code>se = TRUE</code>. The coverage of the 
+confidence interval can be specified in the <code>CI</code> argument. The number of bootstrap iterations 
+can be specified as well:</p>
+<cite><a href="https://elbersb.github.io/segregation/articles/segregation.html" 
+target="_blank">Elbers</a></cite>
+</blockquote>
+<pre><code class="language-html">#' Inference
+(se <- with(occgen95, mutual_total(occgen95,"Gender","OccMinor",weight="Number",
+             se = TRUE, CI = .95, n_bootstrap = 500)))
+#> 500 bootstrap iterations on 63797997 observations
+#>    stat       est           se                  CI         bias
+#> 1:    M 0.1921553 6.011835e-05 0.1920404,0.1922738 3.005235e-06
+#> 2:    H 0.2856637 8.741495e-05 0.2855050,0.2858442 4.623086e-06
+</code></pre>
+<blockquote>
+<p>The confidence intervals are based on the percentiles from the bootstrap distribution, and hence require 
+a large number of bootstrap iterations for valid interpretation. The estimate <code>est</code> that is reported 
+in the results has already been “debiased”, i.e. the bias that has been estimated from the bootstrap distribution 
+(which is reported in <code>bias</code>) has been subtracted from the usual maximum-likelihood estimate that we 
+would obtain from <code>mutual_total</code> with <code>se = FALSE</code>. The confidence interval is centered 
+around the debiased estimate.</p>
+<p>On balance, confidence intervals are preferred over the standard error because the bootstrap distribution 
+can be skewed, especially when segregation is very low or very high. For this example, we can see that the 
+standard errors provide almost identical coverage to the confidence intervals, as</p>
+<cite><a href="https://elbersb.github.io/segregation/articles/segregation.html" 
+target="_blank">Elbers</a></cite>
+</blockquote>
+<pre><code class="language-html"># M
+with(se, c(est[1] - 1.96 * se[1], est[1] + 1.96 * se[1]))
+#> [1] 0.1920375 0.1922731
+# H
+with(se, c(est[2] - 1.96 * se[2], est[2] + 1.96 * se[2]))
+#> [1] 0.2854924 0.2858350</code></pre>
+<blockquote><p>provide effectively the same coverage as the confidence intervals obtained from the percentile bootstrap.</p>
+<cite><a href="https://elbersb.github.io/segregation/articles/segregation.html" 
+target="_blank">Elbers</a></cite>
+</blockquote>
+<blockquote>
+<p>Whenever the bootstrap is used, the bootstrap distributions for each parameter are reported in an attribute 
+<code>bootstrap</code> of the returned object. This can be used, for instance, to check whether the bootstrap 
+distribution is skewed. The following code computes local segregation scores for all schools, and then shows 
+a histogram of the bootstrap distribution for school C137_9, which has a very 
+low local segregation score:</p>
+<cite><a href="https://elbersb.github.io/segregation/articles/segregation.html" 
+target="_blank">Elbers</a></cite>
+</blockquote>
+<p>(Here I substitute school C137_9 by OccMinor 36 (Secondary school teachers), which also has a very 
+low local segregation score.)</p>
+<pre><code class="language-html">#' Look at a single occupation. First, get all.
+local <- mutual_local(occgen95, "Gender", "OccMinor", weight = "Number",
+                      se = TRUE, CI = .95, n_bootstrap = 500)
+#> 500 bootstrap iterations on 63797997 observations
+# pick bootstrap distribution of local segregation scores for OccMinor 36
+ls_occ <- attr(local, "bootstrap")[OccMinor == 36 & stat == "ls", boot_est]
+hist(ls_occ, main = "Bootstrap distribution for secondary school teachers")</code></pre>
+</article>
 </main>
 <div id="references" class="section level2">
 <h2 class="hasAnchor">
