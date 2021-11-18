@@ -255,10 +255,11 @@ M(\mathbf{T})=M(\mathbf{S}) + \sum_{s=1}^S p_s M(\mathbf{T}_s),
 H(\mathbf{T})=H(\mathbf{S}) + \sum_{s=1}^S \frac{E(\mathbf{T}_s)}{E(\mathbf{T})} p_s H(\mathbf{T}_s),
 \]</span></p>
 <p>where <span class="math inline">\(E(\cdot)\)</span> is again the entropy of the marginal group distribution. Note that <span class="math inline">\(E(\mathbf{T})=E(\mathbf{S})\)</span>, because the group marginal distributions are identical.</p>
-</blockquote>
+<cite><a href="https://elbersb.github.io/segregation/articles/segregation.html" 
+target="_blank">Elbers</a></cite></blockquote>
 <p>In this walkthrough, I substitute gender for race, occupations for schools, and major occupational groups for 
 states. </p>
-<pre><code class="language-html">#' total segregation
+<pre id="totalseg"><code class="language-html">#' total segregation
 (total <- with(occgen95, mutual_total(occgen95,"Gender","OccMinor",weight="Number")))
 #>    stat       est
 #> 1:    M 0.1921583
@@ -321,6 +322,46 @@ the total segregation even though they hold only 13% of employees.</p>
 </article>
 <article>
 <h2>Local segregation</h2>
+<p>Elbers further provides a decomposition of the M index that lets us look at segregation in individual units 
+(occupations, schools) and groups (gender, race).</p>
+<blockquote>
+<p>The M index (but not the H index) allows for another decomposition, into local segregation scores. To define this decomposition, let <span class="math inline">\(p_{g|u} = t_{ug} / t_{u \cdot}\)</span> be the conditional probability of being in group <span class="math inline">\(g\)</span>, given that one is in unit <span class="math inline">\(u\)</span>. We can then define the <em>local segregation score of unit <span class="math inline">\(u\)</span></em> as</p>
+<p><span class="math display">\[L_u = \sum_{g=1}^G p_{g|u}\log\frac{p_{g|u}}{p_{\cdot g}}\]</span> The weighted average of the <span class="math inline">\(L_u\)</span> is again <span class="math inline">\(M(\mathbf{T})\)</span>, i.e. <span class="math inline">\(M(\mathbf{T}) = \sum_{u=1}^U p_{u\cdot}L_u\)</span>.</p>
+<p>To obtain the local segregation scores <span class="math inline">\(L_u\)</span>, along with the marginal 
+weights <span class="math inline">\(p_{u\cdot}\)</span>, 
+use <code><a href="https://elbersb.github.io/segregation/reference/mutual_local.html" target="blank">mutual_local()</a></code>:</p>
+<cite><a href="https://elbersb.github.io/segregation/articles/segregation.html" 
+target="_blank">Elbers</a></cite></blockquote>
+<pre><code class="language-html">#' Local segregation
+with(occgen95, mutual_local(occgen95, "Gender","OccMinor",weight="Number", wide=TRUE))
+#>      OccMinor         ls            p
+#>   1:        1 0.17792791 0.0026274179
+#>   2:        2 0.08521106 0.0001306781
+#>   3:        3 0.23904515 0.0010283081
+#>   4:        4 0.41632608 0.0003430202
+#>   5:        5 0.40382257 0.0045865390
+#>  ---                                 
+#> 288:      288 0.08925095 0.0036835012
+#> 289:      289 0.02133888 0.0120616169
+#> 290:      290 0.01106637 0.0039019564
+#> 291:      291 0.07130543 0.0113775516
+#> 292:      292 0.08273497 0.0121131232</code></pre>
+<p>The output gives a segregation score (ls) for each of the 292 detailed occupations and the share 
+of people in each occupation (p). The shares sum to 1. And the sum of the local weighted 
+segregation scores equals the <a href="#totalseg">total segregation</a>.</p>
+<pre><code class="language-html">sum(localoccgen95$p)
+#> [1] 1
+with(localoccgen95, sum(ls * p))
+#> [1] 0.1921583</code></pre>
+<p>As analyses become more detailed, sample sizes also shrink and confidence intervals demand more 
+attention. The following code computes and plots the 95% confidence intervals in relation to the 
+size (p) of each occupation.</p>
+<pre><code class="language-html">#' Compute and plot 95% confidence intervals vs occupation size
+localoccgen95se <-with(occgen95, mutual_local(occgen95, "Gender","OccMinor",weight="Number", 
+		wide=TRUE, se = TRUE, n_bootstrap = 1000))
+#> 1000 bootstrap iterations on 63797997 observations
+localoccgen95se$lengthCI <- sapply(localoccgen95se$ls_CI, base::diff)
+with(localoccgen95se, plot(x = p, y = lengthCI, pch = 16, cex = 0.3))</code></pre>
 </article>
 </main>
 <div id="references" class="section level2">
