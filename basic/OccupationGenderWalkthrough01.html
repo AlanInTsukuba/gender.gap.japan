@@ -364,7 +364,7 @@ localoccgen95se$lengthCI <- sapply(localoccgen95se$ls_CI, base::diff)
 with(localoccgen95se, plot(x = p, y = lengthCI, pch = 16, cex = 0.3))</code></pre>
 <p><img src="images/CI_vs_p_localoccgen95se.png" width="700"></p>
 <p>The largest occupations have the shortest confidence intervals. The 8 occupations with more than 2% 
-  population share are listed below.</p>
+  population share are listed below. The merge is to get the titles of the occupations.</p>
 <pre><code class="language-html">#' List occupations with shares greater than 2%
 merge(with(occgen,occgen[CensusYear == 1995 & Gender == "Female",c("OccMinor","Title")]),
 localoccgen95se[p > 0.02,c("OccMinor","ls","p")])
@@ -381,6 +381,19 @@ localoccgen95se[p > 0.02,c("OccMinor","ls","p")])
 #' To get confidence intervals, use
 merge(with(occgen,occgen[CensusYear == 1995 & Gender == "Female",c("OccMinor","Title")]),
 localoccgen95se[p > 0.02,c("OccMinor","ls","ls_CI","p","p_CI")])</code></pre>
+<blockquote><p>Because the M is symmetric, local segregation scores can also be obtained for groups. The equivalent definition for the <em>local segregation score of group <span class="math inline">\(g\)</span></em> is then</p>
+<p><span class="math display">\[L_g = \sum_{u=1}^U p_{u|g}\log\frac{p_{u|g}}{p_{u \cdot}},\]</span></p>
+<p>and, as expected, <span class="math inline">\(M(\mathbf{T}) = \sum_{g=1}^G p_{\cdot g}L_g\)</span>.</p>
+<p>To obtain these scores, switch the group and unit arguments in <code>mutual_local</code>:</p>
+<cite><a href="https://elbersb.github.io/segregation/articles/segregation.html" 
+target="_blank">Elbers</a></cite></blockquote>
+</blockquote>
+<pre><code class="language-html">#' Switch OccMinor and Gender to get segregation by gender
+(localoccgen95g <-with(occgen95, mutual_local(occgen95,"OccMinor", "Gender",weight="Number", 
+		wide=TRUE)))
+#>    Gender        ls        p
+#> 1: Female 0.2971974 0.399142
+#> 2:   Male 0.1223822 0.600858</code></pre>
 </article>
 </main>
 <div id="references" class="section level2">
