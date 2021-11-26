@@ -3,7 +3,7 @@
     <head>
       <!--<meta name="google-site-verification" content="Z7SEnQaO9LAITbhuwGaI3rFtnpMRKeV9BbaW3LyvP2g" />-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="revised" content="15 November 2021" />
+      <meta name="revised" content="26 November 2021" />
         <title>Harmonizing 1985-2005 occupation classifications</title>
 
         <link rel="stylesheet" href="https://latex.now.sh/style.css"> 
@@ -17,7 +17,7 @@ integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="ano
 <body>
 <h1>Harmonizing 1985-2005 occupation classifications used in Japan's Population Census</h1>
 <p class="author"><a href="https://orcid.org/0000-0003-0070-2347" target="_blank">Alan Engel</a><br>Last update: 
-23 November 2021</p>
+26 November 2021</p>
 <main>
 <p>The occupational classifications used in the 1985, 1990, 1995, 2000 and 2005 population censuses 
 slightly differ. In order to compare gender segregation by occupation over this time span, Uchikoshi and 
@@ -25,11 +25,14 @@ Mugiyama (2020) report harmonizing classifications for the 1980 though 2005 popu
 <ul>
 <p>Desired features of coding</p>
 <li>No leading zeros so that sorting as numbers and sorting as text produce the same results</li>
-<li>Maintain same ordering as 2005 population census.</li>
+<li>Maintain same ordering as for the <a href="https://www.stat.go.jp/english/data/kokusei/2005/syokugyo.html" class="uri">2005 population census</a>.</li>
 <li>Enable "group by" aggregation of detailed occupations to produce mid-level and top level 
 occupation class totals.</li>
-<li>Codes of "not otherwise classified" categories end in "99".</li>
+<li>Correspondence table should support merging with data downloaded from 
+<a href="https://www.e-stat.go.jp/" class="uri">e-Stat (https://www.e-stat.go.jp/)</a></li>
 </ul>
+<p>The harmonized occupation classification and correspondence table can be downloaded from 
+this project's <a href="https://github.com/AlanInTsukuba/tsukuba-segregation/tree/main/inst/extdata" target="blank">repository</a>.</p>
 </main>
 <div id="references" class="section level2">
 <h2 class="hasAnchor">
