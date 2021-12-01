@@ -41,15 +41,42 @@ integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="ano
   <p>The codes in columns A, C, E, G and I appear to be specific to 
     <a href="https://www.e-stat.go.jp/api/api-info/e-stat-manual3-0">e-Stat's query language and API</a>. (An 
   example of using R to query e-Stat is at 
-  <a href="https://qiita.com/nozma/items/778843c757e42a4a63a4">https://qiita.com/nozma/items/778843c757e42a4a63a4</a>. Using it will 
+  <a href="https://qiita.com/nozma/items/778843c757e42a4a63a4">https://qiita.com/nozma/items/778843c757e42a4a63a4</a>. Using the API will 
 be left to a future task.)</p>
 <p>The first subtask is to create a column that can be used as a basis for constructing the harmonized occupation classification 
   and to merge this data with it. This column can be created from the census year (column J) and the occupation numbers 
 given in column H. The cat03_code numbers in column G are an alternative to the occupation numbers, but aren't used here because 
 they appear to be specific to this dataset.</p>
 <p>First, correct a "feature" of this file. The occupation numbers of the first 9 occupations are in wide characters. These 
-  must be corrected to ASCII numerals. The easiest way to do this is to use a plain text editor such as Notepad.
+  must be corrected to ASCII numerals. The easiest way to do this is to use a plain text editor such as Notepad. So far, I have 
+  only observed this feature in this download from the 2000 census, but researchers should be aware that it may exist elsewhere.
+  (The <a href="../inst/extdata/2000_totals_minor_occupations.csv">CSV file in the repository</a> is the corrected version.)
 </p>
+<p>The remainder of this task is done in Microsoft Excel.</p>
+<p>The CSV file 2000_totals_minor_occupations.csv is imported into Excel, a new worksheet created with its first three 
+  columns labeled 'OccCode', 'Gender' and 'value'.
+</p>
+<figure>
+  <img src="images/Preprocessing02.png"
+        loading="lazy" alt="Import CSV into Excel and create new worksheet" width="600" height="500" />
+      <figcaption>Import CSV into Excel and create new worksheet</figcaption>
+</figure>
+<p>Under OccCode, make an occupation code by concatenating the census year, zero padding, and the occupation number.</p>
+<pre><code class="language-html">=CONCATENATE(LEFT('2000_totals_minor_occupations'!J2,4),"00",LEFT('2000_totals_minor_occupations'!H2,1))</code></pre>
+<p>Use the conditional IF to select 'MALE' or 'FEMALE' under Gender. Simply copy the value.</p>
+<pre><code class="language-html">=IF('2000_totals_minor_occupations'!F2="男","MALE","FEMALE")</code></pre>
+<p>These cells can be replicated down the length of the dataset. The function for computing OccCode must be 
+  modified for 2-digit and 3-digit occupation numbers.
+</p>
+<pre><code class="language-html">=CONCATENATE(LEFT('2000_totals_minor_occupations'!J11,4),"0",LEFT('2000_totals_minor_occupations'!H11,2))
+and
+  =CONCATENATE(LEFT('2000_totals_minor_occupations'!J101,4),LEFT('2000_totals_minor_occupations'!H101,3))
+</code></pre>
+<figure>
+  <img src="images/Preprocessing03.png"
+        loading="lazy" alt="Extracted worksheet" width="600" height="500" />
+      <figcaption>Extracted worksheet</figcaption>
+</figure>
 </main>
 </body>
 </html>
