@@ -19,7 +19,37 @@ integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="ano
 <p class="author"><a href="https://orcid.org/0000-0003-0070-2347" target="_blank">Alan Engel</a><br>Last update: 
 30 November 2021</p>
 <main>
-
+  <p>This image of the top rows from the year 2000 dataset show the columns of interest and tasks that 
+    need to be performed to prepare this data for use in harmonizing the occupation classifications and 
+    import the data into R.
+  </p>
+  <figure>
+      <img src="images/Preprocessing01.png"
+            loading="lazy" alt="Top rows of 2000 data file" width="600" height="500" />
+          <figcaption>Top rows of 2000 data file</figcaption>
+  </figure>
+  <ul>
+    <p>The columns of interest are as follows:</p>
+    <li><b>B</b> gives the name of the statistic, which is number of employees.</li>
+    <li><b>D</b> gives the status of employment, which in this case is the total for all statuses.</li>
+    <li><b>F</b> gives the gender.</li>
+    <li><b>H</b> lists the minor occupations including their 
+      <a href="https://www.stat.go.jp/english/data/kokusei/2000/syokugyo.html">numbers as used in the 2000 population census</a>.</li>
+    <li><b>J</b> gives the census year.</li>
+    <li><b>L</b> gives the value of this statistic.</li> 
+  </ul>
+  <p>The codes in columns A, C, E, G and I appear to be specific to 
+    <a href="https://www.e-stat.go.jp/api/api-info/e-stat-manual3-0">e-Stat's query language and API</a>. (An 
+  example of using R to query e-Stat is at 
+  <a href="https://qiita.com/nozma/items/778843c757e42a4a63a4">https://qiita.com/nozma/items/778843c757e42a4a63a4</a>. Using it will 
+be left to a future task.)</p>
+<p>The first subtask is to create a column that can be used as a basis for constructing the harmonized occupation classification 
+  and to merge this data with it. This column can be created from the census year (column J) and the occupation numbers 
+given in column H. The cat03_code numbers in column G are an alternative to the occupation numbers, but aren't used here because 
+they appear to be specific to this dataset.</p>
+<p>First, correct a "feature" of this file. The occupation numbers of the first 9 occupations are in wide characters. These 
+  must be corrected to ASCII numerals. The easiest way to do this is to use a plain text editor such as Notepad.
+</p>
 </main>
 </body>
 </html>
