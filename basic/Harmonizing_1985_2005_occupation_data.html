@@ -93,11 +93,51 @@ in the 2005 census. </p>
         <figcaption>New occupations</figcaption>
 </figure>
 </li>
+<li><p>Where occupations have been removed from the classification, they are aggregated into the not otherwise 
+  classified (NOC) slot for that mid-level group if one exists. Otherwise it is replaced by NA. Elbers's (2021) segregation 
+  package accomodates omitted occupations. 
+</p>
+<p>The mid-level group food, beverage and tobacco workers presents a special case. Tobacco workers 
+  were not in this group in 1985, and was one NOC category for the group. In 1990, tobacco workers were moved into 
+  this group and the group split into a mid-level food workers group and mid-level beverage and tobacco workers group. 
+  Each of the latter groups has an NOC category. For this harmonization, these two mid-level groups were recombined and 
+  the NOC groups coded for aggregation.
+</p>
+<figure>
+  <img src="images/HarmonizingOccupations05.png"
+        loading="lazy" alt="Splitting of food, beverages and tobacco mid-level group" width="600" height="500" />
+      <figcaption>Splitting of food, beverages and tobacco mid-level group</figcaption>
+</figure>
+</li>
 </ul>
+<p>Finally, a hierarchical numbering scheme of major, mid and minor occupations is created by deriving 
+  the minor level OccMinor from OccCodeAgg, and adding OccMajor, OccSub and OccMid codes to be compatible with 
+  the occupation levels used for the Population Census of Japan. The added OccSub level reflects the fact 
+  that the population census classifications actually have 4 levels. 
+</p>
+<figure>
+  <img src="images/HarmonizingOccupations06.png"
+        loading="lazy" alt="Creating hierarchical occupational numbering scheme" width="600" height="500" />
+      <figcaption>Creating hierarchical occupational numbering scheme</figcaption>
+</figure>
+<p>The csv file is created by hiding column OccCodeAgg, copying all cells to a new spreadsheet while saving formula as 
+  values, and saving the new spreadsheet in csv format. 
+</p>
+<blockquote>
+  <ol>
+    <h4>Datasets:</h4>
+    <li><a href="/inst/extdata/HarmonizedOccupationClasses1985-2005.csv">Harmonized occupational classes in CSV format</a></li>
+    <li>For public critique, the <a href="/basic/data/Harmonized Occupation Classes 1985-2005.xlsx">XSLX spreadsheet</a> used 
+      for this task.</li>
+  </ol>
+</blockquote>
 </main>
 <div id="references" class="section level2">
 <h2 class="hasAnchor">
 <a href="#references" class="anchor"></a>References</h2>
+<p>Elbers, B. (2021). A Method for Studying Differences in Segregation Across Time and Space. 
+  Sociological Methods &amp; Research. <a href="https://doi.org/10.1177/0049124121986204" 
+  class="uri">doi:10.18637/jss.v089.i07</a></p>
 <p>Uchikoshi, Fumiya, Ryota Mugiyama. (2020) Trends in Occupational Sex Segregation in Japan: 
   A Decomposition Analysis of Census Data, 1980-2005. 
 Japanese Journal of Population Studies. 2020. 56. 9-23 
