@@ -2,7 +2,7 @@ authors:
     - family-names: Engel
       given-names: Alan
       orcid: "https://orcid.org/0000-0003-0070-2347"
-cff-version: 1.0.1
+cff-version: 1.2.0
 message: Project in early version, please do not cite.
 title: Tsukuba and Segregation
 type: dataset
@@ -10,3 +10,41 @@ contact:
     - email: "ttcrossroads09@gmail.com"
       family-names: Engel
       given-names: Alan
+references:
+  - authors:
+      - family-names: Brinton
+        given-names: Mary C.
+      - family-names: Ngo
+        given-names: Hang-Yue
+    title: “Age and Sex in the Occupational Structure: A United States-Japan Comparison” 
+    type: article
+    journal: "Sociological Forum"
+    volume: 8
+    issue: 1
+    publisher:
+      name: "Wiley, Springer"
+    year: 1993
+    pages: 93–111
+    url: "http://www.jstor.org/stable/684286"
+  - authors:
+      - family-names: Duncan
+        given-names: Otis Dudley
+      - family-names: Duncan
+        given-names: Beverly
+    title: “A Methodological Analysis of Segregation Indexes” 
+    type: article
+    journal: "American Sociological Review"
+    volume: 20
+    issue: 2
+    year: 1955
+    pages: 210–217
+    url: "https://www.jstor.org/stable/2088328"
+  - authors:
+      - family-names: Elbers
+        given-names: Benjamin
+    title: “A Method for Studying Differences in Segregation Across Time and Space” 
+    type: article
+    journal: "Sociological Methods &amp; Research"
+    issue: February
+    year: 2021
+    doi: "10.1177/0049124121986204"
