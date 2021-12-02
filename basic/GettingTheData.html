@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <!--<meta name="google-site-verification" content="Z7SEnQaO9LAITbhuwGaI3rFtnpMRKeV9BbaW3LyvP2g" />-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="revised" content="26 November 2021" />
+        <title>Getting the data for harmonizing 1985-2005 occupation classifications</title>
+
+        <link rel="stylesheet" href="https://latex.now.sh/style.css"> 
+        <link rel="stylesheet" href="https://alanintsukuba.github.io/ShowReferencesModal.css"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css">
+<!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" 
+integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" 
+integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]-->    
+</head>
+<body>
+<h1>Getting the data for harmonizing 1985-2005 occupation classifications</h1>
+<p class="author"><a href="https://orcid.org/0000-0003-0070-2347" target="_blank">Alan Engel</a><br>Last update: 
+30 November 2021</p>
+<main>
+<article>
+    <p>Several time series datasets covering labor force status and employment are the  
+ <a href="https://www.e-stat.go.jp/stat-search/files?page=1&layout=datalist&toukei=00200521&tstat=000001011777&cycle=0&tclass1=000001011807&tclass2val=0">
+     e-Stat website
+ </a>.
+The database giving national population totals by minor occupation, employment status and gender for persons 
+aged 15 and older are in Table 9 at the very bottom of that page. The link takes you to 
+<a href="https://www.e-stat.go.jp/stat-search/database?page=1&layout=datalist&stat_infid=000001086332">a list of 
+datasets</a> for censuses carried out between 1985 and 2015. </p>
+<figure>
+    <img src="images/OccupationTimeSeriesDataList.png"
+          loading="lazy" alt="Time series dataset list" width="600" height="400" />
+        <figcaption>
+          Time series dataset list</a>.
+        </figcaption>
+</figure>
+<p>Clicking on the DB link displays the full table. The left column lists the occupations at the major, mid and minor 
+    class levels. The next set of 7 columns gives population numbers by occupation status for both genders: total, 
+    employees, officers, self-employed with employees, self-employed without employees, unpaid employees of family 
+    businesses and household workers. The next 
+    set of 7 columns gives the numbers for males followed by the numbers for females. To select items for download, 
+    click in the red box at upper left.
+</p>
+<figure>
+    <img src="images/OccupationTable.png"
+          loading="lazy" alt="Occupation table" width="600" height="400" />
+        <figcaption>
+          Occupation table</a>.
+        </figcaption>
+</figure>
+<p>The data item selection panel has 5 rows in this case. For this task, I will select only the total occupation status numbers 
+    (row 2), male and female (row 3), and the minor occupations (row 4). Click on the button at the right of row 2.
+</p>
+<figure>
+    <img src="images/DataItemSelection.png"
+          loading="lazy" alt="Data item selection" width="600" height="400" />
+        <figcaption>
+            Data item selection</a>.
+        </figcaption>
+</figure>
+<p>The popup displays with all items selected. Deselect all by clicking on the 
+    reverse button at lower right, then select totals as indicated by the arrow at left. 
+    Finally click on the confirm button at bottom.
+</p>
+<figure>
+    <img src="images/OccupationStatusItemSelection.png"
+          loading="lazy" alt="Occupation status item selection" width="600" height="500" />
+        <figcaption>
+            Occupation status item selection</a>.
+        </figcaption>
+</figure>
+<p>Repeat this to deselect gender by clicking on the button at the right of row 3. Deselect 
+    the top item and click on confirm.
+</p>
+<figure>
+    <img src="images/GenderSelection.png"
+          loading="lazy" alt="Gender selection" width="600" height="500" />
+        <figcaption>
+            Gender selection</a>.
+        </figcaption>
+</figure>
+<p>Selecting occupations is a bit more complicated. When the occupation panel is selected by clicking 
+    on the button in row 4 of the data item selection panel, the panel displays a hierarchical tree 
+    of the occupation catagories. Each level can be selected with two clicks by selecting one member 
+    of that level (1), then clicking on the button at 2. This selects all in that level. (You can 
+    deselect all in the level by clicking on the button to the right of the select button.) However, see 
+    the TIP below for a quirk found for some years.
+</p>
+<figure>
+    <img src="images/OccupationSelection1.png"
+          loading="lazy" alt="Occupation selection (panel 1)" width="600" height="500" />
+        <figcaption>
+            Occupation selection (panel 1)</a>.
+        </figcaption>
+</figure>
+<blockquote>
+<p><b>TIP: </b>For years 2005 and 2010, the submajor classes I-1, I-2 and I-3 are inserted under 
+their major class I. This pushes the mid and minor layers down one level, so that selecting all of the 
+minor categories at top select the mid layer under I (panel 2). </p>
+<figure>
+    <img src="images/OccupationSelection2.png"
+          loading="lazy" alt="Occupation selection (panel 2)" width="600" height="500" />
+        <figcaption>
+            Occupation selection (panel 2)</a>.
+        </figcaption>
+</figure>
+<p>To correctly select the minor layers under I, you can select the underlying minor layers as above, but 
+    have to deselect the mid layer item by item.
+</p>
+<figure>
+    <img src="images/OccupationSelection3.png"
+          loading="lazy" alt="Occupation selection (panel 3)" width="600" height="500" />
+        <figcaption>
+            Occupation selection (panel 3)</a>.
+        </figcaption>
+</figure>
+</blockquote>
+<p>After completing these selections, we have 1/7 occupation status item, 2/3 gender items and 274/349 minor level occupations. 
+    Reflecting slightly varying occupation classifications, this latter number may vary by census year.
+</p>
+<p>Click on "confirm (確認)" to complete and close this panel.</p>
+<figure>
+    <img src="images/DataItemSelection2.png"
+          loading="lazy" alt="Confirm data item selection" width="600" height="500" />
+        <figcaption>Confirm data item selection</figcaption>
+</figure>
+<p >The main table now has male and female totals by minor occupation. Click on the download button at upper right 
+    <img src="images/downloadbutton.PNG" width=80 height=30  style="display: inline-block;"/>.
+</p>
+<figure>
+    <img src="images/FinalTable.PNG"
+          loading="lazy" alt="Main table after data item selection" width="500" height="700" />
+        <figcaption>Main table after data item selection</figcaption>
+</figure>
+<p>The download format panel lets you select wide CSV, long CSV, or wide XLSX format. Wide CSV is the default. Also, 
+    the default symbol for missing data is a dash '-'. This can be changed to 'NA' in the listbox near the bottom.
+    Click on the download button at bottom 
+    <img src="images/downloadbutton.PNG" width=80 height=30  style="display: inline-block;"/> to save your selected data.
+</p>
+<figure>
+    <img src="images/DownloadPanel.PNG"
+          loading="lazy" alt="Download format panel" width="600" height="1000" />
+        <figcaption>Download format panel</figcaption>
+</figure>
+<p>The resulting dataset can be downloaded <a href="../inst/extdata/2005_totals_minor_occupations.csv">here</a>.
+(If your browser attempts to retype this as an xls file, force the type back to csv.) The <a href="PreprocessingTheData.html">next page 
+on preprocessing the data</a> uses a similarly 
+<a href="../inst/extdata/2000_totals_minor_occupations.csv">downloaded file with 2000 data</a>.</p>
+</article>
+</main>
+</body>
+</html>

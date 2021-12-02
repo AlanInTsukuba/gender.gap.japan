@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <!--<meta name="google-site-verification" content="Z7SEnQaO9LAITbhuwGaI3rFtnpMRKeV9BbaW3LyvP2g" />-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="revised" content="26 November 2021" />
+        <title>Preprocessing data for harmonizing 1985-2005 occupation classifications</title>
+
+        <link rel="stylesheet" href="https://latex.now.sh/style.css"> 
+        <link rel="stylesheet" href="https://alanintsukuba.github.io/ShowReferencesModal.css"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css">
+<!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" 
+integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" 
+integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]-->    
+</head>
+<body>
+<h1>Preprocessing data for harmonizing 1985-2005 occupation classifications</h1>
+<p class="author"><a href="https://orcid.org/0000-0003-0070-2347" target="_blank">Alan Engel</a><br>Last update: 
+30 November 2021</p>
+<main>
+  <p>This image of the top rows from the year 2000 dataset show the columns of interest and tasks that 
+    need to be performed to prepare this data for use in harmonizing the occupation classifications and 
+    import the data into R.
+  </p>
+  <figure>
+      <img src="images/Preprocessing01.png"
+            loading="lazy" alt="Top rows of 2000 data file" width="600" height="500" />
+          <figcaption>Top rows of 2000 data file</figcaption>
+  </figure>
+  <ul>
+    <p>The columns of interest are as follows:</p>
+    <li><b>B</b> gives the name of the statistic, which is number of employees.</li>
+    <li><b>D</b> gives the status of employment, which in this case is the total for all statuses.</li>
+    <li><b>F</b> gives the gender.</li>
+    <li><b>H</b> lists the minor occupations including their 
+      <a href="https://www.stat.go.jp/english/data/kokusei/2000/syokugyo.html">numbers as used in the 2000 population census</a>.</li>
+    <li><b>J</b> gives the census year.</li>
+    <li><b>L</b> gives the value of this statistic.</li> 
+  </ul>
+  <p>The codes in columns A, C, E, G and I appear to be specific to 
+    <a href="https://www.e-stat.go.jp/api/api-info/e-stat-manual3-0">e-Stat's query language and API</a>. (An 
+  example of using R to query e-Stat is at 
+  <a href="https://qiita.com/nozma/items/778843c757e42a4a63a4">https://qiita.com/nozma/items/778843c757e42a4a63a4</a>. Using the API will 
+be left to a future task.)</p>
+<p>The first subtask is to create a column that can be used as a basis for constructing the harmonized occupation classification 
+  and to merge this data with it. This column can be created from the census year (column J) and the occupation numbers 
+given in column H. The cat03_code numbers in column G are an alternative to the occupation numbers, but aren't used here because 
+they appear to be specific to this dataset.</p>
+<p>First, correct a "feature" of this file. The occupation numbers of the first 9 occupations are in wide characters. These 
+  must be corrected to ASCII numerals. The easiest way to do this is to use a plain text editor such as Notepad. So far, I have 
+  only observed this feature in this download from the 2000 census, but researchers should be aware that it may exist elsewhere.
+  (The <a href="../inst/extdata/2000_totals_minor_occupations.csv">CSV file in the repository</a> is the corrected version.)
+</p>
+<p>The remainder of this task is done in Microsoft Excel.</p>
+<p>The CSV file 2000_totals_minor_occupations.csv is imported into Excel, a new worksheet created with its first three 
+  columns labeled 'OccCode', 'Gender' and 'value'.
+</p>
+<figure>
+  <img src="images/Preprocessing02.png"
+        loading="lazy" alt="Import CSV into Excel and create new worksheet" width="600" height="500" />
+      <figcaption>Import CSV into Excel and create new worksheet</figcaption>
+</figure>
+<p>Under OccCode, make an occupation code by concatenating the census year, zero padding, and the occupation number.</p>
+<pre><code class="language-html">=CONCATENATE(LEFT('2000_totals_minor_occupations'!J2,4),"00",LEFT('2000_totals_minor_occupations'!H2,1))</code></pre>
+<p>Use the conditional IF to select 'MALE' or 'FEMALE' under Gender. Simply copy the value.</p>
+<pre><code class="language-html">=IF('2000_totals_minor_occupations'!F2="男","MALE","FEMALE")</code></pre>
+<p>These cells can be replicated down the length of the dataset. The function for computing OccCode must be 
+  modified for 2-digit and 3-digit occupation numbers.
+</p>
+<pre><code class="language-html">=CONCATENATE(LEFT('2000_totals_minor_occupations'!J11,4),"0",LEFT('2000_totals_minor_occupations'!H11,2))
+and
+=CONCATENATE(LEFT('2000_totals_minor_occupations'!J101,4),LEFT('2000_totals_minor_occupations'!H101,3))
+</code></pre>
+<figure>
+  <img src="images/Preprocessing03.png"
+        loading="lazy" alt="Extracted dataset" width="600" height="500" />
+      <figcaption>Extracted dataset</figcaption>
+</figure>
+<p>If the formulas are converted to values, this <a href="../inst/extdata/2000_totals_minor_occupations.xlsx">XSLX file</a> can be used directly in R.</p>
+</main>
+</body>
+</html>
