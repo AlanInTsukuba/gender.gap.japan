@@ -3,7 +3,7 @@
     <head>
       <!--<meta name="google-site-verification" content="Z7SEnQaO9LAITbhuwGaI3rFtnpMRKeV9BbaW3LyvP2g" />-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="revised" content="26 November 2021" />
+      <meta name="revised" content="2 December 2021" />
         <title>Harmonizing 1985-2005 occupation classifications</title>
 
         <link rel="stylesheet" href="https://latex.now.sh/style.css"> 
@@ -17,12 +17,16 @@ integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="ano
 <body>
 <h1>Harmonizing 1985-2005 occupation classifications used in Japan's Population Census</h1>
 <p class="author"><a href="https://orcid.org/0000-0003-0070-2347" target="_blank">Alan Engel</a><br>Last update: 
-26 November 2021</p>
+2 December 2021</p>
 <main>
 <p>The occupational classifications used in the population censuses carried out between 1985 and 2005
-slightly differ. </p>
+slightly differ. These classifications must be harmonized if we want to follow overall trends during this 
+period. Uchikoshi and Mugiyama (2020) created such a harmonization to cover censuses carried out between 
+1980 and 2005. This task creates a similar harmonization covering censuses carried out between 1985 and 2005. 
+Census information for 1980 is available only in PDF scanned image format and would need to be manually 
+keyed in, so it is omitted from this task.</p>
 <ul>
-<p>Desired features of coding</p>
+<p>Coding for the harmonized occupational classification has the following features:</p>
 <li>No leading zeros so that sorting as numbers and sorting as text produce the same results</li>
 <li>Maintain same ordering as for the <a href="https://www.stat.go.jp/english/data/kokusei/2005/syokugyo.html" class="uri">2005 population census</a>.</li>
 <li>Enable "group by" aggregation of detailed occupations to produce mid-level and top level 
@@ -40,6 +44,56 @@ this project's <a href="https://github.com/AlanInTsukuba/tsukuba-segregation/tre
           loading="lazy" alt="Worksheet for harmonized occupational classifications" width="600" height="500" />
         <figcaption>Worksheet for harmonized occupational classifications</figcaption>
 </figure>
+<p>In the worksheet, column 'OccCodeAgg' is a temporary coding created for stepping through the set of 5 
+  classifications. The 5 columns to its right contain the 'OccCode' values as described in the 
+  <a href="PreprocessingTheData.html">task on preprocessing the data</a>; they will be used to 
+  merge downloaded data into the harmonized classification. The MinorTitle entries are from the 
+  <a href="https://www.stat.go.jp/english/data/kokusei/2005/syokugyo.html">2005 census</a>.</p>
+  <figure>
+    <img src="images/HarmonizingOccupations02.png"
+          loading="lazy" alt="Part of occupation classification for 1985" width="600" height="500" />
+        <figcaption>Part of occupation classification for 1985</figcaption>
+</figure>
+<p>The harmonization task consists of stepping 
+  down these classifications, rearranging and aggregating as needed. Here are some illustrative 
+  examples:
+</p>
+<ul>
+  <li>
+<p>The first two categories are unchanged across the censuses so two sequential codes, Agg001 and Agg002, are 
+  entered under OccCodeAgg.</p>
+</li><li>
+<p>The third category is in position 3 for censuses 1990 through 2005, but in position 10 for the 1985 
+  census. This is reflected by entering code '1985010' in position 3 under 1985. Most such rearrangements 
+are under the same middle category and result in no changes when aggregated at the mid or major levels. 
+Some rearrangements, however, change minor occupations mid and major classifications. An example is 
+tobacco workers, who are classified at position 246 under construction workers in the 1985 census, 
+207 under food and beverage workers in the 1990 and 1995 censuses, and under beverage and tobacco workers 
+in the 2005 census. </p>
+</li><li>
+  <p>Mining and smelting technicians, the fourth category, were split into two categories in the 1985 census, but 
+  combined for later censuses. Assigning the same OccCodeAgg, 'Agg004', to both rows will allow "group by" aggregation 
+  of 1985 data when it is imported.
+</p>
+</li><li>
+  <p>Similarly, when a minor occupation is split, such as for computer processing technicians in the 2005 census, 
+  assigning the same OccCodeAgg, in this case 'Agg010,' to both will enable aggregation to the broader definition. 
+  Here, the MinorTitle is taken from the 
+  <a href="https://www.stat.go.jp/english/data/kokusei/2000/syokugyo.html">broader definition used in the older census</a>.
+</p>
+</li>
+<li>
+  <p>When new occupations appear in later censuses, such as certified social insurance and tax accountants, and 
+    other management specialists in the 2000 and 2005 censuses, OccCodeAgg entries are assigned without provision for 
+    aggregation.
+  </p>
+  <figure>
+    <img src="images/HarmonizingOccupations03.png"
+          loading="lazy" alt="New occupations" width="600" height="500" />
+        <figcaption>New occupations</figcaption>
+</figure>
+</li>
+</ul>
 </main>
 <div id="references" class="section level2">
 <h2 class="hasAnchor">
