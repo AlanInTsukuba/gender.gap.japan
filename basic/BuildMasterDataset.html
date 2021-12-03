@@ -205,9 +205,7 @@ integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="ano
     occgenall <- rbind(occgenall,occgencomb)
     
     #######################################################
-    #' occgenall is the completed full dataset. Save it as an 
-    #' R object
-    saveRDS(occgenall, file="....occgenall.Rda")
+    #' occgenall is the completed full dataset. Save it.
     
     write.table(occgenall, file="....occgenall.csv", sep="\t",row.names=F)
     
