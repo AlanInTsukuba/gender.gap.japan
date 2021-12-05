@@ -49,7 +49,40 @@ integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="ano
         <td style="text-align: center;">40.0</td>
         <td style="text-align: center;">40.9</td>
         <td style="text-align: center;">41.9</td></tr>
+    <tr><td colspan=7><b>C. Distribution of occupational major groups (%)</b></td></tr>
     </table>
+    <pre><code class="language-html">#' DescriptiveStatistics.R
+        #' If not already in the workspace:
+        #' occgenall <- read.csv("Data/occgenall.csv", sep="\t",header=T)
+        
+        #' sample size
+        with(occgenall[,c("CensusYear","value")], 
+        aggregate(value,
+            list(CensusYear=occgenall$CensusYear),FUN="sum"))
+         
+        #' using outer joins
+        tmp1985 <- occgenall[occgenall$CensusYear == "1985",c("OccMinor","CensusYear")]
+        tmp1990 <- occgenall[occgenall$CensusYear == "1990",c("OccMinor","CensusYear")]
+        tmp1995 <- occgenall[occgenall$CensusYear == "1995",c("OccMinor","CensusYear")]
+        tmp2000 <- occgenall[occgenall$CensusYear == "2000",c("OccMinor","CensusYear")]
+        tmp2005 <- occgenall[occgenall$CensusYear == "2005",c("OccMinor","CensusYear")]
+        head(tmp1985)
+        colSums(is.na(unique(merge(x = tmp1985 ,y = tmp1990 ,by="OccMinor",all=TRUE))))
+        colSums(is.na(unique(merge(x = tmp1985 ,y = tmp1995 ,by="OccMinor",all=TRUE))))
+        colSums(is.na(unique(merge(x = tmp1985 ,y = tmp2000 ,by="OccMinor",all=TRUE))))
+        colSums(is.na(unique(merge(x = tmp1985 ,y = tmp2005 ,by="OccMinor",all=TRUE))))
+        rm("tmp1985","tmp1990","tmp1995","tmp2000","tmp2005")
+        
+        #' labor force participation
+        tmp <- with(occgenall,aggregate(occgenall$value, #data=occgenall,
+                list(CensusYear=occgenall$CensusYear,
+                    Gender=occgenall$Gender),
+                FUN="sum"))
+        tmp <- with(tmp,cbind(tmp[Gender=="FEMALE",c("CensusYear","x")],
+                tmp[Gender=="MALE","x"]))
+        colnames(tmp) <- c("CensusYear","Female","Male")
+        with(tmp,cbind(tmp, Female / (Female + Male)))
+        rm(tmp)</code></pre>
 </main>
 <div id="references" class="section level2">
     <h2 class="hasAnchor">
