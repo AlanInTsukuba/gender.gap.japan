@@ -61,4 +61,44 @@ references:
     pages: 1-39
     year: 2019
     doi: "10.18637/jss.v089.i07"
+  - authors:
+      - family-names: Uchikoshi
+        given-names: Fumiya
+      - family-names: Mugiyama
+        given-names: Ryota
+    title: “Trends in Occupational Sex Segregation in Japan" 
+    subtitle: "A Decomposition Analysis of Census Data, 1980-2005” 
+    type: article
+    journal: "Japanese Journal of Population Studies"
+    volume: 56
+    issue: 7
+    pages: 9-23
+    year: 2020
+    doi: "10.24454/jps.1901001"
+  - authors:
+      - family-names: Uchikoshi
+        given-names: Fumiya
+      - family-names: Mugiyama
+        given-names: Ryota
+      - family-names: Komatsu
+        given-names: Kyoko
+    title: “Labor Market Gender Gap Focusing on Occupational Segregation and Skill Devaluation"
+    subtitle: "Evidence from Matched Data of Japanese O-NET and Census” 
+    type: discussion paper
+    journal: "Discussion Paper Series"
+    number: 713
+    institution: "Institute of Economic Research, Hitotsubashi University"
+    location: "Tokyo, Japan"
+    year: 2020
+    url: "https://hermes-ir.lib.hit-u.ac.jp/hermes/ir/re/31323/DP713.pdf"
+  - authors:
+      - family-names: Ueno
+        given-names: Koji
+    title: “Gender-Stratified Labor Market, Heterosexual Marriage Expectation, and 
+LGBQ Young Adults’ Career Plans in Contemporary Japan” 
+    type: article
+    journal: "Socius"
+    issue: January
+    year: 2021
+    doi: "10.1177/23780231211052807"
 
