@@ -155,7 +155,33 @@ integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="ano
                 tmp[Gender=="MALE","x"]))
         colnames(tmp) <- c("CensusYear","Female","Male")
         with(tmp,cbind(tmp, Female / (Female + Male)))
-        rm(tmp)</code></pre>
+        rm(tmp)
+    
+        #' distribution of occupational major groups
+        #' These are in the OccMajor column of occgenall
+        #' First get the grant totals
+        grandtotal <- with(occgenall,aggregate(occgenall$value, 
+                list(CensusYear=occgenall$CensusYear),
+                FUN="sum"))
+        colnames(grandtotal) <- c("CensusYear","Total")
+        
+        #' Next get the totals by major group
+        majorgrptotals <- with(occgenall,aggregate(occgenall$value, 
+                list(OccMain=occgenall$OccMain,
+                    OccSub=occgenall$OccSub,
+                    CensusYear=occgenall$CensusYear),
+                FUN="sum"))
+        colnames(majorgrptotals) <- c("OccMain","OccSub","CensusYear","value")
+        head(majorgrptotals)
+        
+        majorgrpshares <- merge(majorgrptotals, grandtotal)
+        majorgrpshares$Share <- with(majorgrpshares, value / Total)
+        
+        #' Get harmonized occupation classes for titles
+        hoc <- read.csv("Data/HarmonizedOccupationClasses1985-2005.csv",header=T)
+        head(hoc)
+        merge(majorgrpshares, hoc[hoc$MainTitle != "",c("OccMain","OccSub","MainTitle")])
+        </code></pre>
 </main>
 <div id="references" class="section level2">
     <h2 class="hasAnchor">
