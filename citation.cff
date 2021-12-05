@@ -3,8 +3,8 @@ authors:
       given-names: Alan
       orcid: "https://orcid.org/0000-0003-0070-2347"
 cff-version: 1.2.0
-message: Project in early version, please do not cite.
-title: Tsukuba and Segregation
+message: "Project in early version, please do not cite."
+title: "Gender Gap Japan"
 type: dataset
 contact:
     - email: "ttcrossroads09@gmail.com"
