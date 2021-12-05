@@ -16,9 +16,10 @@ references:
         given-names: Mary C.
       - family-names: Ngo
         given-names: Hang-Yue
-    title: “Age and Sex in the Occupational Structure A United States-Japan Comparison” 
+    title: 'Age and Sex in the Occupational Structure' 
+    subtitle: 'A United States-Japan Comparison'
     type: article
-    journal: "Sociological Forum"
+    journal: 'Sociological Forum'
     volume: 8
     issue: 1
     publisher:
