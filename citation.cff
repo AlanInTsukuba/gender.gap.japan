@@ -50,6 +50,16 @@ references:
     year: 2021
     doi: "10.1177/0049124121986204"
   - authors:
+      - family-names: Fuchs
+        given-names: 'Victor R.'
+    title: "A Note on Sex Segregation in Professional Occupations"
+    type: article
+    journal: "Explorations in Economic Research"
+    volume: 2
+    issue: 1
+    pages: 105-111
+    url: "https://www.nber.org/chapters/c7405"
+  - authors:
       - family-names: Tivadar
         given-names: Mihai
     title: “OasisR” 
