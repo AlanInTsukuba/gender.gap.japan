@@ -18,10 +18,36 @@ integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="ano
 <p class="author"><a href="https://orcid.org/0000-0003-0070-2347" target="_blank">Alan Engel</a><br>Last update: 
 6 December 2021</p>
 <main>
+  <article>
   <p>Uchikoshi and Mugiyama (2020) decompose changes in occupational gender segregation into 
     within occupation and between occupation contributions using Duncan and Duncan's dissimilarity 
     index as extended by Fuchs (1975).
   </p>
+  <p>Taking \(F_{jt}\) (\(M_{jt}\)) to be the number of women (men) employed in occupation \(j\) at 
+    time \(t\) and \(T_{jt}=F_{jt}+M_{jt}\) to be the total number of women and men, 
+    Uchikoshi and Mugiyama (2020) express the Duncan Dissimilarity Index as 
+    $$D_{t}=\sum_{j=1}^{J}\Bigg[100\times\frac{1}{2}\times\Bigg|\frac{F_{jt}}{F_{t}}-\frac{M_{jt}}{M_{t}}\Bigg|\Bigg]$$
+    $$=\sum_{j=1}^{J}\Bigg[100\times\frac{1}{2}\times 
+    \Bigg|\frac{ \frac{F_{jt}}{T_{jt}}\times T_{jt} }{ \frac{F_{t}}{T_{t}}\times 
+    T_{t} }-\frac{ \frac{M_{jt}}{T_{jt}}\times T_{jt} }{ \frac{M_{t}}{T_{t}}\times T_{t} }\Bigg|\Bigg]
+    =\sum_{j=1}^{J}D_{jt}$$</p>
+    <p>This index is interpreted as the percentage of women (or men) who would have to transfer between 
+      occupations for their proportions to be the same in all occupations. It equals 100 for complete segregation 
+      and 0 if the proportion of women and men are same for all occupations.
+    </p>
+  <p>Uchikoshi and Mugiyama compare the dissimilarty indexes at two different times as 
+    $$D_{2}-D_{1}=\sum_{j=1}^{J}\Bigg[D_{j2}-100\times\frac{1}{2}\times 
+    \Bigg|\frac{ \frac{F_{j2}}{T_{j2}}\times T_{j1} }{ \frac{F_{2}}{T_{2}}\times 
+    T_{1} }-\frac{ \frac{M_{j2}}{T_{j2}}\times T_{j1} }{ \frac{M_{2}}{T_{2}}\times T_{1} }\Bigg|\Bigg]$$
+    $$+\sum_{j=1}^{J}\Bigg[100\times\frac{1}{2}\times 
+    \Bigg|\frac{ \frac{F_{j2}}{T_{j2}}\times T_{j1} }{ \frac{F_{2}}{T_{2}}\times 
+    T_{1} }-\frac{ \frac{M_{j2}}{T_{j2}}\times T_{j1} }{ \frac{M_{2}}{T_{2}}\times T_{1} }\Bigg|-D_{j1}\Bigg]$$
+  </p>
+  <p>The first term on the right is the contribution of changes in the sizes of occupations to this difference. 
+    The second term on the right is the contribution of changes in the proportions of women and men within occupations. 
+    The former can be referred to as the marginal occupation effect, and the latter can be referred to as the 
+    segregation structural effect.
+  </p></article>
 </main>
 <div id="references" class="section level2">
     <h2 class="hasAnchor">
