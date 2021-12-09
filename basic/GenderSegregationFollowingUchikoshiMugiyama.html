@@ -2,7 +2,7 @@
     <head>
       <!--<meta name="google-site-verification" content="Z7SEnQaO9LAITbhuwGaI3rFtnpMRKeV9BbaW3LyvP2g" />-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="revised" content="6 December 2021" />
+      <meta name="revised" content="9 December 2021" />
         <title>Occupational gender segregation following Uchikoshi and Mugiyama (2020)</title>
 
         <link rel="stylesheet" href="https://latex.now.sh/style.css"> 
@@ -16,7 +16,7 @@ integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="ano
 <body>
 <h1>Occupational gender segregation following Uchikoshi and Mugiyama (2020)</h1>
 <p class="author"><a href="https://orcid.org/0000-0003-0070-2347" target="_blank">Alan Engel</a><br>Last update: 
-6 December 2021</p>
+9 December 2021</p>
 <main>
   <article>
   <p>Uchikoshi and Mugiyama (2020) decompose changes in occupational gender segregation into 
@@ -48,14 +48,40 @@ integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="ano
     The former can be referred to as the marginal occupation effect, and the latter can be referred to as the 
     segregation structural effect.
   </p></article>
+  <article>
+    <h2>Task: R function for Uchikoshi-Mugiyama decomposition</h2>
+    <p>Uchikoshi and Mugiyama introduce their decomposition with the following fake example 
+      of the gender compositions of 3 occupations at 2 points in time.</p>
+    <table>
+      <caption><h4>Fake example</h4></caption>
+      <tr><th colspan=2></th><th colspan=3>Gender</th></tr>
+      <tr><th>Time point</th><th>Occupation</th><th>Female</th><th>Male</th><th>Marginal total</th><th>Dissimilarity</th></tr>
+      <tr><td rowspan=3>1</td><td>1</td><td>10</td><td>50</td><td>60</td><td>14.583</td></tr>
+      <tr><td>2</td><td>30</td><td>50</td><td>80</td><td>2.083</td></tr>
+      <tr><td>3</td><td>40</td><td>20</td><td>60</td><td>16.667</td></tr>
+      <tr><td></td><td>Marginal total</td><td>80</td><td>120</td><td>200</td><td>33.333</td></tr>
+      <tr><td rowspan=3>2</td><td>1</td><td>20</td><td>60</td><td>80</td><td>12.500</td></tr>
+      <tr><td>2</td><td>30</td><td>50</td><td>80</td><td>2.083</td></tr>
+      <tr><td>3</td><td>30</td><td>10</td><td>40</td><td>14.583</td></tr>
+      <tr><td></td><td>Marginal total</td><td>80</td><td>120</td><td>200</td><td>29.167</td></tr>
+    </table>
+    <p>In this example, the only changes are in the gender compositions of occupations 1 and 3. The 
+      total number of employees and the marginal gender totals do not differ.
+    </p>
+  </article>
 </main>
 <div id="references" class="section level2">
     <h2 class="hasAnchor">
     <a href="#references" class="anchor"></a>References</h2>
-    <p>Duncan, Otis Dudley and Duncan, Beverly, 1955, “A Methodological Analysis of Segregation Indexes,”
-      American Sociological Review, 20（2）, pp.210–217.</p>
-    <p>Fuchs, Victor R., 1975, “A Note on Sex Segregation in Professional Occupations,” Explorations in
-      Economic Research, 2, pp.105–111.</p>
+    <p>Duncan, Otis Dudley and Duncan, Beverly (1955) A Methodological Analysis of Segregation Indexes.
+      American Sociological Review, 20（2）, pp.210–217. 
+      <a href="https://www.jstor.org/stable/2088328" class="uri">https://www.jstor.org/stable/2088328</a></p>
+    <p><a id="Elbers2021">Elbers, Benjamin (2021)</a>. A Method for Studying Differences in Segregation Across Time and Space. 
+      Sociological Methods &amp; Research. <a href="https://doi.org/10.1177/0049124121986204" 
+      class="uri">doi:10.18637/jss.v089.i07</a></p>
+    <p>Fuchs, Victor R. (1975) “A Note on Sex Segregation in Professional Occupations,” 
+      Explorations in Economic Research, 2, pp.105–111. 
+      <a href="https://www.nber.org/chapters/c7405" class="uri">https://www.nber.org/chapters/c7405</a></p>
     <p>Uchikoshi, Fumiya, Ryota Mugiyama. (2020) Trends in Occupational Sex Segregation in Japan: 
         A Decomposition Analysis of Census Data, 1980-2005. 
       Japanese Journal of Population Studies. 2020. 56. 9-23 
