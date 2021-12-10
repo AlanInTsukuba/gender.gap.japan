@@ -72,202 +72,202 @@ integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="ano
   <article>
     <p>R script for this task.</p>
     <pre><code class="language-html">#' UMDissimilarity.R
-      #' @references
-      #' Otis Dudley Duncan and Beverly Duncan. 1955. "A Methodological Analysis 
-      #' 	of Segregation Indexes,"
-      #'      American Sociological Review 20(2): 210-217.
-      #' [UM2020] Uchikoshi, Fumiya, Ryota Mugiyama. (2020) Trends in 
-      #' 		Occupational Sex Segregation in Japan: 
-      #'         A Decomposition Analysis of Census Data, 1980-2005. 
-      #'       Japanese Journal of Population Studies. 2020. 56. 9-23 
-      #' [Elbers] Benjamin Elbers. 2021. A Method for Studying Differences in
-      #'   Segregation Across Time and Space Sociological Methods & Research.
-      #'   doi: 10.1177/0049124121986204
-      
-      #' Reproduce Uchikoshi-Mugiyama decomposition
-      
-      library(segregation) # Use Elbers package when possible
-      library(data.table)
-      #' imports: @import data.table
-      
-      #' Fake examples in UM2020
-      um1 <- matrix_to_long(matrix(c(10, 30, 40,50,50,20), ncol = 2))
-      um2 <- matrix_to_long(matrix(c(20, 30, 30,60,50,10), ncol = 2))
-      
-      #' Elbers has a dissimilarity function. Try it with UM data.
-      dissimilarity(um1, "group", "unit", weight="n")
-      ##    stat       est
-      ## 1:    D 0.3333333
-      dissimilarity(um2, "group", "unit", weight="n")
-      ##    stat       est
-      ## 1:    D 0.2916667
-      #' These are the same values as in UM2020
-      
-      #' Adopt parameters from Elber 
-      #' https://github.com/elbersb/segregation/blob/master/R/dissimilarity.R
-      #' @param data A data frame.
-      #' @param group A categorical variable or a vector of variables
-      #'   contained in \code{data}. Defines the first dimension
-      #'   over which segregation is computed. The D index only
-      #'   allows two distinct groups.
-      #' @param unit A categorical variable or a vector of variables
-      #'   contained in \code{data}. Defines the second dimension
-      #'   over which segregation is computed.
-      #' @param weight Numeric. (Default \code{NULL})
-      
-      source("scripts/dissimilarity_um.R")
-      
-      um1.prep <- prepare_data(um1, "group", "unit", weight="n")
-      um2.prep <- prepare_data(um2, "group", "unit", weight="n")
-      
-      um1.du <- dissimilarity_unit(um1.prep, "group", "unit")
-      dissimilarity_all(um1.prep, "group", "unit")
-      
-      um1.prep[, sum(freq)]
-      
-      ## try to put together UM's decomposition
-      # dissimilarity_margin
-      um1.prep <- prepare_data(um1, "group", "unit", weight="n")
-      um2.prep <- prepare_data(um2, "group", "unit", weight="n")
-      
-      #' dissimilarity indexes for two time points
-      um1.du <- dissimilarity_unit(um1.prep, "group", "unit")
-      um2.du <- dissimilarity_unit(um2.prep, "group", "unit")
-      
-      #' add columns needed for decomposition
-      um1.prep[, n_group := sum(freq), by = group]
-      um2.prep[, n_group := sum(freq), by = group]
-      
-      um1.prep[, n_unit := sum(freq), by = unit]
-      um2.prep[, n_unit := sum(freq), by = unit]
-      
-      um1.prep[, n_all := sum(freq)]
-      um2.prep[, n_all := sum(freq)]
-      
-      #' decomposition sum
-      um.diff <- merge(um1.prep,um2.prep, by=c("group","unit"))
-      um.diff[, difffrac := (freq.y * (n_unit.x / n_unit.y)) / (n_group.y * (n_all.x / n_all.y)) ]
-      um.decomp <- um.diff[, 1/2 * abs_diff( difffrac ), by = unit]
-      
-      #' summarize
-      um.summary <- um1.du
-      colnames(um.summary) <- c("unit","D_1")
-      um.summary <- merge(um.summary, um2.du)
-      colnames(um.summary) <- c("unit","D_1","D_2")
-      um.summary[, within := merge(um.decomp, um1.du, by="unit")[,V1.x-V1.y] ]
-      um.summary[, marginal := merge( um2.du, um.decomp, by="unit")[,V1.x-V1.y] ]
-      um.summary[, contribution := within + marginal]
-      um.summary
-      print(um.summary, digits=3)
-      #    unit    D_1    D_2  within marginal contribution
-      # 1:    1 0.1458 0.1250 -0.0521   0.0312      -0.0208
-      # 2:    2 0.0208 0.0208  0.0000   0.0000       0.0000
-      # 3:    3 0.1667 0.1458  0.0521  -0.0729      -0.0208
-      
-      print(data.table(D_1 = sum(um.summary$D_1), D_2 = sum(um.summary$D_2),
-        within = sum(um.summary$within ),marginal = sum(um.summary$marginal),
-        contribution = sum(um.summary$contribution)),digits=3)
-      #      D_1   D_2    within marginal contribution
-      # 1: 0.333 0.292 -2.78e-17  -0.0417      -0.0417
-      #' These are the same values as in UM2020
-      </code></pre>
-  </article>
-  <p>R functions for this task.</p>
-  <pre><code class="language-html">#' dissimilarity_um.R
-    #' Functions for UMDissimilarityR
-    #' @references
-    #' Otis Dudley Duncan and Beverly Duncan. 1955. "A Methodological Analysis of Segregation Indexes,"
-    #'      American Sociological Review 20(2): 210-217.
-    #' [UM2020] Uchikoshi, Fumiya, Ryota Mugiyama. (2020) Trends in Occupational Sex Segregation in Japan: 
-    #'         A Decomposition Analysis of Census Data, 1980-2005. 
-    #'       Japanese Journal of Population Studies. 2020. 56. 9-23 
-    #' [Elbers] Benjamin Elbers. 2021. A Method for Studying Differences in
-    #'   Segregation Across Time and Space Sociological Methods & Research.
-    #'   doi: 10.1177/0049124121986204
-    
-    #' @import segregation
-    #' @import data.table
-    
-    #' from https://github.com/elbersb/segregation/blob/master/R/segregation.R
-    globalVariables(c(
-        "V1", "V2", "cond1", "cond2", "entropy_cond", "entropy_cond1", "entropy_cond2", "entropyw",
-        "est", "freq", "freq1", "freq2", "freq_orig1", "freq_orig2",
-        "ls_diff_mean", "ls_diff1", "ls_diff2", "ls_unit", "bias", "boot_est", "est_debiased",
-        "n", "n_group", "n_group_target", "n_source", "n_target", "n_unit", "n_unit_target",
-        "n_within_group", "p", "p_exp", "p1", "p2", "p_group", "p_group_g_unit", "p_group_g_unit1",
-        "p_group_g_unit2", "p_group_s", "p_group_t", "p_unit", "p_unit1", "p_unit2", "p_unit_s",
-        "p_unit_t", "p_within", "sumcond1", "sumcond2", "total", "unit1", "unit2",
-        ".", "..base", "..fixed_margins", "..group", "..n_bootstrap", "..unit", "se", "stat"))
-    
-    #' @import data.table
-    prepare_data <- function(data, group, unit, weight, within = NULL) {
-        if ("data.frame" %in% class(data)) {
-            if (nrow(data) == 0) {
-                stop("data.frame is empty")
-            }
-            test_vars <- c(group, unit, weight, within)
-            test_vars <- test_vars[!test_vars %in% names(data)]
-            if (length(test_vars) > 0) {
-                test_vars <- paste0(test_vars, collapse = ", ")
-                stop(paste0("variable(s) ", test_vars, " not in data.frame"))
-            }
-        } else {
-            stop("not a data.frame")
+  #' @references
+  #' Otis Dudley Duncan and Beverly Duncan. 1955. "A Methodological Analysis 
+  #' 	of Segregation Indexes,"
+  #'      American Sociological Review 20(2): 210-217.
+  #' [UM2020] Uchikoshi, Fumiya, Ryota Mugiyama. (2020) Trends in 
+  #' 		Occupational Sex Segregation in Japan: 
+  #'         A Decomposition Analysis of Census Data, 1980-2005. 
+  #'       Japanese Journal of Population Studies. 2020. 56. 9-23 
+  #' [Elbers] Benjamin Elbers. 2021. A Method for Studying Differences in
+  #'   Segregation Across Time and Space Sociological Methods & Research.
+  #'   doi: 10.1177/0049124121986204
+  
+  #' Reproduce Uchikoshi-Mugiyama decomposition
+  
+  library(segregation) # Use Elbers package when possible
+  library(data.table)
+  #' imports: @import data.table
+  
+  #' Fake examples in UM2020
+  um1 <- matrix_to_long(matrix(c(10, 30, 40,50,50,20), ncol = 2))
+  um2 <- matrix_to_long(matrix(c(20, 30, 30,60,50,10), ncol = 2))
+  
+  #' Elbers has a dissimilarity function. Try it with UM data.
+  dissimilarity(um1, "group", "unit", weight="n")
+  ##    stat       est
+  ## 1:    D 0.3333333
+  dissimilarity(um2, "group", "unit", weight="n")
+  ##    stat       est
+  ## 1:    D 0.2916667
+  #' These are the same values as in UM2020
+  
+  #' Adopt parameters from Elber 
+  #' https://github.com/elbersb/segregation/blob/master/R/dissimilarity.R
+  #' @param data A data frame.
+  #' @param group A categorical variable or a vector of variables
+  #'   contained in \code{data}. Defines the first dimension
+  #'   over which segregation is computed. The D index only
+  #'   allows two distinct groups.
+  #' @param unit A categorical variable or a vector of variables
+  #'   contained in \code{data}. Defines the second dimension
+  #'   over which segregation is computed.
+  #' @param weight Numeric. (Default \code{NULL})
+  
+  source("scripts/dissimilarity_um.R")
+  
+  um1.prep <- prepare_data(um1, "group", "unit", weight="n")
+  um2.prep <- prepare_data(um2, "group", "unit", weight="n")
+  
+  um1.du <- dissimilarity_unit(um1.prep, "group", "unit")
+  dissimilarity_all(um1.prep, "group", "unit")
+  
+  um1.prep[, sum(freq)]
+  
+  ## try to put together UM's decomposition
+  # dissimilarity_margin
+  um1.prep <- prepare_data(um1, "group", "unit", weight="n")
+  um2.prep <- prepare_data(um2, "group", "unit", weight="n")
+  
+  #' dissimilarity indexes for two time points
+  um1.du <- dissimilarity_unit(um1.prep, "group", "unit")
+  um2.du <- dissimilarity_unit(um2.prep, "group", "unit")
+  
+  #' add columns needed for decomposition
+  um1.prep[, n_group := sum(freq), by = group]
+  um2.prep[, n_group := sum(freq), by = group]
+  
+  um1.prep[, n_unit := sum(freq), by = unit]
+  um2.prep[, n_unit := sum(freq), by = unit]
+  
+  um1.prep[, n_all := sum(freq)]
+  um2.prep[, n_all := sum(freq)]
+  
+  #' decomposition sum
+  um.diff <- merge(um1.prep,um2.prep, by=c("group","unit"))
+  um.diff[, difffrac := (freq.y * (n_unit.x / n_unit.y)) / (n_group.y * (n_all.x / n_all.y)) ]
+  um.decomp <- um.diff[, 1/2 * abs_diff( difffrac ), by = unit]
+  
+  #' summarize
+  um.summary <- um1.du
+  colnames(um.summary) <- c("unit","D_1")
+  um.summary <- merge(um.summary, um2.du)
+  colnames(um.summary) <- c("unit","D_1","D_2")
+  um.summary[, within := merge(um.decomp, um1.du, by="unit")[,V1.x-V1.y] ]
+  um.summary[, marginal := merge( um2.du, um.decomp, by="unit")[,V1.x-V1.y] ]
+  um.summary[, contribution := within + marginal]
+  um.summary
+  print(um.summary, digits=3)
+  #    unit    D_1    D_2  within marginal contribution
+  # 1:    1 0.1458 0.1250 -0.0521   0.0312      -0.0208
+  # 2:    2 0.0208 0.0208  0.0000   0.0000       0.0000
+  # 3:    3 0.1667 0.1458  0.0521  -0.0729      -0.0208
+  
+  print(data.table(D_1 = sum(um.summary$D_1), D_2 = sum(um.summary$D_2),
+    within = sum(um.summary$within ),marginal = sum(um.summary$marginal),
+    contribution = sum(um.summary$contribution)),digits=3)
+  #      D_1   D_2    within marginal contribution
+  # 1: 0.333 0.292 -2.78e-17  -0.0417      -0.0417
+  #' These are the same values as in UM2020
+  </code></pre>
+</article>
+<p>R functions for this task.</p>
+<pre><code class="language-html">#' dissimilarity_um.R
+#' Functions for UMDissimilarityR
+#' @references
+#' Otis Dudley Duncan and Beverly Duncan. 1955. "A Methodological Analysis of Segregation Indexes,"
+#'      American Sociological Review 20(2): 210-217.
+#' [UM2020] Uchikoshi, Fumiya, Ryota Mugiyama. (2020) Trends in Occupational Sex Segregation in Japan: 
+#'         A Decomposition Analysis of Census Data, 1980-2005. 
+#'       Japanese Journal of Population Studies. 2020. 56. 9-23 
+#' [Elbers] Benjamin Elbers. 2021. A Method for Studying Differences in
+#'   Segregation Across Time and Space Sociological Methods & Research.
+#'   doi: 10.1177/0049124121986204
+
+#' @import segregation
+#' @import data.table
+
+#' from https://github.com/elbersb/segregation/blob/master/R/segregation.R
+globalVariables(c(
+    "V1", "V2", "cond1", "cond2", "entropy_cond", "entropy_cond1", "entropy_cond2", "entropyw",
+    "est", "freq", "freq1", "freq2", "freq_orig1", "freq_orig2",
+    "ls_diff_mean", "ls_diff1", "ls_diff2", "ls_unit", "bias", "boot_est", "est_debiased",
+    "n", "n_group", "n_group_target", "n_source", "n_target", "n_unit", "n_unit_target",
+    "n_within_group", "p", "p_exp", "p1", "p2", "p_group", "p_group_g_unit", "p_group_g_unit1",
+    "p_group_g_unit2", "p_group_s", "p_group_t", "p_unit", "p_unit1", "p_unit2", "p_unit_s",
+    "p_unit_t", "p_within", "sumcond1", "sumcond2", "total", "unit1", "unit2",
+    ".", "..base", "..fixed_margins", "..group", "..n_bootstrap", "..unit", "se", "stat"))
+
+#' @import data.table
+prepare_data <- function(data, group, unit, weight, within = NULL) {
+    if ("data.frame" %in% class(data)) {
+        if (nrow(data) == 0) {
+            stop("data.frame is empty")
         }
-        vars <- c(group, unit)
-    
-        # create a copy
-        data <- as.data.table(data)
-    
-        # check whether there is variation
-        n_groups <- nrow(data[, .N, by = group])
-        n_units <- nrow(data[, .N, by = unit])
-        if (n_groups == 1) stop("Cannot compute segregation: the group variable is constant")
-        if (n_units == 1) stop("Cannot compute segregation: the unit variable is constant")
-    
-        # use provided weight or weight of 1
-        weight_no_conflict <- weight
-        if (!is.null(weight_no_conflict)) {
-            if (weight_no_conflict == "weight") {
-                data[, freq := as.double(weight)]
-            } else {
-                data[, freq := as.double(get(weight_no_conflict))]
-            }
-        } else {
-            data[, freq := 1]
+        test_vars <- c(group, unit, weight, within)
+        test_vars <- test_vars[!test_vars %in% names(data)]
+        if (length(test_vars) > 0) {
+            test_vars <- paste0(test_vars, collapse = ", ")
+            stop(paste0("variable(s) ", test_vars, " not in data.frame"))
         }
-    
-        if (!is.null(within)) {
-            vars <- c(vars, within)
-        }
-    
-        # collapse on vars, and select only positive weights
-        data <- data[freq > 0, list(freq = sum(freq)), by = vars]
-        setattr(data, "vars", vars)
-        setkey(data, NULL)
-        data
+    } else {
+        stop("not a data.frame")
     }
-    
-    abs_diff <- function(x) {
-        if (length(x) == 1) {
-            abs(x)
+    vars <- c(group, unit)
+
+    # create a copy
+    data <- as.data.table(data)
+
+    # check whether there is variation
+    n_groups <- nrow(data[, .N, by = group])
+    n_units <- nrow(data[, .N, by = unit])
+    if (n_groups == 1) stop("Cannot compute segregation: the group variable is constant")
+    if (n_units == 1) stop("Cannot compute segregation: the unit variable is constant")
+
+    # use provided weight or weight of 1
+    weight_no_conflict <- weight
+    if (!is.null(weight_no_conflict)) {
+        if (weight_no_conflict == "weight") {
+            data[, freq := as.double(weight)]
         } else {
-            abs(diff(x))
+            data[, freq := as.double(get(weight_no_conflict))]
         }
+    } else {
+        data[, freq := 1]
     }
-    
-    #' @import data.table
-    dissimilarity_unit <- function(data, group, unit) {
-        data[, n_group := sum(freq), by = group]
-        data[, 1/2 * abs_diff(freq / n_group), by = unit]
-    
+
+    if (!is.null(within)) {
+        vars <- c(vars, within)
     }
-    
-    dissimilarity_all <- function(data, group, unit) {
-        data[, n_group := sum(freq), by = group]
-        est <- 1/2 * data[, abs_diff(freq / n_group), by = unit][, sum(V1)]
-        data.table(stat = "D", est = est, stringsAsFactors = FALSE)
-    }</code></pre>
+
+    # collapse on vars, and select only positive weights
+    data <- data[freq > 0, list(freq = sum(freq)), by = vars]
+    setattr(data, "vars", vars)
+    setkey(data, NULL)
+    data
+}
+
+abs_diff <- function(x) {
+    if (length(x) == 1) {
+        abs(x)
+    } else {
+        abs(diff(x))
+    }
+}
+
+#' @import data.table
+dissimilarity_unit <- function(data, group, unit) {
+    data[, n_group := sum(freq), by = group]
+    data[, 1/2 * abs_diff(freq / n_group), by = unit]
+
+}
+
+dissimilarity_all <- function(data, group, unit) {
+    data[, n_group := sum(freq), by = group]
+    est <- 1/2 * data[, abs_diff(freq / n_group), by = unit][, sum(V1)]
+    data.table(stat = "D", est = est, stringsAsFactors = FALSE)
+}</code></pre>
 </main>
 <div id="references" class="section level2">
     <h2 class="hasAnchor">
