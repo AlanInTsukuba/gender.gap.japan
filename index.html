@@ -3,7 +3,7 @@
     <head>
       <!--<meta name="google-site-verification" content="Z7SEnQaO9LAITbhuwGaI3rFtnpMRKeV9BbaW3LyvP2g" />-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="revised" content="15 November 2021" />
+      <meta name="revised" content="13 December 2021" />
         <title>Gender Gap Japan</title>
 
         <link rel="stylesheet" href="https://latex.now.sh/style.css"> 
@@ -12,7 +12,7 @@
 <body>
 <h1>Gender Gap Japan</h1>
 <p class="author"><a href="https://orcid.org/0000-0003-0070-2347" target="_blank">Alan Engel</a><br>Last update: 
-16 November 2021</p>
+13 December 2021</p>
 <div class="abstract"><p>Objective: Apply segregation statistics to government data around and about Tsukuba.
 </p>
   <p class="abstract">A recently published decomposition method (Elbers, 2021) enables 
@@ -26,8 +26,6 @@
 <main>
 <ol>
 <li>
-<p></p>
-<ol><li>
 <h4><a href="basic/OccupationGenderWalkthrough01.html">Basic walkthrough of Elbers's segregation package 
 using Japanese population census data</a></h4>
 <p>Elbers's R package "segregation" contains a detailed vignette 
@@ -35,13 +33,11 @@ using Japanese population census data</a></h4>
 that steps through the main features of his package. This basic walkthrough uses data on occupation versus gender from 
 the 1995 and 2000 Japan Population Censuses.</p>
 </li>
-</ol>
-</li>
 <li>
 <h4>Reproduction of Uchikoshi and Mugiyama (2020) with extension</h4>
 <p>Brinton and Ngo (1993) published a landmark study of gender and occupation in Japan. Uchikoshi 
   and Mugiyama (2020) look at subsequent trends at a more detailed minor occupation level. The latter 
-  constructed a harmonized occuplation classification that covers Japanese population censuses 
+  constructed a occupational crosswalk that covers Japanese population censuses 
   that were conducted between 1980 and 2005, and rely mainly on the Duncan dissimilarity index 
   as their measure of segregation. The objective of this subproject is to partially reproduce the Uchikoshi 
   and Mugiyama (2020) results, then compare them to results using Elbers's decomposition.
@@ -53,24 +49,24 @@ prefecture. In addition, the data breaks out occupations by whether the responde
 businesses, and employed by others. This may be useful in looking a occupations in which free-lancing and other forms 
 of self-employment are of interest.</p>-->
 <ol>
-  <li><h4><a href="basic/GettingTheData.html">Getting the data for harmonizing 1985-2005 occupation classifications</a></h4>
+  <li><h4><a href="basic/GettingTheData.html">Getting the data for creating occupational crosswalk</a></h4>
   <p>A step by step guide to downloading occupation and gender data from Japanese population censuses.</p></li>
   <li><h4><a href="basic/PreprocessingTheData.html">Preprocessing the data</a></h4>
   <p>Data downloaded from e-Stat usually must be processed before it can be incorporated into statistics 
-    packages or, in this case, used for harmonizing the occupation classifications. Instead of the 2005 data 
+    packages or, in this case, used for constructing an occupational crosswalk. Instead of the 2005 data 
     downloaded in the previous step, here I use 2000 data because it has a "feature" that is not in the 2005 data and 
     must be corrected.
   </p></li>
 <li>
-<h4><a href="basic/Harmonizing_1985_2005_occupation_data.html">
-Harmonizing 1985-2005 occupation classifications</a></h4>
-<p>The objective is to create a harmonized occupation index covering population censuses between 1985 and 2005. I omit 
+<h4><a href="basic/OccupationalCrosswalk.html">
+Occupational crosswalk</a></h4>
+<p>The objective is to create an occupational crosswalk covering population censuses between 1985 and 2005. I omit 
   the 1980 census because it is available only in PDF image format.</p>
 </li>
 <li>
 <h4><a href="basic/BuildMasterDataset.html">
   Build master dataset</a></h4>
-  <p>The harmonized occupation classifications are used to build a master dataset from the preprocessed occupation-gender 
+  <p>The occupational crosswalk is used to build a master dataset from the preprocessed occupation-gender 
     data.</p>
   </li>
   <li>
@@ -80,9 +76,15 @@ Harmonizing 1985-2005 occupation classifications</a></h4>
         Except where noted, the statistics are generated using the R scripts included.</p>
   </li>
   <li>
-    <h4><a href="basic/GenderSegregationFollowingUchikoshiMugiyama.html">
-      Occupational gender segregation following Uchikoshi and Mugiyama (2020)</a></h4>
-      </li>
+    <h4><a href="basic/UchikoshiMugiyamaDecompositionRFunction.html">
+      Uchikoshi/Mugiyama decomposition R development</a></h4>
+      <p>Develop R functions and script for computing Uchikoshi/Mugiyama decomposition.</p>
+  </li>
+  <li>
+    <h4><a href="basic/ReproduceUMResults.html">
+      Reproduce results from Uchiyama/Mugiyama</a></h4>
+      <p>Use R to reproduce results.</p>
+  </li>
   </ol>
 </li>
 </ol>
