@@ -240,126 +240,126 @@ integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="ano
        </table>
        
        <pre><code class="language-html">#' AnalyzePerElbers.R
-        #' 2021-12-15
-        
-        #' Adapted from
-        #' Elbers, Benjamin. A Method for Studying Differences in Segregation Across Time and Space. 
-        #' SocArXiv, 21 Dec. 2018, supplementary materials
-        
-        library("tidyverse")
-        library("tidylog", warn.conflicts = FALSE)
-        library("fst")
-        library("ggthemes")
-        library("segregation")
-        library("cowplot")
-        library("knitr")
-        library("kableExtra")
-        
-        ## data is in occgenall
-        head(occgenall)
-        
-        # make copy to use as Elbers
-        d <- as_tibble(occgenall) %>%
-            rename(w = value) %>% rename(year = CensusYear)
-        d$n <- as.integer(d$w)
-        
-        head(d)
-        
-        ##########################
-        ###### descriptives ######
-        ##########################
-        
-        samplesize <- d %>%
-            group_by(year) %>%
-            summarize(n = sum(n)) %>%
-            mutate(var = "Sample size (in 1000)",
-                n = round(n / 1000)) %>%
-            spread(year, n)
-        
-        occ1985 <- filter(d, year == 1985) %>% pull(OccMinor) %>% unique
-        occ1990 <- filter(d, year == 1990) %>% pull(OccMinor) %>% unique
-        occ1995 <- filter(d, year == 1995) %>% pull(OccMinor) %>% unique
-        occ2000 <- filter(d, year == 2000) %>% pull(OccMinor) %>% unique
-        occ2005 <- filter(d, year == 2005) %>% pull(OccMinor) %>% unique
-        common_occ <- intersect(occ1985 , occ1990 ) %>%
-            intersect(occ1995 ) %>% intersect(occ2000 ) %>% 
-            intersect(occ2005 )
-        
-        nocc <- tribble(~var, ~`1985`, ~`1990`, ~`1995`, ~`2000`, ~`2005`,
-            "Number of occupations", length(occ1985),
-                length(occ1990), length(occ1995), length(occ2000),
-            length(occ2005),
-            "Appearing occupations", NA,
-                length(setdiff(occ1990, occ1985)),
-                length(setdiff(occ1995, occ1990)),
-                length(setdiff(occ2000, occ1995)),
-                length(setdiff(occ2005, occ2000)),
-            "Disappearing occupations", NA,
-                length(setdiff(occ1985, occ1990)),
-                length(setdiff(occ1990, occ1995)),
-                length(setdiff(occ1995, occ2000)),
-                length(setdiff(occ2000, occ2005))
-            )
-        
-        gender <- d %>%
-            group_by(year, Gender) %>%
-            summarize(n = sum(w)) %>%
-            group_by(year) %>%
-            mutate(p = round(n / sum(n) * 100)) %>%
-            filter(Gender == "FEMALE") %>%
-            select(-n) %>%
-            spread(year, p) %>%
-            rename(var = Gender)
-        
-        occ <- d %>%
-            group_by(year, OccMain) %>%
-            summarize(n = sum(w)) %>%
-            group_by(year) %>%
-            mutate(p = round(n / sum(n) * 100)) %>%
-            select(-n) %>%
-            spread(year, p) %>%
-            merge(hoc[nchar(hoc$MainTitle)>0,c("OccMain","MainTitle")]) %>%
-            mutate(OccMain = MainTitle)  %>%
-            select(-MainTitle) %>%
-            rename(var = OccMain)
-        
-        occ_gender <- d %>%
-            group_by(year, OccMain, Gender) %>%
-            summarize(n = sum(w)) %>%
-            group_by(year, OccMain) %>%
-            mutate(p = round(n / sum(n) * 100)) %>%
-            filter(Gender== "FEMALE") %>%
-            select(-n, -Gender) %>%
-            spread(year, p) %>%
-            merge(hoc[nchar(hoc$MainTitle)>0,c("OccMain","MainTitle")]) %>%
-            mutate(OccMain = MainTitle)  %>%
-            select(-MainTitle) %>%
-            rename(var = OccMain)
-        
-        desc <- bind_rows(samplesize, nocc, gender, occ, occ_gender)
-        desc[5, "var"] <- "Female"
-        names(desc)[[1]] <- ""
-        
-        options(knitr.kable.NA = "")
-        kable(desc, "latex", booktabs = T) %>%
-            kable_styling(latex_options = c("striped", "condensed"),
-                position = "center") %>%
-            row_spec(0, align = "c") %>%
-            group_rows("A. Number of occupations", 2, 4) %>%
-            group_rows("B. Labor force participation (%)", 5, 5) %>%
-            group_rows("C. Distribution of occupational major groups (%)", 6, 14) %>%
-            group_rows("D. Female labor force by major groups (%)", 15, 25) %>%
-            cat(file = "Output/desc.tex", sep = "\n")
-        
-        kable(desc, "html", booktabs = T) %>%
-            kable_styling(latex_options = c("striped", "condensed"),
-                position = "center") %>%
-            row_spec(0, align = "c") %>%
-            group_rows("A. Number of occupations", 2, 4) %>%
-            group_rows("B. Labor force participation (%)", 5, 5) %>%
-            group_rows("C. Distribution of occupational major groups (%)", 6, 14) %>%
-            group_rows("D. Female labor force by major groups (%)", 15, 25) %>%
-            cat(file = "Output/desc.html", sep = "\n")
+#' 2021-12-15
+
+#' Adapted from
+#' Elbers, Benjamin. A Method for Studying Differences in Segregation Across Time and Space. 
+#' SocArXiv, 21 Dec. 2018, supplementary materials
+
+library("tidyverse")
+library("tidylog", warn.conflicts = FALSE)
+library("fst")
+library("ggthemes")
+library("segregation")
+library("cowplot")
+library("knitr")
+library("kableExtra")
+
+## data is in occgenall
+head(occgenall)
+
+# make copy to use as Elbers
+d <- as_tibble(occgenall) %>%
+    rename(w = value) %>% rename(year = CensusYear)
+d$n <- as.integer(d$w)
+
+head(d)
+
+##########################
+###### descriptives ######
+##########################
+
+samplesize <- d %>%
+    group_by(year) %>%
+    summarize(n = sum(n)) %>%
+    mutate(var = "Sample size (in 1000)",
+        n = round(n / 1000)) %>%
+    spread(year, n)
+
+occ1985 <- filter(d, year == 1985) %>% pull(OccMinor) %>% unique
+occ1990 <- filter(d, year == 1990) %>% pull(OccMinor) %>% unique
+occ1995 <- filter(d, year == 1995) %>% pull(OccMinor) %>% unique
+occ2000 <- filter(d, year == 2000) %>% pull(OccMinor) %>% unique
+occ2005 <- filter(d, year == 2005) %>% pull(OccMinor) %>% unique
+common_occ <- intersect(occ1985 , occ1990 ) %>%
+    intersect(occ1995 ) %>% intersect(occ2000 ) %>% 
+    intersect(occ2005 )
+
+nocc <- tribble(~var, ~`1985`, ~`1990`, ~`1995`, ~`2000`, ~`2005`,
+    "Number of occupations", length(occ1985),
+        length(occ1990), length(occ1995), length(occ2000),
+    length(occ2005),
+    "Appearing occupations", NA,
+        length(setdiff(occ1990, occ1985)),
+        length(setdiff(occ1995, occ1990)),
+        length(setdiff(occ2000, occ1995)),
+        length(setdiff(occ2005, occ2000)),
+    "Disappearing occupations", NA,
+        length(setdiff(occ1985, occ1990)),
+        length(setdiff(occ1990, occ1995)),
+        length(setdiff(occ1995, occ2000)),
+        length(setdiff(occ2000, occ2005))
+    )
+
+gender <- d %>%
+    group_by(year, Gender) %>%
+    summarize(n = sum(w)) %>%
+    group_by(year) %>%
+    mutate(p = round(n / sum(n) * 100)) %>%
+    filter(Gender == "FEMALE") %>%
+    select(-n) %>%
+    spread(year, p) %>%
+    rename(var = Gender)
+
+occ <- d %>%
+    group_by(year, OccMain) %>%
+    summarize(n = sum(w)) %>%
+    group_by(year) %>%
+    mutate(p = round(n / sum(n) * 100)) %>%
+    select(-n) %>%
+    spread(year, p) %>%
+    merge(hoc[nchar(hoc$MainTitle)>0,c("OccMain","MainTitle")]) %>%
+    mutate(OccMain = MainTitle)  %>%
+    select(-MainTitle) %>%
+    rename(var = OccMain)
+
+occ_gender <- d %>%
+    group_by(year, OccMain, Gender) %>%
+    summarize(n = sum(w)) %>%
+    group_by(year, OccMain) %>%
+    mutate(p = round(n / sum(n) * 100)) %>%
+    filter(Gender== "FEMALE") %>%
+    select(-n, -Gender) %>%
+    spread(year, p) %>%
+    merge(hoc[nchar(hoc$MainTitle)>0,c("OccMain","MainTitle")]) %>%
+    mutate(OccMain = MainTitle)  %>%
+    select(-MainTitle) %>%
+    rename(var = OccMain)
+
+desc <- bind_rows(samplesize, nocc, gender, occ, occ_gender)
+desc[5, "var"] <- "Female"
+names(desc)[[1]] <- ""
+
+options(knitr.kable.NA = "")
+kable(desc, "latex", booktabs = T) %>%
+    kable_styling(latex_options = c("striped", "condensed"),
+        position = "center") %>%
+    row_spec(0, align = "c") %>%
+    group_rows("A. Number of occupations", 2, 4) %>%
+    group_rows("B. Labor force participation (%)", 5, 5) %>%
+    group_rows("C. Distribution of occupational major groups (%)", 6, 14) %>%
+    group_rows("D. Female labor force by major groups (%)", 15, 25) %>%
+    cat(file = "Output/desc.tex", sep = "\n")
+
+kable(desc, "html", booktabs = T) %>%
+    kable_styling(latex_options = c("striped", "condensed"),
+        position = "center") %>%
+    row_spec(0, align = "c") %>%
+    group_rows("A. Number of occupations", 2, 4) %>%
+    group_rows("B. Labor force participation (%)", 5, 5) %>%
+    group_rows("C. Distribution of occupational major groups (%)", 6, 14) %>%
+    group_rows("D. Female labor force by major groups (%)", 15, 25) %>%
+    cat(file = "Output/desc.html", sep = "\n")
 </code></pre>
     <!--<table>
     <caption>Descriptive statistics</caption>
