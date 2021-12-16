@@ -4,7 +4,7 @@
       <!--<meta name="google-site-verification" content="Z7SEnQaO9LAITbhuwGaI3rFtnpMRKeV9BbaW3LyvP2g" />-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="revised" content="2 December 2021" />
-        <title>Occupational crosswalk for Japan's 1985-2005 population censuses</title>
+        <title>Occupational harmonization for Japan's 1985-2005 population censuses</title>
 
         <link rel="stylesheet" href="https://latex.now.sh/style.css"> 
         <link rel="stylesheet" href="https://alanintsukuba.github.io/ShowReferencesModal.css"> 
@@ -15,19 +15,19 @@ integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="ano
 integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]-->    
 </head>
 <body>
-<h1>Occupational crosswalk for Japan's 1985-2005 population censuses</h1>
+<h1>Occupational harmonization for Japan's 1985-2005 population censuses</h1>
 <p class="author"><a href="https://orcid.org/0000-0003-0070-2347" target="_blank">Alan Engel</a><br>Last update: 
 13 December 2021</p>
 <main>
 <p>The occupational classifications used in the population censuses carried out between 1985 and 2005
-slightly differ. Crosswalks must be developed if we want to follow overall trends during this 
-period. Uchikoshi and Mugiyama (2020) [UM2020] created such a crosswalk to cover censuses carried out between 
-1980 and 2005. This task creates a similar crosswalk covering censuses carried out between 1985 and 2005. 
+slightly differ. A harmonization must be developed if we want to follow overall trends during this 
+period. Uchikoshi and Mugiyama (2020) [UM2020] created such a harmonization to cover censuses carried out between 
+1980 and 2005. This task creates a similar harmonization covering censuses carried out between 1985 and 2005. 
 Census information for 1980 is available only in PDF scanned image format and would need to be manually 
 keyed in, so it is omitted from this task. </p>
-<p>The crosswalk created here was created independently of Uchikoshi and Mugiyama (2020) and may differ.</p>
+<p>The harmonization created here was created independently of Uchikoshi and Mugiyama (2020) and may differ.</p>
 <ul>
-<p>Coding for the crosswalk has the following features:</p>
+<p>Coding for the harmonization has the following features:</p>
 <li>No leading zeros so that sorting as numbers and sorting as text produce the same results</li>
 <li>Maintain same ordering as for the <a href="https://www.stat.go.jp/english/data/kokusei/2005/syokugyo.html" class="uri">2005 population census</a>.</li>
 <li>Enable "group by" aggregation of detailed occupations to produce mid-level and top level 
@@ -35,15 +35,15 @@ occupation class totals.</li>
 <li>Correspondence table should support merging with data downloaded from 
 <a href="https://www.e-stat.go.jp/" class="uri">e-Stat (https://www.e-stat.go.jp/)</a></li>
 </ul>
-<p>The crosswalk and correspondence table can be downloaded from 
+<p>The harmonization and correspondence table can be downloaded from 
 this project's <a href="https://github.com/AlanInTsukuba/tsukuba-segregation/tree/main/inst/extdata" target="blank">repository</a>.</p>
-<p>The crosswalk task was done in a Microsoft Excel workbook with one worksheet for harmonizing and 
+<p>The harmonization task was done in a Microsoft Excel workbook with one worksheet for harmonizing and 
   one worksheet for each of the census years.  
 </p>
 <figure>
     <img src="images/OccupationalCrosswalk01.png"
-          loading="lazy" alt="Worksheet occupational crosswalk" width="600" height="500" />
-        <figcaption>Worksheet occupational crosswalk</figcaption>
+          loading="lazy" alt="Worksheet occupational harmonization" width="600" height="500" />
+        <figcaption>Worksheet occupational harmonization</figcaption>
 </figure>
 <p>In the worksheet, column 'OccCodeAgg' is a temporary coding created for stepping through the set of 5 
   classifications. The 5 columns to its right contain the 'OccCode' values as described in the 
@@ -55,7 +55,7 @@ this project's <a href="https://github.com/AlanInTsukuba/tsukuba-segregation/tre
           loading="lazy" alt="Part of occupation classification for 1985" width="600" height="500" />
         <figcaption>Part of occupation classification for 1985</figcaption>
 </figure>
-<p>The crosswalk task consists of stepping 
+<p>The harmonization task consists of stepping 
   down these classifications, rearranging and aggregating as needed. Here are some illustrative 
   examples:
 </p>
@@ -116,9 +116,9 @@ in the 2005 census. </p>
   the occupation levels used for the Population Census of Japan. The added OccSub level reflects the fact 
   that the population census classifications actually have 4 levels. 
 </p>
-<p>This crosswalk has 261 to 264 occupations (see <a href="DescriptiveStatistics.html">descriptive statistics</a>) in 
-  contrast to the 245 of UM2020's crosswalk. One reason for this may be differing starting points for creating the 
-crossworks. The crosswalk in this task prioritizes the <a href="https://www.stat.go.jp/english/data/kokusei/2005/syokugyo.html">
+<p>This harmonization has 261 to 264 occupations (see <a href="DescriptiveStatistics.html">descriptive statistics</a>) in 
+  contrast to the 245 of UM2020's harmonization. One reason for this may be differing starting points for creating the 
+crossworks. The harmonization in this task prioritizes the <a href="https://www.stat.go.jp/english/data/kokusei/2005/syokugyo.html">
   2005 occupational classification</a> while UM2020 appears to 
 prioritize the 1980 classification. Occupational classifications for the 1990 through 2005 censuses were derived from the 
 <a href="https://www.soumu.go.jp/toukei_toukatsu/index/seido/shokgyou/61index.htm">3rd Revision 

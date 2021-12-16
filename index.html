@@ -37,7 +37,7 @@ the 1995 and 2000 Japan Population Censuses.</p>
 <h4>Reproduction of Uchikoshi and Mugiyama (2020) with extension</h4>
 <p>Brinton and Ngo (1993) published a landmark study of gender and occupation in Japan. Uchikoshi 
   and Mugiyama (2020) look at subsequent trends at a more detailed minor occupation level. The latter 
-  constructed a occupational crosswalk that covers Japanese population censuses 
+  constructed a occupational harmonization that covers Japanese population censuses 
   that were conducted between 1980 and 2005, and rely mainly on the Duncan dissimilarity index 
   as their measure of segregation. The objective of this subproject is to partially reproduce the Uchikoshi 
   and Mugiyama (2020) results, then compare them to results using Elbers's decomposition.
@@ -50,26 +50,29 @@ businesses, and employed by others. This may be useful in looking a occupations 
 of self-employment are of interest.</p>-->
 <ol>
   <li>
-    <h4>Data and crosswalk</h4>
+    <h4>Data, crosswalk and harmonized occupational classification</h4>
     <ol>
-      <li><h4><a href="basic/GettingTheData.html">Getting the data for creating occupational crosswalk</a></h4>
+      <li><h4><a href="basic/GettingTheData.html">Getting the data for creating occupational 
+        crosswalk</a></h4>
       <p>A step by step guide to downloading occupation and gender data from Japanese population censuses.</p></li>
       <li><h4><a href="basic/PreprocessingTheData.html">Preprocessing the data</a></h4>
       <p>Data downloaded from e-Stat usually must be processed before it can be incorporated into statistics 
-        packages or, in this case, used for constructing an occupational crosswalk. Instead of the 2005 data 
-        downloaded in the previous step, here I use 2000 data because it has a "feature" that is not in the 2005 data and 
+        packages or, in this case, used for constructing an occupational crosswalk and 
+        harmonized classification. Instead of the 2005 data 
+        downloaded in the previous step, here I show 2000 data because it has a "feature" that is not in the 2005 data and 
         must be corrected.
       </p></li>
       <li>
       <h4><a href="basic/OccupationalCrosswalk.html">
       Occupational crosswalk</a></h4>
-      <p>The objective is to create an occupational crosswalk covering population censuses between 1985 and 2005. I omit 
+      <p>The objective is to create an occupational crosswalk and harmonization covering population censuses 
+        between 1985 and 2005. I omit 
         the 1980 census because it is available only in PDF image format.</p>
       </li>
       <li>
       <h4><a href="basic/BuildMasterDataset.html">
       Build master dataset</a></h4>
-      <p>The occupational crosswalk is used to build a master dataset from the preprocessed occupation-gender 
+      <p>The occupational harmonization is used to build a master dataset from the preprocessed occupation-gender 
         data.</p>
       </li>
       <li>
