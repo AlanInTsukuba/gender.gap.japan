@@ -56,12 +56,115 @@ $$S(t_{2})-S(t_{1})=\Delta_{marginal-units}+\sum_{u\in t_{1}\cap t_{2}}\Delta_{i
           loading="lazy" alt="Occupational gender segregation 1985-2005" width="600" height="900" />
         <figcaption>Occupational gender segregation 1985-2005</figcaption>
 </figure>
-<p></p>
+<p>When the changes in M between 1985 and 2005 are decomposed into the 5 components, structural, 
+    gender margins, occupational margins, appearing occupations and disappearing occupations, we 
+    that structural segregation decreased overall and in most of the major occupational groups. 
+    At the total labor force level, decreases in segregation due to structural changes and occupational 
+    marginal changes appears to have been offset by gender marginal changes. In the main group with 
+    the largest decrease in segregation, transportation and communications workes, the change 
+    was mostly due changes in occupational composition.
+</p>
 <figure>
     <img src="images/ElbersTotalSegregation02.png"
           loading="lazy" alt="Decomposition of change 1985 to 2005" width="600" height="400" />
         <figcaption>Decomposition of change 1985 to 2005</figcaption>
 </figure>
+<pre><code class="language-html">#' AnalyzePerElbers.R
+# (continuation)
+##############################
+###### analysis: change ######
+##############################
+
+d1985 <- filter(d, year == 1985)
+d2005 <- filter(d, year == 2005)
+
+diffs <- bind_rows(
+    mutual_difference(d1985 , d2005, "Gender", "OccMinor", weight = "w",
+            precision = .000001) %>%
+        mutate(OccMain= "Total") %>%
+        spread(stat, est),
+    mutual_difference(d1985 , d2005, "Gender", "OccMain", weight = "w",
+            precision = .000001) %>%
+        mutate(OccMain= "Between major groups") %>%
+        spread(stat, est),
+    d %>%
+        group_by(OccMain) %>%
+            do(mutual_difference(filter(., year == 1985), filter(., year == 2005),
+                        "Gender", "OccMinor", weight = "w", precision = .000001)) %>%
+            spread(stat, est) %>%
+        merge(hoc[nchar(hoc$MainTitle)>0,c("OccMain","MainTitle")]) %>% # add main group titles
+            mutate(OccMain = paste(OccMain,MainTitle,sep=" "))  %>%
+            select(-MainTitle)  %>%
+            arrange(diff)
+    )
+
+# NOTE mutual_difference doesn't output additions or removals if there are none.
+diffs_total <- diffs %>%
+    select(OccMain, M1, M2, diff, additions, removals, unit_marginal, group_marginal, structural) %>%
+    mutate(order = 1:11)
+
+diffs_percentage <- diffs_total %>%
+    mutate(additions = round(additions / diff * 100),
+    removals = round(removals / diff * 100),
+        unit_marginal = round(unit_marginal / diff * 100),
+        group_marginal = round(group_marginal / diff * 100),
+        structural = round(structural / diff * 100),
+        diff = 100) %>%
+    select(-OccMain, -M1, -M2) %>%
+    mutate_at(vars(diff:structural),
+        function(x) paste0("(", sprintf("%.0f", x), "%)"))
+
+diffs_total <- diffs_total %>%
+    mutate_at(vars(M1:structural), function(x) paste0( sprintf("%.3f", x)))
+
+options(knitr.kable.NA = "")
+bind_rows(diffs_total, diffs_percentage) %>%
+    arrange(order, M1) %>%
+    select(-order) %>%
+    kable("html", booktabs = TRUE, escape = FALSE,
+        align = c("l", "r", "r", "r", "r", "r", "r", "r"),
+        col.names = linebreak(c("Component", "1985", "2005", "Diff.","Appearing",
+            "Disappearing", "Occupation", "Gender", "Structural"))) %>%
+    kable_styling(latex_options = c("striped", "condensed", "scale_down"),
+        position = "center") %>%
+    #add_header_above(c(" ", "M" = 3, " ", "Marginal" = 2)) %>%
+    group_rows("Within major groups (sorted by Diff.)", 5, 22) %>%
+    row_spec(c(2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22), font_size = 8) %>%
+    cat(file = "Output/diffs.html", sep = "\n")
+
+
+diffs_plot <- diffs %>%
+    filter(OccMain!= "Between major groups") %>%
+    mutate(order = c(1, rep(2, 9))) %>%
+    arrange(order, diff) %>%
+    mutate(order = 1:10) %>%
+    mutate(OccMain= ifelse(OccMain == "Total", "Total labor force", paste("Only:", OccMain))) %>%
+    select(OccMain, order, group_marginal, unit_marginal, structural, additions, removals) %>%
+    gather(component, value, -OccMain, -order) %>%
+    mutate(component = recode_factor(component,
+        `group_marginal` = "Gender margins",
+        `unit_marginal` = "Occupation margins",
+        `additions` = "Appearing occupations",
+        `removals` = "Disappearing occupations",
+        `structural` = "Structural", .ordered = TRUE))
+
+labels <- rev(diffs_plot$OccMain[1:10])
+labels[10] <- expression(bold("Total labor force"))
+
+p <- ggplot(diffs_plot, aes(y = value, x = reorder(OccMain, -order), fill = component)) +
+    geom_col() +
+    geom_hline(yintercept = 0) +
+    theme_bw() +
+    theme(axis.title.y = element_blank(), legend.position = "bottom",
+        legend.title = element_blank()) +
+    guides(fill = guide_legend(nrow = 2, byrow = TRUE)) +
+    scale_fill_manual(values = ggthemes::colorblind_pal()(5)) +
+    scale_x_discrete(labels = labels) +
+    ylab("Difference in M") +
+    coord_flip()
+
+ggsave("Output/ElbersTotalSegregation02.png", p, width = 8, height = 5)
+</code></pre>
 </main>
 <div id="references" class="section level2">
     <h2 class="hasAnchor">
