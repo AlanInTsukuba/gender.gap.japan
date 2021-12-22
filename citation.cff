@@ -142,3 +142,13 @@ references:
     location: "Tokyo, Japan"
     year: 2020
     url: "https://osf.io/txqka/download"
+  - authors:
+      - family-names: Ueno
+        given-names: Koji
+    title: "Gender-Stratified Labor Market, Heterosexual Marriage Expectation, and 
+LGBQ Young Adults&#39; Career Plans in Contemporary Japan"
+    type: article
+    journal: "Socius"
+    issue: January
+    year: 2021
+    doi: "10.1177/23780231211052807"
