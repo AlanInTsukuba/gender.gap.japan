@@ -2,7 +2,7 @@
     <head>
       <!--<meta name="google-site-verification" content="Z7SEnQaO9LAITbhuwGaI3rFtnpMRKeV9BbaW3LyvP2g" />-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="revised" content="6 December 2021" />
+      <meta name="revised" content="16 December 2021" />
         <title>Descriptive statistics</title>
 
         <link rel="stylesheet" href="https://latex.now.sh/style.css"> 
@@ -16,232 +16,339 @@ integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="ano
 <body>
 <h1>Descriptive statistics</h1>
 <p class="author"><a href="https://orcid.org/0000-0003-0070-2347" target="_blank">Alan Engel</a><br>Last update: 
-6 December 2021</p>
+16 December 2021</p>
 <main>
     <p>This task produces a table of descriptive statistics similar to Table 3 in <a href="#Elbers2021">Elbers (2021)</a>. 
     Except where noted, the statistics are generated using the R scripts included below.</p>
-<table>
-    <caption>Descriptive statistics</caption>
-    <tr><th></th><th></th><th>1985</th><th>1990</th><th>1995</th><th>2000</th><th>2005</th></tr>
-    <tr><td colspan=2>Sample size (in 1000)</td><td>5571</td><td>6158</td><td>6416</td>
-        <td>6303</td><td>6153</td></tr>
-    <tr><td colspan=7><b>A. Number of occupations</b></td></tr>
-    <tr><td></td><td>Number of occupations</td>
-        <td style="text-align: center;">262</td>
-        <td style="text-align: center;">261</td>
-        <td  style="text-align: center;">262</td>
-        <td style="text-align: center;">264</td>
-        <td style="text-align: center;">264</td></tr>
-        <tr><td></td><td>Appearing occupations</td><td></td>
-            <td style="text-align: center;">1</td>
-            <td style="text-align: center;">1</td>
-            <td style="text-align: center;">3</td>
-            <td style="text-align: center;">4</td></tr>
-        <tr><td></td><td>Disappearing occupations</td><td></td>
-            <td style="text-align: center;">2</td>
-            <td style="text-align: center;">1</td>
-            <td style="text-align: center;">1</td>
-            <td style="text-align: center;">2</td></tr>
-    <tr><td colspan=7><b>B. Labor force participation (%)</b></td></tr>
-    <tr><td></td>
-        <td>Female</td><td style="text-align: center;">37.2</td>
-        <td style="text-align: center;">39.7</td>
-        <td style="text-align: center;">40.0</td>
-        <td style="text-align: center;">40.9</td>
-        <td style="text-align: center;">41.9</td></tr>
-    <tr><td colspan=7><b>C. Distribution of occupational major groups (%)</b></td></tr>
-    <tr><td></td>
-        <td>A. SPECIALIST AND TECHNICAL</td>
-        <td style='text-align: center;'>11.47</td><td style='text-align: center;'>11.66</td><td style='text-align: center;'>12.7</td><td style='text-align: center;'>13.6</td><td style='text-align: center;'>13.9</td></tr>
-        <tr><td></td>
-        <td>B. ADMINISTRATIVE AND MANAGERIAL</td>
-        <td style='text-align: center;'> 4.24</td><td style='text-align: center;'> 4.13</td><td style='text-align: center;'> 4.2</td><td style='text-align: center;'> 2.9</td><td style='text-align: center;'> 2.4</td></tr>
- 
-        <tr><td></td>
-        <td>C. CLERICAL</td>
-        <td style='text-align: center;'>14.03</td><td style='text-align: center;'>19.11</td><td style='text-align: center;'>19.3</td><td style='text-align: center;'>19.5</td><td style='text-align: center;'>19.8</td></tr>
- 
-        <tr><td></td>
-        <td>D. SALES</td>
-        <td style='text-align: center;'>14.90</td><td style='text-align: center;'>14.28</td><td style='text-align: center;'>14.6</td><td style='text-align: center;'>14.9</td><td style='text-align: center;'>14.4</td></tr>
- 
-        <tr><td></td>
-        <td>E. SERVICE</td>
-        <td style='text-align: center;'> 7.47</td><td style='text-align: center;'> 7.27</td><td style='text-align: center;'> 7.9</td><td style='text-align: center;'> 8.9</td><td style='text-align: center;'>10.0</td></tr>
- 
-        <tr><td></td>
-        <td>F. SECURITY</td>
-        <td style='text-align: center;'> 1.47</td><td style='text-align: center;'> 1.41</td><td style='text-align: center;'> 1.5</td><td style='text-align: center;'> 1.6</td><td style='text-align: center;'> 1.7</td></tr>
- 
-        <tr><td></td>
-        <td>G. AGRICULTURE, FORESTRY AND FISHERY</td>
-        <td style='text-align: center;'> 9.66</td><td style='text-align: center;'> 7.08</td><td style='text-align: center;'> 5.9</td><td style='text-align: center;'> 5.0</td><td style='text-align: center;'> 4.8</td></tr>
- 
-        <tr><td></td>
-        <td>H. TRANSPORT AND COMMUNICATION</td>
-        <td style='text-align: center;'> 4.19</td><td style='text-align: center;'> 3.78</td><td style='text-align: center;'> 3.8</td><td style='text-align: center;'> 3.7</td><td style='text-align: center;'> 3.5</td></tr>
- 
-        <tr><td></td>
-        <td>I-1. MANUFACTURING AND PRODUCTION</td>
-        <td style='text-align: center;'>21.29</td><td style='text-align: center;'>19.85</td><td style='text-align: center;'>18.0</td><td style='text-align: center;'>17.3</td><td style='text-align: center;'>16.2</td></tr>
-        <tr><td></td>
-        <td>I-2. OPERATORS</td>
-        <td style='text-align: center;'> 1.71</td><td style='text-align: center;'> 1.57</td><td style='text-align: center;'> 1.6</td><td style='text-align: center;'> 1.6</td><td style='text-align: center;'> 1.5</td></tr
-        <tr><td></td>
-        <td>I-3. LABORERS</td>
-        <td style='text-align: center;'> 9.40</td><td style='text-align: center;'> 9.33</td><td style='text-align: center;'> 9.8</td><td style='text-align: center;'> 9.8</td><td style='text-align: center;'> 9.9</td></tr>
-        <tr><td></td>
-        <td>J. WORKERS NOC</td>
-        <td style='text-align: center;'> 0.18</td><td style='text-align: center;'> 0.53</td><td style='text-align: center;'> 0.6</td><td style='text-align: center;'> 1.2</td><td style='text-align: center;'> 1.8</td></tr>
-        <tr><td colspan=7><b>D. Female labor force by major groups (%)</b></td></tr>
-        <tr><td></td>
-            <td>A. SPECIALIST AND TECHNICAL</td>
-            <td style='text-align: center;'>40.07</td><td style='text-align: center;'>40.5</td><td style='text-align: center;'>41.9</td><td style='text-align: center;'>43.4</td><td style='text-align: center;'>47.1</td>
-            </tr>
-            <tr><td></td>
-            <td>B. ADMINISTRATIVE AND MANAGERIAL</td>
-            <td style='text-align: center;'> 8.79</td><td style='text-align: center;'> 9.1</td><td style='text-align: center;'> 9.6</td><td style='text-align: center;'>11.1</td><td style='text-align: center;'>11.7</td>
-            </tr>
-            <tr><td></td>
-            <td>C. CLERICAL</td>
-            <td style='text-align: center;'>51.65</td><td style='text-align: center;'>60.8</td><td style='text-align: center;'>62.0</td><td style='text-align: center;'>62.0</td><td style='text-align: center;'>61.5</td>
-            </tr>
-            <tr><td></td>
-            <td>D. SALES</td>
-            <td style='text-align: center;'>36.65</td><td style='text-align: center;'>36.7</td><td style='text-align: center;'>37.3</td><td style='text-align: center;'>36.2</td><td style='text-align: center;'>37.5</td>
-            </tr>
-            <tr><td></td>
-            <td>E. SERVICE</td>
-            <td style='text-align: center;'>63.40</td><td style='text-align: center;'>63.0</td><td style='text-align: center;'>63.8</td><td style='text-align: center;'>64.8</td><td style='text-align: center;'>66.2</td>
-            </tr>
-            <tr><td></td>
-            <td>F. SECURITY</td>
-            <td style='text-align: center;'> 2.56</td><td style='text-align: center;'> 3.2</td><td style='text-align: center;'> 4.6</td><td style='text-align: center;'> 5.0</td><td style='text-align: center;'> 5.4</td>
-            </tr>
-            <tr><td></td>
-            <td>G. AGRICULTURE, FORESTRY AND FISHERY</td>
-            <td style='text-align: center;'>45.73</td><td style='text-align: center;'>44.8</td><td style='text-align: center;'>43.2</td><td style='text-align: center;'>42.8</td><td style='text-align: center;'>40.8</td>
-            </tr>
-            <tr><td></td>
-            <td>H. TRANSPORT AND COMMUNICATION</td>
-            <td style='text-align: center;'> 5.42</td><td style='text-align: center;'> 4.9</td><td style='text-align: center;'> 5.3</td><td style='text-align: center;'> 4.7</td><td style='text-align: center;'> 4.4</td>
-            </tr>
-            <tr><td></td>
-            <td>I-1. MANUFACTURING AND PRODUCTION</td>
-            <td style='text-align: center;'>37.65</td><td style='text-align: center;'>37.1</td><td style='text-align: center;'>35.0</td><td style='text-align: center;'>34.1</td><td style='text-align: center;'>32.2</td>
-            </tr>
-            <tr><td></td>
-            <td>I-2. OPERATORS</td>
-            <td style='text-align: center;'> 0.58</td><td style='text-align: center;'> 0.9</td><td style='text-align: center;'> 1.2</td><td style='text-align: center;'> 1.3</td><td style='text-align: center;'> 1.3</td>
-            </tr
-            <tr><td></td>
-            <td>I-3. LABORERS</td>
-            <td style='text-align: center;'>21.10</td><td style='text-align: center;'>22.6</td><td style='text-align: center;'>23.9</td><td style='text-align: center;'>26.0</td><td style='text-align: center;'>26.8</td>
-            </tr>
-            <tr><td></td>
-            <td>J. WORKERS NOC</td>
-            <td style='text-align: center;'>49.25</td><td style='text-align: center;'>43.9</td><td style='text-align: center;'>44.6</td><td style='text-align: center;'>43.8</td><td style='text-align: center;'>39.8</td>
-            </tr>
-        </table>
-    <pre><code class="language-html">#' DescriptiveStatistics.R
-#' If not already in the workspace:
-#' occgenall <- read.csv("Data/occgenall.csv", sep="\t",header=T)
-        
-#' sample size
-with(occgenall[,c("CensusYear","value")], 
-aggregate(value,
-    list(CensusYear=occgenall$CensusYear),FUN="sum"))
-         
-#' using outer joins
-tmp1985 <- occgenall[occgenall$CensusYear == "1985",c("OccMinor","CensusYear")]
-tmp1990 <- occgenall[occgenall$CensusYear == "1990",c("OccMinor","CensusYear")]
-tmp1995 <- occgenall[occgenall$CensusYear == "1995",c("OccMinor","CensusYear")]
-tmp2000 <- occgenall[occgenall$CensusYear == "2000",c("OccMinor","CensusYear")]
-tmp2005 <- occgenall[occgenall$CensusYear == "2005",c("OccMinor","CensusYear")]
-head(tmp1985)
-colSums(is.na(unique(merge(x = tmp1985 ,y = tmp1990 ,by="OccMinor",all=TRUE))))
-colSums(is.na(unique(merge(x = tmp1985 ,y = tmp1995 ,by="OccMinor",all=TRUE))))
-colSums(is.na(unique(merge(x = tmp1985 ,y = tmp2000 ,by="OccMinor",all=TRUE))))
-colSums(is.na(unique(merge(x = tmp1985 ,y = tmp2005 ,by="OccMinor",all=TRUE))))
-rm("tmp1985","tmp1990","tmp1995","tmp2000","tmp2005")
-        
-#' labor force participation
-tmp <- with(occgenall,aggregate(occgenall$value, #data=occgenall,
-        list(CensusYear=occgenall$CensusYear,
-            Gender=occgenall$Gender),
-        FUN="sum"))
-tmp <- with(tmp,cbind(tmp[Gender=="FEMALE",c("CensusYear","x")],
-        tmp[Gender=="MALE","x"]))
-colnames(tmp) <- c("CensusYear","Female","Male")
-        with(tmp,cbind(tmp, Female / (Female + Male)))
-rm(tmp)
-    
-#' distribution of occupational major groups
-#' These are in the OccMajor column of occgenall
-#' First get the grant totals
-grandtotal <- with(occgenall,aggregate(occgenall$value, 
-         list(CensusYear=occgenall$CensusYear),
-        FUN="sum"))
-colnames(grandtotal) <- c("CensusYear","Total")
-        
-#' Next get the totals by major group
-majorgrptotals <- with(occgenall,aggregate(occgenall$value, 
-		list(OccMain=occgenall$OccMain,
-			OccSub=occgenall$OccSub,
-			CensusYear=occgenall$CensusYear),
-		FUN="sum"))
-colnames(majorgrptotals) <- c("OccMain","OccSub","CensusYear","GrpTotal")
-head(majorgrptotals)
+    <table class="table" style="margin-left: auto; margin-right: auto;">
+        <thead>
+         <tr>
+          <th style="text-align:left;text-align: center;">  </th>
+          <th style="text-align:right;text-align: center;"> 1985 </th>
+          <th style="text-align:right;text-align: center;"> 1990 </th>
+          <th style="text-align:right;text-align: center;"> 1995 </th>
+          <th style="text-align:right;text-align: center;"> 2000 </th>
+          <th style="text-align:right;text-align: center;"> 2005 </th>
+         </tr>
+        </thead>
+       <tbody>
+         <tr>
+          <td style="text-align:left;"> Sample size (in 1000) </td>
+          <td style="text-align:right;"> 55611 </td>
+          <td style="text-align:right;"> 61254 </td>
+          <td style="text-align:right;"> 63775 </td>
+          <td style="text-align:right;"> 62290 </td>
+          <td style="text-align:right;"> 60397 </td>
+         </tr>
+         <tr grouplength="3"><td colspan="6" style="border-bottom: 1px solid;"><strong>A. Number of occupations</strong></td></tr>
+       <tr>
+          <td style="text-align:left;padding-left: 2em;" indentlevel="1"> Number of occupations </td>
+          <td style="text-align:right;"> 261 </td>
+          <td style="text-align:right;"> 260 </td>
+          <td style="text-align:right;"> 261 </td>
+          <td style="text-align:right;"> 263 </td>
+          <td style="text-align:right;"> 263 </td>
+         </tr>
+         <tr>
+          <td style="text-align:left;padding-left: 2em;" indentlevel="1"> Appearing occupations </td>
+          <td style="text-align:right;">  </td>
+          <td style="text-align:right;"> 1 </td>
+          <td style="text-align:right;"> 1 </td>
+          <td style="text-align:right;"> 2 </td>
+          <td style="text-align:right;"> 1 </td>
+         </tr>
+         <tr>
+          <td style="text-align:left;padding-left: 2em;" indentlevel="1"> Disappearing occupations </td>
+          <td style="text-align:right;">  </td>
+          <td style="text-align:right;"> 2 </td>
+          <td style="text-align:right;"> 0 </td>
+          <td style="text-align:right;"> 0 </td>
+          <td style="text-align:right;"> 1 </td>
+         </tr>
+         <tr grouplength="1"><td colspan="6" style="border-bottom: 1px solid;"><strong>B. Labor force participation (%)</strong></td></tr>
+       <tr>
+          <td style="text-align:left;padding-left: 2em;" indentlevel="1"> Female </td>
+          <td style="text-align:right;"> 37 </td>
+          <td style="text-align:right;"> 40 </td>
+          <td style="text-align:right;"> 40 </td>
+          <td style="text-align:right;"> 41 </td>
+          <td style="text-align:right;"> 42 </td>
+         </tr>
+         <tr grouplength="9"><td colspan="6" style="border-bottom: 1px solid;"><strong>C. Distribution of occupational major groups (%)</strong></td></tr>
+       <tr>
+          <td style="text-align:left;padding-left: 2em;" indentlevel="1"> A SPECIALIST / TECHNICAL </td>
+          <td style="text-align:right;"> 11 </td>
+          <td style="text-align:right;"> 12 </td>
+          <td style="text-align:right;"> 13 </td>
+          <td style="text-align:right;"> 14 </td>
+          <td style="text-align:right;"> 14 </td>
+         </tr>
+         <tr>
+          <td style="text-align:left;padding-left: 2em;" indentlevel="1"> B MANAGERIAL </td>
+          <td style="text-align:right;"> 4 </td>
+          <td style="text-align:right;"> 4 </td>
+          <td style="text-align:right;"> 4 </td>
+          <td style="text-align:right;"> 3 </td>
+          <td style="text-align:right;"> 2 </td>
+         </tr>
+         <tr>
+          <td style="text-align:left;padding-left: 2em;" indentlevel="1"> C CLERICAL </td>
+          <td style="text-align:right;"> 14 </td>
+          <td style="text-align:right;"> 19 </td>
+          <td style="text-align:right;"> 19 </td>
+          <td style="text-align:right;"> 20 </td>
+          <td style="text-align:right;"> 20 </td>
+         </tr>
+         <tr>
+          <td style="text-align:left;padding-left: 2em;" indentlevel="1"> D SALES </td>
+          <td style="text-align:right;"> 15 </td>
+          <td style="text-align:right;"> 14 </td>
+          <td style="text-align:right;"> 15 </td>
+          <td style="text-align:right;"> 15 </td>
+          <td style="text-align:right;"> 15 </td>
+         </tr>
+         <tr>
+          <td style="text-align:left;padding-left: 2em;" indentlevel="1"> E SERVICES </td>
+          <td style="text-align:right;"> 7 </td>
+          <td style="text-align:right;"> 7 </td>
+          <td style="text-align:right;"> 8 </td>
+          <td style="text-align:right;"> 9 </td>
+          <td style="text-align:right;"> 10 </td>
+         </tr>
+         <tr>
+          <td style="text-align:left;padding-left: 2em;" indentlevel="1"> F SECURITY </td>
+          <td style="text-align:right;"> 1 </td>
+          <td style="text-align:right;"> 1 </td>
+          <td style="text-align:right;"> 1 </td>
+          <td style="text-align:right;"> 2 </td>
+          <td style="text-align:right;"> 2 </td>
+         </tr>
+         <tr>
+          <td style="text-align:left;padding-left: 2em;" indentlevel="1"> G AG, F &amp; F </td>
+          <td style="text-align:right;"> 10 </td>
+          <td style="text-align:right;"> 7 </td>
+          <td style="text-align:right;"> 6 </td>
+          <td style="text-align:right;"> 5 </td>
+          <td style="text-align:right;"> 5 </td>
+         </tr>
+         <tr>
+          <td style="text-align:left;padding-left: 2em;" indentlevel="1"> H TRANSPORT &amp; COMM </td>
+          <td style="text-align:right;"> 4 </td>
+          <td style="text-align:right;"> 4 </td>
+          <td style="text-align:right;"> 4 </td>
+          <td style="text-align:right;"> 4 </td>
+          <td style="text-align:right;"> 4 </td>
+         </tr>
+         <tr>
+          <td style="text-align:left;padding-left: 2em;" indentlevel="1"> I MANU., OPERATORS, LABORERS </td>
+          <td style="text-align:right;"> 32 </td>
+          <td style="text-align:right;"> 31 </td>
+          <td style="text-align:right;"> 30 </td>
+          <td style="text-align:right;"> 29 </td>
+          <td style="text-align:right;"> 28 </td>
+         </tr>
+         <tr grouplength="9"><td colspan="6" style="border-bottom: 1px solid;"><strong>D. Female labor force by major groups (%)</strong></td></tr>
+       <tr>
+          <td style="text-align:left;padding-left: 2em;" indentlevel="1"> A SPECIALIST / TECHNICAL </td>
+          <td style="text-align:right;"> 40 </td>
+          <td style="text-align:right;"> 41 </td>
+          <td style="text-align:right;"> 42 </td>
+          <td style="text-align:right;"> 43 </td>
+          <td style="text-align:right;"> 47 </td>
+         </tr>
+         <tr>
+          <td style="text-align:left;padding-left: 2em;" indentlevel="1"> B MANAGERIAL </td>
+          <td style="text-align:right;"> 9 </td>
+          <td style="text-align:right;"> 9 </td>
+          <td style="text-align:right;"> 10 </td>
+          <td style="text-align:right;"> 11 </td>
+          <td style="text-align:right;"> 12 </td>
+         </tr>
+         <tr>
+          <td style="text-align:left;padding-left: 2em;" indentlevel="1"> C CLERICAL </td>
+          <td style="text-align:right;"> 52 </td>
+          <td style="text-align:right;"> 61 </td>
+          <td style="text-align:right;"> 62 </td>
+          <td style="text-align:right;"> 62 </td>
+          <td style="text-align:right;"> 61 </td>
+         </tr>
+         <tr>
+          <td style="text-align:left;padding-left: 2em;" indentlevel="1"> D SALES </td>
+          <td style="text-align:right;"> 37 </td>
+          <td style="text-align:right;"> 37 </td>
+          <td style="text-align:right;"> 37 </td>
+          <td style="text-align:right;"> 36 </td>
+          <td style="text-align:right;"> 38 </td>
+         </tr>
+         <tr>
+          <td style="text-align:left;padding-left: 2em;" indentlevel="1"> E SERVICES </td>
+          <td style="text-align:right;"> 63 </td>
+          <td style="text-align:right;"> 63 </td>
+          <td style="text-align:right;"> 64 </td>
+          <td style="text-align:right;"> 65 </td>
+          <td style="text-align:right;"> 66 </td>
+         </tr>
+         <tr>
+          <td style="text-align:left;padding-left: 2em;" indentlevel="1"> F SECURITY </td>
+          <td style="text-align:right;"> 3 </td>
+          <td style="text-align:right;"> 3 </td>
+          <td style="text-align:right;"> 5 </td>
+          <td style="text-align:right;"> 5 </td>
+          <td style="text-align:right;"> 5 </td>
+         </tr>
+         <tr>
+          <td style="text-align:left;padding-left: 2em;" indentlevel="1"> G AG, F &amp; F </td>
+          <td style="text-align:right;"> 46 </td>
+          <td style="text-align:right;"> 45 </td>
+          <td style="text-align:right;"> 43 </td>
+          <td style="text-align:right;"> 43 </td>
+          <td style="text-align:right;"> 41 </td>
+         </tr>
+         <tr>
+          <td style="text-align:left;padding-left: 2em;" indentlevel="1"> H TRANSPORT &amp; COMM </td>
+          <td style="text-align:right;"> 5 </td>
+          <td style="text-align:right;"> 5 </td>
+          <td style="text-align:right;"> 5 </td>
+          <td style="text-align:right;"> 5 </td>
+          <td style="text-align:right;"> 4 </td>
+         </tr>
+         <tr>
+          <td style="text-align:left;padding-left: 2em;" indentlevel="1"> I MANU., OPERATORS, LABORERS </td>
+          <td style="text-align:right;"> 31 </td>
+          <td style="text-align:right;"> 31 </td>
+          <td style="text-align:right;"> 29 </td>
+          <td style="text-align:right;"> 29 </td>
+          <td style="text-align:right;"> 29 </td>
+         </tr>
+       </tbody>
+       </table>
+<pre><code class="language-html">#' AnalyzePerElbers.R
+#' 2021-12-15
 
-majorgrpshares <- merge(majorgrptotals, grandtotal)
-majorgrpshares$GrpShare <- with(majorgrpshares, 100*GrpTotal/ Total)
-head(majorgrpshares)
+#' Adapted from
+#' Elbers, Benjamin. A Method for Studying Differences in Segregation Across Time and Space. 
+#' SocArXiv, 21 Dec. 2018, supplementary materials
 
-#' Get harmonized occupation classes for titles
-hoc <- read.csv("Data/HarmonizedOccupationClasses1985-2005.csv",header=T)
-head(hoc)
-merge(majorgrpshares, hoc[hoc$MainTitle != "",c("OccMain","OccSub","MainTitle")])
+library("tidyverse")
+library("tidylog", warn.conflicts = FALSE)
+library("fst")
+library("ggthemes")
+library("segregation")
+library("cowplot")
+library("knitr")
+library("kableExtra")
 
-tmptbl <- cbind(majorgrpshares[majorgrpshares$CensusYear==1985,c("OccMain","OccSub","GrpShare")], 
-	majorgrpshares[majorgrpshares$CensusYear==1990,c("GrpShare")], 
-	majorgrpshares[majorgrpshares$CensusYear==1995,c("GrpShare")], 
-	majorgrpshares[majorgrpshares$CensusYear==2000,c("GrpShare")], 
-	majorgrpshares[majorgrpshares$CensusYear==2005,c("GrpShare")])
-colnames(tmptbl)  <- c("OccMain","OccSub","X1985","X1990","X1995","X2000","X2005")
+## data is in occgenall
+head(occgenall)
+#' Harmonized occupation classes to get main group titles
+hoc <- read.csv("Data/OccupationalCrosswalk1985-2005.csv",header=T)
 
-tmp <- with(tmptbl,format(tmptbl[with(tmptbl, order(OccMain,OccSub)),], digits=2))
-with(tmp, paste0("<tr><td>",OccMain,OccSub,"</td><td style='text-align: center;'>",X1985,"</td><td style='text-align: center;'>",X1990,"</td><td style='text-align: center;'>",X1995,"</td><td style='text-align: center;'>",X2000,"</td><td style='text-align: center;'>",X2005,"</td></tr>"))
+# make copy to use as Elbers
+d <- as_tibble(occgenall) %>%
+    rename(w = value) %>% rename(year = CensusYear) %>%
+    filter(OccMinor != 1267)
+d$n <- as.integer(d$w)
 
-##########################################################
-#' Female shares by major group
-head(majorgrpshares)
 
-tmpoccgenf <- with(occgenall,occgenall[Gender=="FEMALE",])
-head(tmpoccgenf )
-majorgrpFshares <- with(tmpoccgenf,aggregate(tmpoccgenf$value, 
-		list(OccMain=tmpoccgenf$OccMain,
-			OccSub=tmpoccgenf$OccSub,
-			CensusYear=tmpoccgenf$CensusYear),
-		FUN="sum"))
-colnames(majorgrpFshares) <- c("OccMain","OccSub","CensusYear","FemaleGrpTotal")
-head(majorgrpFshares)
+head(d)
 
-majorgrpshares <- merge(majorgrpshares,majorgrpFshares )
-majorgrpshares$FemShare <- with(majorgrpshares, 100*FemaleGrpTotal/ GrpTotal)
+##########################
+###### descriptives ######
+##########################
 
-tmptbl <- cbind(majorgrpshares[majorgrpshares$CensusYear==1985,c("OccMain","OccSub","FemShare")], 
-	majorgrpshares[majorgrpshares$CensusYear==1990,c("FemShare")], 
-	majorgrpshares[majorgrpshares$CensusYear==1995,c("FemShare")], 
-	majorgrpshares[majorgrpshares$CensusYear==2000,c("FemShare")], 
-	majorgrpshares[majorgrpshares$CensusYear==2005,c("FemShare")])
-colnames(tmptbl)  <- c("OccMain","OccSub","X1985","X1990","X1995","X2000","X2005")
+samplesize <- d %>%
+    group_by(year) %>%
+    summarize(n = sum(n)) %>%
+    mutate(var = "Sample size (in 1000)",
+        n = round(n / 1000)) %>%
+    spread(year, n)
 
-tmp <- with(tmptbl,format(tmptbl[with(tmptbl, order(OccMain,OccSub)),], digits=2))
-with(tmp, paste0("<tr><td>",OccMain,OccSub,"</td><td style='text-align: center;'>",X1985,"</td><td style='text-align: center;'>",X1990,"</td><td style='text-align: center;'>",X1995,"</td><td style='text-align: center;'>",X2000,"</td><td style='text-align: center;'>",X2005,"</td></tr>"))
+occ1985 <- filter(d, year == 1985) %>% pull(OccMinor) %>% unique
+occ1990 <- filter(d, year == 1990) %>% pull(OccMinor) %>% unique
+occ1995 <- filter(d, year == 1995) %>% pull(OccMinor) %>% unique
+occ2000 <- filter(d, year == 2000) %>% pull(OccMinor) %>% unique
+occ2005 <- filter(d, year == 2005) %>% pull(OccMinor) %>% unique
+common_occ <- intersect(occ1985 , occ1990 ) %>%
+    intersect(occ1995 ) %>% intersect(occ2000 ) %>% 
+    intersect(occ2005 )
 
-ls()
-#### clean up
-rm("grandtotal","grptotals_ht","majorgrpFshares","majorgrpshares","majorgrptotals","tmp","tmpoccgenf","tmptbl")</code></pre>
+nocc <- tribble(~var, ~`1985`, ~`1990`, ~`1995`, ~`2000`, ~`2005`,
+    "Number of occupations", length(occ1985),
+        length(occ1990), length(occ1995), length(occ2000),
+    length(occ2005),
+    "Appearing occupations", NA,
+        length(setdiff(occ1990, occ1985)),
+        length(setdiff(occ1995, occ1990)),
+        length(setdiff(occ2000, occ1995)),
+        length(setdiff(occ2005, occ2000)),
+    "Disappearing occupations", NA,
+        length(setdiff(occ1985, occ1990)),
+        length(setdiff(occ1990, occ1995)),
+        length(setdiff(occ1995, occ2000)),
+        length(setdiff(occ2000, occ2005))
+    )
+
+gender <- d %>%
+    group_by(year, Gender) %>%
+    summarize(n = sum(w)) %>%
+    group_by(year) %>%
+    mutate(p = round(n / sum(n) * 100)) %>%
+    filter(Gender == "FEMALE") %>%
+    select(-n) %>%
+    spread(year, p) %>%
+    rename(var = Gender)
+
+occ <- d %>%
+    group_by(year, OccMain) %>%
+    summarize(n = sum(w)) %>%
+    group_by(year) %>%
+    mutate(p = round(n / sum(n) * 100)) %>%
+    select(-n) %>%
+    spread(year, p) %>%
+    merge(hoc[nchar(hoc$MainTitle)>0,c("OccMain","MainTitle")]) %>%
+    mutate(OccMain = paste(OccMain,MainTitle,sep=" "))  %>%
+    select(-MainTitle) %>%
+    rename(var = OccMain)
+
+occ_gender <- d %>%
+    group_by(year, OccMain, Gender) %>%
+    summarize(n = sum(w)) %>%
+    group_by(year, OccMain) %>%
+    mutate(p = round(n / sum(n) * 100)) %>%
+    filter(Gender== "FEMALE") %>%
+    select(-n, -Gender) %>%
+    spread(year, p) %>%
+    merge(hoc[nchar(hoc$MainTitle)>0,c("OccMain","MainTitle")]) %>%
+    mutate(OccMain = paste(OccMain,MainTitle,sep=" "))  %>%
+    select(-MainTitle) %>%
+    rename(var = OccMain)
+
+desc <- bind_rows(samplesize, nocc, gender, occ, occ_gender)
+desc[5, "var"] <- "Female"
+names(desc)[[1]] <- ""
+
+options(knitr.kable.NA = "")
+kable(desc, "latex", booktabs = T) %>%
+    kable_styling(latex_options = c("striped", "condensed"),
+        position = "center") %>%
+    row_spec(0, align = "c") %>%
+    group_rows("A. Number of occupations", 2, 4) %>%
+    group_rows("B. Labor force participation (%)", 5, 5) %>%
+    group_rows("C. Distribution of occupational major groups (%)", 6, 14) %>%
+    group_rows("D. Female labor force by major groups (%)", 15, 25) %>%
+    cat(file = "Output/desc.tex", sep = "\n")
+
+kable(desc, "html", booktabs = T) %>%
+    kable_styling(latex_options = c("striped", "condensed"),
+        position = "center") %>%
+    row_spec(0, align = "c") %>%
+    group_rows("A. Number of occupations", 2, 4) %>%
+    group_rows("B. Labor force participation (%)", 5, 5) %>%
+    group_rows("C. Distribution of occupational major groups (%)", 6, 14) %>%
+    group_rows("D. Female labor force by major groups (%)", 15, 23) %>%
+    cat(file = "Output/desc.html", sep = "\n")
+                
+</code></pre>
 </main>
 <div id="references" class="section level2">
     <h2 class="hasAnchor">

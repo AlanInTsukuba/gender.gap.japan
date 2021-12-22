@@ -1,0 +1,181 @@
+<html>
+    <head>
+      <!--<meta name="google-site-verification" content="Z7SEnQaO9LAITbhuwGaI3rFtnpMRKeV9BbaW3LyvP2g" />-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="revised" content="14 December 2021" />
+        <title>Applying Elbers: Total segregation</title>
+
+        <link rel="stylesheet" href="https://latex.now.sh/style.css"> 
+        <link rel="stylesheet" href="https://alanintsukuba.github.io/ShowReferencesModal.css"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css">
+<!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" 
+integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" 
+integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]-->    
+</head>
+<body>
+<h1>Applying Elbers: Total segregation</h1>
+<p class="author"><a href="https://orcid.org/0000-0003-0070-2347" target="_blank">Alan Engel</a><br>Last update: 
+14 December 2021</p>
+<main>
+    <p>Elbers (2021) derives a five-term decomposition: 
+        $$S(t_{2})-S(t_{1})=\Delta_{appearing}+\Delta_{disappearing}$$
+    $$+\Delta_{marginal-units}+\Delta_{marginal-groups}$$
+$$+\sum_{u\in t_{1}\cap t_{2}}\Delta_{i,structural}$$
+where \(S(t)\) is a segregation index value at time t, 
+\(\Delta_{appearing}\) is the number of units (e.g., occupations) that newly 
+appeared between time \(t_{1}\) and \(t_{2}\), \(\Delta_{disappearing}\) 
+is the number of units that disappeared, \(\Delta_{marginal-units}\) 
+is the marginal change due to units, and \(\Delta_{marginal-groups}\) is 
+that due to groups (for example, genders). The last term is the structural 
+("pure") segregation that occurs within each unit. </p>
+<p>When written in this 
+form, the Uchikoshi and Mugiyama (2020) [UM2020] decomposition of a change in 
+Duncans' Dissimilarity Index becomes:
+$$S(t_{2})-S(t_{1})=\Delta_{marginal-units}+\sum_{u\in t_{1}\cap t_{2}}\Delta_{i,structural}$$</p>
+<p>In UM2020 the segregation index is Duncans' Dissimilarity Index. 
+</p>
+<p>Elbers uses Thiel's H index:
+    $$H=\frac{M}{E(p_{g})}$$ where M is the Mutual Information Index and \(E(p_{g})\) is the 
+    group (gender) entropy. This task follows the analysis that Elbers (2021) provides in his 
+    supplementary materials.</p>
+<p>The figure below shows the decomposition of total H and M into the segregation 
+    between the major groups and the weighted sum of segregations within the major 
+    groups. H is a standardized index with a range from 0 (no segregation) to 1 (complete 
+    segregation). M has a minimum of 0 for no segregation; its maximum value is the entropy, 
+    which is the value of the M at complete segregation. The results show sustained high levels 
+    of segregation in the specialist and technical occupations, and sharply decreasing 
+    segregation in transportation and communications occupations. Managerial workers and 
+    manufacturing workers, operators and laborers show gradually decreasing segregation. Sales 
+    occupations show that segregation increased in the period from 1990 to 1995, which started 
+    in Japan's bubble economy and ended in its "lost decade." These major groups will be 
+    analyzed in more detail later in this project.
+</p>
+<figure>
+    <img src="images/ElbersTotalSegregation01.png"
+          loading="lazy" alt="Occupational gender segregation 1985-2005" width="600" height="900" />
+        <figcaption>Occupational gender segregation 1985-2005</figcaption>
+</figure>
+<p>When the changes in M between 1985 and 2005 are decomposed into the 5 components, structural, 
+    gender margins, occupational margins, appearing occupations and disappearing occupations, we 
+    that structural segregation decreased overall and in most of the major occupational groups. 
+    At the total labor force level, decreases in segregation due to structural changes and occupational 
+    marginal changes appears to have been offset by gender marginal changes. In the main group with 
+    the largest decrease in segregation, transportation and communications workes, the change 
+    was mostly due changes in occupational composition.
+</p>
+<figure>
+    <img src="images/ElbersTotalSegregation02.png"
+          loading="lazy" alt="Decomposition of change 1985 to 2005" width="600" height="400" />
+        <figcaption>Decomposition of change 1985 to 2005</figcaption>
+</figure>
+<pre><code class="language-html">#' AnalyzePerElbers.R
+# (continuation)
+##############################
+###### analysis: change ######
+##############################
+
+d1985 <- filter(d, year == 1985)
+d2005 <- filter(d, year == 2005)
+
+diffs <- bind_rows(
+    mutual_difference(d1985 , d2005, "Gender", "OccMinor", weight = "w",
+            precision = .000001) %>%
+        mutate(OccMain= "Total") %>%
+        spread(stat, est),
+    mutual_difference(d1985 , d2005, "Gender", "OccMain", weight = "w",
+            precision = .000001) %>%
+        mutate(OccMain= "Between major groups") %>%
+        spread(stat, est),
+    d %>%
+        group_by(OccMain) %>%
+            do(mutual_difference(filter(., year == 1985), filter(., year == 2005),
+                        "Gender", "OccMinor", weight = "w", precision = .000001)) %>%
+            spread(stat, est) %>%
+        merge(hoc[nchar(hoc$MainTitle)>0,c("OccMain","MainTitle")]) %>% # add main group titles
+            mutate(OccMain = paste(OccMain,MainTitle,sep=" "))  %>%
+            select(-MainTitle)  %>%
+            arrange(diff)
+    )
+
+# NOTE mutual_difference doesn't output additions or removals if there are none.
+diffs_total <- diffs %>%
+    select(OccMain, M1, M2, diff, additions, removals, unit_marginal, group_marginal, structural) %>%
+    mutate(order = 1:11)
+
+diffs_percentage <- diffs_total %>%
+    mutate(additions = round(additions / diff * 100),
+    removals = round(removals / diff * 100),
+        unit_marginal = round(unit_marginal / diff * 100),
+        group_marginal = round(group_marginal / diff * 100),
+        structural = round(structural / diff * 100),
+        diff = 100) %>%
+    select(-OccMain, -M1, -M2) %>%
+    mutate_at(vars(diff:structural),
+        function(x) paste0("(", sprintf("%.0f", x), "%)"))
+
+diffs_total <- diffs_total %>%
+    mutate_at(vars(M1:structural), function(x) paste0( sprintf("%.3f", x)))
+
+options(knitr.kable.NA = "")
+bind_rows(diffs_total, diffs_percentage) %>%
+    arrange(order, M1) %>%
+    select(-order) %>%
+    kable("html", booktabs = TRUE, escape = FALSE,
+        align = c("l", "r", "r", "r", "r", "r", "r", "r"),
+        col.names = linebreak(c("Component", "1985", "2005", "Diff.","Appearing",
+            "Disappearing", "Occupation", "Gender", "Structural"))) %>%
+    kable_styling(latex_options = c("striped", "condensed", "scale_down"),
+        position = "center") %>%
+    #add_header_above(c(" ", "M" = 3, " ", "Marginal" = 2)) %>%
+    group_rows("Within major groups (sorted by Diff.)", 5, 22) %>%
+    row_spec(c(2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22), font_size = 8) %>%
+    cat(file = "Output/diffs.html", sep = "\n")
+
+
+diffs_plot <- diffs %>%
+    filter(OccMain!= "Between major groups") %>%
+    mutate(order = c(1, rep(2, 9))) %>%
+    arrange(order, diff) %>%
+    mutate(order = 1:10) %>%
+    mutate(OccMain= ifelse(OccMain == "Total", "Total labor force", paste("Only:", OccMain))) %>%
+    select(OccMain, order, group_marginal, unit_marginal, structural, additions, removals) %>%
+    gather(component, value, -OccMain, -order) %>%
+    mutate(component = recode_factor(component,
+        `group_marginal` = "Gender margins",
+        `unit_marginal` = "Occupation margins",
+        `additions` = "Appearing occupations",
+        `removals` = "Disappearing occupations",
+        `structural` = "Structural", .ordered = TRUE))
+
+labels <- rev(diffs_plot$OccMain[1:10])
+labels[10] <- expression(bold("Total labor force"))
+
+p <- ggplot(diffs_plot, aes(y = value, x = reorder(OccMain, -order), fill = component)) +
+    geom_col() +
+    geom_hline(yintercept = 0) +
+    theme_bw() +
+    theme(axis.title.y = element_blank(), legend.position = "bottom",
+        legend.title = element_blank()) +
+    guides(fill = guide_legend(nrow = 2, byrow = TRUE)) +
+    scale_fill_manual(values = ggthemes::colorblind_pal()(5)) +
+    scale_x_discrete(labels = labels) +
+    ylab("Difference in M") +
+    coord_flip()
+
+ggsave("Output/ElbersTotalSegregation02.png", p, width = 8, height = 5)
+</code></pre>
+</main>
+<div id="references" class="section level2">
+    <h2 class="hasAnchor">
+    <a href="#references" class="anchor"></a>References</h2>
+    <p><a id="Elbers2021"></a>Elbers, Benjamin (2021). A Method for Studying Differences in Segregation Across Time and Space. 
+        Sociological Methods &amp; Research. <a href="https://doi.org/10.1177/0049124121986204" 
+        class="uri">doi:10.18637/jss.v089.i07</a></p>
+    <p>Uchikoshi, Fumiya, Ryota Mugiyama. (2020) Trends in Occupational Sex Segregation in Japan: 
+        A Decomposition Analysis of Census Data, 1980-2005. 
+        Japanese Journal of Population Studies. 2020. 56. 9-23 
+        <a href="https://doi.org/10.24454/jps.1901001" class="uri">https://doi.org/10.24454/jps.1901001</a></p>
+    </div>    
+</body>
+</html>

@@ -1,39 +1,4 @@
-<html>
-    <head>
-      <!--<meta name="google-site-verification" content="Z7SEnQaO9LAITbhuwGaI3rFtnpMRKeV9BbaW3LyvP2g" />-->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="revised" content="13 December 2021" />
-        <title>Reproduce results from Uchikoshi and Mugiyama (2020)</title>
-
-        <link rel="stylesheet" href="https://latex.now.sh/style.css"> 
-        <link rel="stylesheet" href="https://alanintsukuba.github.io/ShowReferencesModal.css"> 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css">
-<!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" 
-integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" 
-integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]-->    
-</head>
-<body>
-<h1>Reproduce results from Uchikoshi and Mugiyama (2020)</h1>
-<p class="author"><a href="https://orcid.org/0000-0003-0070-2347" target="_blank">Alan Engel</a><br>Last update: 
-13 December 2021</p>
-<main>
-  <article>
-    <h4>Reproduce dissimilarity computations</h4>
-  <p>The task reproduces the main results of Uchikoshi and Mugiyama (2020) [UM2020] using the occupational crosswalk 
-    developed above. The left panel of Figure 1 of UM2020 shows the dissimilarity index produced by their crosswalk for census years 1980 
-    through 2005. The right panel shows the relative change with 1980 as the reference. The figure below shows the 
-    corresponding graphs from this project's crosswalk covering 1985 to 2005. UM2020 uses a 0-100 dissimilarity scale; 
-    in this task, I use a 0-1 scale. While the numberical output varies slightly, 
-    probably due to small differences in crosswalks, the trends are close to identical.
-  </p>
-  <figure>
-    <img src="images/UMDissimilarity01.png"
-          loading="lazy" alt="Dissimilarity Index 1985-2005" width="600" height="500" />
-        <figcaption>Dissimilarity Index 1985-2005</figcaption>
-</figure>
-<p>The R code for the above figure is below.</p>
-<pre><code class="language-html">#' ReproduceUMResults.R
+#' ReproduceUMResults.R
 #' Use data from UchikoshiMugiyamaRepro01.R in decomposition
 #' following script in UMDissimilarity.R and functions in 
 #' dissimilarity_um.R
@@ -83,35 +48,15 @@ di_um$Change <- as.numeric(di_um$DI ) / as.numeric(di_um[1,2][[1]])
 windows(11,5)
 par(mfrow=c(1,2))
 with(di_um, plot(CensusYear, DI, ylim=c(0,0.60), type="b",
-  main="Dissimilarity Index", ylab=""))
+	main="Dissimilarity Index", ylab=""))
 with(di_um, text(CensusYear, DI, labels=round(as.numeric(di_um$DI ),4), 
-  pos=3,cex=0.7))
+	pos=3,cex=0.7))
 with(di_um, plot(CensusYear, Change, ylim=c(0.85,1.15), type="b",
-  main="Change versus 1985", ylab=""))
+	main="Change versus 1985", ylab=""))
 with(di_um, text(CensusYear, Change, labels=round(as.numeric(di_um$Change ),3), 
-  pos=3,cex=0.7))</code></pre>
-</article>
-<article>
-  <h4>Decomposition of changes between censuses</h4>
-  <p>The figure below corresponds to Figure 2 of UM2020 and shows the decomposition of 
-    census-to-census changes into structural and occupational (marginal) components. The 
-    decompositions 1990-1995, 1995-2000, and 2000-2005 are consistent with UM2020, with 
-    larger structural changes for 1995-2000 and 2000-2005, and larger occupational changes 
-    for 1990-1995. For 1985-1990, the total change seems to agree but the decomposition for 
-    this task shows larger, but opposing, contributions for structure and occupations. This 
-    may be an artifact of the crosswalk. As noted in the <a href="OccupationalCrosswalk.html">
-      task on creating the crosswalk</a>, 
-    occupational classifications for 1980 and 1985 were derived from the 2nd Revision of 
-    the Japan Standard Occupational Classification while those for 1990 through 2005 were 
-    derived from the 3rd Revision.
-  </p>
-  <figure>
-    <img src="images/UMDissimilarity02.png"
-          loading="lazy" alt="Decomposition of changes in gender-occupation segregation" width="600" height="500" />
-        <figcaption>Decomposition of changes in gender-occupation segregation</figcaption>
-</figure>
-<p>The R code for the above figure is below.</p>
-<pre><code class="language-html"># decompose census-to-census changes 
+	pos=3,cex=0.7))
+
+# decompose census-to-census changes 
 #' dissimilarity indexes for time points
 d85.du <- ggj.dissimilarity_unit(d85,"Gender","OccMinor", weight="value")
 d90.du <- ggj.dissimilarity_unit(d90,"Gender","OccMinor", weight="value")
@@ -162,8 +107,8 @@ d85_90.summary
 
 # sum over units
 d85_90.sum <- with(d85_90.summary, data.table(D_1 = sum(D_1), D_2 = sum(D_2),
-within = sum(within ),marginal = sum(marginal),
-contribution = sum(contribution)))
+	within = sum(within ),marginal = sum(marginal),
+	contribution = sum(contribution)))
 
 
 # decomposition sums 1990-1995
@@ -183,8 +128,8 @@ d90_95.summary
 
 # sum over units
 d90_95.sum <- with(d90_95.summary, data.table(D_1 = sum(D_1), D_2 = sum(D_2),
-within = sum(within ),marginal = sum(marginal),
-contribution = sum(contribution)))
+	within = sum(within ),marginal = sum(marginal),
+	contribution = sum(contribution)))
 d90_95.sum
 
 
@@ -205,8 +150,8 @@ d95_00.summary
 
 # sum over units
 d95_00.sum <- with(d95_00.summary, data.table(D_1 = sum(D_1), D_2 = sum(D_2),
-within = sum(within ),marginal = sum(marginal),
-contribution = sum(contribution)))
+	within = sum(within ),marginal = sum(marginal),
+	contribution = sum(contribution)))
 d95_00.sum
 
 
@@ -227,8 +172,8 @@ d00_05.summary
 
 # sum over units
 d00_05.sum <- with(d00_05.summary, data.table(D_1 = sum(D_1), D_2 = sum(D_2),
-within = sum(within ),marginal = sum(marginal),
-contribution = sum(contribution)))
+	within = sum(within ),marginal = sum(marginal),
+	contribution = sum(contribution)))
 d00_05.sum
 
 # decomposition sums 1985-2005
@@ -248,30 +193,29 @@ d85_05.summary
 
 # sum over units
 d85_05.sum <- with(d85_05.summary, data.table(D_1 = sum(D_1), D_2 = sum(D_2),
-within = sum(within ),marginal = sum(marginal),
-contribution = sum(contribution)))
+	within = sum(within ),marginal = sum(marginal),
+	contribution = sum(contribution)))
 d85_05.sum
 
 # plot it
 res <- cbind(data.table(
-Period = c("1985-1990","1990-1995","1995-2000","2000-2005","1985-2005")),
-rbind(d85_90.sum,d90_95.sum,d95_00.sum,d00_05.sum,d85_05.sum))
+	Period = c("1985-1990","1990-1995","1995-2000","2000-2005","1985-2005")),
+	rbind(d85_90.sum,d90_95.sum,d95_00.sum,d00_05.sum,d85_05.sum))
 colnames(res) <- c("Period","D_1","D_2","Structural","Occupational","Total")
 
 with(res,barplot(cbind(Structural,Occupational,Total) ~ Period, beside=TRUE, ylim=c(-0.04,0.04),
 main="Decomposition of changes in gender-occupation segregation",xlab="",
 names.arg=c("1985-1990","1990-1995","1995-2000","2000-2005","1985-2005"),
 legend.text = c("Structural","Occupational","Total"), col = gray.colors(3)))
-  </code></pre>
-</article>
-</main>
-<div id="references" class="section level2">
-    <h2 class="hasAnchor">
-    <a href="#references" class="anchor"></a>References</h2>
-    <p>Uchikoshi, Fumiya, Ryota Mugiyama. (2020) Trends in Occupational Sex Segregation in Japan: 
-        A Decomposition Analysis of Census Data, 1980-2005. 
-      Japanese Journal of Population Studies. 2020. 56. 9-23 
-      <a href="https://doi.org/10.24454/jps.1901001" class="uri">https://doi.org/10.24454/jps.1901001</a></p>
-</div>
-</body>
-</html>
+
+#' scatterplot corresponding to UM2020 Figure 3
+with(d85_05.summary[abs(contribution) > 0.002 & abs(contribution) < 0.01 ,], 
+	plot(marginal,within #xlim=c(-0.010,0.010),ylim=c(-0.005,0.005)
+	))
+with(d85_05.summary[abs(contribution) > 0.002 & abs(contribution) < 0.01,], text(marginal,within, 
+	labels=as.character(OccMinor ), #xlim=c(-0.010,0.010),ylim=c(-0.005,0.005),
+	pos=1,cex=0.7))
+
+
+
+
