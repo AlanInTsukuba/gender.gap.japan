@@ -96,3 +96,17 @@ references:
     pages: 1-39
     year: 2019
     doi: "10.18637/jss.v089.i07"
+  - authors:
+      - family-names: Uchikoshi
+        given-names: Fumiya
+      - family-names: Mugiyama
+        given-names: Ryota
+    title: “Trends in Occupational Sex Segregation in Japan" 
+    subtitle: "A Decomposition Analysis of Census Data, 1980-2005” 
+    type: article
+    journal: "Japanese Journal of Population Studies"
+    volume: 56
+    issue: 7
+    pages: 9-23
+    year: 2020
+    doi: "10.24454/jps.1901001"
