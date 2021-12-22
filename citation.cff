@@ -16,8 +16,8 @@ references:
         given-names: Mary C.
       - family-names: Ngo
         given-names: Hang-Yue
-    title: 'Age and Sex in the Occupational Structure' 
-    subtitle: 'A United States-Japan Comparison'
+    title: “Age and Sex in the Occupational Structure” 
+    subtitle: "A United States-Japan Comparison"
     type: article
     journal: 'Sociological Forum'
     volume: 8
@@ -63,7 +63,8 @@ references:
   - authors:
       - family-names: Ho
         given-names: 'Swee-Lin'
-    title: "Tokyo at 10: Establishing difference through the friendship networks of women executives in Japan"
+    title: "Tokyo at 10"
+    subtitle: "Establishing difference through the friendship networks of women executives in Japan"
     type: article
     journal: "Journal of the Royal Anthropological Institute"
     year: 2012
@@ -74,7 +75,8 @@ references:
   - authors:
       - family-names: Ho
         given-names: 'Swee-Lin'
-    title: "‘License to drink’: White-collar female workers and Japan’s urban night space"
+    title: "‘License to drink’"
+    subtitle: "White-collar female workers and Japan’s urban night space"
     type: article
     journal: "Ethnography"
     year: 2015
@@ -99,8 +101,8 @@ references:
         given-names: Fumiya
       - family-names: Mugiyama
         given-names: Ryota
-    title: 'Trends in Occupational Sex Segregation in Japan'
-    subtitle: 'A Decomposition Analysis of Census Data, 1980-2005'
+    title: “Trends in Occupational Sex Segregation in Japan" 
+    subtitle: "A Decomposition Analysis of Census Data, 1980-2005” 
     type: article
     journal: "Japanese Journal of Population Studies"
     volume: 56
@@ -115,8 +117,8 @@ references:
         given-names: Ryota
       - family-names: Komatsu
         given-names: Kyoko
-    title: 'Labor Market Gender Gap Focusing on Occupational Segregation and Skill Devaluation'
-    subtitle: 'Evidence from Matched Data of Japanese O-NET and Census'
+    title: “Labor Market Gender Gap Focusing on Occupational Segregation and Skill Devaluation” 
+    subtitle: "Evidence from Matched Data of Japanese O-NET and Census"
     type: discussion paper
     journal: "Discussion Paper Series"
     number: 713
@@ -131,7 +133,8 @@ references:
         given-names: Ryota
       - family-names: Oguro
         given-names: Megumi
-    title: “Still Separate in STEM?: Trends in Sex Segregation by Field of Study in Japan, 1975-2019"
+    title: “Still Separate in STEM?"
+    subtitle: "Trends in Sex Segregation by Field of Study in Japan, 1975-2019"
     type: discussion paper
     journal: "Discussion Paper Series"
     number: 710
