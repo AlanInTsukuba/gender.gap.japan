@@ -110,3 +110,19 @@ references:
     pages: 9-23
     year: 2020
     doi: "10.24454/jps.1901001"
+  - authors:
+      - family-names: Uchikoshi
+        given-names: Fumiya
+      - family-names: Mugiyama
+        given-names: Ryota
+      - family-names: Komatsu
+        given-names: Kyoko
+    title: “Labor Market Gender Gap Focusing on Occupational Segregation and Skill Devaluation” 
+    subtitle: "Evidence from Matched Data of Japanese O-NET and Census"
+    type: discussion paper
+    journal: "Discussion Paper Series"
+    number: 713
+    institution: 'Institute of Economic Research, Hitotsubashi University'
+    location: "Tokyo, Japan"
+    year: 2020
+    url: "https://hermes-ir.lib.hit-u.ac.jp/hermes/ir/re/31323/DP713.pdf"
