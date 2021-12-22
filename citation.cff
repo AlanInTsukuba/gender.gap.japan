@@ -10,3 +10,20 @@ contact:
     - email: "ttcrossroads09@gmail.com"
       family-names: Engel
       given-names: Alan
+references:
+  - authors:
+      - family-names: Brinton
+        given-names: Mary C.
+      - family-names: Ngo
+        given-names: Hang-Yue
+    title: “Age and Sex in the Occupational Structure” 
+    subtitle: "A United States-Japan Comparison"
+    type: article
+    journal: 'Sociological Forum'
+    volume: 8
+    issue: 1
+    publisher:
+      name: "Wiley, Springer"
+    year: 1993
+    pages: 93–111
+    url: "http://www.jstor.org/stable/684286"
