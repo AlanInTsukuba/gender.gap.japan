@@ -75,15 +75,15 @@ references:
   - authors:
       - family-names: Ho
         given-names: 'Swee-Lin'
-    title: "‘License to drink’"
-    subtitle: "White-collar female workers and Japan’s urban night space"
+    title: "&#39;License to drink&#39;"
+    subtitle: "White-collar female workers and Japan&#39;s urban night space"
     type: article
     journal: "Ethnography"
     year: 2015
     volume: 16
     issue: 1
     pages: 25-50
-    doi: "10.1111/j.1467-9655.2011.01732.x"
+    doi: "10.1177/1466138113506632"
   - authors:
       - family-names: Tivadar
         given-names: Mihai
@@ -101,8 +101,8 @@ references:
         given-names: Fumiya
       - family-names: Mugiyama
         given-names: Ryota
-    title: “Trends in Occupational Sex Segregation in Japan" 
-    subtitle: "A Decomposition Analysis of Census Data, 1980-2005” 
+    title: "Trends in Occupational Sex Segregation in Japan" 
+    subtitle: "A Decomposition Analysis of Census Data, 1980-2005" 
     type: article
     journal: "Japanese Journal of Population Studies"
     volume: 56
@@ -133,7 +133,7 @@ references:
         given-names: Ryota
       - family-names: Oguro
         given-names: Megumi
-    title: “Still Separate in STEM?"
+    title: "Still Separate in STEM?"
     subtitle: "Trends in Sex Segregation by Field of Study in Japan, 1975-2019"
     type: discussion paper
     journal: "Discussion Paper Series"
@@ -145,8 +145,8 @@ references:
   - authors:
       - family-names: Ueno
         given-names: Koji
-    title: 'Gender-Stratified Labor Market, Heterosexual Marriage Expectation, and 
-LGBQ Young Adults&#39; Career Plans in Contemporary Japan'
+    title: "Gender-Stratified Labor Market, Heterosexual Marriage Expectation, and 
+LGBQ Young Adults&#39; Career Plans in Contemporary Japan"
     type: article
     journal: "Socius"
     issue: January
