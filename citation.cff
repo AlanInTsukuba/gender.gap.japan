@@ -40,3 +40,12 @@ references:
     year: 1955
     pages: 210–217
     url: "https://www.jstor.org/stable/2088328"
+  - authors:
+      - family-names: Elbers
+        given-names: Benjamin
+    title: “A Method for Studying Differences in Segregation Across Time and Space” 
+    type: article
+    journal: "Sociological Methods &amp; Research"
+    issue: February
+    year: 2021
+    doi: "10.1177/0049124121986204"
