@@ -84,3 +84,15 @@ references:
     issue: 1
     pages: 25-50
     doi: "10.1177/1466138113506632"
+  - authors:
+      - family-names: Tivadar
+        given-names: Mihai
+    title: “OasisR” 
+    subtitle: "An R Package to Bring some Order to the World of Segregation Measurement"
+    type: article
+    journal: "Sociological Methods &amp; Research"
+    volume: 89
+    issue: 7
+    pages: 1-39
+    year: 2019
+    doi: "10.18637/jss.v089.i07"
