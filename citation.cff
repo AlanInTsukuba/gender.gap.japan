@@ -19,7 +19,7 @@ references:
     title: “Age and Sex in the Occupational Structure” 
     subtitle: "A United States-Japan Comparison"
     type: article
-    journal: "Sociological Forum"
+    journal: 'Sociological Forum'
     volume: 8
     issue: 1
     publisher:
@@ -87,10 +87,10 @@ references:
   - authors:
       - family-names: Tivadar
         given-names: Mihai
-    title: “A Method for Studying Differences in Segregation Across Time and OasisR” 
-    subtitle: "An R Package to Bring some Order to the World of Segregation Measurement Method for Studying Differences in Segregation Across Time and Space"
+    title: “OasisR” 
+    subtitle: "An R Package to Bring some Order to the World of Segregation Measurement"
     type: article
-    journal: "Sociological Methods &amp; ResearcJournal of Statistical Software"
+    journal: "Sociological Methods &amp; Research"
     volume: 89
     issue: 7
     pages: 1-39
@@ -122,7 +122,7 @@ references:
     type: discussion paper
     journal: "Discussion Paper Series"
     number: 713
-    institution: "Institute of Economic Research, Hitotsubashi University"
+    institution: 'Institute of Economic Research, Hitotsubashi University'
     location: "Tokyo, Japan"
     year: 2020
     url: "https://hermes-ir.lib.hit-u.ac.jp/hermes/ir/re/31323/DP713.pdf"
@@ -145,8 +145,8 @@ references:
   - authors:
       - family-names: Ueno
         given-names: Koji
-    title: “Gender-Stratified Labor Market, Heterosexual Marriage Expectation, and 
-LGBQ Young Adults’ Career Plans in Contemporary Japan” 
+    title: 'Gender-Stratified Labor Market, Heterosexual Marriage Expectation, and 
+LGBQ Young Adults&#39; Career Plans in Contemporary Japan'
     type: article
     journal: "Socius"
     issue: January
