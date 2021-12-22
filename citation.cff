@@ -54,10 +54,33 @@ references:
     title: "A Note on Sex Segregation in Professional Occupations"
     type: article
     journal: "Explorations in Economic Research"
+    year: 1975
     volume: 2
     issue: 1
     pages: 105-111
     url: "https://www.nber.org/chapters/c7405"
+  - authors:
+      - family-names: Ho
+        given-names: 'Swee-Lin'
+    title: "Tokyo at 10: Establishing difference through the friendship networks of women executives in Japan"
+    type: article
+    journal: "Journal of the Royal Anthropological Institute"
+    year: 2012
+    volume: 18
+    issue: 1
+    pages: 83-102
+    doi: "10.1111/j.1467-9655.2011.01732.x"
+  - authors:
+      - family-names: Ho
+        given-names: 'Swee-Lin'
+    title: "‘License to drink’: White-collar female workers and Japan’s urban night space"
+    type: article
+    journal: "Ethnography"
+    year: 2015
+    volume: 16
+    issue: 1
+    pages: 25-50
+    doi: "10.1111/j.1467-9655.2011.01732.x"
   - authors:
       - family-names: Tivadar
         given-names: Mihai
