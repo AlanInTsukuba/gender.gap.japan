@@ -27,3 +27,16 @@ references:
     year: 1993
     pages: 93–111
     url: "http://www.jstor.org/stable/684286"
+  - authors:
+      - family-names: Duncan
+        given-names: Otis Dudley
+      - family-names: Duncan
+        given-names: Beverly
+    title: “A Methodological Analysis of Segregation Indexes” 
+    type: article
+    journal: "American Sociological Review"
+    volume: 20
+    issue: 2
+    year: 1955
+    pages: 210–217
+    url: "https://www.jstor.org/stable/2088328"
