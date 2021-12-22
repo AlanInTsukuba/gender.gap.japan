@@ -126,3 +126,19 @@ references:
     location: "Tokyo, Japan"
     year: 2020
     url: "https://hermes-ir.lib.hit-u.ac.jp/hermes/ir/re/31323/DP713.pdf"
+  - authors:
+      - family-names: Uchikoshi
+        given-names: Fumiya
+      - family-names: Mugiyama
+        given-names: Ryota
+      - family-names: Oguro
+        given-names: Megumi
+    title: "Still Separate in STEM?"
+    subtitle: "Trends in Sex Segregation by Field of Study in Japan, 1975-2019"
+    type: discussion paper
+    journal: "Discussion Paper Series"
+    number: 710
+    institution: "Institute of Economic Research, Hitotsubashi University"
+    location: "Tokyo, Japan"
+    year: 2020
+    url: "https://osf.io/txqka/download"
