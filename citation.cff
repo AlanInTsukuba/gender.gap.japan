@@ -28,8 +28,21 @@ references:
     pages: 93–111
     url: "http://www.jstor.org/stable/684286"
   - authors:
+      - family-names: Deming
+        given-names: "W. Edwards"
+      - family-names: Stephan
+        given-names: "Frederick F."
+    title:  "On a Least Squares Adjustment of a Sampled Frequency Table when the Expected Marginal Totals are Known."
+    type: article
+    journal: "The Annals of Mathematical Statistics"
+    volume: 11
+    issue: 4
+    year: 1940
+    pages: 427-444
+    url: "https://www.jstor.org/stable/2235722"
+  - authors:
       - family-names: Duncan
-        given-names: Otis Dudley
+        given-names: "Otis Dudley"
       - family-names: Duncan
         given-names: Beverly
     title: “A Methodological Analysis of Segregation Indexes” 
