@@ -634,8 +634,28 @@ occupations include highly gender-specific doctors and nurses.</p>
     <article>
         <h4>Estimating counterfactuals following <a href="#DemingStephan1940">Deming and Stephan (1940)</a></h4>
         <p> This procedure adjusts sampled frequency tables when the expected marginal totals are known. In this case, 
-        we want to adjust the gender vs occupation table for 1985 to that which would be expecte for 2005 marginal 
-    totals assuming no structural changes.</p>
+        we want to adjust the gender vs occupation table for 1985 to that which would be expected for 2005 marginal 
+    totals assuming no structural changes. The difference in M between the 2005 actual and the counterfactual frequency 
+    values is the structural change and the difference in M between the counterfactual and the 1985 actual 
+    frequency values is the marginal change. Below I manually calculate the counterfactual frequencies and M decompositions 
+    following Elbers's method.</p>
+    <p>Elbers uses Deming and Stephan's iterative procedure for estimating the counterfacturals. In their 1940 paper, 
+        Deming and Stephan also provide a direct method; I use the direct method in this task. First, I compress the 
+        spectech occupation group into 3 occupations: judges and lawyers; other legal; and other spectech. The 
+        calculated total M indexes will differ from the uncompressed case because M is dependent on the number of 
+        occupations, but the estimated counterfactual frequencies for the legal occupations of interest will not differ 
+        from the uncompressed case.
+    </p>
+    <table>
+        <caption>Actual occupation vs gender frequencies for legal occupations in 1985 and 2005</caption>
+        <tr><th></th><th colspan=3>1985</th><th></th><th colspan=3>2005</th></tr>
+        <tr><td></td><td colspan=2>Gender</td><td></td><td></td><td colspan=2>Gender</td></tr>
+        <tr><td>Occupation</td><td>Female</td><td>Male</td><td>Marginal total</td><td></td><td>Female</td><td>Male</td><td>Marginal total</td></tr>
+        <tr><td>Judges, lawyers</td><td>789</td><td>15204</td><td>15993</td><td></td><td>2302</td><td>19506</td><td>21808</td></tr>
+        <tr><td>Other legal</td><td>2795</td><td>23926</td><td>26721</td><td></td><td>6379</td><td>29833</td><td>36212</td></tr>
+        <tr><td>Other spectech</td><td>2555759</td><td>3789332</td><td>6345091</td><td></td><td>4018698</td><td>4465215</td><td>8483913</td></tr>
+        <tr><td>Marginal total</td><td>2559343</td><td>3828462</td><td>6387805</td><td></td><td>4027379</td><td>4514554</td><td>8541933</td></tr>
+    </table>
     </article>
        </main>
 <div id="references" class="section level2">
