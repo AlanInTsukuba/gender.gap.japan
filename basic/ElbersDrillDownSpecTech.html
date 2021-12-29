@@ -656,6 +656,32 @@ occupations include highly gender-specific doctors and nurses.</p>
         <tr><td>Other spectech</td><td>2555759</td><td>3789332</td><td>6345091</td><td></td><td>4018698</td><td>4465215</td><td>8483913</td></tr>
         <tr><td>Marginal total</td><td>2559343</td><td>3828462</td><td>6387805</td><td></td><td>4027379</td><td>4514554</td><td>8541933</td></tr>
     </table>
+    <p>Deming and Stephan (1940) estimate the cell frequencies \(N_{ij}\) of an <i>r \(\times\) s</i> universe table from 
+        based on the cell frequencies \(n_{ij}\)
+    of an <i>r \(\times\) s</i> sampled table when the expected marginal totals of the universe table are known. For the 
+    two-dimensional case, we seek the values of <i>\(m_{ij}\)</i> that minimize 
+    $$\tag{3}S = \sum\frac{(m_{ij}-n_{ij})^2}{n_{ij}}$$ where I number the equations as in Deming and Stephan (1940). 
+    Following their <i>Case II: Both sets of marginal totals known</i>, assume \(N_{1.}, N_{2.}, \cdots, N_{r.}\) to be 
+    known. We require $$\tag{4}\sum_{j}m_{ij} = m_{i.},\hspace{60pt} i = 1, 2, \cdots, r.$$ and 
+    $$\tag{5}\sum_{i}m_{ij} = m_{.j},\hspace{60pt} j = 1, 2, \cdots, s-1.$$conditions on the 
+    adjusted \(m_{ij}\), a total of \(r+s-1\) conditions. For both cases, $$\tag{6}m_{i.}=N_{i.}n/N,$$
+    $$\tag{7}m_{.j}=N_{.j}n/N.$$ In other words, \(m_{i.}\) and \(m_{.j}\) are the deflated marginal totals, 
+    \(N_{i.}\) and \(N_{.j}\) divided by the actual sampling ratio \(N/n\).</p>
+    <p><i>Solution.</i> Assuming that the adjusted values of the \(m_{ij}\) have been found, let each take on a 
+    small variation \(\delta m_{ij}\); then the differentials of eqs. (3), (4) and (5) give 
+    $$\tag{10}\frac{1}{2}\delta S=\sum \{(m_{ij}-n_{ij})/n_{ij}\}\delta m_{ij}=0 \hspace{20pt} \verb!(one equation),!$$ 
+    $$\tag{11}\sum_{j} \delta m_{ij} = 0,\hspace{40pt} i = 1, 2, \cdots, r, \hspace{20pt} \verb!(r equations)!$$
+    $$\tag{17}\sum_{i} \delta m_{ij} = 0,\hspace{40pt} j = 1, 2, \cdots, s-1, \hspace{20pt} \verb!(s-1 equations)!.$$ 
+    By adding eqs. (10), (11) and (17), after multiplying eq. (11<i>i</i>) by the Lagrange multiplier \(-\lambda_{i.}\) and eq. (17<i>j</i>) 
+    by \(-\lambda_{.j}\), we get 
+    $$\tag{18} \sum \{(m_{ij}-n_{ij})/n_{ij}-\lambda_{i.}-\lambda_{.j}\} \delta m_{ij}= 0.$$
+    Equating each brace to zero, we get
+    $$\tag{19} m_{ij}=n_{ij}(1+ \lambda_{i.} + \lambda_{.j})$$ wherein \(\lambda_{.s}\) is to be counted 0.</p>
+    <p>To evaluate the Lagrange multipliers in eq. (19), we sum the two members down and across the tables to obtain 
+        the \(r+s-1\) normal equations
+    $$\tag{20} n_{i.} \lambda_{i.} + \sum_{j}n_{ij}\lambda_{.j} = m_{i.}-n_{i.}, \hspace{40pt} i = 1, 2, \cdots, r  $$
+    $$\sum_{i} n_{ij} \lambda_{i.} + n_{.j} \lambda_{.j}  = m_{.j}-n_{.j}, \hspace{40pt} j = 1, 2, \cdots, s-1. $$
+    </p>
     <p></p>
     <table>
         <caption>TABLE 1 from Deming and Stephan (1940) adapted for this task</caption>
