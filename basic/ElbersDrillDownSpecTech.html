@@ -680,12 +680,70 @@ occupations include highly gender-specific doctors and nurses.</p>
     $$\tag{19} m_{ij}=n_{ij}(1+ \lambda_{i.} + \lambda_{.j})$$ wherein \(\lambda_{.s}\) is to be counted 0.</p>
     <p>To evaluate the Lagrange multipliers in eq. (19), we sum the two members down and across the tables to obtain 
         the \(r+s-1\) normal equations
-    $$\tag{20} n_{i.} \lambda_{i.} + \sum_{j}n_{ij}\lambda_{.j} = m_{i.}-n_{i.}, \hspace{40pt} i = 1, 2, \cdots, r  $$
-    $$\sum_{i} n_{ij} \lambda_{i.} + n_{.j} \lambda_{.j}  = m_{.j}-n_{.j}, \hspace{40pt} j = 1, 2, \cdots, s-1. $$
+    $$ \tag{20} n_{i.} \lambda_{i.} + \sum_{j}n_{ij}\lambda_{.j} = m_{i.}-n_{i.}, \hspace{40pt} i = 1, 2, \cdots, r  \\
+    \sum_{i} n_{ij} \lambda_{i.} + n_{.j} \lambda_{.j}  = m_{.j}-n_{.j}, \hspace{40pt} j = 1, 2, \cdots, s-1. $$
     </p>
-    <p>The top row of eqs (20) solved</p>
+    <p>The top row of eqs (20) solved for \(\lambda_{i.}\) gives 
+    $$\tag{21} \lambda_{i.} = (1/n_{i.})\{m_{i.} - \sum_{j} n_{ij}\lambda_{.j} \} - 1.$$
+    Substituted into the bottom row of eqs. (20), this gives the \(s - 1 \) normal equations.
+    </p>
     <table>
-        <caption>TABLE 1 from Deming and Stephan (1940) adapted for this task</caption>
+        <tr><td style="text-align:center">\(\lambda_{.1}\)</td>
+            <td style="text-align:center">\(\lambda_{.2}\)</td>
+            <td style="text-align:center">\(...\)</td>
+            <td style="text-align:center">\(\lambda_{.s-1}\)</td>
+            <td style="text-align:center">\(=\)</td>
+            <td>\(1\)</td></tr>
+        <tr><td style="text-align:center">\(n_{.1}-\sum_{i}\frac{n_{i1}n_{i1}}{n_{i.}} \)</td>
+            <td style="text-align:center">\(-\sum_{i}\frac{n_{i1}n_{i2}}{n_{i.}} \)</td>
+            <td style="text-align:center">\(...\)</td>
+            <td style="text-align:center">\(-\sum_{i}\frac{n_{i1}n_{i,s-1}}{n_{i.}} \)</td>
+            <td style="text-align:center">\(=\)</td>
+            <td>\(m_{.1}-\sum_{i}\frac{n_{i1}m_{i.}}{n_{i.}} \)</td></tr>
+        <tr><td style="text-align:center"></td>
+            <td style="text-align:center">\(n_{.2}-\sum_{i}\frac{n_{i2}n_{i2}}{n_{i.}} \)</td>
+            <td style="text-align:center">\(...\)</td>
+            <td style="text-align:center">\(-\sum_{i}\frac{n_{i2}n_{i,s-1}}{n_{i.}} \)</td>
+            <td style="text-align:center">\(=\)</td>
+            <td>\(m_{.2}-\sum_{i}\frac{n_{i2}m_{i.}}{n_{i.}} \)</td>
+        </tr>
+        <tr>
+            <td>\((22)\)</td>
+            <td></td>
+            <td></td>
+            <td style="text-align:center">\(.\)<br>\(.\)<br>\(.\)</td>
+            <td></td>
+            <td style="text-align:center">\(.\)<br>\(.\)<br>\(.\)</td>
+        </tr>
+        <tr><td style="text-align:center"></td>
+            <td style="text-align:center"></td>
+            <td style="text-align:center"></td>
+            <td style="text-align:center">\(n_{.s-1}-\sum_{i}\frac{n_{i,s-1}n_{i,s-1}}{n_{i.}} \)</td>
+            <td style="text-align:center">\(=\)</td>
+            <td>\(m_{.s-1}-\sum_{i}\frac{n_{i,s-1}m_{i.}}{n_{i.}} \)</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>\(0.\)</td>
+        </tr>
+        </table>
+    <p>The coefficients are symmetrical and those below the diagonal are omitted. 
+    </p>
+    <p>The numerical example in Deming and Stephan (1940) uses an artificial sample of native white persons if native white parentage 
+        attending school in 6 states by 4 age brackets. The sample in this task is for 3 occupations and 2 genders.
+    </p>
+    <p>
+        For this task, I estimate the counterfactuals gender counts for the 2005 census using the actual occupation vs gender counts 
+        for 1985 and the marginal totals for 2005. 
+    </p>
+    <table>
+        <caption>A table showing the counterfactuals of the numbers of females and males in the occupational categories judges and lawyers, other legal, and other spectech from 
+            the 1985 Population Census as computed for the 2005 Population Census
+    <br>(TABLE 1 from Deming and Stephan (1940) adapted for this task)</caption>
         <tr style="border: 1px solid black;"><td colspan=3>Gender</td><td>Female</td><td>Male</td></tr>
         <tr style="border: 1px solid black;"><td colspan=3 style="text-align: right">j =</td><td>1</td><td>2</td><td>\(n_{i.}\)</td></tr>
         <tr style="border: 1px solid black;"><td colspan=3 style="text-align: right">\(\lambda_{.i}\) =</td><td>0.3957</td><td>0</td><td>\(m_{i.}\)</td></tr>
