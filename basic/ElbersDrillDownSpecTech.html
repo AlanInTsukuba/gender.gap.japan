@@ -687,7 +687,7 @@ occupations include highly gender-specific doctors and nurses.</p>
     $$\tag{21} \lambda_{i.} = (1/n_{i.})\{m_{i.} - \sum_{j} n_{ij}\lambda_{.j} \} - 1.$$
     Substituted into the bottom row of eqs. (20), this gives the \(s - 1 \) normal equations.
     </p>
-    <table>
+    <table style="counter-increment: null ;">
         <tr><td style="text-align:center">\(\lambda_{.1}\)</td>
             <td style="text-align:center">\(\lambda_{.2}\)</td>
             <td style="text-align:center">\(...\)</td>
@@ -731,8 +731,11 @@ occupations include highly gender-specific doctors and nurses.</p>
             <td>\(0.\)</td>
         </tr>
         </table>
-    <p>The coefficients are symmetrical and those below the diagonal are omitted. 
+    <p>The coefficients are symmetrical and those below the diagonal are omitted. Deming and Stephan add the 0 in the bottom row 
+        to enable computation of the minimized S. The Lagrange multipliers are then solved, \(s-1\) directly and the remaining by 
+        substitution into eq. (21), with \(\lambda_{.s}\) being set to 0.
     </p>
+    <p>For computations using the machines of the day, Deming and Stephan set up a preparatory table, which I adapt in Table </p>
     <p>The numerical example in Deming and Stephan (1940) uses an artificial sample of native white persons if native white parentage 
         attending school in 6 states by 4 age brackets. The sample in this task is for 3 occupations and 2 genders.
     </p>
@@ -759,7 +762,8 @@ occupations include highly gender-specific doctors and nurses.</p>
     </table>
     <p></p>
     <table>
-        <caption>TABLE 2 from Deming and Stephan (1940) adapted for this task</caption>
+        <label for="cap5" style="content: 'Table ' counter(caption) '.';font-weight: bold;" />
+        <caption id="cap5">TABLE 2 from Deming and Stephan (1940) adapted for this task</caption>
         <tr><td></td><td colspan=2 style="text-align: center">j =</td><td style="text-align: center">\(m_{i.}/\sqrt{n_{i.}}\)</td><td style="text-align: center">Sum</td></tr>
         <tr><td>i</td><td>1</td><td>2</td></tr>
         <tr><td>1</td><td>6.24</td><td>120.22</td><td>172.45</td><td>298.91</td></tr>
