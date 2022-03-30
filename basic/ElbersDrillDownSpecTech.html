@@ -657,7 +657,7 @@ occupations include highly gender-specific doctors and nurses.</p>
         <tr><td>Other spectech</td><td>2555759</td><td>3789332</td><td>6345091</td><td></td><td>4018698</td><td>4465215</td><td>8483913</td></tr>
         <tr><td>Marginal total</td><td>2559343</td><td>3828462</td><td>6387805</td><td></td><td>4027379</td><td>4514554</td><td>8541933</td></tr>
     </table>
-    <p>Deming and Stephan (1940) estimate the cell frequencies \(N_{ij}\) of an <i>r \(\times\) s</i> universe table from 
+    <p>Deming and Stephan (1940) estimate the cell frequencies \(N_{ij}\) of an <i>r \(\times\) s</i> universe table  
         based on the cell frequencies \(n_{ij}\)
     of an <i>r \(\times\) s</i> sampled table when the expected marginal totals of the universe table are known. For the 
     two-dimensional case, we seek the values of <i>\(m_{ij}\)</i> that minimize 
@@ -732,17 +732,9 @@ occupations include highly gender-specific doctors and nurses.</p>
             <td>\(0.\)</td>
         </tr>
         </table>
-    <p>The coefficients are symmetrical and those below the diagonal are omitted. Deming and Stephan add the 0 in the bottom row 
+    <p>The coefficients are symmetrical and those below the diagonal are omitted. Deming and Stephan (1940) add the 0 in the bottom row 
         to enable computation of the minimized S. The Lagrange multipliers are then solved, \(s-1\) directly and the remaining by 
         substitution into eq. (21), with \(\lambda_{.s}\) being set to 0.
-    </p>
-    <p>For computations using the machines of the day, Deming and Stephan set up a preparatory table, which I adapt in Table </p>
-    <p>The numerical example in Deming and Stephan (1940) uses an artificial sample of native white persons if native white parentage 
-        attending school in 6 states by 4 age brackets. The sample in this task is for 3 occupations and 2 genders.
-    </p>
-    <p>
-        For this task, I estimate the counterfactuals gender counts for the 2005 census using the actual occupation vs gender counts 
-        for 1985 and the marginal totals for 2005. 
     </p>
     <table class="noincrement">
         <caption class="noincrement"><b>Table 4. </b>A table showing the counterfactuals of the numbers of females and males in the occupational categories judges and lawyers, other legal, and other spectech from 
@@ -750,27 +742,72 @@ occupations include highly gender-specific doctors and nurses.</p>
     <br>(TABLE 1 from Deming and Stephan (1940) adapted for this task)</caption>
         <tr style="border: 1px solid black;"><td colspan=3>Gender</td><td>Female</td><td>Male</td></tr>
         <tr style="border: 1px solid black;"><td colspan=3 style="text-align: right">j =</td><td>1</td><td>2</td><td>\(n_{i.}\)</td></tr>
-        <tr style="border: 1px solid black;"><td colspan=3 style="text-align: right">\(\lambda_{.i}\) =</td><td>0.3957</td><td>0</td><td>\(m_{i.}\)</td></tr>
+        <tr style="border: 1px solid black;"><td colspan=3 style="text-align: right">\(\lambda_{.i}\) =</td><td>0.3966</td><td>0</td><td>\(m_{i.}\)</td></tr>
         <tr style="border: 1px solid black;"><td>Occupation</td><td style="text-align: center">i</td><td style="text-align: center">\(\lambda_{i.}\)</td></tr>
-        <tr style="border: 1px solid black;"><td rowspan=2>Judges, lawyers</td><td rowspan=2>1</td><td>0.3441</td><td>789</td><td>15204</td><td>15993</td></tr>
-        <tr style="border: 1px solid black;"><td></td><td><i>1373</i></td><td><i>20435</i></td><td><i>21808</i></td></tr>
-        <tr style="border: 1px solid black;"><td rowspan=2>Other legal</td><td rowspan=2>2</td><td>0.3138</td><td>2795</td><td>23926</td><td>26721</td></tr>
-        <tr style="border: 1px solid black;"><td></td><td><i>4778</i></td><td><i>31434</i></td><td><i>36212</i></td></tr>
-        <tr style="border: 1px solid black;"><td rowspan=2>Other spectech</td><td rowspan=2>3</td><td>0.1777</td><td>2555759</td><td>3789332</td><td>6345091</td></tr>
-        <tr style="border: 1px solid black;"><td></td><td><i>4021228</i></td><td><i>4462685</i></td><td><i>8482913</i></td></tr>
+        <tr style="border: 1px solid black;"><td rowspan=2>Judges, lawyers</td><td rowspan=2>1</td><td>0.3440</td><td>789</td><td>15204</td><td>15993</td></tr>
+        <tr style="border: 1px solid black;"><td></td><td><i>1373</i></td><td><i>20434</i></td><td><i>21808</i></td></tr>
+        <tr style="border: 1px solid black;"><td rowspan=2>Other legal</td><td rowspan=2>2</td><td>0.3137</td><td>2795</td><td>23926</td><td>26721</td></tr>
+        <tr style="border: 1px solid black;"><td></td><td><i>4780</i></td><td><i>31432</i></td><td><i>36212</i></td></tr>
+        <tr style="border: 1px solid black;"><td rowspan=2>Other spectech</td><td rowspan=2>3</td><td>0.1772</td><td>2555759</td><td>3789332</td><td>6345091</td></tr>
+        <tr style="border: 1px solid black;"><td></td><td><i>4022254</i></td><td><i>4460802</i></td><td><i>8482913</i></td></tr>
         <tr style="border: 1px solid black;"><td></td><td></td><td style="text-align: center">\(n_{.i}\)</td><td>2559343</td><td>3828462</td><td>6387805</td></tr>
         <tr style="border: 1px solid black;"><td></td><td></td><td style="text-align: center">\(m_{.i}\)</td><td><i>4027379</i></td><td><i>4514554</i></td><td><i>8541933</i></td></tr>
     </table>
-    <p></p>
+    <p>For computations using the machines of the day, Deming and Stephan (1940) set up a preparatory table, which I adapt in Table 5, 
+        by dividing each \(n_{ij}\) in the <i>i</i>th row by \(\sqrt{n_{i.}}\) and also calculating \(m_{i.}/\sqrt{n_{i.}}\) for that row. </p>
+    <p>The numerical example in Deming and Stephan (1940) uses an artificial sample of native white persons if native white parentage 
+        attending school in 6 states by 4 age brackets. The sample in this task is for 3 occupations and 2 genders.
+    </p>
+    <p>
+        For this task, I estimate the counterfactuals gender counts for the 2005 census using the actual occupation vs gender counts 
+        for 1985 and the marginal totals for 2005. To illustrate, for \(i=1\) and \(j=1\), \(789/\sqrt{15993} = 6.24\). Summing the squares 
+        and cross-products along the vertical gives the summations for eqs. (22), which are given below as eqs. (23).
+    </p>
     <table class="noincrement">
-        <caption class="noincrement"><b>Table 5. </b>TABLE 2 from Deming and Stephan (1940) adapted for this task</caption>
+        <tr>
+            <td>No.</td>
+            <td style="text-align:center">\(\lambda_{.1}\)</td>
+            <td style="text-align:center">\(=\)</td>
+            <td>\(1\)</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td style="text-align:center">1525994</td>
+            <td style="text-align:center">\(=\)</td>
+            <td>605268</td>
+            <td>(23)</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td style="text-align:center"></td>
+            <td style="text-align:center"></td>
+            <td>0</td>
+            <td></td>
+        </tr>
+    </table>
+    <p>Solving eqs. (23) gives \(\lambda_{.1} = 0.3966\). Substitution into eq. (21) gives eqs. (24).
+        $$\tag{24} \lambda_{1.} = 0.3440\text{, }\lambda_{2.} = 0.3137\text{ and }\lambda_{3.} = 0.1772 $$
+        The \(m_{ij}\) can then be computed by eq. (19), for example, 
+        $$\tag{25} m_{21}=2795(1+0.3966+0.3137) = 4780 $$
+    </p>
+    <table class="noincrement">
+        <caption class="noincrement"><b>Table 5. </b>Preparatory TABLE 2 from Deming and Stephan (1940) adapted for this task</caption>
         <tr><td></td><td colspan=2 style="text-align: center">j =</td><td style="text-align: center">\(m_{i.}/\sqrt{n_{i.}}\)</td><td style="text-align: center">Sum</td></tr>
         <tr><td>i</td><td>1</td><td>2</td></tr>
-        <tr><td>1</td><td>6.24</td><td>120.22</td><td>172.45</td><td>298.91</td></tr>
+        <tr><td>1</td><td>6.239</td><td>120.22</td><td>172.45</td><td>298.91</td></tr>
         <tr><td>2</td><td>17.10</td><td>146.37</td><td>221.53</td><td>384.99</td></tr>
         <tr><td>3</td><td>1014.61</td><td>1504.33</td><td>3368.04</td><td>5886.99</td></tr>
         <tr><td>Sum</td><td>1037.95</td><td>1770.92</td><td>3762.01</td><td>6570.89</td></tr>
     </table>
+    <p>We can use the counterfactuals (\(m_{ij}\)) in Table 4 to interpret the actual frequencies for 2005 as listed 
+        in Table 3. Women employed as judges and lawyers increased from 789 in 1985 to 2302 in 2005, a 192% increase. 
+        Of this 1513-person increase, 584 (74%) can be assigned to marginal changes; both the numbers of women in spectech 
+        and the number of people employed as judges and lawyers increased. The remaining 929 can be attributed to structural 
+        changes in this occupation. This structural gain in 929 women judges and lawyers is mirrored by a 929-person shortfall versus 
+        marginal changes for men (19506 actual versus 20434 expected). Other legal occupations, such as scriveners and patent agents, 
+        also showed structural gains for women, a 228 percent gain to 6379 actual versus the 4780 expected from marginal increases.
+    </p>
     </article>
        </main>
 <div id="references" class="section level2">
