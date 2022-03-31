@@ -3,7 +3,7 @@
       <!--<meta name="google-site-verification" content="Z7SEnQaO9LAITbhuwGaI3rFtnpMRKeV9BbaW3LyvP2g" />-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="revised" content="30 March 2022" />
-        <title>Drill down: A. Specialists and technicians - M Index for legal occupations</title>
+        <title>Drill down: A. Specialists and technicians - Decomposition of M index change for legal occupations</title>
 
         <!--<link rel="stylesheet" href="https://latex.now.sh/style.css"> -->
         <link rel="stylesheet" href="https://alanintsukuba.github.io/latex.css">
@@ -15,8 +15,41 @@ integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="ano
 integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]-->    
 </head>
 <body>
-<h1>Drill down: A. Specialists and technicians - M Index for legal occupations</h1>
+<h1>Drill down: A. Specialists and technicians - Decomposition of M index change  for legal occupations</h1>
 <p class="author"><a href="https://orcid.org/0000-0003-0070-2347" target="_blank">Alan Engel</a><br>Last update: 
     31 March 2022</p>
+<article>
+    <p>Elbers (2021) proposes a decomposition of the change in M between two times \(t_{1}\) and \(t_{2}\) as shown in 
+        Equation (1), where \(M(t'_{1}\) is the value of M calculated using the counterfactuals at time \(t_{2}\) versus \(t_{1}\). 
+        $$\tag{1} M(t_{2})-M(t_{1})=\overbrace{M(t_{2})-M(t_{1'})}^{\text{structural}}+\overbrace{M(t_{1'})-M(t_{1})}^{\text{marginal}} $$
+        Table 1 shows the gender frequencies also shown in Table 1 of the <a href="EstimatingCounterfactuals.html">previous page on 
+        estimating counterfactuals</a>. The counterfactual values are from Table 2 of that page.
+    </p>
+    <table class="noincrement" style="counter-increment: null;">
+        <caption class="noincrement"><b>Table 1. </b>Actual occupation vs gender frequencies for legal occupations in 1985 and 2005 with 
+        counterfactuals</caption>
+        <tr><th></th><th colspan=3>1985</th><th></th><th colspan=3>2005</th></tr>
+        <tr><td></td><td colspan=2>Gender</td><td></td><td></td><td colspan=2>Gender</td></tr>
+        <tr><td>Occupation</td><td>Female</td><td>Male</td><td>Marginal total</td><td></td><td>Female</td><td>Male</td><td>Marginal total</td></tr>
+        <tr><td>Judges, lawyers</td><td>789</td><td>15204</td><td>15993</td><td></td><td>2302</td><td>19506</td><td>21808</td></tr>
+        <tr><td>Other legal</td><td>2795</td><td>23926</td><td>26721</td><td></td><td>6379</td><td>29833</td><td>36212</td></tr>
+        <tr><td>Other spectech</td><td>2555759</td><td>3789332</td><td>6345091</td><td></td><td>4018698</td><td>4465215</td><td>8483913</td></tr>
+        <tr><td>Marginal total</td><td>2559343</td><td>3828462</td><td>6387805</td><td></td><td>4027379</td><td>4514554</td><td>8541933</td></tr>
+        <tr><th></th><th colspan=3>Counterfactuals</th></tr>
+        <tr><td></td><td colspan=2>Gender</td></tr>
+        <tr><td>Occupation</td><td>Female</td><td>Male</td><td>Marginal total</td></tr>
+        <tr><td>Judges, lawyers</td><td>1373</td><td>20434</td><td>21808</td></tr>
+        <tr><td>Other legal</td><td>4780</td><td>31432</td><td>36212</td></tr>
+        <tr><td>Other spectech</td><td>4018698</td><td>4465215</td><td>8483913</td></tr>
+        <tr><td>Marginal total</td><td>4027379</td><td>4514554</td><td>8541933</td></tr>
+    </table>
+</article>
+<div id="references" class="section level2">
+    <h2 class="hasAnchor">
+    <a href="#references" class="anchor"></a>References</h2>
+    <p><a id="Elbers2021"></a>Elbers, Benjamin (2021). A Method for Studying Differences in Segregation Across Time and Space. 
+        Sociological Methods &amp; Research. <a href="https://doi.org/10.1177/0049124121986204" 
+        class="uri">doi:10.18637/jss.v089.i07</a></p>
+    </div>    
 </body>
 </html>
