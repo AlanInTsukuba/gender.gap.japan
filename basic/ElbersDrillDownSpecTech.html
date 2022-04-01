@@ -2,10 +2,11 @@
     <head>
       <!--<meta name="google-site-verification" content="Z7SEnQaO9LAITbhuwGaI3rFtnpMRKeV9BbaW3LyvP2g" />-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="revised" content="21 December 2021" />
+      <meta name="revised" content="30 March 2022" />
         <title>Drill down: A. Specialists and technicians</title>
 
-        <link rel="stylesheet" href="https://latex.now.sh/style.css"> 
+        <!--<link rel="stylesheet" href="https://latex.now.sh/style.css"> -->
+        <link rel="stylesheet" href="https://alanintsukuba.github.io/latex.css">
         <link rel="stylesheet" href="https://alanintsukuba.github.io/ShowReferencesModal.css"> 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" 
@@ -16,7 +17,7 @@ integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="ano
 <body>
 <h1>Drill down: A. Specialists and technicians</h1>
 <p class="author"><a href="https://orcid.org/0000-0003-0070-2347" target="_blank">Alan Engel</a><br>Last update: 
-21 December 2021</p>
+    30 March 2022</p>
 <main>
     <p>Of the <a href="">major occupation groups</a>, specialists and technicians shows 
     persistently high gender segregation by occupation. This major group includes 
@@ -29,8 +30,8 @@ integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="ano
         this major group in 2000 to 25% in 2005. As a share, teachers' decline from 22% in 
         1985 to 16% in 2005 occurred mainly between 1985 and 1995.
     </p>
-<table class="table" style="margin-left: auto; margin-right: auto;">
-    <caption>Descriptive statistics: A. Specialists and technicians</caption>
+<table class="table noincrement" style="margin-left: auto; margin-right: auto;">
+    <caption class="noincrement"><b>Table 1</b>Descriptive statistics: A. Specialists and technicians</caption>
     <thead>
         <tr>
         <th style="text-align:left;text-align: center;">  </th>
@@ -316,11 +317,11 @@ occupations include highly gender-specific doctors and nurses.</p>
     </p>
     <p>Decomposing changes in total spectech segregation (see Figure) shows that the largest 
         contribution to change was reduced structural segregation with a lesser contribution 
-        from changes in the gender mix (gender margins). Changes in employment in segregated occupations (occupation 
+        from changes in gender mix (gender margins). Changes in employment in segregated occupations (occupation 
         margins) contributed additional segregation. It might be tempting to try to visually sum 
         contributions in mid-level groups to get the total decomposition; this is readily 
         feasible because the total is a weighted sum of the mid-levels plus the between, which 
-        is not in this figure and it's not clear whether or not the between term can be further 
+        is not in this figure; it's not clear whether or not the between term can be further 
         decomposed.
     </p>
     <figure>
@@ -330,8 +331,19 @@ occupations include highly gender-specific doctors and nurses.</p>
                 technicians
             </figcaption>
     </figure>
-    <table class="table" style="margin-left: auto; margin-right: auto;">
-        <caption>Decomposition of major group changes 1985-2005: A. Specialists and 
+    <p>Several of the decompositions listed in Table 2 below warrant a closer look. The change in gender 
+        segregation for 105 Legal, for example, shows a -1302% contribution from gender margins, -6% from 
+        occupational margins, and 1408% from structural change. Elbers decomposes M by estimating the 
+    changes in cell values that would be expected if there were only marginal changes and no structural change. 
+    These expected values are called the 'counterfactuals.'
+    The structural changes are then the differences between these expected values and the actual observed 
+    values. The estimated cell values are calculated using the procedure developed by 
+    <a href="#DemingStephan1940">Deming and Stephan (1940)</a> 
+    for adjusting sampled frequency tables when the expected marginal totals are known. Deming and Stephan 
+    provide a worked example that I adapt in 
+    <a href="EstimatingCounterfactuals.html">Drill down: A. Specialists and technicians - Estimating counterfactuals following Deming and Stephan (1940)</a>.</p>
+    <table class="table noincrement" style="margin-left: auto; margin-right: auto;">
+        <caption class="noincrement"><b>Table 2. </b>Decomposition of major group changes 1985-2005: A. Specialists and 
             technicians</caption>
         <thead>
        <tr>
@@ -625,6 +637,10 @@ occupations include highly gender-specific doctors and nurses.</p>
 <div id="references" class="section level2">
     <h2 class="hasAnchor">
     <a href="#references" class="anchor"></a>References</h2>
+    <p><a id="DemingStephan1940"></a>Deming, W. E., and Frederick F. Stephan. (1940) "On a Least Squares Adjustment of a Sampled Frequency 
+        Table when the Expected Marginal Totals are Known." 
+        The Annals of Mathematical Statistics, vol. 11, no. 4, pp. 427-444. 
+    <a href="https://www.jstor.org/stable/2235722">https://www.jstor.org/stable/2235722</a></p>
     <p><a id="Elbers2021"></a>Elbers, Benjamin (2021). A Method for Studying Differences in Segregation Across Time and Space. 
         Sociological Methods &amp; Research. <a href="https://doi.org/10.1177/0049124121986204" 
         class="uri">doi:10.18637/jss.v089.i07</a></p>
