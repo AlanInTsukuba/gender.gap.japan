@@ -19,11 +19,11 @@ integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="ano
 <p class="author"><a href="https://orcid.org/0000-0003-0070-2347" target="_blank">Alan Engel</a><br>Last update: 
     31 March 2022</p>
 <article>
-    <p>Elbers (2021) proposes a decomposition of the change in M between two times \(t_{1}\) and \(t_{2}\) as shown in 
-        Equation (1), where \(M(t'_{1}\) is the value of M calculated using the counterfactuals at time \(t_{2}\) versus \(t_{1}\). 
-        $$\tag{1} M(t_{2})-M(t_{1})=\overbrace{M(t_{2})-M(t_{1'})}^{\text{structural}}+\overbrace{M(t_{1'})-M(t_{1})}^{\text{marginal}} $$
-        Table 1 shows the gender frequencies also shown in Table 1 of the <a href="EstimatingCounterfactuals.html">previous page on 
-        estimating counterfactuals</a>. The counterfactual values are from Table 2 of that page.
+    <p>Elbers (2021) illustrates decompositions of the changes in M. He first decomposes changes into structurat changes 
+        and marginal changes. He then further decomposes the marginal changes into those due to changes in occupations and those due to 
+        changes in gender. He further decomposes structural changes by occupation. Here I apply these decompositions to this task 
+        using the data in Table 1. Table 1 shows the gender frequencies also shown in Table 1 of the <a href="EstimatingCounterfactuals.html">previous page on 
+            estimating counterfactuals</a>. The counterfactual values are from Table 2 of that page.
     </p>
     <table class="noincrement" style="counter-increment: null;">
         <caption class="noincrement"><b>Table 1. </b>Actual occupation vs gender frequencies for legal occupations in 1985 and 2005 with 
@@ -40,9 +40,46 @@ integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="ano
         <tr><td>Occupation</td><td>Female</td><td>Male</td><td>Marginal total</td></tr>
         <tr><td>Judges, lawyers</td><td>1373</td><td>20434</td><td>21808</td></tr>
         <tr><td>Other legal</td><td>4780</td><td>31432</td><td>36212</td></tr>
-        <tr><td>Other spectech</td><td>4018698</td><td>4465215</td><td>8483913</td></tr>
+        <tr><td>Other spectech</td><td>4022254</td><td>4460802</td><td>8483913</td></tr>
         <tr><td>Marginal total</td><td>4027379</td><td>4514554</td><td>8541933</td></tr>
     </table>
+    <p>The first decomposition of the change in M between two times \(t_{1}\) and \(t_{2}\) as shown in 
+        Equation (1), where \(M(t'_{1}\) is the value of M calculated using the counterfactuals at time \(t_{2}\) versus \(t_{1}\). 
+        $$\tag{1} M(t_{2})-M(t_{1})=\overbrace{M(t_{2})-M(t_{1'})}^{\text{structural}}+\overbrace{M(t_{1'})-M(t_{1})}^{\text{marginal}} $$
+        Referring to the <a href="OccupationGenderWalkthrough01.html">earlier walkthrough</a>, I rewrite Table 1, replacing counts 
+        with percentages of the total sample.
+    </p>
+    <table class="noincrement" style="counter-increment: null;">
+        <caption class="noincrement"><b>Table 2. </b>Actual occupation vs gender percent probabilities for legal occupations in 1985 and 2005 with 
+        counterfactuals</caption>
+        <tr><th></th><th colspan=3>1985</th><th></th><th colspan=3>2005</th></tr>
+        <tr><td></td><td colspan=2>Gender</td><td></td><td></td><td colspan=2>Gender</td></tr>
+        <tr><td>Occupation</td><td>Female</td><td>Male</td><td>Marginal total</td><td></td><td>Female</td><td>Male</td><td>Marginal total</td></tr>
+        <tr><td>Judges, lawyers</td><td>0.0124%</td><td>0.238%</td><td>0.250%</td><td></td><td>0.0269%</td><td>0.228%</td><td>0.255%</td></tr>
+        <tr><td>Other legal</td><td>0.0438</td><td>0.375</td><td>0.418</td><td></td><td>0.0748</td><td>0.349</td><td>0.424</td></tr>
+        <tr><td>Other spectech</td><td>40.01</td><td>59.32</td><td>99.33</td><td></td><td>47.05</td><td>52.27</td><td>99.32</td></tr>
+        <tr><td>Marginal total</td><td>40.07</td><td>59.93</td><td>100</td><td></td><td>47.15</td><td>52.85</td><td>100</td></tr>
+        <tr><th></th><th colspan=3>Counterfactuals</th></tr>
+        <tr><td></td><td colspan=2>Gender</td></tr>
+        <tr><td>Occupation</td><td>Female</td><td>Male</td><td>Marginal total</td></tr>
+        <tr><td>Judges, lawyers</td><td>0.0161%</td><td>0.239%</td><td>0.255%</td></tr>
+        <tr><td>Other legal</td><td>0.0560</td><td>0.368</td><td>0.424</td></tr>
+        <tr><td>Other spectech</td><td>47.09</td><td>52.22</td><td>99.32</td></tr>
+        <tr><td>Marginal total</td><td>47.15</td><td>52.85</td><td>100</td></tr>
+    </table>
+    <p>Working from the counts in Table 1 to reduce rounding errors, we get 
+        $$ \begin{align}
+        M_{2005} & = 0.00163 \\
+        \tag{2}M_{1985'} & = 0.00207 \\
+        M_{1985} & = 0.00176 
+        \end{align}. $$
+        This gives</p>
+    <table class="noborder">
+        <tr><td>\(\text{Total change in M}\)</td><td>\(M_{2005}-M_{1985}\)</td><td>\(=\)</td><td>\(-0.000142\)</td><td>\(=> -8.1 \text{% change}\)</td><td></td></tr>
+        <tr><td>\(\text{Structural change}\)</td><td>\(M_{2005}-M_{1985'}\)</td><td>\(=\)</td><td>\(-0.000450\)</td><td>\(=> -25.6 \text{%}\)</td><td>\(\tag{3}\)</td></tr>
+        <tr><td>\(\text{Marginal change}\)</td><td>\(M_{1985'}-M_{1985}\)</td><td>\(=\)</td><td>\(0.000308\)</td><td>\(=> 17.5 \text{%}\)</td></tr>
+    </table>
+    <p>which shows a 17.5 % increase in M due to marginal changes being offset by a 25.6 % decrease due to structural changes.</p>
 </article>
 <div id="references" class="section level2">
     <h2 class="hasAnchor">
