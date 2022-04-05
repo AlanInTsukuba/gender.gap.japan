@@ -55,33 +55,33 @@ integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="ano
         counterfactuals</caption>
         <tr><th></th><th colspan=3>1985</th><th></th><th colspan=3>2005</th></tr>
         <tr><td></td><td colspan=2>Gender</td><td></td><td></td><td colspan=2>Gender</td></tr>
-        <tr><td>Occupation</td><td>Female</td><td>Male</td><td>Marginal total</td><td></td><td>Female</td><td>Male</td><td>Marginal total</td></tr>
+        <tr><td>Occupation</td><td>Female</td><td>Male</td><td>Marginal</td><td></td><td>Female</td><td>Male</td><td>Marginal</td></tr>
         <tr><td>Judges, lawyers</td><td>0.0124%</td><td>0.238%</td><td>0.250%</td><td></td><td>0.0269%</td><td>0.228%</td><td>0.255%</td></tr>
         <tr><td>Other legal</td><td>0.0438</td><td>0.375</td><td>0.418</td><td></td><td>0.0748</td><td>0.349</td><td>0.424</td></tr>
         <tr><td>Other spectech</td><td>40.01</td><td>59.32</td><td>99.33</td><td></td><td>47.05</td><td>52.27</td><td>99.32</td></tr>
-        <tr><td>Marginal total</td><td>40.07</td><td>59.93</td><td>100</td><td></td><td>47.15</td><td>52.85</td><td>100</td></tr>
+        <tr><td>Marginal</td><td>40.07</td><td>59.93</td><td>100</td><td></td><td>47.15</td><td>52.85</td><td>100</td></tr>
         <tr><th></th><th colspan=7>Counterfactuals</th></tr>
         <tr><th></th><th colspan=3>least squares regression (Deming and Stephan, 1940)</th><th></th><th colspan=3>iterative proportional fitting (Elber, 2021)</th></tr>
         <tr><td></td><td colspan=2>Gender</td><td></td><td></td><td colspan=2>Gender</td></tr>
-        <tr><td>Occupation</td><td>Female</td><td>Male</td><td>Marginal total</td><td></td><td>Female</td><td>Male</td><td>Marginal total</td></tr>
+        <tr><td>Occupation</td><td>Female</td><td>Male</td><td>Marginal</td><td></td><td>Female</td><td>Male</td><td>Marginal</td></tr>
         <tr><td>Judges, lawyers</td><td>0.0152%</td><td>0.240%</td><td>0.255%</td><td></td><td>0.0165%</td><td>0.237%</td><td>0.255%</td></tr>
         <tr><td>Other legal</td><td>0.0532</td><td>0.371</td><td>0.424</td><td></td><td>0.0572</td><td>0.367</td><td>0.424</td></tr>
         <tr><td>Other spectech</td><td>45.39</td><td>53.94</td><td>99.32</td><td></td><td>47.07</td><td>52.25</td><td>99.32</td></tr>
-        <tr><td>Marginal total</td><td>47.15</td><td>52.85</td><td>100</td><td></td><td>47.15</td><td>52.85</td><td>100</td></tr>
+        <tr><td>Marginal</td><td>47.15</td><td>52.85</td><td>100</td><td></td><td>47.15</td><td>52.85</td><td>100</td></tr>
     </table>
     <p>Working from the counts in Table 1 to reduce rounding errors, we get 
         $$ \begin{align}
         M_{2005} & = 0.00163 \\
-        \tag{2}M_{1985'} & = 0.00265 \\
+        \tag{2}M_{1985'} & = 0.00208 \\
         M_{1985} & = 0.00176 
         \end{align}. $$
         This gives</p>
     <table class="noborder">
         <tr><td>\(\Delta_{total}\)</td><td>\(M_{2005}-M_{1985}\)</td><td>\(=\)</td><td>\(-0.000142\)</td><td>\(=> -8.1 \text{% change}\)</td><td></td></tr>
-        <tr><td>\(\Delta_{structural}\)</td><td>\(M_{2005}-M_{1985'}\)</td><td>\(=\)</td><td>\(-0.001031\)</td><td>\(=> -58.6 \text{%}\)</td><td>\(\tag{3}\)</td></tr>
-        <tr><td>\(\Delta_{marginal}\)</td><td>\(M_{1985'}-M_{1985}\)</td><td>\(=\)</td><td>\(0.000889\)</td><td>\(=> 50.5 \text{%}\)</td></tr>
+        <tr><td>\(\Delta_{structural}\)</td><td>\(M_{2005}-M_{1985'}\)</td><td>\(=\)</td><td>\(-0.000452\)</td><td>\(=> -25.6 \text{%}\)</td><td>\(\tag{3}\)</td></tr>
+        <tr><td>\(\Delta_{marginal}\)</td><td>\(M_{1985'}-M_{1985}\)</td><td>\(=\)</td><td>\(0.000311\)</td><td>\(=> 17.6 \text{%}\)</td></tr>
     </table>
-    <p>which shows a 50.5 % increase in M due to marginal changes being offset by a 58.6 % decrease due to structural changes.</p>
+    <p>which shows a 18 % increase in M due to marginal changes being offset by a 26 % decrease due to structural changes.</p>
 </article>
 <article>
     <h4>Comparison to Elber's decomposition</h4>
@@ -90,7 +90,8 @@ integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="ano
     <h5>Decomposition of the change in M into structural and marginal components.</h5>
     <p>The segregation package's ipf function calculates a set of counterfactuals using the iterative proportional fitting 
         algorithm also introduced in Deming and Stephan (1940). In the R console output shown below, n_source is the 1985 data and n_target 
-        is the 2005 data. 
+        is the 2005 data. The resulting counterfactual counts are in Table 1 and the probabilities are in Table 2. The least squares method preserves 
+        the marginal counts of the 2005 data. Both methods preserve the marginal probabilities.
     </p>
 <pre><code class="language-html"># counterfactuals using ipf function
 (cfacts <- ipf(legal1985, legal2005, "Gender", "OccMinor", weight = "w"))
@@ -104,6 +105,24 @@ integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="ano
 ## 5   MALE     1029    23926    29833   23415.900
 ## 6   MALE     1999  3789332  4465215 3337401.121
 </code></pre>
+<p>The function mutual_difference provides \(M_{1985}\)(M1) and  \(M_{2005}\)(M2). It doesn't provide 
+    \(M_{1985'}\) directly, but we can get this by summing M1, group_marginal and unit_marginal. 
+    $$ \begin{align}
+    M_{2005} & = 0.00163 \\
+    \tag{4}M_{1985'} & = 0.00189 \\
+    M_{1985} & = 0.00176 
+    \end{align}. $$
+    This gives</p>
+<table class="noborder">
+    <tr><td>\(\Delta_{total}\)</td><td>\(M_{2005}-M_{1985}\)</td><td>\(=\)</td><td>\(-0.000142\)</td><td>\(=> -8.1 \text{% change}\)</td><td></td></tr>
+    <tr><td>\(\Delta_{structural}\)</td><td>\(M_{2005}-M_{1985'}\)</td><td>\(=\)</td><td>\(-0.000266\)</td><td>\(=> -15.0 \text{%}\)</td><td>\(\tag{5}\)</td></tr>
+    <tr><td>\(\Delta_{marginal}\)</td><td>\(M_{1985'}-M_{1985}\)</td><td>\(=\)</td><td>\(0.000124\)</td><td>\(=> 7.0 \text{%}\)</td></tr>
+</table>
+<p>which shows a 7.0 % increase in M due to marginal changes being offset by a 15.0 % decrease due to structural changes. 
+    If we estimate confidence intervals for the IPF method (see code below), we find that \(\Delta_{structural}\) and \(\Delta_{marginal}\) 
+    estimated for the least squares counterfactuals fall inside.
+</p>
+
 <pre><code class="language-html"># Decomposing changes in indices
 mutual_difference(legal1985, legal2005, "Gender", "OccMinor", weight = "w")
             
@@ -116,6 +135,18 @@ mutual_difference(legal1985, legal2005, "Gender", "OccMinor", weight = "w")
 ## 6: group_marginal  1.175015e-04
 ## 7:  unit_marginal  6.226171e-06
 ## 8:     structural -2.655849e-04
+
+mutual_difference(legal1985, legal2005, "Gender", "OccMinor", weight = "w", se=TRUE)
+
+##             stat           est           se                          CI          bias
+## 1:             M1  0.0017647425 2.070748e-05     0.001722991,0.001802110  1.513961e-08
+## 2:             M2  0.0016236760 2.014460e-05     0.001582224,0.001654201 -7.755737e-07
+## 3:           diff -0.0001410665 3.096467e-05 -1.988926e-04,-7.613107e-05 -7.907133e-07
+## 4:      additions  0.0000000000 0.000000e+00                         0,0  0.000000e+00
+## 5:       removals  0.0000000000 0.000000e+00                         0,0  0.000000e+00
+## 6: group_marginal  0.0001027409 6.368765e-06   0.0000945652,0.0001153312  7.086803e-06
+## 7:  unit_marginal  0.0000209698 6.467000e-06   7.527389e-06,2.779999e-05 -7.069809e-06
+## 8:     structural -0.0002647772 3.115294e-05 -0.0003221377,-0.0001986830 -8.077073e-07
 </code></pre>
 </article>
 <div id="references" class="section level2">
