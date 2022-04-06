@@ -119,10 +119,11 @@ integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="ano
     <tr><td>\(\Delta_{marginal}\)</td><td>\(M_{1985'}-M_{1985}\)</td><td>\(=\)</td><td>\(0.000124\)</td><td>\(=> 7.0 \text{%}\)</td></tr>
 </table>
 <p>which shows a 7.0 % increase in M due to marginal changes being offset by a 15.0 % decrease due to structural changes. 
-    If we estimate confidence intervals for the IPF method (see code below), we find that \(\Delta_{structural}\) and \(\Delta_{marginal}\) 
-    estimated for the least squares counterfactuals fall inside.
+    The \(\Delta_{structural}\) and \(\Delta_{marginal}\) 
+    estimated for the least squares counterfactuals fall inside the confidence intervals estimated by the IPF method (see code below). The 
+    function \(mutual_difference\) further decomposes marginal changes into group (gender) and unit (occupation) contributions. The total 
+    marginal component is simply the sum of these two.
 </p>
-
 <pre><code class="language-html"># Decomposing changes in indices
 mutual_difference(legal1985, legal2005, "Gender", "OccMinor", weight = "w")
             
@@ -148,6 +149,10 @@ mutual_difference(legal1985, legal2005, "Gender", "OccMinor", weight = "w", se=T
 ## 7:  unit_marginal  0.0000209698 6.467000e-06   7.527389e-06,2.779999e-05 -7.069809e-06
 ## 8:     structural -0.0002647772 3.115294e-05 -0.0003221377,-0.0001986830 -8.077073e-07
 </code></pre>
+</article>
+<article>
+    <h4>Local segregation</h4>
+
 </article>
 <div id="references" class="section level2">
     <h2 class="hasAnchor">
