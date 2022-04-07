@@ -63,6 +63,19 @@ references:
     year: 2021
     doi: "10.1177/0049124121986204"
   - authors:
+      - family-names: Friendly
+        given-names: Michael
+      - family-names: Fox
+        given-names: John
+      - family-names: Chalmers
+        given-names: Phil
+    title: "matlib"
+    subtitle:"Matrix Functions for Teaching and Learning Linear Algebra and Multivariate Statistics"
+    type: software
+    journal: "R package"
+    version: 0.9.5
+    url: "https://CRAN.R-project.org/package=matlib"
+  - authors:
       - family-names: Fuchs
         given-names: 'Victor R.'
     title: "A Note on Sex Segregation in Professional Occupations"
