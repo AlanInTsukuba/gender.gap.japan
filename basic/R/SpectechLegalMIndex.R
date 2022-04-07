@@ -13,14 +13,14 @@
 #' Elbers, Benjamin. A Method for Studying Differences in Segregation Across Time and Space. 
 #' SocArXiv, 21 Dec. 2018, supplementary materials
 
-library("tidyverse")
-library("tidylog", warn.conflicts = FALSE)
-library("fst")
-library("ggthemes")
-library("segregation")
-library("cowplot")
-library("knitr")
-library("kableExtra")
+require("tidyverse")
+require("tidylog", warn.conflicts = FALSE)
+require("fst")
+require("ggthemes")
+require("segregation")
+require("cowplot")
+require("knitr")
+require("kableExtra")
 
 # Compute the M and H indices using mutual_total():
 head(legal1985)
@@ -114,6 +114,53 @@ mutual_local(legal2005, "Gender","OccMinor", weight="w", wide = TRUE)
 localse2005$lengthCI <- sapply(localse2005$ls_CI, base::diff)
 with(localse2005, plot(x = p, y = lengthCI, pch = 16, cex = 0.3))
 
+# counterfactuals using ipf function
+(cfacts <- ipf(legal1985, legal2005, "Gender", "OccMinor", weight = "w"))
+## [IPF 1/1] #
+##              
+##   Gender OccMinor n_source n_target           n
+## 1 FEMALE     1028      789     2302    1056.823
+## 2 FEMALE     1029     2795     6379    3654.223
+## 3 FEMALE     1999  2555759  4018698 3007032.515
+## 4   MALE     1028    15204    19506   15244.417
+## 5   MALE     1029    23926    29833   23415.900
+## 6   MALE     1999  3789332  4465215 3337401.121
+
+(cfactstotal <- 100*sweep(cfacts[,3:5],2,colSums(cfacts[,3:5]),`/`) )
+##      n_source    n_target           n
+## 1  0.01235166  0.02694940  0.01654439
+## 2  0.04375525  0.07467865  0.05720624
+## 3 40.00997213 47.04670477 47.07458219
+## 4  0.23801603  0.22835581  0.23864876
+## 5  0.37455746  0.34925350  0.36657193
+## 6 59.32134747 52.27405787 52.24644649
+
+colSums(cfactstotal[c(1,4),]  )
+##  n_source  n_target         n 
+## 0.2503677 0.2553052 0.2551932
+
+colSums(cfactstotal[c(2,5),]  )
+##  n_source  n_target         n 
+## 0.4183127 0.4239321 0.4237782 
+
+colSums(cfactstotal[c(3,6),]  )
+## n_source n_target        n 
+## 99.33132 99.32076 99.32103 
+
+colSums(cfactstotal[1:3,]  )
+## n_source n_target        n 
+## 40.06608 47.14833 47.14833
+
+colSums(cfactstotal[4:6,]  )
+## n_source n_target        n 
+## 59.93392 52.85167 52.85167
+
+colSums(cfactstotal  )
+## n_source n_target        n 
+##      100      100      100 
+
+ipf(legal1985, legal2005, "Gender", "OccMinor", weight = "w", precision=1e-7)
+
 # Decomposing changes in indices
 mutual_difference(legal1985, legal2005, "Gender", "OccMinor", weight = "w")
             
@@ -138,4 +185,29 @@ mutual_difference(legal1985, legal2005, "Gender", "OccMinor", weight = "w", se=T
 ## 6: group_marginal  0.0001027409 6.368765e-06   0.0000945652,0.0001153312  7.086803e-06
 ## 7:  unit_marginal  0.0000209698 6.467000e-06   7.527389e-06,2.779999e-05 -7.069809e-06
 ## 8:     structural -0.0002647772 3.115294e-05 -0.0003221377,-0.0001986830 -8.077073e-07
- 
+
+###################################################################################
+## use the counterfactuals calculated using Deming and Stephan's least squares
+## method
+
+legal1985p <- tibble(Gender = c("FEMALE","MALE","FEMALE","MALE","FEMALE","MALE"),
+	OccMinor=c(1028, 1028, 1029, 1029, 1999, 1999),
+	w=c(1302,20506,4541,31671,3876555,4607358))
+
+mutual_total(legal1985p , "Gender","OccMinor", weight="w")
+##    stat         est
+## 1:    M 0.002075279
+## 2:    H 0.003012003
+
+(legalMmarginal <- 0.002075279 - 1.764758e-03)
+## [1] 0.000310521
+(legalMstruct <- 1.622900e-03 - 0.002075279)
+## [1] -0.000452379
+
+legalMmarginal / 1.764758e-03
+## [1] 0.1759567
+legalMstruct / 1.764758e-03
+## [1] -0.2563405
+
+
+
