@@ -70,7 +70,7 @@ references:
       - family-names: Chalmers
         given-names: Phil
     title: "matlib"
-    subtitle:"Matrix Functions for Teaching and Learning Linear Algebra and Multivariate Statistics"
+    subtitle: "Matrix Functions for Teaching and Learning Linear Algebra and Multivariate Statistics"
     type: software
     journal: "R package"
     version: 0.9.5
