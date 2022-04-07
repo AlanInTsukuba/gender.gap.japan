@@ -98,6 +98,18 @@ references:
     pages: 25-50
     doi: "10.1177/1466138113506632"
   - authors:
+      - family-names: Karmel
+        given-names: T.
+      - family-names: Maclachlan
+        given-names: M.
+    title: Occupational Sex Segregation - Increasing or Decreasing
+    type: article
+    journal: Economic Research
+    volume: 64
+    issue: 3
+    pages: 187-195
+    doi: 10.1111/j.1475-4932.1988.tb02057.x
+  - authors:
       - family-names: Tivadar
         given-names: Mihai
     title: “OasisR” 
