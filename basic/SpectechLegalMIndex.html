@@ -19,14 +19,14 @@ integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="ano
 <p class="author"><a href="https://orcid.org/0000-0003-0070-2347" target="_blank">Alan Engel</a><br>Last update: 
     31 March 2022</p>
 <article>
-    <p>Elbers (2021) proposes a decomposition of the change in M between two times \(t_{1}\) and \(t_{2}\) as shown in 
-        Equation (1), where \(M(t'_{1}\) is the value of M calculated using the counterfactuals at time \(t_{2}\) versus \(t_{1}\). 
-        $$\tag{1} M(t_{2})-M(t_{1})=\overbrace{M(t_{2})-M(t_{1'})}^{\text{structural}}+\overbrace{M(t_{1'})-M(t_{1})}^{\text{marginal}} $$
-        Table 1 shows the gender frequencies also shown in Table 1 of the <a href="EstimatingCounterfactuals.html">previous page on 
-        estimating counterfactuals</a>. The counterfactual values are from Table 2 of that page.
+    <p>Elbers (2021) illustrates decompositions of the changes in M. He first decomposes changes into structurat changes 
+        and marginal changes. He then further decomposes the marginal changes into those due to changes in occupations and those due to 
+        changes in gender. He further decomposes structural changes by occupation. Here I apply these decompositions to this task 
+        using the data in Table 1. Table 1 shows the gender frequencies also shown in Table 1 of the <a href="EstimatingCounterfactuals.html">previous page on 
+            estimating counterfactuals</a>. The counterfactual values are from Table 2 of that page.
     </p>
     <table class="noincrement" style="counter-increment: null;">
-        <caption class="noincrement"><b>Table 1. </b>Actual occupation vs gender frequencies for legal occupations in 1985 and 2005 with 
+        <caption class="noincrement"><b>Table 1.</b> Actual occupation vs gender frequencies for legal occupations in 1985 and 2005 with 
         counterfactuals</caption>
         <tr><th></th><th colspan=3>1985</th><th></th><th colspan=3>2005</th></tr>
         <tr><td></td><td colspan=2>Gender</td><td></td><td></td><td colspan=2>Gender</td></tr>
@@ -35,14 +35,124 @@ integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="ano
         <tr><td>Other legal</td><td>2795</td><td>23926</td><td>26721</td><td></td><td>6379</td><td>29833</td><td>36212</td></tr>
         <tr><td>Other spectech</td><td>2555759</td><td>3789332</td><td>6345091</td><td></td><td>4018698</td><td>4465215</td><td>8483913</td></tr>
         <tr><td>Marginal total</td><td>2559343</td><td>3828462</td><td>6387805</td><td></td><td>4027379</td><td>4514554</td><td>8541933</td></tr>
-        <tr><th></th><th colspan=3>Counterfactuals</th></tr>
-        <tr><td></td><td colspan=2>Gender</td></tr>
-        <tr><td>Occupation</td><td>Female</td><td>Male</td><td>Marginal total</td></tr>
-        <tr><td>Judges, lawyers</td><td>1373</td><td>20434</td><td>21808</td></tr>
-        <tr><td>Other legal</td><td>4780</td><td>31432</td><td>36212</td></tr>
-        <tr><td>Other spectech</td><td>4018698</td><td>4465215</td><td>8483913</td></tr>
-        <tr><td>Marginal total</td><td>4027379</td><td>4514554</td><td>8541933</td></tr>
+        <tr><th></th><th colspan=7>Counterfactuals</th></tr>
+        <tr><th></th><th colspan=3>least squares regression (Deming and Stephan, 1940)</th><th></th><th colspan=3>iterative proportional fitting (Elber, 2021)</th></tr>
+        <tr><td></td><td colspan=2>Gender</td><td></td><td></td><td colspan=2>Gender</td></tr>
+        <tr><td>Occupation</td><td>Female</td><td>Male</td><td>Marginal total</td><td></td><td>Female</td><td>Male</td><td>Marginal total</td></tr>
+        <tr><td>Judges, lawyers</td><td>1302</td><td>20506</td><td>21808</td><td></td><td>1057</td><td>15244</td><td>16301</td></tr>
+        <tr><td>Other legal</td><td>4541</td><td>31671</td><td>36212</td><td></td><td>3654</td><td>23416</td><td>27070</td></tr>
+        <tr><td>Other spectech</td><td>3876555</td><td>4607358</td><td>8483913</td><td></td><td>3007033</td><td>3337401</td><td>6344434</td></tr>
+        <tr><td>Marginal total</td><td>4027379</td><td>4514554</td><td>8541933</td><td></td><td>3011744</td><td>3376061</td><td>6387805</td></tr>
     </table>
+    <p>The first decomposition of the change in M between two times \(t_{1}\) and \(t_{2}\) as shown in 
+        Equation (1), where \(M(t'_{1}\) is the value of M calculated using the counterfactuals at time \(t_{2}\) versus \(t_{1}\). 
+        $$\tag{1} M(t_{2})-M(t_{1})=\overbrace{M(t_{2})-M(t_{1'})}^{\text{structural}}+\overbrace{M(t_{1'})-M(t_{1})}^{\text{marginal}} $$
+        Referring to the <a href="OccupationGenderWalkthrough01.html">earlier walkthrough</a>, I rewrite Table 1, replacing counts 
+        with percentages of the total sample.
+    </p>
+    <table class="noincrement" style="counter-increment: null;">
+        <caption class="noincrement"><b>Table 2.</b> Actual occupation vs gender percent probabilities for legal occupations in 1985 and 2005 with 
+        counterfactuals</caption>
+        <tr><th></th><th colspan=3>1985</th><th></th><th colspan=3>2005</th></tr>
+        <tr><td></td><td colspan=2>Gender</td><td></td><td></td><td colspan=2>Gender</td></tr>
+        <tr><td>Occupation</td><td>Female</td><td>Male</td><td>Marginal</td><td></td><td>Female</td><td>Male</td><td>Marginal</td></tr>
+        <tr><td>Judges, lawyers</td><td>0.0124%</td><td>0.238%</td><td>0.250%</td><td></td><td>0.0269%</td><td>0.228%</td><td>0.255%</td></tr>
+        <tr><td>Other legal</td><td>0.0438</td><td>0.375</td><td>0.418</td><td></td><td>0.0748</td><td>0.349</td><td>0.424</td></tr>
+        <tr><td>Other spectech</td><td>40.01</td><td>59.32</td><td>99.33</td><td></td><td>47.05</td><td>52.27</td><td>99.32</td></tr>
+        <tr><td>Marginal</td><td>40.07</td><td>59.93</td><td>100</td><td></td><td>47.15</td><td>52.85</td><td>100</td></tr>
+        <tr><th></th><th colspan=7>Counterfactuals</th></tr>
+        <tr><th></th><th colspan=3>least squares regression (Deming and Stephan, 1940)</th><th></th><th colspan=3>iterative proportional fitting (Elber, 2021)</th></tr>
+        <tr><td></td><td colspan=2>Gender</td><td></td><td></td><td colspan=2>Gender</td></tr>
+        <tr><td>Occupation</td><td>Female</td><td>Male</td><td>Marginal</td><td></td><td>Female</td><td>Male</td><td>Marginal</td></tr>
+        <tr><td>Judges, lawyers</td><td>0.0152%</td><td>0.240%</td><td>0.255%</td><td></td><td>0.0165%</td><td>0.237%</td><td>0.255%</td></tr>
+        <tr><td>Other legal</td><td>0.0532</td><td>0.371</td><td>0.424</td><td></td><td>0.0572</td><td>0.367</td><td>0.424</td></tr>
+        <tr><td>Other spectech</td><td>45.39</td><td>53.94</td><td>99.32</td><td></td><td>47.07</td><td>52.25</td><td>99.32</td></tr>
+        <tr><td>Marginal</td><td>47.15</td><td>52.85</td><td>100</td><td></td><td>47.15</td><td>52.85</td><td>100</td></tr>
+    </table>
+    <p>Working from the counts in Table 1 to reduce rounding errors, we get 
+        $$ \begin{align}
+        M_{2005} & = 0.00163 \\
+        \tag{2}M_{1985'} & = 0.00208 \\
+        M_{1985} & = 0.00176 
+        \end{align}. $$
+        This gives</p>
+    <table class="noborder">
+        <tr><td>\(\Delta_{total}\)</td><td>\(M_{2005}-M_{1985}\)</td><td>\(=\)</td><td>\(-0.000142\)</td><td>\(=> -8.1 \text{% change}\)</td><td></td></tr>
+        <tr><td>\(\Delta_{structural}\)</td><td>\(M_{2005}-M_{1985'}\)</td><td>\(=\)</td><td>\(-0.000452\)</td><td>\(=> -25.6 \text{%}\)</td><td>\(\tag{3}\)</td></tr>
+        <tr><td>\(\Delta_{marginal}\)</td><td>\(M_{1985'}-M_{1985}\)</td><td>\(=\)</td><td>\(0.000311\)</td><td>\(=> 17.6 \text{%}\)</td></tr>
+    </table>
+    <p>which shows a 18 % increase in M due to marginal changes being offset by a 26 % decrease due to structural changes.</p>
+</article>
+<article>
+    <h4>Comparison to Elber's decomposition</h4>
+    <p>Segregation computations for the this compressed dataset are contain in <a href="R/SpectechLegalMIndex.R">supplemental R code</a>. Relevant 
+    extracts are shown below.</p>
+    <h5>Decomposition of the change in M into structural and marginal components.</h5>
+    <p>The segregation package's ipf function calculates a set of counterfactuals using the iterative proportional fitting 
+        algorithm also introduced in Deming and Stephan (1940). In the R console output shown below, n_source is the 1985 data and n_target 
+        is the 2005 data. The resulting counterfactual counts are in Table 1 and the probabilities are in Table 2. The least squares method preserves 
+        the marginal counts of the 2005 data. Both methods preserve the marginal probabilities.
+    </p>
+<pre><code class="language-html"># counterfactuals using ipf function
+(cfacts <- ipf(legal1985, legal2005, "Gender", "OccMinor", weight = "w"))
+## [IPF 1/1] #
+##              
+##   Gender OccMinor n_source n_target           n
+## 1 FEMALE     1028      789     2302    1056.823
+## 2 FEMALE     1029     2795     6379    3654.223
+## 3 FEMALE     1999  2555759  4018698 3007032.515
+## 4   MALE     1028    15204    19506   15244.417
+## 5   MALE     1029    23926    29833   23415.900
+## 6   MALE     1999  3789332  4465215 3337401.121
+</code></pre>
+<p>The function mutual_difference provides \(M_{1985}\)(M1) and  \(M_{2005}\)(M2). It doesn't provide 
+    \(M_{1985'}\) directly, but we can get this by summing M1, group_marginal and unit_marginal. 
+    $$ \begin{align}
+    M_{2005} & = 0.00163 \\
+    \tag{4}M_{1985'} & = 0.00189 \\
+    M_{1985} & = 0.00176 
+    \end{align}. $$
+    This gives</p>
+<table class="noborder">
+    <tr><td>\(\Delta_{total}\)</td><td>\(M_{2005}-M_{1985}\)</td><td>\(=\)</td><td>\(-0.000142\)</td><td>\(=> -8.1 \text{% change}\)</td><td></td></tr>
+    <tr><td>\(\Delta_{structural}\)</td><td>\(M_{2005}-M_{1985'}\)</td><td>\(=\)</td><td>\(-0.000266\)</td><td>\(=> -15.0 \text{%}\)</td><td>\(\tag{5}\)</td></tr>
+    <tr><td>\(\Delta_{marginal}\)</td><td>\(M_{1985'}-M_{1985}\)</td><td>\(=\)</td><td>\(0.000124\)</td><td>\(=> 7.0 \text{%}\)</td></tr>
+</table>
+<p>which shows a 7.0 % increase in M due to marginal changes being offset by a 15.0 % decrease due to structural changes. 
+    The \(\Delta_{structural}\) and \(\Delta_{marginal}\) 
+    estimated for the least squares counterfactuals fall inside the confidence intervals estimated by the IPF method (see code below). The 
+    function \(mutual_difference\) further decomposes marginal changes into group (gender) and unit (occupation) contributions. The total 
+    marginal component is simply the sum of these two.
+</p>
+<pre><code class="language-html"># Decomposing changes in indices
+mutual_difference(legal1985, legal2005, "Gender", "OccMinor", weight = "w")
+            
+##              stat           est
+## 1:             M1  1.764758e-03
+## 2:             M2  1.622900e-03
+## 3:           diff -1.418572e-04
+## 4:      additions  0.000000e+00
+## 5:       removals  0.000000e+00
+## 6: group_marginal  1.175015e-04
+## 7:  unit_marginal  6.226171e-06
+## 8:     structural -2.655849e-04
+
+mutual_difference(legal1985, legal2005, "Gender", "OccMinor", weight = "w", se=TRUE)
+
+##             stat           est           se                          CI          bias
+## 1:             M1  0.0017647425 2.070748e-05     0.001722991,0.001802110  1.513961e-08
+## 2:             M2  0.0016236760 2.014460e-05     0.001582224,0.001654201 -7.755737e-07
+## 3:           diff -0.0001410665 3.096467e-05 -1.988926e-04,-7.613107e-05 -7.907133e-07
+## 4:      additions  0.0000000000 0.000000e+00                         0,0  0.000000e+00
+## 5:       removals  0.0000000000 0.000000e+00                         0,0  0.000000e+00
+## 6: group_marginal  0.0001027409 6.368765e-06   0.0000945652,0.0001153312  7.086803e-06
+## 7:  unit_marginal  0.0000209698 6.467000e-06   7.527389e-06,2.779999e-05 -7.069809e-06
+## 8:     structural -0.0002647772 3.115294e-05 -0.0003221377,-0.0001986830 -8.077073e-07
+</code></pre>
+</article>
+<article>
+    <h4>Local segregation</h4>
+
 </article>
 <div id="references" class="section level2">
     <h2 class="hasAnchor">
@@ -50,6 +160,9 @@ integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="ano
     <p><a id="Elbers2021"></a>Elbers, Benjamin (2021). A Method for Studying Differences in Segregation Across Time and Space. 
         Sociological Methods &amp; Research. <a href="https://doi.org/10.1177/0049124121986204" 
         class="uri">doi:10.18637/jss.v089.i07</a></p>
+    <p><a id="KarmelMaclachlan1988"></a>Karmel, T., M. Maclachlan (1988). Occupational Sex Segregation - Increasing or Decreasing? 
+        Economic Record, vol. 64, no. 3, pp. 187-195. <a href="https://doi.org/10.1111/j.1475-4932.1988.tb02057.x" 
+        class="uri">doi:10.1111/j.1475-4932.1988.tb02057.x</a></p>
     </div>    
 </body>
 </html>
