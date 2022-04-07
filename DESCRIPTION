@@ -1,13 +1,19 @@
-Package: tsukuba.segregation
-Title: Functions and data for segregation and Tsukuba
-Version: 0.0.0.9000
+Package: gender.gap.japan
+Title: Gender Gap Japan
+Version: 1.0.0.0000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "Alan",
+           family = "Engel",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+           email = "ttcrossroads09@gmail.com",
+           comment = c(ORCID = "0000-0003-0070-2347"))
+Description: "Objective: Apply segregation statistics to Japanese government data A recently published decomposition method (Elbers, 2021) enables 
+changes in segregation to be decomposed into changes resulting from new units 
+(for example, occupations), disappearing units, changes in groups (for example, gender), 
+changes in units, and structural changes. Elbers has released an R package with 
+clearly written vignette and documentation. This project will apply this and 
+other segregation statistics methods to gender gaps in Japan using readily 
+available census and other government statistics."
 License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
     license
 Encoding: UTF-8
