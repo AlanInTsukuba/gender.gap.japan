@@ -152,7 +152,38 @@ mutual_difference(legal1985, legal2005, "Gender", "OccMinor", weight = "w", se=T
 </article>
 <article>
     <h4>Local segregation</h4>
+<p>The structural changes in M are the sum of the structural changes in the units, in this case the occupations.
+    $$\begin{align} \Delta_{structural} & = \frac{1}{2}(M(t_{2})-M(t'_{1})) + \frac{1}{2}(M(t'_{2})-M(t_{1})) \\ 
+    & =\sum_{u=1}^{U}\left(\frac{1}{2}p_{.u}^{t_{2}}[L_{u}(t_{2})-L_{u}(t'_{1})]+\frac{1}{2}p_{.u}^{t_{1}}[L_{u}(t'_{2})-L_{u}(t_{1})]  \right)   \\
+    & =\sum_{u=1}^{U}\Delta_{u,structural} 
+    \end{align} $$ Elber's (2018) decomposition allows further 
+    decompositions based on local segregation scores, holding the marginals constant. 
+    The function \(mutual_local\) shown in the code below gives the local segregation scores \(L_{u}\) and marginal weights \(p_{u.}\), where 
+    the local segregation score of unit \(u\) is defined as
+    $$ L_{u} = \sum_{g=1}^{G}p_{g|u}\log{\frac{p_{g|u}}{p_{.g}}} $$ with \(p_{g|u}=t_{ug}/t_{u.}\).
+</p>
+<pre><code class="language-html">##########################################################
+## local segregation
 
+mutual_local(legal1985, "Gender", "OccMinor", weight = "w", 
+    wide = TRUE, se = TRUE, CI = .95, n_bootstrap = 500)
+
+## 500 bootstrap iterations on 6387805 observations
+##   OccMinor           ls        ls_se                     ls_CI       ls_bias           p         p_se                    p_CI        p_bias
+## 1:     1028 3.353249e-01 4.509297e-03       0.3272385,0.3440315 -7.970815e-05 0.002503730 2.006284e-05 0.002466782,0.002544254 -5.260023e-08
+## 2:     1029 2.190133e-01 3.403324e-03       0.2122004,0.2257648 -3.511488e-05 0.004182378 2.576516e-05 0.004129572,0.004233148  7.489271e-07
+## 3:     1999 9.461750e-06 1.227055e-07 9.222291e-06,9.703226e-06  8.205336e-11 0.993313892 3.327408e-05     0.9932447,0.9933803 -6.963268e-07
+
+mutual_local(legal2005, "Gender", "OccMinor", weight = "w", 
+    wide = TRUE, se = TRUE, CI = .95, n_bootstrap = 500)
+
+## 500 bootstrap iterations on 8541933 observations
+##    OccMinor           ls        ls_se                     ls_CI       ls_bias           p         p_se                    p_CI        p_bias
+## 1:     1028 3.127103e-01 4.149638e-03       0.3049829,0.3209711 -1.011267e-04 0.002552984 1.747530e-05 0.002519854,0.002589774  6.813446e-08
+## 2:     1029 1.925077e-01 2.840052e-03       0.1874197,0.1977822 -2.273009e-04 0.004239439 2.288586e-05 0.004196998,0.004283357 -1.180061e-07
+## 3:     1999 9.727760e-06 1.195276e-07 9.495809e-06,9.970365e-06 -7.513348e-09 0.993207577 2.773202e-05     0.9931544,0.9932600  4.987162e-08
+
+</code></pre>
 </article>
 <div id="references" class="section level2">
     <h2 class="hasAnchor">
