@@ -150,6 +150,7 @@ mutual_difference(legal1985, legal2005, "Gender", "OccMinor", weight = "w", se=T
 ## 8:     structural -0.0002647772 3.115294e-05 -0.0003221377,-0.0001986830 -8.077073e-07
 </code></pre>
 </article>
+<!--
 <article>
     <h4>Local segregation</h4>
 <p>The structural changes in M are the sum of the structural changes in the units, in this case the occupations.
@@ -158,10 +159,103 @@ mutual_difference(legal1985, legal2005, "Gender", "OccMinor", weight = "w", se=T
     & =\sum_{u=1}^{U}\Delta_{u,structural} 
     \end{align} $$ Elber's (2018) decomposition allows further 
     decompositions based on local segregation scores, holding the marginals constant. 
-    The function \(mutual_local\) shown in the code below gives the local segregation scores \(L_{u}\) and marginal weights \(p_{u.}\), where 
+    The function \( mutual\_local \) shown in the code below gives the local segregation scores \(L_{u}\) and marginal weights \(p_{u.}\), where 
     the local segregation score of unit \(u\) is defined as
-    $$ L_{u} = \sum_{g=1}^{G}p_{g|u}\log{\frac{p_{g|u}}{p_{.g}}} $$ with \(p_{g|u}=t_{ug}/t_{u.}\).
+    $$ L_{u} = \sum_{g=1}^{G}p_{g|u}\log{\frac{p_{g|u}}{p_{.g}}} $$ with \(p_{g|u}=t_{ug}/t_{u.}\). In addition to the counterfactuals for 
+    \(t'_{1}\), this decomposition uses the counterfactuals for \(t'_{2}\). These can be calculated using the \(ipf\) function.
 </p>
+<pre><code class="language-html">## counterfactuals for both directions
+(legal1985cf <- ipf(legal1985, legal2005, "Gender", "OccMinor", weight = "w", precision=1e-7) %>% 
+    mutate(w = n) %>%
+    select(Gender,OccMinor,w))
+##   Gender OccMinor           w
+## 1 FEMALE     1028    1057.290
+## 2 FEMALE     1029    3655.558
+## 3 FEMALE     1999 3007030.713
+## 4   MALE     1028   15251.083
+## 5   MALE     1029   23424.365
+## 6   MALE     1999 3337385.991
+
+(legal2005cf <- ipf(legal2005, legal1985, "Gender", "OccMinor", weight = "w", precision=1e-7) %>% 
+    mutate(w = n) %>%
+    select(Gender,OccMinor,w))
+##   Gender OccMinor           w
+## 1 FEMALE     1028    1736.260
+## 2 FEMALE     1029    4931.009
+## 3 FEMALE     1999 3415750.357
+## 4   MALE     1028   19649.994
+## 5   MALE     1029   30801.001
+## 6   MALE     1999 5069064.378
+</code></pre>
+<p>Then calculate the local segregation scores for each occupation and time with respective counterfactual.</p>
+<pre><code class="language-html">
+(localseg1985 <- mutual_local(legal1985, "Gender", "OccMinor", weight = "w", wide = TRUE))
+##    OccMinor           ls           p
+## 1:     1028 3.352452e-01 0.002503677
+## 2:     1029 2.189781e-01 0.004183127
+## 3:     1999 9.461832e-06 0.993313196
+
+(localseg1985cf <- mutual_local(legal1985cf, "Gender", "OccMinor", weight = "w", wide = TRUE))
+##   OccMinor           ls           p
+## 1:     1028 4.050255e-01 0.002553048
+## 2:     1029 2.573294e-01 0.004239316
+## 3:     1999 1.235412e-05 0.993207636
+
+(localseg2005cf <- mutual_local(legal2005cf, "Gender", "OccMinor", weight = "w", wide = TRUE))
+##    OccMinor           ls           p
+## 1:     1028 2.629661e-01 0.002503679
+## 2:     1029 1.661860e-01 0.004183129
+## 3:     1999 7.603102e-06 0.993313192
+
+(localseg2005 <- mutual_local(legal2005, "Gender", "OccMinor", weight = "w", wide = TRUE))
+##    OccMinor           ls           p
+## 1:     1028 3.126092e-01 0.002553052
+## 2:     1029 1.922804e-01 0.004239321
+## 3:     1999 9.720246e-06 0.993207626
+</code></pre>
+<table class="noincrement" style="counter-increment: null;">
+    <caption class="noincrement">Decomposition of structural changes into contributions of the occupations</caption>
+    <tr><th>Occupation</th><th colspan=2>Proportion</th><th colspan=2>Observed</th><th colspan=2>Counterfactual</th><th style="text-align: right">Weighted difference</th></tr>
+    <tr><td style="text-align: right">\(u \)</td>
+        <td>\(p_{.u}^{t_{1}} \)</td>
+        <td>\(p_{.u}^{t_{2}} \)</td>
+        <td>\(L_{u}(t_{1}) \)</td>
+        <td>\(L_{u}(t_{2}) \)</td>
+        <td>\(L_{u}(t'_{2}) \)</td>
+        <td>\(L_{u}(t'_{1}) \)</td>
+        <td style="text-align: right">\(\Delta_{u,structural} \)</td></tr>
+    <tr><td style="text-align: right">Judges, lawyers</td>
+        <td>0.0025</td><td>0.0026</td><td>0.335</td><td>0.313</td><td>0.263</td><td>0.405</td>
+        <td style="text-align: right;">1.51e-04</td></tr>
+    <tr><td style="text-align: right">Other legal</td>
+        <td>0.0042</td><td>0.0042</td><td>0.219</td><td>0.192</td><td>0.166</td><td>0.257</td>
+        <td style="text-align: right;">1.36e-04</td></tr>
+    <tr><td style="text-align: right">Other spectech</td>
+        <td>0.9933</td><td>0.9932</td><td>9.46e-06</td><td>9.72e-06</td><td>7.60e-06</td><td>1.24e-05</td>
+        <td style="text-align: right;">2.49e-06</td></tr>
+    </table>
+<pre><code class="language-html">#########################################################
+## Decomposition of structural changes into contributions of each occupation
+localchange <- data.table(localseg1985[,"OccMinor"], p1 = localseg1985[,"p"], 
+    p2 = localseg2005[,"p"], ls1=localseg1985[,"ls"],ls2=localseg2005[,"ls"],
+    ls2cf=localseg2005cf[,"ls"],ls1cf=localseg1985cf[,"ls"])
+
+localchange <- setnames(localchange,c("OccMinor","p1","p2","ls1","ls2","ls2cf","ls1cf")) %>% 
+    mutate(wd = (p2*(ls2-ls2cf) + p1*(ls1cf-ls1))/2)
+
+localchange 
+##    OccMinor          p1          p2          ls1          ls2        ls2cf        ls1cf           wd
+## 1:     1028 0.002503677 0.002553052 3.352452e-01 3.126092e-01 2.629661e-01 4.050255e-01 1.507244e-04
+## 2:     1029 0.004183127 0.004239321 2.189781e-01 1.922804e-01 1.661860e-01 2.573294e-01 1.355255e-04
+## 3:     1999 0.993313196 0.993207626 9.461832e-06 9.720246e-06 7.603102e-06 1.235412e-05 2.487857e-06
+
+print(localchange, digits=3)
+    OccMinor      p1      p2      ls1      ls2    ls2cf    ls1cf       wd
+## 1:     1028 0.00250 0.00255 3.35e-01 3.13e-01 2.63e-01 4.05e-01 1.51e-04
+## 2:     1029 0.00418 0.00424 2.19e-01 1.92e-01 1.66e-01 2.57e-01 1.36e-04
+## 3:     1999 0.99331 0.99321 9.46e-06 9.72e-06 7.60e-06 1.24e-05 2.49e-06
+    
+</code></pre>
 <pre><code class="language-html">##########################################################
 ## local segregation
 
@@ -185,6 +279,7 @@ mutual_local(legal2005, "Gender", "OccMinor", weight = "w",
 
 </code></pre>
 </article>
+-->
 <div id="references" class="section level2">
     <h2 class="hasAnchor">
     <a href="#references" class="anchor"></a>References</h2>
