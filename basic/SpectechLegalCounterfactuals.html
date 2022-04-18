@@ -2,8 +2,8 @@
     <head>
       <!--<meta name="google-site-verification" content="Z7SEnQaO9LAITbhuwGaI3rFtnpMRKeV9BbaW3LyvP2g" />-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="revised" content="30 March 2022" />
-        <title>Drill down: A. Specialists and technicians - Decomposition of M index change for legal occupations</title>
+      <meta name="revised" content="18 April 2022" />
+        <title>Drill down: A. Specialists and technicians - Counterfactuals for a collapsed set of occupations</title>
 
         <!--<link rel="stylesheet" href="https://latex.now.sh/style.css"> -->
         <link rel="stylesheet" href="https://alanintsukuba.github.io/latex.css">
@@ -15,11 +15,11 @@ integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="ano
 integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]-->    
 </head>
 <body>
-<h1>Drill down: A. Specialists and technicians - Decomposition of M index change  for legal occupations</h1>
+<h1>Drill down: A. Specialists and technicians - Counterfactuals for a collapsed set of occupations</h1>
 <p class="author"><a href="https://orcid.org/0000-0003-0070-2347" target="_blank">Alan Engel</a><br>Last update: 
-    31 March 2022</p>
+    18 April 2022</p>
 <article>
-    <p>Elbers (2021) illustrates decompositions of the changes in M. He first decomposes changes into structurat changes 
+    <p>Elbers (2021) illustrates decompositions of the changes in M. He first decomposes changes into structural changes 
         and marginal changes. He then further decomposes the marginal changes into those due to changes in occupations and those due to 
         changes in gender. He further decomposes structural changes by occupation. Here I apply these decompositions to this task 
         using the data in Table 1. Table 1 shows the gender frequencies also shown in Table 1 of the <a href="EstimatingCounterfactuals.html">previous page on 
@@ -51,7 +51,7 @@ integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="ano
         with percentages of the total sample.
     </p>
     <table class="noincrement" style="counter-increment: null;">
-        <caption class="noincrement"><b>Table 2.</b> Actual occupation vs gender percent probabilities for legal occupations in 1985 and 2005 with 
+        <caption class="noincrement"><b>Table 2.</b> Actual occupation vs gender probabilities for legal occupations in 1985 and 2005 with 
         counterfactuals</caption>
         <tr><th></th><th colspan=3>1985</th><th></th><th colspan=3>2005</th></tr>
         <tr><td></td><td colspan=2>Gender</td><td></td><td></td><td colspan=2>Gender</td></tr>
@@ -90,8 +90,9 @@ integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="ano
     <h5>Decomposition of the change in M into structural and marginal components.</h5>
     <p>The segregation package's ipf function calculates a set of counterfactuals using the iterative proportional fitting 
         algorithm also introduced in Deming and Stephan (1940). In the R console output shown below, n_source is the 1985 data and n_target 
-        is the 2005 data. The resulting counterfactual counts are in Table 1 and the probabilities are in Table 2. The least squares method preserves 
-        the marginal counts of the 2005 data. Both methods preserve the marginal probabilities.
+        is the 2005 data. The resulting counterfactual counts are in Table 1 and the probabilities are in Table 2. The least squares method here shows 
+        the marginal counts of the 2005 data. Elber's IPF adjusts the values so that the number of observations is the same as for 1985. 
+        Both methods produce the same probabilities.
     </p>
 <pre><code class="language-html"># counterfactuals using ipf function
 (cfacts <- ipf(legal1985, legal2005, "Gender", "OccMinor", weight = "w"))
