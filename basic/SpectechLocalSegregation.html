@@ -18,17 +18,30 @@ integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="ano
     <h1>Drill down: Specialists and technicians - Changes and local segregation at detailed occupational level</h1>
     <p class="author"><a href="https://orcid.org/0000-0003-0070-2347" target="_blank">Alan Engel</a><br>Last update: 
         18 April 2022</p>
-    <article>
-        <h4>Decompose 1985-2005 changes into structural and marginal contributions</h4>
-        <p>With the counterfactuals in hand, we can now proceed to decomposing changes in M into structural and marginal contributions at the detailed occupation level. 
-            We can further decompose both the marginal and structural contributions by gender and occupation.
-        </p>
-    </article>
+        <article>
+            <h4>Decompose 1985-2005 changes by occupation for individual occupation</h4>
+            <p>The structural changes in M are the sum of the structural changes in the units, in this case the occupations.
+                $$\begin{align} \Delta_{structural} & = \frac{1}{2}(M(t_{2})-M(t'_{1})) + \frac{1}{2}(M(t'_{2})-M(t_{1})) \\ 
+                & =\sum_{u=1}^{U}\left(\frac{1}{2}p_{.u}^{t_{2}}[L_{u}(t_{2})-L_{u}(t'_{1})]+\frac{1}{2}p_{.u}^{t_{1}}[L_{u}(t'_{2})-L_{u}(t_{1})]  \right)   \\
+                & =\sum_{u=1}^{U}\Delta_{u,structural} 
+                \end{align} $$ Elber's (2018) decomposition allows further 
+                decompositions based on local segregation scores, holding the marginals constant. 
+                The function \( mutual\_local \) shown in the code below gives the local segregation scores \(L_{u}\) and marginal weights \(p_{u.}\), where 
+                the local segregation score of unit \(u\) is defined as
+                $$ L_{u} = \sum_{g=1}^{G}p_{g|u}\log{\frac{p_{g|u}}{p_{.g}}} $$ with \(p_{g|u}=t_{ug}/t_{u.}\). In addition to the counterfactuals for 
+                \(t'_{1}\), this decomposition uses the counterfactuals for \(t'_{2}\). These can be calculated using the \(ipf\) function.
+            </p>        
+            <figure>
+                <img src="images/LocalSegregationSpectech1985-2005.png"
+                      loading="lazy" alt="Local segregation changes for pecialists and 
+                      technicians 1985-2005" width="600" height="900" />
+                    <figcaption>Local segregation changes for pecialists and 
+                        technicians 1985-2005
+                    </figcaption>
+            </figure>
+            </article>
     <article>
         <h4>Further decompose marginal contributions by gender and occupation</h4>
-    </article>
-    <article>
-        <h4>Further decompose structural contributions by gender and occupation</h4>
     </article>
     </body>
 </html>
