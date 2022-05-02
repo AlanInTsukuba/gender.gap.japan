@@ -1,0 +1,131 @@
+# 'BuildMasterDataset.R'
+#' Reproduce analysis of Uchikoshi and Mugiyama using data 
+#' 	prepared as described at 
+#' 	https://alanintsukuba.github.io/tsukuba.segregation/
+#' Uchikoshi, Fumiya, Ryota Mugiyama. Trends in Occupational Sex Segregation 
+#' 	in Japan: A Decomposition Analysis of Census Data, 1980-2005. 
+#' 	Japanese Journal of Population Studies. 2020. 56. 9-23 
+#' 	https://doi.org/10.24454/jps.1901001
+
+#' install.packages("openxlsx")
+#' install.packages("tidyverse")
+require(openxlsx)
+require(tidyverse)
+
+
+#' Load and look at harmonized occupation classes
+hoc <- read.csv("Data/OccupationalCrosswalk1985-2005V02.csv",header=T)
+head(hoc)
+#'   OccMain OccSub OccMid OccMinor OccCodeAgg   X1985   X1990   X1995   X2000   X2005
+#' 1       A     10    101     1001     Agg001 1985001 1990001 1995001 2000001 2005001
+#' 2       A     10    101     1002     Agg002 1985002 1990002 1995002 2000002 2005002
+#' 3       A     10    102     1003     Agg003 1985010 1990003 1995003 2000003 2005003
+#' 4       A     10    102     1004     Agg004 1985003 1990004 1995004 2000004 2005004
+#' 5       A     10    102     1004     Agg004 1985004      NA      NA      NA      NA
+#' 6       A     10    102     1005     Agg005 1985005 1990005 1995005 2000005 2005005
+#'                   ShortTitle                        MainTitle                  MidTitle
+#' 1             NS researchers SPECIALIST AND TECHNICAL WORKERS       SCIENCE RESEARCHERS
+#' 2            HSS researchers                                                           
+#' 3          AgFFF techniciana                                  ENGINEERS AND TECHNICIANS
+#' 4 Metal smelting technicians                                                           
+#' 5                       <NA>                                                           
+#' 6       Mechanical engineers                                                           
+#'               MidTitleLabel                                                  MinorTitle
+#' 1                Scientists                                 Natural science researchers
+#' 2                                                Humanities, social science researchers
+#' 3 Engineers and technicians       Agriculture, forestry, fisheries and food technicians
+#' 4                                                            Metal smelting technicians
+#' 5                                                                                  <NA>
+#' 6                           Mechanical engineers, aircraft and shipbuilding technicians
+#'             MinorTitleLabel
+#' 1   Nat science researchers
+#' 2           HSS researchers
+#' 3     AFF, food technicians
+#' 4             Smelting tech
+#' 5                      <NA>
+#' 6 Mech eng, air & ship tech
+
+#' Load and look at minor occupation totals from 1985
+mot <- read.xlsx("Data/1985_totals_minor_occupations.xlsx","Extract")
+head(mot)
+#'   OccCode Gender  value
+#' 1 1985001   MALE  86322
+#' 2 1985002   MALE   2850
+#' 3 1985003   MALE   3926
+#' 4 1985004   MALE  25909
+#' 5 1985005   MALE 284513
+#' 6 1985006   MALE 307559
+
+occgencomb <- merge(hoc %>% select(OccMain,OccSub,OccMid,OccMinor,OccCodeAgg,X1985),
+	mot, by.x="X1985",by.y="OccCode") %>% 
+	group_by(OccCodeAgg, Gender) %>% 
+	mutate(year=1985, n=sum(value)) %>%
+	select(-X1985, -value) 
+
+head(occgencomb)
+summarize(occgencomb)
+## put occgencomb in a master occgenall data frame
+occgenall <- occgencomb
+
+#' Repeat for 1990
+mot <- read.xlsx("Data/1990_totals_minor_occupations.xlsx","Extract")
+occgencomb <- merge(hoc %>% select(OccMain,OccSub,OccMid,OccMinor,OccCodeAgg,X1990),
+	mot, by.x="X1990",by.y="OccCode") %>% 
+	group_by(OccCodeAgg, Gender) %>% 
+	mutate(year=1990, n=sum(value)) %>%
+	select(-X1990, -value)
+
+head(occgencomb)
+summarize(occgencomb)
+occgenall <- rbind(occgenall,occgencomb)
+
+#' Repeat for 1995
+mot <- read.xlsx("Data/1995_totals_minor_occupations.xlsx","Extract")
+occgencomb <- merge(hoc %>% select(OccMain,OccSub,OccMid,OccMinor,OccCodeAgg,X1995),
+	mot, by.x="X1995",by.y="OccCode") %>% 
+	group_by(OccCodeAgg, Gender) %>% 
+	mutate(year=1995, n=sum(value)) %>%
+	select(-X1995, -value)
+
+head(occgencomb)
+summarize(occgencomb)
+occgenall <- rbind(occgenall,occgencomb)
+
+#' Repeat for 2000
+mot <- read.xlsx("Data/2000_totals_minor_occupations.xlsx","Extract")
+occgencomb <- merge(hoc %>% select(OccMain,OccSub,OccMid,OccMinor,OccCodeAgg,X2000),
+	mot, by.x="X2000",by.y="OccCode") %>% 
+	group_by(OccCodeAgg, Gender) %>% 
+	mutate(year=2000, n=sum(value)) %>%
+	select(-X2000, -value) 
+
+head(occgencomb)
+summarize(occgencomb)
+occgenall <- rbind(occgenall,occgencomb)
+
+#' Repeat for 2005
+mot <- read.xlsx("Data/2005_totals_minor_occupations.xlsx","Extract")
+occgencomb <- merge(hoc %>% select(OccMain,OccSub,OccMid,OccMinor,OccCodeAgg,X2005),
+	mot, by.x="X2005",by.y="OccCode") %>% 
+	group_by(OccCodeAgg, Gender) %>% 
+	mutate(year=2005, n=sum(value)) %>%
+	select(-X2005, -value) 
+
+head(occgencomb)
+summarize(occgencomb)
+occgenall <- rbind(occgenall,occgencomb)  %>%
+	arrange(OccCodeAgg,Gender,year)
+
+#######################################################
+#' occgenall is the completed full dataset. Save it as an 
+#' R object
+saveRDS(occgenall, file="Data/occgenall.Rda")
+
+write.table(occgenall, file="Data/occgenall.csv", sep="\t",row.names=F)
+
+#################################
+#' clean up
+ls()
+rm(mot, occgencomb)
+
+
