@@ -26,14 +26,54 @@ integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="ano
                 & =\sum_{u=1}^{U}\Delta_{u,structural} 
                 \end{align} $$ Elber's (2018) decomposition allows further 
                 decompositions based on local segregation scores, holding the marginals constant. 
-                The function \(mutual_difference\) run with \(method = shapley_detailed\) provides the unit local segregation as I will 
+                The function \(\textit{mutual_difference}\) run with \(method = shapley\_detailed\) provides the unit local segregation as I will 
                 illustrated later below. But first, for the purpose of showing the computation of Equation (1) in detail, I will use 
-                the functions \( mutual\_local \) and \(ipf\).
-                The function \( mutual\_local \) gives the local segregation scores \(L_{u}\) and marginal weights \(p_{u.}\), where 
+                the functions \( mutual\_local \) and \(\textit{ipf}\).
+            </p> 
+            <h5>Using \( \textit{mutual_local} \) and \(\textit{ipf}\)</h5>
+            <p>The function \( mutual\_local \) gives the local segregation scores \(L_{u}\) and marginal weights \(p_{u.}\), where 
                 the local segregation score of unit \(u\) is defined as
                 $$ L_{u} = \sum_{g=1}^{G}p_{g|u}\log{\frac{p_{g|u}}{p_{.g}}} $$ with \(p_{g|u}=t_{ug}/t_{u.}\). In addition to the counterfactuals for 
-                \(t'_{1}\), this decomposition uses the counterfactuals for \(t'_{2}\). These can be calculated using \(ipf\).
-            </p>        
+                \(t'_{1}\), this decomposition uses the counterfactuals for \(t'_{2}\). These can be calculated using \(\textit{ipf}\). 
+            After loading the required library, the code below calculates the counterfactuals for 1985 projected onto 2005 marginals 
+            (\(t'_{1}\) above). 
+        The resulting data frame \(\text{counterfactuals85}\) lists the groups \(\text{Gender}\), units \(\text{OccMinor}\), counts for 
+    1985 \(\text{n_source}\) and 2005 \(\text{n_target}\), and counterfactuals \(\text{n}\).</p>
+<pre><code class="language-html">require("tidyverse")
+require("tidylog", warn.conflicts = FALSE)
+require("segregation")
+
+## See Package 'segregation' for details on functions.
+## https://cloud.r-project.org/web/packages/segregation/segregation.pdf
+## Decompose local segregation changes by occupation using mutual_local and ipf.
+## Use ipf to calculate counterfactuals for 1985 projected to 2005.
+
+counterfactuals85 <- ipf(filter(d, OccMain == "A", year == 1985),
+    filter(d, OccMain == "A", year == 2005), 
+    group= "Gender", unit="OccMinor", weight="w",max_iterations=200, precision=1e-7)
+head(counterfactuals85)
+##   Gender OccMinor n_source n_target          n
+## 1 FEMALE     1001     8187    22240 11627.5433
+## 2 FEMALE     1002      382     1253   659.5543
+## 3 FEMALE     1003     1890     6990  1631.2085
+## 4 FEMALE     1004      232      330   121.6623
+## 5 FEMALE     1005     2805     8637  2668.5416
+## 6 FEMALE     1006     4017     9154  3764.8135</code></pre>
+<p>The counterfactuals for 2005 projected onto 1985 (\(t'_{2}\) above) are calculated by reversing the source and target data 
+    frames in \(\textit{ipf}\).</p>
+<pre><code class="language-html">## Reverse the source and target data frames to get the counterfactuals for 
+## 2005 projected onto 1985 marginals.
+counterfactuals05 <- ipf(filter(d, OccMain == "A", year == 2005),
+    filter(d, OccMain == "A", year == 1985), 
+    group= "Gender", unit="OccMinor", weight="w",max_iterations=200, precision=1e-7)
+head(counterfactuals05)
+##   Gender OccMinor n_source n_target          n
+## 1 FEMALE     1001    22240     8187 15439.3155
+## 2 FEMALE     1002     1253      382   719.0422
+## 3 FEMALE     1003     6990     1890  8077.6565
+## 4 FEMALE     1004      330      232   613.2693
+## 5 FEMALE     1005     8637     2805  8864.6060
+## 6 FEMALE     1006     9154     4017  9527.9115</code></pre>
             <figure>
                 <img src="images/LocalSegregationSpectech1985-2005.png"
                       loading="lazy" alt="Local segregation changes for pecialists and 
