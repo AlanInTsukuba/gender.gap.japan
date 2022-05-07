@@ -58,63 +58,59 @@ head(mot)
 
 occgencomb <- merge(hoc %>% select(OccMain,OccSub,OccMid,OccMinor,OccCodeAgg,X1985),
 	mot, by.x="X1985",by.y="OccCode") %>% 
-	group_by(OccCodeAgg, Gender) %>% 
-	mutate(year=1985, n=sum(value)) %>%
-	select(-X1985, -value) 
+	group_by(OccMain,OccSub,OccMid,OccMinor,OccCodeAgg, Gender) %>% 
+	summarize( n=sum(value)) %>% mutate(year=1985) 
 
-head(occgencomb)
-summarize(occgencomb)
-## put occgencomb in a master occgenall data frame
+#' head(occgencomb)
+#' summarize(occgencomb)
+#' put occgencomb in a master occgenall data frame
 occgenall <- occgencomb
 
 #' Repeat for 1990
 mot <- read.xlsx("Data/1990_totals_minor_occupations.xlsx","Extract")
 occgencomb <- merge(hoc %>% select(OccMain,OccSub,OccMid,OccMinor,OccCodeAgg,X1990),
 	mot, by.x="X1990",by.y="OccCode") %>% 
-	group_by(OccCodeAgg, Gender) %>% 
-	mutate(year=1990, n=sum(value)) %>%
-	select(-X1990, -value)
+	group_by(OccMain,OccSub,OccMid,OccMinor,OccCodeAgg, Gender) %>% 
+	summarize( n=sum(value)) %>% mutate(year=1990) 
 
-head(occgencomb)
-summarize(occgencomb)
+#' head(occgencomb)
+#' summarize(occgencomb)
 occgenall <- rbind(occgenall,occgencomb)
 
 #' Repeat for 1995
 mot <- read.xlsx("Data/1995_totals_minor_occupations.xlsx","Extract")
 occgencomb <- merge(hoc %>% select(OccMain,OccSub,OccMid,OccMinor,OccCodeAgg,X1995),
 	mot, by.x="X1995",by.y="OccCode") %>% 
-	group_by(OccCodeAgg, Gender) %>% 
-	mutate(year=1995, n=sum(value)) %>%
-	select(-X1995, -value)
+	group_by(OccMain,OccSub,OccMid,OccMinor,OccCodeAgg, Gender) %>% 
+	summarize( n=sum(value)) %>% mutate(year=1995) 
 
-head(occgencomb)
-summarize(occgencomb)
+#' head(occgencomb)
+#' summarize(occgencomb)
 occgenall <- rbind(occgenall,occgencomb)
 
 #' Repeat for 2000
 mot <- read.xlsx("Data/2000_totals_minor_occupations.xlsx","Extract")
 occgencomb <- merge(hoc %>% select(OccMain,OccSub,OccMid,OccMinor,OccCodeAgg,X2000),
 	mot, by.x="X2000",by.y="OccCode") %>% 
-	group_by(OccCodeAgg, Gender) %>% 
-	mutate(year=2000, n=sum(value)) %>%
-	select(-X2000, -value) 
+	group_by(OccMain,OccSub,OccMid,OccMinor,OccCodeAgg, Gender) %>% 
+	summarize( n=sum(value)) %>% mutate(year=2000) 
 
-head(occgencomb)
-summarize(occgencomb)
+#' head(occgencomb)
+#' summarize(occgencomb)
 occgenall <- rbind(occgenall,occgencomb)
 
 #' Repeat for 2005
 mot <- read.xlsx("Data/2005_totals_minor_occupations.xlsx","Extract")
 occgencomb <- merge(hoc %>% select(OccMain,OccSub,OccMid,OccMinor,OccCodeAgg,X2005),
 	mot, by.x="X2005",by.y="OccCode") %>% 
-	group_by(OccCodeAgg, Gender) %>% 
-	mutate(year=2005, n=sum(value)) %>%
-	select(-X2005, -value) 
+	group_by(OccMain,OccSub,OccMid,OccMinor,OccCodeAgg, Gender) %>% 
+	summarize( n=sum(value)) %>% mutate(year=2005) 
 
-head(occgencomb)
-summarize(occgencomb)
+#' head(occgencomb)
+#' summarize(occgencomb)
 occgenall <- rbind(occgenall,occgencomb)  %>%
-	arrange(OccCodeAgg,Gender,year)
+	arrange(OccMain,OccSub,OccMid,OccMinor,OccCodeAgg, Gender,year) %>%
+	select(OccMain,OccSub,OccMid,OccMinor,OccCodeAgg, Gender,year,n)
 
 #######################################################
 #' occgenall is the completed full dataset. Save it as an 
