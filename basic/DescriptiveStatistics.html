@@ -285,7 +285,7 @@ d <- as_tibble(occgenall) %>%
     OccMain = as.character(OccMain), OccSub=as.character(OccSub),
     OccMid=as.character(OccMid),OccMinor=as.character(OccMinor),
     year = as.integer(year)) %>%
-    filter(OccMinor != 1267)
+    filter(OccMinor != 1267) # remove Workers not classifiable by occupation
 head(d)
 
 ##########################
