@@ -12,6 +12,23 @@ contact:
       given-names: Alan
 references:
   - authors:
+      - family-names: Blau
+        given-names: Francine D.
+      - family-names: Brummund
+        given-names: Peter
+      - family-names: Liu
+        given-names: Albert Yung-Hsu
+    title: "Trends in Occupational Segregation by Gender 1970–2009"
+    subtitle: "Adjusting for the Impact of Changes in the Occupational Coding System"
+    type: article
+    journal: Demography
+    volume: 50
+    issue: 2
+    publisher: Duke University Press
+    year: 2013
+    pages: 471-492
+    doi: "10.1007/s13524-012-0151-7"
+  - authors:
       - family-names: Brinton
         given-names: Mary C.
       - family-names: Ngo
