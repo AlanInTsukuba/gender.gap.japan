@@ -1,32 +1,4 @@
-<!DOCTYPE html>
-<html>
-    <head>
-      <!--<meta name="google-site-verification" content="Z7SEnQaO9LAITbhuwGaI3rFtnpMRKeV9BbaW3LyvP2g" />-->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="revised" content="7 May 2022" />
-        <title>Build master dataset</title>
-
-        <link rel="stylesheet" href="https://latex.now.sh/style.css"> 
-        <link rel="stylesheet" href="https://alanintsukuba.github.io/ShowReferencesModal.css"> 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css">
-<!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" 
-integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" 
-integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]-->    
-</head>
-<body>
-<h1>Build master dataset</h1>
-<p class="author"><a href="https://orcid.org/0000-0003-0070-2347" target="_blank">Alan Engel</a><br>Last update: 
-    7 May 2022</p>
-<main>
-<p>The following R script builds the master occupation-gender dataset from the table of harmonized 
-    occupation classifications and occupation-gender files downloaded from e-Stat and preprocessed.
-</p>
-<p>This script is saved in <a href="https://github.com/AlanInTsukuba/tsukuba.segregation/tree/main/basic/R">the 
-    repository</a> for this project. The datasets used in this script and produced by it are also in 
-    <a href="https://github.com/AlanInTsukuba/tsukuba.segregation/tree/main/basic/data">the repository</a>.
-</p>
-<pre><code class="language-html"># 'BuildMasterDataset.R'
+# 'BuildMasterDataset.R'
 #' Reproduce analysis of Uchikoshi and Mugiyama using data 
 #' 	prepared as described at 
 #' 	https://alanintsukuba.github.io/tsukuba.segregation/
@@ -85,9 +57,9 @@ head(mot)
 #' 6 1985006   MALE 307559
 
 occgencomb <- merge(hoc %>% select(OccMain,OccSub,OccMid,OccMinor,OccCodeAgg,X1985),
-    mot, by.x="X1985",by.y="OccCode") %>% 
-    group_by(OccMain,OccSub,OccMid,OccMinor,OccCodeAgg, Gender) %>% 
-    summarize( n=sum(value)) %>% mutate(year=1985) 
+	mot, by.x="X1985",by.y="OccCode") %>% 
+	group_by(OccMain,OccSub,OccMid,OccMinor,OccCodeAgg, Gender) %>% 
+	summarize( n=sum(value)) %>% mutate(year=1985) 
 
 #' head(occgencomb)
 #' summarize(occgencomb)
@@ -97,9 +69,9 @@ occgenall <- occgencomb
 #' Repeat for 1990
 mot <- read.xlsx("Data/1990_totals_minor_occupations.xlsx","Extract")
 occgencomb <- merge(hoc %>% select(OccMain,OccSub,OccMid,OccMinor,OccCodeAgg,X1990),
-    mot, by.x="X1990",by.y="OccCode") %>% 
-    group_by(OccMain,OccSub,OccMid,OccMinor,OccCodeAgg, Gender) %>% 
-    summarize( n=sum(value)) %>% mutate(year=1990) 
+	mot, by.x="X1990",by.y="OccCode") %>% 
+	group_by(OccMain,OccSub,OccMid,OccMinor,OccCodeAgg, Gender) %>% 
+	summarize( n=sum(value)) %>% mutate(year=1990) 
 
 #' head(occgencomb)
 #' summarize(occgencomb)
@@ -108,9 +80,9 @@ occgenall <- rbind(occgenall,occgencomb)
 #' Repeat for 1995
 mot <- read.xlsx("Data/1995_totals_minor_occupations.xlsx","Extract")
 occgencomb <- merge(hoc %>% select(OccMain,OccSub,OccMid,OccMinor,OccCodeAgg,X1995),
-    mot, by.x="X1995",by.y="OccCode") %>% 
-    group_by(OccMain,OccSub,OccMid,OccMinor,OccCodeAgg, Gender) %>% 
-    summarize( n=sum(value)) %>% mutate(year=1995) 
+	mot, by.x="X1995",by.y="OccCode") %>% 
+	group_by(OccMain,OccSub,OccMid,OccMinor,OccCodeAgg, Gender) %>% 
+	summarize( n=sum(value)) %>% mutate(year=1995) 
 
 #' head(occgencomb)
 #' summarize(occgencomb)
@@ -119,9 +91,9 @@ occgenall <- rbind(occgenall,occgencomb)
 #' Repeat for 2000
 mot <- read.xlsx("Data/2000_totals_minor_occupations.xlsx","Extract")
 occgencomb <- merge(hoc %>% select(OccMain,OccSub,OccMid,OccMinor,OccCodeAgg,X2000),
-    mot, by.x="X2000",by.y="OccCode") %>% 
-    group_by(OccMain,OccSub,OccMid,OccMinor,OccCodeAgg, Gender) %>% 
-    summarize( n=sum(value)) %>% mutate(year=2000) 
+	mot, by.x="X2000",by.y="OccCode") %>% 
+	group_by(OccMain,OccSub,OccMid,OccMinor,OccCodeAgg, Gender) %>% 
+	summarize( n=sum(value)) %>% mutate(year=2000) 
 
 #' head(occgencomb)
 #' summarize(occgencomb)
@@ -130,15 +102,15 @@ occgenall <- rbind(occgenall,occgencomb)
 #' Repeat for 2005
 mot <- read.xlsx("Data/2005_totals_minor_occupations.xlsx","Extract")
 occgencomb <- merge(hoc %>% select(OccMain,OccSub,OccMid,OccMinor,OccCodeAgg,X2005),
-    mot, by.x="X2005",by.y="OccCode") %>% 
-    group_by(OccMain,OccSub,OccMid,OccMinor,OccCodeAgg, Gender) %>% 
-    summarize( n=sum(value)) %>% mutate(year=2005) 
+	mot, by.x="X2005",by.y="OccCode") %>% 
+	group_by(OccMain,OccSub,OccMid,OccMinor,OccCodeAgg, Gender) %>% 
+	summarize( n=sum(value)) %>% mutate(year=2005) 
 
 #' head(occgencomb)
 #' summarize(occgencomb)
 occgenall <- rbind(occgenall,occgencomb)  %>%
-    arrange(OccMain,OccSub,OccMid,OccMinor,OccCodeAgg, Gender,year) %>%
-    select(OccMain,OccSub,OccMid,OccMinor,OccCodeAgg, Gender,year,n)
+	arrange(OccMain,OccSub,OccMid,OccMinor,OccCodeAgg, Gender,year) %>%
+	select(OccMain,OccSub,OccMid,OccMinor,OccCodeAgg, Gender,year,n)
 
 #######################################################
 #' occgenall is the completed full dataset. Save it as an 
@@ -151,7 +123,5 @@ write.table(occgenall, file="Data/occgenall.csv", sep="\t",row.names=F)
 #' clean up
 ls()
 rm(mot, occgencomb)
-</code></pre>    
-</main>
-</body>
-</html>
+
+

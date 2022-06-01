@@ -25,7 +25,7 @@ globalVariables(c(
     ".", "..base", "..fixed_margins", "..group", "..n_bootstrap", "..unit", "se", "stat"))
 
 #' @import data.table
-prepare_data <- function(data, group, unit, weight, within = NULL) {
+ggj.prepare_data <- function(data, group, unit, weight, within = NULL) {
     if ("data.frame" %in% class(data)) {
         if (nrow(data) == 0) {
             stop("data.frame is empty")
@@ -73,7 +73,7 @@ prepare_data <- function(data, group, unit, weight, within = NULL) {
     data
 }
 
-abs_diff <- function(x) {
+ggj.abs_diff <- function(x) {
     if (length(x) == 1) {
         abs(x)
     } else {
@@ -82,17 +82,20 @@ abs_diff <- function(x) {
 }
 
 #' @import data.table
-dissimilarity_unit <- function(data, group, unit) {
+ggj.dissimilarity_unit <- function(data, group, unit, weight = NULL) {
+    data <- ggj.prepare_data(data, group, unit, weight)
     data[, n_group := sum(freq), by = group]
-    data[, 1/2 * abs_diff(freq / n_group), by = unit]
+    data[, 1/2 * ggj.abs_diff(freq / n_group), by = unit]
 
 }
 
-dissimilarity_all <- function(data, group, unit) {
+ggj.dissimilarity_all <- function(data, group, unit, weight = NULL) {
+    data <- ggj.prepare_data(data, group, unit, weight)
     data[, n_group := sum(freq), by = group]
-    est <- 1/2 * data[, abs_diff(freq / n_group), by = unit][, sum(V1)]
+    est <- 1/2 * data[, ggj.abs_diff(freq / n_group), by = unit][, sum(V1)]
     data.table(stat = "D", est = est, stringsAsFactors = FALSE)
 }
 
-
+## clean up
+# rm(ggj.abs_diff,ggj.dissimilarity_all,ggj.dissimilarity_unit,ggj.prepare_data)
 

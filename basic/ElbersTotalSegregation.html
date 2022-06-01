@@ -2,7 +2,7 @@
     <head>
       <!--<meta name="google-site-verification" content="Z7SEnQaO9LAITbhuwGaI3rFtnpMRKeV9BbaW3LyvP2g" />-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="revised" content="14 December 2021" />
+      <meta name="revised" content="13 May 2022" />
         <title>Applying Elbers: Total segregation</title>
 
         <link rel="stylesheet" href="https://latex.now.sh/style.css"> 
@@ -16,7 +16,7 @@ integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="ano
 <body>
 <h1>Applying Elbers: Total segregation</h1>
 <p class="author"><a href="https://orcid.org/0000-0003-0070-2347" target="_blank">Alan Engel</a><br>Last update: 
-14 December 2021</p>
+13 May 2022</p>
 <main>
     <p>Elbers (2021) derives a five-term decomposition: 
         $$S(t_{2})-S(t_{1})=\Delta_{appearing}+\Delta_{disappearing}$$
@@ -69,8 +69,89 @@ $$S(t_{2})-S(t_{1})=\Delta_{marginal-units}+\sum_{u\in t_{1}\cap t_{2}}\Delta_{i
           loading="lazy" alt="Decomposition of change 1985 to 2005" width="600" height="400" />
         <figcaption>Decomposition of change 1985 to 2005</figcaption>
 </figure>
-<pre><code class="language-html">#' AnalyzePerElbers.R
-# (continuation)
+<pre><code class="language-html">#' ElbersTotalSegregation.R
+#' 2021-12-15
+#' Revised 2022-5-13
+
+#' Code for https://alanintsukuba.github.io/gender.gap.japan/basic/ElbersTotalSegregation.html
+
+#' Adapted from
+#' Elbers, Benjamin. A Method for Studying Differences in Segregation Across Time and Space. 
+#' SocArXiv, 21 Dec. 2018, supplementary materials
+
+require("tidyverse")
+require("tidylog", warn.conflicts = FALSE)
+require("fst")
+require("ggthemes")
+require("segregation")
+require("cowplot")
+require("knitr")
+require("kableExtra")
+
+#####################################
+###### analysis: cross-section ######
+#####################################
+#' Note: Elbers uses the function do(), which has been superceded.
+#' Here, do() is replaced by summarize() and across() as described at
+#' https://dplyr.tidyverse.org/reference/do.html
+
+by_year <- d %>%
+    group_by(year) %>%
+    summarize(mutual_total(across(), "Gender", "OccMinor", weight = "w"))
+p_total <- ggplot(by_year, aes(x = year, y = est, linetype = stat)) +
+    geom_point() + geom_line() + ylim(0, max(by_year$est)) +
+    theme_bw() +
+    theme(axis.title.x = element_blank(),
+        axis.title.y = element_blank(),
+        legend.title = element_blank(),
+        legend.position = "none")
+
+d %>%
+    filter(OccMinor %in% common_occ) %>%
+    group_by(year) %>%
+    summarize(mutual_total(across(), "Gender", "OccMinor", weight = "w")) %>%
+    rename(est_common = est) %>%
+    left_join(by_year) %>%
+    mutate(est / est_common)
+
+between <- d %>%
+    group_by(year) %>%
+    summarize(mutual_total(across(), "Gender", "OccMain", weight = "w"))
+p_between <- ggplot(between, aes(x = year, y = est, linetype = stat)) +
+    geom_point() + geom_line() +
+    ylim(0, max(by_year$est)) +
+    theme_bw() +
+    theme(axis.title.x = element_blank(),
+        axis.title.y = element_blank(),
+        legend.title = element_blank(),
+        legend.position = "none")
+
+by_year_major <- d %>%
+    group_by(year, OccMain) %>%
+    summarize(mutual_total(across(), "Gender", "OccMinor", weight = "w")) %>%
+    merge(hoc[nchar(hoc$MainTitleLabel)>0,c("OccMain","MainTitleLabel")]) %>%
+    mutate(OccMain = paste(OccMain,MainTitleLabel,sep=" "))  %>%
+    select(-MainTitleLabel)
+
+p_major <- ggplot(by_year_major, aes(x = year, y = est, linetype = stat)) +
+    facet_wrap("OccMain") + geom_point() + geom_line() +
+    ylim(0, max(by_year_major$est)) +
+    theme_bw() +
+    theme(axis.title.x = element_blank(),
+        axis.title.y = element_blank(),
+        legend.title = element_blank(),
+        legend.position = "bottom",
+        strip.text.x = element_text(margin = margin(2, 0, 2, 0)))
+
+p_complete <- ggdraw() +
+    draw_plot(p_total, .1, .75, .375, .23) +
+    draw_plot(p_between, .5, .75, .375, .23) +
+    draw_plot(p_major, 0, 0, 1, .73) +
+    draw_plot_label(c("A: Total", "B: Between", "C: Within"),
+    c(.11, .51, 0.01), c(1.0, 1.0, .75), size = 12, hjust = 0)
+ggsave("Images/ElbersTotalSegregation01.pdf", p_complete, width = 6, height = 8)
+ggsave("Images/ElbersTotalSegregation01.png", p_complete, width = 8, height = 12)
+
 ##############################
 ###### analysis: change ######
 ##############################
@@ -89,12 +170,12 @@ diffs <- bind_rows(
         spread(stat, est),
     d %>%
         group_by(OccMain) %>%
-            do(mutual_difference(filter(., year == 1985), filter(., year == 2005),
+            summarize(mutual_difference(filter(across(), year == 1985), filter(across(), year == 2005),
                         "Gender", "OccMinor", weight = "w", precision = .000001)) %>%
             spread(stat, est) %>%
-        merge(hoc[nchar(hoc$MainTitle)>0,c("OccMain","MainTitle")]) %>% # add main group titles
-            mutate(OccMain = paste(OccMain,MainTitle,sep=" "))  %>%
-            select(-MainTitle)  %>%
+        merge(hoc[nchar(hoc$MainTitleLabel)>0,c("OccMain","MainTitleLabel")]) %>% # add main group titles
+            mutate(OccMain = paste(OccMain,MainTitleLabel,sep=" "))  %>%
+            select(-MainTitleLabel)  %>%
             arrange(diff)
     )
 
@@ -163,7 +244,12 @@ p <- ggplot(diffs_plot, aes(y = value, x = reorder(OccMain, -order), fill = comp
     ylab("Difference in M") +
     coord_flip()
 
-ggsave("Output/ElbersTotalSegregation02.png", p, width = 8, height = 5)
+ggsave("Images/ElbersTotalSegregation02.png", p, width = 8, height = 5)
+
+#' clean up
+rm(p,labels ,diffs_plot,diffs_total,diffs_percentage,diffs_total,d1985,d2005 ,
+p_complete,p_major,by_year_major,p_between,between,p_total,by_year)
+
 </code></pre>
 </main>
 <div id="references" class="section level2">

@@ -12,6 +12,23 @@ contact:
       given-names: Alan
 references:
   - authors:
+      - family-names: Blau
+        given-names: Francine D.
+      - family-names: Brummund
+        given-names: Peter
+      - family-names: Liu
+        given-names: Albert Yung-Hsu
+    title: "Trends in Occupational Segregation by Gender 1970–2009"
+    subtitle: "Adjusting for the Impact of Changes in the Occupational Coding System"
+    type: article
+    journal: Demography
+    volume: 50
+    issue: 2
+    publisher: Duke University Press
+    year: 2013
+    pages: 471-492
+    doi: "10.1007/s13524-012-0151-7"
+  - authors:
       - family-names: Brinton
         given-names: Mary C.
       - family-names: Ngo
@@ -63,6 +80,19 @@ references:
     year: 2021
     doi: "10.1177/0049124121986204"
   - authors:
+      - family-names: Friendly
+        given-names: Michael
+      - family-names: Fox
+        given-names: John
+      - family-names: Chalmers
+        given-names: Phil
+    title: "matlib"
+    subtitle: "Matrix Functions for Teaching and Learning Linear Algebra and Multivariate Statistics"
+    type: software
+    journal: "R package"
+    version: 0.9.5
+    url: "https://CRAN.R-project.org/package=matlib"
+  - authors:
       - family-names: Fuchs
         given-names: 'Victor R.'
     title: "A Note on Sex Segregation in Professional Occupations"
@@ -97,6 +127,18 @@ references:
     issue: 1
     pages: 25-50
     doi: "10.1177/1466138113506632"
+  - authors:
+      - family-names: Karmel
+        given-names: T.
+      - family-names: Maclachlan
+        given-names: M.
+    title: Occupational Sex Segregation - Increasing or Decreasing
+    type: article
+    journal: Economic Research
+    volume: 64
+    issue: 3
+    pages: 187-195
+    doi: 10.1111/j.1475-4932.1988.tb02057.x
   - authors:
       - family-names: Tivadar
         given-names: Mihai

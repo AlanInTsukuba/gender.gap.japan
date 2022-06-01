@@ -1,0 +1,307 @@
+OccMain,OccSub,OccMid,OccMinor,OccCodeAgg,1985,1990,1995,2000,2005,ShortTitle,MainTitle,MainTitleLabel,SubTitle,SubTitleLabel,MidTitle,MidTitleLabel,MinorTitle,MinorTitleLabel
+A,10,101,1001,Agg001,1985001,1990001,1995001,2000001,2005001,NS researchers,SPECIALIST AND TECHNICAL WORKERS,SPECIALIST/TECHNICAL,SPECIALIST AND TECHNICAL WORKERS,SPECIALIST/TECHNICAL,SCIENCE RESEARCHERS,Scientists,Natural science researchers,Nat science researchers
+A,10,101,1002,Agg002,1985002,1990002,1995002,2000002,2005002,HSS researchers,,,,,,,"Humanities, social science researchers",HSS researchers
+A,10,102,1003,Agg003,1985010,1990003,1995003,2000003,2005003,AgFFF techniciana,,,,,ENGINEERS AND TECHNICIANS,Engineers and technicians,"Agriculture, forestry, fisheries and food technicians","AFF, food technicians"
+A,10,102,1004,Agg004,1985003,1990004,1995004,2000004,2005004,Metal smelting technicians,,,,,,,Metal smelting technicians,Smelting tech
+A,10,102,1004,Agg004,1985004,NA,NA,NA,NA,NA,,,,,,,NA,NA
+A,10,102,1005,Agg005,1985005,1990005,1995005,2000005,2005005,Mechanical engineers,,,,,,,"Mechanical engineers, aircraft and shipbuilding technicians","Mech eng, air & ship tech"
+A,10,102,1006,Agg006,1985006,1990006,1995006,2000006,2005006,,,,,,,,Electrical and electronic engineers,Electrical engineers
+A,10,102,1007,Agg007,1985007,1990007,1995007,2000007,2005007,Chemical techinicians,,,,,,,Chemical techinicians,Chemical technicians
+A,10,102,1008,Agg008,1985008,1990008,1995008,2000008,2005008,Architectural engineers,,,,,,,Architectural engineers,Architectural engineers
+A,10,102,1009,Agg009,1985009,1990009,1995009,2000009,2005009,Civil engineers and surveyors,,,,,,,Civil engineers and surveyors,"Civil eng, surveyors"
+A,10,102,1010,Agg010,1985011,1990010,1995010,2000010,2005010,Computer processing technicians,,,,,,,Computer processing technicians,Comp proc technicians
+A,10,102,1010,Agg010,NA,NA,NA,NA,2005011,NA,,,,,,,NA,NA
+A,10,102,1011,Agg011,1985012,1990011,1995011,2000011,2005012,"Engineers, technicians NOC",,,,,,,Other engineers and technicians,Eng tech NEC
+A,10,103,1012,Agg012,1985013,1990012,1995012,2000012,2005013,Doctors,,,,,HEALTH CARE WORKERS,Healthcare,Doctors,Physicians
+A,10,103,1013,Agg013,1985014,1990013,1995013,2000013,2005014,Dental surgeons,,,,,,,Dental surgeons,Dentists
+A,10,103,1014,Agg014,1985015,1990014,1995014,2000014,2005015,Veterinary surgeons,,,,,,,Veterinary surgeons,Veterinarians
+A,10,103,1015,Agg015,1985016,1990015,1995015,2000015,2005016,Pharmacists,,,,,,,Pharmacists,Pharmacists
+A,10,103,1016,Agg016,1985017,1990016,1995016,2000016,2005017,Public health nurses,,,,,,,Public health nurses,Public health nurses
+A,10,103,1017,Agg017,1985018,1990017,1995017,2000017,2005018,Midwives,,,,,,,Midwives,Midwives
+A,10,103,1018,Agg018,1985019,1990018,1995018,2000018,2005019,Nurses,,,,,,,Nurses,Nurses
+A,10,103,1019,Agg019,1985021,1990019,1995019,2000019,2005020,Radiologists,,,,,,,Diagnostic radiographers and X-ray technicians,Radiographers
+A,10,103,1020,Agg020,1985022,1990020,1995020,2000020,2005021,Clinical lab techs,,,,,,,Clinical laboratory and medical technicians,Clinical tech
+A,10,103,1021,Agg021,1985023,1990021,1995021,2000021,2005022,Dental hygienists,,,,,,,Dental hygienists,Dental hygienists
+A,10,103,1022,Agg022,1985024,1990022,1995022,2000022,2005023,Dental technicians,,,,,,,Dental technicians,Dental tech
+A,10,103,1023,Agg023,1985020,1990023,1995023,2000023,2005024,Nutritionists,,,,,,,Nutritionists,Nutritionists
+A,10,103,1024,Agg024,1985025,1990024,1995024,2000024,2005025,Alternative medicine practitioners,,,,,,,"Masseurs, chiropractors, acupuncturists, moxacauterists and Judo-orthopedists","Chiropractors, masseurs, related"
+A,10,103,1025,Agg025,1985026,1990025,1995025,2000025,2005026,Other health care workers,,,,,,,Other health care workers,Health care NEC
+A,10,104,1026,Agg026,1985047,1990026,1995026,2000026,2005027,Childcare workers,,,,,SOCIAL WELFARE SPECIALIST PROFESSIONALS,Social,Childcare workers,Childcare workers
+A,10,104,1027,Agg027,1985048,1990027,1995027,2000027,2005028,Other social welfare ,,,,,,,Other social welfare specialist professionals,Other social workers
+A,10,105,1028,Agg028,1985027,1990028,1995028,2000028,2005029,"Judges, prosecutors, attorneys",,,,,LEGAL WORKERS,Legal,"Judges, public prosecutors and attorneys","Judges, lawyers"
+A,10,105,1029,Agg029,NA,NA,NA,2000029,2005030,NA,,,,,,,NA,NA
+A,10,105,1029,Agg029,1985028,1990029,1995029,2000030,2005031,Other legal workers,,,,,,,Other legal workers,Legal NEC
+A,10,106,1030,Agg030,1985029,1990030,1995030,2000031,2005032,Certified public accountants and licensed tax accountants,,,,,MANAGEMENT SPECIALISTS,Managers,Certified public accountants and licensed tax accountants,Accountants
+A,10,106,1031,Agg031,NA,NA,NA,2000032,2005033,Certified social insurance and labor consultant,,,,,,,Certified social insurance and labor consultant,Social insurance and labor consultant
+A,10,106,1032,Agg032,NA,NA,NA,2000033,2005034,Other management specialists,,,,,,,Other management specialists,Management specialists NEC
+A,10,107,1033,Agg033,1985030,1990031,1995031,2000034,2005035,Kindergarten teachers,,,,,TEACHERS,Teachers,Kindergarten teachers,Kindergarten teachers
+A,10,107,1034,Agg034,1985031,1990032,1995032,2000035,2005036,Elementary school teachers,,,,,,,Elementary school teachers,Primary school teachers
+A,10,107,1035,Agg035,1985032,1990033,1995033,2000036,2005037,Junior high school teachers,,,,,,,Junior high school teachers,Junior high teachers
+A,10,107,1036,Agg036,1985033,1990034,1995034,2000037,2005038,Senior high school teachers,,,,,,,Senior high school teachers,Senior high teachers
+A,10,107,1037,Agg037,1985034,1990035,1995035,2000038,2005039,University professors,,,,,,,University professors,University professors
+A,10,107,1038,Agg038,1985035,1990036,1995036,2000039,2005040,"Teachers at schools for the blind, deaf or handicapped",,,,,,,"Teachers at schools for the blind, deaf or handicapped",Special needs teachers
+A,10,107,1039,Agg039,1985036,1990037,1995037,2000040,2005041,Other teachers,,,,,,,Other teachers,Teachers NEC
+A,10,108,1040,Agg040,1985037,1990038,1995038,2000041,2005042,Workers in religion,,,,,WORKERS IN RELIGION,Religious,Workers in religion,Religious professionals
+A,10,109,1041,Agg041,1985038,1990039,1995039,2000042,2005043,Writers and authors,,,,,"WRITERS, JOURNALISTS AND EDITORS",Writers,Writers and authors,Authors and related writers
+A,10,109,1042,Agg042,1985039,1990040,1995040,2000043,2005044,Journalists and editors,,,,,,,Journalists and editors,Journalists and editors
+A,10,110,1043,Agg043,1985040,1990041,1995041,2000044,2005045,"Sculptors, painters and industrial artists",,,,,"ARTISTS, PHOTOGRAPHERS AND DESIGNERS","Arts, design, photo","Sculptors, painters and industrial artists","Sculptors, painters, artists"
+A,10,110,1044,Agg044,1985041,1990042,1995042,2000045,2005046,Designers,,,,,,,Designers,Designers
+A,10,110,1045,Agg045,1985042,1990043,1995043,2000046,2005047,Photographers,,,,,,,Photographers,Photographers
+A,10,111,1046,Agg046,1985043,1990044,1995044,2000047,2005048,Musicians (exc private lessons),,,,,MUSICIANS AND STAGE DESIGNERS,Entertainment,Musicians (except for private lessons),Musicians
+A,10,111,1047,Agg047,1985044,1990045,1995045,2000048,2005049,Musicians (private lessons),,,,,,,Musicians (for private lessons),Music instructors
+A,10,111,1048,Agg048,1985045,1990046,1995046,2000049,2005050,"Actors, dancers and performers (except for private lessons)",,,,,,,"Actors, dancers and performers (except for private lessons)","Actors, dancers"
+A,10,111,1049,Agg049,1985046,1990047,1995047,2000050,2005051,"Actors, dancers and performers (for private lessons)",,,,,,,"Actors, dancers and performers (for private lessons)","Acting, dancing instructors"
+A,10,112,1050,Agg050,1985051,1990048,1995048,2000051,2005052,Private tutors (for study),,,,,OTHER SPECIALSTS AND TECHNICAL WORKERS,"Tutors, athletes NEC",Private tutors (for study),Private tutors (after school)
+A,10,112,1051,Agg051,1985052,1990049,1995049,2000052,2005053,Private tutors (NOC),,,,,,,Private tutors (not classified elsewhere),Private tutors NEC
+A,10,112,1052,Agg052,1985049,1990050,1995050,2000053,2005054,Sports professionals (except for private lessons),,,,,,,Sports professionals (except for private lessons),Professional athletes
+A,10,112,1053,Agg053,1985050,1990051,1995051,2000054,2005055,Sports trainers,,,,,,,Sports professionals (for private lessons),Sports instructors
+A,10,112,1054,Agg054,1985053,1990052,1995052,2000055,2005056,Specialist and technical workers not classified elsewhere,,,,,,,Specialist and technical workers not classified elsewhere,Professionals NEC
+B,10,113,1055,Agg055,1985054,1990053,1995053,2000056,2005057,Managemant public servants,ADMINISTRATIVE AND MANAGERIAL WORKERS,MANAGERIAL,ADMINISTRATIVE AND MANAGERIAL WORKERS,MANAGERIAL,MANAGEMENT PUBLIC SERVANTS,Public officials,Managemant public servants,Public officials
+B,10,114,1056,Agg056,1985055,1990054,1995054,2000057,2005058,Company officers,,,,,"OFFICERS OF COMPANIES, ORGANIZATION, etc.",Managing directors and exectutives,Company officers,Company officers
+B,10,114,1057,Agg057,1985056,1990055,1995055,2000058,2005059,Officers of other corporations and organization,,,,,,,Officers of other corporations and organization,External officers
+B,10,115,1058,Agg058,1985057,1990056,1995056,2000059,2005060,Managers of companies and corporations,,,,,OTHER ADMINISTRATIVE AND MANAGERIAL WORKERS,Other managers,Managers of companies and corporations,Managers of companies
+B,10,115,1059,Agg059,1985058,NA,NA,NA,NA,Stationmasters,,,,,,,,NA
+B,10,115,1059,Agg059,1985059,NA,NA,NA,NA,Post office managers,,,,,,,,NA
+B,10,115,1059,Agg059,1985060,1990057,1995057,2000060,2005061,Administrative and managerial workers NOC,,,,,,,Administrative and managerial workers not classified elsewhere,"Administrators, managers NEC"
+C,10,116,1060,Agg060,1985061,1990058,1995058,2000061,2005062,General clerical workers,CLERICAL WORKERS,CLERICAL,CLERICAL WORKERS,CLERICAL,GENERAL CLERICAL WORKERS,General clerical workers,General clerical workers,General office clerks
+C,10,116,1061,Agg061,1985062,1990059,1995059,2000062,2005063,Accountancy clerks,,,,,,,Accountancy clerks,Accountancy clerks
+C,10,117,1062,Agg062,1985065,1990060,1995060,2000063,2005064,Money collectors,,,,,OUTDOOR SERVICE WORKERS,Remote service workers,Money collectors,Money collectors
+C,10,117,1063,Agg063,1985066,1990061,1995061,2000064,2005065,Other outdoor service workers,,,,,,,Other outdoor service workers,Other out-of-office workers
+C,10,118,1064,Agg064,1985063,1990062,1995062,2000065,2005066,Transport clerical workers,,,,,TRANSPORT AND COMMUNICATION CLERICAL WORKERS,Transport and communications clerical workers,Transport clerical workers,Transport clerks
+C,10,118,1065,Agg065,1985064,1990063,1995063,2000066,2005067,Post and communications clerical workers,,,,,,,Post and communications clerical workers,"Posts, comms clerks"
+C,10,119,1066,Agg066,1985067,1990064,1995064,2000067,2005068,"Stenographers, typists and word processor operators",,,,,OFFICE APPLIANCE OPERATORS,Office equipment operators,"Stenographers, typists and word processor operators",Typists and word processors
+C,10,119,1067,Agg067,1985068,1990065,1995065,2000068,2005069,Key punchers,,,,,,,Key punchers,Key punchers
+C,10,119,1068,Agg068,1985069,1990066,1995066,2000069,2005070,Computer operators,,,,,,,Computer operators,Computer operators
+D,10,120,1069,Agg069,1985070,1990067,1995067,2000070,2005071,Retailers,SALES WORKERS,SALES,SALES WORKERS,SALES,MERCHANDISE SALES WORKERS,Merchandise sales workers,Retailers,Retailers
+D,10,120,1070,Agg070,1985071,1990068,1995068,2000071,2005072,Wholesalers,,,,,,,Wholesalers,Wholesalers
+D,10,120,1071,Agg071,1985072,1990069,1995069,2000072,2005073,Restaurateurs,,,,,,,Restauranteurs,Restaurant operators
+D,10,120,1072,Agg072,1985073,1990070,1995070,2000073,2005074,Shop assistants,,,,,,,Shop assistants,Shop assistants
+D,10,120,1073,Agg073,1985074,1990071,1995071,2000074,2005075,Home visit and mobile sales workers,,,,,,,Home visit and mobile sales workers,Peddlers and street vendors
+D,10,120,1074,Agg074,1985075,1990072,1995072,2000075,2005076,Recycled resources wholesale and collection workers,,,,,,,Recycled resources wholesale and collection workers,Junk dealers
+D,10,120,1075,Agg075,1985077,1990073,1995073,2000076,2005077,Goods sales canvassers,,,,,,,Goods sales canvassers,Traveling salespersons
+D,10,120,1076,Agg076,1985076,1990074,1995074,2000077,2005078,Commodity brokers,,,,,,,Commodity brokers,Commodity brokers
+D,10,121,1077,Agg077,1985080,1990075,1995075,2000078,2005079,Real estate agents and dealers,,,,,QUASI-SALES WORKERS,"Agents, brokers, related",Real estate agents and dealers,Real estate agents
+D,10,121,1078,Agg078,1985079,1990076,1995076,2000079,2005080,Insurance brokers and salesmen,,,,,,,Insurance brokers and salesmen,Insurance representatives
+D,10,121,1079,Agg079,1985081,1990077,1995077,2000080,NA,,,,,,,,(Pawnbrokers),Pawnbrokers
+D,10,121,1079,Agg079,1985078,1990078,1995078,2000081,2005081,"Salesmen (except merchandise, insurance and real estate)",,,,,,,"Salesmen (except merchandise, insurance and real estate)",Salespersons NEC
+D,10,121,1080,Agg080,1985082,1990079,1995079,2000082,2005082,Other quasi-sales workers,,,,,,,Other quasi-sales workers,Quasi-sales NEC
+E,10,122,1081,Agg081,1985274,1990080,1995080,2000083,2005083,Housekeepers and home helpers,SERVICE WORKERS,SERVICES,SERVICE WORKERS,SERVICES,DOMESTIC SUPPORT SERVICE WORKERS,Domestic support workers,Housekeepers and home helpers,Hosuekeepers and domestic helpers
+E,10,122,1082,Agg082,1985275,1990081,1995081,2000084,2005084,Home helpers,,,,,,,Home helpers,Domestic helpers
+E,10,122,1083,Agg083,1985276,1990082,1995082,2000085,2005085,Other domestic support service workers,,,,,,,Other domestic support service workers,Domestic support NEC
+E,10,123,1084,Agg084,1985277,1990083,1995083,2000086,2005086,Hairdressers,,,,,DOMESTIC HYGIENE SERVICE WORKERS,Personal hygience workers,Hairdressers,Hairdressers
+E,10,123,1085,Agg085,1985278,1990084,1995084,2000087,2005087,Beauticians,,,,,,,Beauticians,Beauticians
+E,10,123,1086,Agg086,1985279,1990085,1995085,2000088,2005088,Bath workers,,,,,,,Bath workers,Bathhouse workers
+E,10,123,1087,Agg087,1985280,1990086,1995086,2000089,2005089,Launderers and fullers,,,,,,,Launderers and fullers,Launderers and dry cleaners
+E,10,124,1088,Agg088,1985281,1990087,1995087,2000090,2005090,Cooks,,,,,FOOD AND DRINK PREPARATORY WORKERS,Food and beverage preparation workers,Cooks,Cooks
+E,10,124,1089,Agg089,1985282,1990088,1995088,2000091,2005091,Bartenders,,,,,,,Bartenders,Bartenders
+E,10,125,1090,Agg090,1985283,1990089,1995089,2000092,2005092,Food and drink service and personal assistance workers,,,,,CUSTOMER SERVICE WORKERS,Personal service workers,Food and drink service and personal assistance workers,Waiters and servants
+E,10,125,1091,Agg091,1985284,1990090,1995090,2000093,2005093,Customer entertainment workers,,,,,,,Customer entertainment workers,Customer entertainment
+E,10,125,1092,Agg092,1985285,1990091,1995091,2000094,2005094,Geisha and dancers,,,,,,,Geisha and dancers,Geisha and dancers
+E,10,125,1093,Agg093,1985286,1990092,1995092,2000095,2005095,"Service workers in places of entertainment, etc.",,,,,,,"Service workers in places of entertainment, etc.","Recreation, amusement place workers"
+E,10,125,1094,Agg094,1985288,NA,NA,NA,NA,,,,,,,,(Other personal service workers),Personal service workers NEC
+E,10,125,1095,Agg095,1985289,1990093,1995093,2000096,2005096,"Masters, managers and Banto (attendants) of hotel",,,,,,,"Masters, managers and Banto (attendants) of hotel",Hotel managers and attendants
+E,10,126,1096,Agg096,1985290,1990094,1995094,2000097,2005097,"Superintendents of lodgings, apartment houses and matron",,,,,"RESIDENTIAL FACILITIES, OFFICE BUILDINGS AND OTHER MANAGEMENT PERSONNEL",Facilities superindendents,"Superintendents of lodgings, apartment houses and matron",Lodging and residence superintendents
+E,10,126,1096,Agg096,NA,1990095,1995095,2000098,2005098,Superintendents of buildings,,,,,,,Superintendents of buildings,Building superintendents
+E,10,126,1096,Agg096,NA,1990096,1995096,2000099,2005099,Superintendents of parking lots,,,,,,,Superintendents of parking lots,Parking lot superintendents
+E,10,127,1097,Agg097,NA,1990097,1995097,2000100,2005100,Travel attendants,,,,,OTHER SERVICE WORKERS,Other service workers,Travel attendants,Travel attendants
+E,10,127,1098,Agg098,1985287,1990098,1995098,2000101,2005101,Luggage checkers; renters,,,,,,,Left luggage handlers,Baggage handlers
+E,10,127,1098,Agg098,NA,NA,NA,2000102,2005102,,,,,,,,Commodity hire workers,Cargo handlers
+E,10,127,1099,Agg099,1985291,1990099,1995099,2000103,2005103,Advertisers,,,,,,,Advertisers,Advertisers
+E,10,127,1100,Agg100,NA,NA,NA,2000104,2005104,Undertakers and crematorium workers,,,,,,,Undertakers and crematorium workers,Undertakers and crematorium workerts
+E,10,127,1100,Agg100,NA,NA,NA,2000105,2005105,Care workers (treatment and welfare institution),,,,,,,Care workers (treatment and welfare institution),Care workers
+E,10,127,1100,Agg100,1985292,1990100,1995100,2000106,2005106,Service workers not classified elsewhere,,,,,,,Service workers not classified elsewhere,Service workers NEC
+F,10,128,1101,Agg101,1985269,1990101,1995101,2000107,2005107,Self-defence officials,SECURITY WORKERS,PROTECTIVE,SECURITY WORKERS,PROTECTIVE,PUBLIC SECURITY WORKERS,Protective service workers,Self-defence officials,Protective services workers
+F,10,128,1102,Agg102,1985270,1990102,1995102,2000108,2005108,Police officers and maritime safety officials,,,,,,,Police officers and maritime safety officials,Police officers
+F,10,128,1103,Agg103,1985272,1990103,1995103,2000109,2005109,Prison guards and other judicial police staff,,,,,,,Prison guards and other judicial police staff,Prison guards
+F,10,128,1104,Agg104,1985271,1990104,1995104,2000110,2005110,Firefighters,,,,,,,Firefighters,Firefighters
+F,10,128,1105,Agg105,NA,1990105,1995105,2000111,2005111,,,,,,,,,NA
+F,10,128,1105,Agg105,1985273,1990106,1995106,2000112,2005112,Other public secrity workers,,,,,,,Other public security workers,Protective services workers NEC
+G,10,129,1106,Agg106,1985083,1990107,1995107,2000113,2005113,Crop farming and sericulture workers,"AGRICULTURE, FORESTRY AND FISHERY WORKERS",AG F & F,"AGRICULTURE, FORESTRY AND FISHERY WORKERS",AG F & F,AGRICULTURE WORKERS,Agriculture workers,Crop farming and sericulture workers,Field crop workers and sericulturists
+G,10,129,1107,Agg107,1985084,1990108,1995108,2000114,2005114,Livestock farm workers,,,,,,,Livestock farm workers,Livestock producers
+G,10,129,1108,Agg108,1985085,1990109,1995109,2000115,2005115,Landscape gardeners and nursery workers,,,,,,,Landscape gardeners and nursery workers,Landscape gardeners and nursery growers
+G,10,129,1109,Agg109,1985086,1990110,1995110,2000116,2005116,Other agricultural workers,,,,,,,Other agricultural workers,Agricultural workers NEC
+G,10,130,1110,Agg110,1985087,1990111,1995111,2000117,2005117,Forest nursery workers,,,,,FORESTRY WORKERS,Forestry workers,Forest nursery workers,Forestry and related workers
+G,10,130,1111,Agg111,1985088,1990112,1995112,2000118,NA,,,,,,,,,NA
+G,10,130,1111,Agg111,1985089,1990113,1995113,2000119,2005118,"Tree-felling, logging and timber transportation workers",,,,,,,"Tree-felling, logging and timber transportation workers",Lumberjacks
+G,10,130,1112,Agg112,1985090,1990114,1995114,2000120,NA,,,,,,,,,NA
+G,10,130,1112,Agg112,1985091,1990115,1995115,2000121,2005119,Other forestry workers,,,,,,,Other forestry workers,Forestry workers NEC
+G,10,131,1113,Agg113,1985092,1990116,1995116,2000122,2005120,Fishery workers,,,,,FISHERY WORKERS,Fishery workers,Fishery workers,Fishery workers
+G,10,131,1114,Agg114,1985093,1990118,1995118,2000123,2005121,Fishing boat operators,,,,,,,"Ships' captains, navigation officers, chief engineers and engineers (fishing boat)",Fishing boat captains and related
+G,10,131,1115,Agg115,1985094,1990117,1995117,2000124,2005122,Seaweed and shellfish harvesting workers,,,,,,,Seaweed and shellfish harvesting workers,Seaweed and shellfish harvesters
+G,10,131,1116,Agg116,1985095,1990119,1995119,2000125,2005123,Aquaculture workers,,,,,,,Aquaculture workers,Aquaculture workers
+G,10,131,1117,Agg117,1985096,1990120,1995120,2000126,2005124,Other fishery workers,,,,,,,Other fishery workers,Fishery workers NEC
+H,10,132,1118,Agg118,1985105,1990121,1995121,2000127,2005125,Railway drivers,TRANSPORT AND COMMUNICATION WORKERS,TRANSPORT & COMM,TRANSPORT AND COMMUNICATION WORKERS,TRANSPORT & COMM,RAILWAY DRIVERS,Railway driverss,Railway drivers,Railway drivers
+H,10,132,1118,Agg118,1985106,1990122,1995122,2000128,NA,,,,,,,,,NA
+H,10,133,1119,Agg119,1985107,1990123,1995123,2000129,2005126,Motor vehicle drivers,,,,,MOTOR VEHICLE DRIVERS,Moter vehicle drivers,Motor vehicle drivers,Motor vehicle drivers
+H,10,134,1120,Agg120,1985108,1990124,1995124,2000130,2005127,"Ship captains, navigation officers, navigators (except fishing boats) and pilots",,,,,SHIP AND AIRCRAFT OPERATORS,Ship and aircraft operators,"Ship captains, navigation officers, navigators (except fishing boats) and pilots",Ship captains and navigators
+H,10,134,1121,Agg121,1985109,1990125,1995125,2000131,2005128,Ships' chief engineers and engineers (except fishing boats),,,,,,,Ships' chief engineers and engineers (except fishing boats),Ship engineers
+H,10,134,1122,Agg122,1985110,1990126,1995126,2000132,2005129,Aircraft pilots and aviation engineers,,,,,,,Aircraft pilots and aviation engineers,Aircraft pilots and engineers
+H,10,135,1123,Agg123,1985111,1990127,1995127,2000133,2005130,Conductors,,,,,OTHER TRANSPORT WORKERS,Other transport workers,Conductors,Conductors
+H,10,135,1124,Agg124,1985112,1990128,1995128,2000134,NA,134ìSìπóAëóä÷òAã∆ñ±è]éñé“,,,,,,,,NA
+H,10,135,1125,Agg125,1985113,1990129,1995129,2000135,2005131,"Deckhands, dual purpose crew and stokers",,,,,,,"Deckhands, dual purpose crew and stokers","Deck crews, related"
+H,10,135,1125,Agg125,1985114,1990130,1995130,2000136,NA,,,,,,,,,NA
+H,10,135,1126,Agg126,NA,NA,NA,NA,2005132,Forklift (vehicle) driver,,,,,,,Forklift (vehicle) driver,Lifting truck operators
+H,10,135,1127,Agg127,1985115,1990131,1995131,2000137,2005133,Transport workers not classified elsewhere,,,,,,,Transport workers not classified elsewhere,Transport workers NEC
+H,10,136,1128,Agg128,1985116,1990132,1995132,2000138,2005134,Communication technology workers,,,,,COMMUNICATION WORKERS,Communications workers,Communication technology workers,Communications workers
+H,10,136,1128,Agg128,1985117,1990133,1995133,2000139,NA,,,,,,,,,NA
+H,10,136,1129,Agg129,1985118,1990134,1995134,2000140,2005135,Telephone exchange operators,,,,,,,Telephone exchange operators,Telephone exchange operators
+H,10,136,1130,Agg130,1985119,1990135,1995135,2000141,2005136,Mail and telegram collection and delivery workers,,,,,,,Mail and telegram collection and delivery workers,"Mail, telegram collection and delivery"
+H,10,136,1131,Agg131,1985120,1990136,1995136,2000142,2005137,Other communication workers,,,,,,,Other communication workers,Communications workers NEC
+I,11,137,1132,Agg132,1985121,1990154,1995154,2000143,2005138,Pig-iron forging and steelmaking workers,MANUFACTURING AND PRODUCTION WORKERS,"MAN., OPERATORS, LABORERS",MANUFACTURING AND PRODUCTION WORKERS,"MAN., OPERATORS, LABORERS",METAL MATERIAL MANUFACTURING WORKERS,Metal crafts workers,Pig-iron forging and steelmaking workers,Steelmaking workers
+I,11,137,1133,Agg133,1985122,1990155,1995155,2000144,2005139,Non-ferrous metal smelting workers,,,,,,,Non-ferrous metal smelting workers,Non-ferrous smelting workers
+I,11,137,1134,Agg134,1985123,1990156,1995156,2000145,2005140,Cast metal manufacturing workers,,,,,,,Cast metal manufacturing workers,Molders
+I,11,137,1135,Agg135,1985124,1990157,1995157,2000146,2005141,Forging workers,,,,,,,Forging workers,Forgers
+I,11,137,1136,Agg136,1985127,1990158,1995158,2000147,2005142,Metal heat treatment workers,,,,,,,Metal heat treatment workers,Metal heat treaters
+I,11,137,1137,Agg137,1985125,1990159,1995159,2000148,2005143,Rolling workers,,,,,,,Rolling workers,Rolling mill workers
+I,11,137,1138,Agg138,1985126,1990160,1995160,2000149,2005144,Wire drawing workers,,,,,,,Wire drawing workers,Wire drawing workers
+I,11,137,1139,Agg139,1985128,1990161,1995161,2000150,2005145,Other metal material manufacturing workers,,,,,,,Other metal material manufacturing workers,Other metals related workers
+I,11,138,1140,Agg140,1985224,1990162,1995162,2000151,2005146,Chemical products manufacturing workers,,,,,CHEMICAL PRODUCTS MANUFACTURING WORKER,Chemical products makers,Chemical products manufacturing workers,Chemical operators
+I,11,138,1141,Agg141,1985225,1990163,1995163,2000152,NA,,,,,,,,,NA
+I,11,138,1141,Agg141,1985226,1990164,1995164,2000153,2005147,Other chemical products manufacturing workers,,,,,,,Other chemical products manufacturing workers,Chemical products workers NEC
+I,11,139,1143,Agg143,1985202,1990146,1995146,2000155,2005148,Glass product shaping workers,,,,,"CERAMIC, EARTH AND STONE PRODUCT MANUFACTURING WORKERS",Refractories workers,Glass product shaping workers,Glass formers
+I,11,139,1144,Agg144,1985205,1990147,1995147,2000156,2005149,"Brick, tile and clay pipe manufacturing workers",,,,,,,"Brick, tile and clay pipe manufacturing workers","Brick, tile and earthen pipe makers"
+I,11,139,1145,Agg145,1985203,1990148,1995148,2000157,2005150,Porcelain and ceramic manufacturing workers,,,,,,,Porcelain and ceramic manufacturing workers,Porcelain and ceramic makers
+I,11,139,1146,Agg146,1985204,1990149,1995149,2000158,2005151,Ceramic painting workers,,,,,,,Ceramic painting workers,Ceramic decorators
+I,11,139,1147,Agg147,1985206,1990150,1995150,2000159,2005152,Cement manufacturing workers,,,,,,,Cement manufacturing workers,Cement makers
+I,11,139,1148,Agg148,1985207,1990151,1995151,2000160,2005153,Cement products manufacturing workers,,,,,,,Cement products manufacturing workers,Cement products makers
+I,11,139,1149,Agg149,1985208,1990152,1995152,2000161,2005154,Stonemasons,,,,,,,Stonemasons,Stonemasons
+I,11,139,1150,Agg150,1985201,1990145,1995145,2000154,NA,,,,,,,,,NA
+I,11,139,1150,Agg150,1985209,1990153,1995153,2000162,2005155,"Other ceramic, earth and stone product manufacturing workers",,,,,,,"Other ceramic, earth and stone product manufacturing workers","Ceramic, clay, stone workers NEC"
+I,11,140,1151,Agg151,1985129,1990165,1995165,2000163,2005156,Metal machine tools workers,,,,,METAL PROCESSING WORKERS,Metal fabricators,Metal machine tools workers,Metal cutting machine operators
+I,11,140,1152,Agg152,1985130,1990166,1995166,2000164,2005157,Metal press workers,,,,,,,Metal press workers,Metal press operators
+I,11,140,1153,Agg153,1985131,1990167,1995167,2000165,2005158,Metal welding and fusion cutting workers,,,,,,,Metal welding and fusion cutting workers,Welders and framecutters
+I,11,140,1154,Agg154,1985132,1990168,1995168,2000166,2005159,Ironworkers and boilermakers,,,,,,,Ironworkers and boilermakers,Ironworkers and boilermakers
+I,11,140,1155,Agg155,1985133,1990169,1995169,2000167,2005160,Sheet metal workers,,,,,,,Sheet metal workers,Sheet metal workers
+I,11,140,1157,Agg157,1985134,1990170,1995170,2000168,NA,Metal engravers,,,,,,,Metal engravers,Metal engravers
+I,11,140,1156,Agg156,1985135,1990171,1995171,2000169,2005161,Plating workers,,,,,,,Plating workers,Galvanizers
+I,11,140,1157,Agg157,1985136,1990172,1995172,2000170,2005162,Other metal processing workers,,,,,,,Other metal processing workers,Metal processing workers NEC
+I,11,141,1158,Agg158,1985137,1990173,1995173,2000171,2005163,General mechanical apparatus assembly workers,,,,,GENERAL MECHANICAL APPARATUS ASSEMBLY AND REPAIR WORKERS,General mechanical apparatus assemblers and repairers,General mechanical apparatus assembly workers,Mechanical machinery assemblers
+I,11,141,1159,Agg159,1985138,1990174,1995174,2000172,2005164,General mechanical apparatus repair workers,,,,,,,General mechanical apparatus repair workers,Mechanical machinery repairers
+I,11,142,1160,Agg160,1985139,1990175,1995175,2000173,2005165,Electro-mechanical apparatus assembly workers,,,,,ELECTRO-MECHANICAL APPARATUS ASSEMBLY AND REPAIR WORKERS,Electromechanical apparatus assemblers and repairers,Electro-mechanical apparatus assembly workers,Electric machinery assemblers
+I,11,142,1161,Agg161,1985140,1990176,1995176,2000174,2005166,Electro-mechanical apparatus repair workers,,,,,,,Electro-mechanical apparatus repair workers,Electric machinery repairers
+I,11,142,1162,Agg162,1985142,1990177,1995177,2000175,2005167,Light bulb and electron tube assembly workers,,,,,,,Light bulb and electron tube assembly workers,Light bulb and electron tube assemblers
+I,11,142,1163,Agg163,1985143,1990178,1995178,2000176,2005168,Coated wire manufacturing workers,,,,,,,Coated wire manufacturing workers,Wire and cable makers
+I,11,142,1164,Agg164,1985141,1990179,1995179,2000177,2005169,Semi-conductor product manufacturing workers,,,,,,,Semi-conductor product manufacturing workers,Semiconductor product makers
+I,11,142,1165,Agg165,1985144,1990180,1995180,2000178,2005170,Other electro-mechanical apparatus assembly and repair workers,,,,,,,Other electro-mechanical apparatus assembly and repair workers,Electro-mechanical assemblers and repairers NEC
+I,11,143,1166,Agg166,1985145,1990181,1995181,2000179,2005171,Automobile assembly workers,,,,,TRANSPORTATION MACHINERY ASSEMBLY AND REPAIR WORKERS,Transport machinery assemblers and repairers,Automobile assembly workers,Automobile assemblers
+I,11,143,1167,Agg167,1985146,1990182,1995182,2000180,2005172,Automobile maintenance workers,,,,,,,Automobile maintenance workers,Automobile repairers
+I,11,143,1168,Agg168,1985149,1990183,1995183,2000181,2005173,Aircraft assembly and maintenance workers,,,,,,,Aircraft assembly and maintenance workers,Aircraft assemblers and repairers
+I,11,143,1169,Agg169,1985147,1990184,1995184,2000182,2005174,Railway vehicle assembly and repair workers,,,,,,,Railway vehicle assembly and repair workers,Rail vehicle assemblers and repairers
+I,11,143,1170,Agg170,1985150,1990185,1995185,2000183,2005175,Bicycle assembly and repair workers,,,,,,,Bicycle assembly and repair workers,Bicycle assemblers and repairers
+I,11,143,1171,Agg171,1985148,1990186,1995186,2000184,2005176,Ship rigging workers,,,,,,,Ship rigging workers,Ship riggers
+I,11,143,1172,Agg172,1985151,1990187,1995187,2000185,2005177,Other transportation machinery assembly and repair workers,,,,,,,Other transportation machinery assembly and repair workers,Transport machinery assemblers and repairers NEC
+I,11,144,1173,Agg173,1985155,1990191,1995191,2000189,2005178,Weighing and measuring appliance assembly and repair workers,,,,,"WEIGHING AND MEASURING APPLIANCE, PHOTO-OPTIC MECHANICAL APPARATUS ASSEMBLY AND REPAIR WORKERS",Precision instrument assemblers and repairers,Weighing and measuring appliance assembly and repair workers,Instrument assemblers and repairers
+I,11,144,1174,Agg174,1985152,1990188,1995188,2000186,2005179,Clock assembly and repair workers,,,,,,,Clock assembly and repair workers,Watch assemblers and repairers
+I,11,144,1175,Agg175,1985153,1990189,1995189,2000187,2005180,Photo-optic mechanical apparatus assembly and repair workers,,,,,,,Photo-optic mechanical apparatus assembly and repair workers,Photomechanical instrument assemblers and repairers
+I,11,144,1176,Agg176,1985154,1990190,1995190,2000188,2005181,Lens polishing and adjustment workers,,,,,,,Lens polishing and adjustment workers,Lens grinders and adjusters
+I,11,144,1177,Agg177,1985156,1990192,1995192,2000190,2005182,"Other weighing and measuring appliance, photo-optic mechanical apparatus assembly and repair workers",,,,,,,"Other weighing and measuring appliance, photo-optic mechanical apparatus assembly and repair workers",Instrument assemblers and repairers NEC
+I,11,145,1178,Agg178,1985210,1990193,1995193,2000191,2005183,Cereal polishing and flour milling workers,,,,,FOOD MANUFACTURING WORKERS,Food manufacturers,Cereal polishing and flour milling workers,Grain polishers and millers
+I,11,145,1179,Agg179,1985216,1990195,1995195,2000193,2005184,Miso and soy sauce manufacturing workers,,,,,,,Miso and soy sauce manufacturing workers,Miso and soy sauce makers
+I,11,145,1180,Agg180,1985212,1990197,1995197,2000195,2005185,Noodle manufacturing workers,,,,,,,Noodle manufacturing workers,Noodle makers
+I,11,145,1181,Agg181,1985211,1990198,1995198,2000196,2005186,Bread and confectionery manufacturing workers,,,,,,,Bread and confectionery manufacturing workers,Bakers and confectioners
+I,11,145,1182,Agg182,1985213,1990199,1995199,2000197,2005187,"Tofu, konjak jelly, wheat-gluten bread manufacturing workers",,,,,,,"Tofu, konjac jelly, wheat-gluten bread manufacturing workers","Tofu, konjac, related product makers"
+I,11,145,1183,Agg183,1985217,1990200,1995200,2000198,2005188,"Canned, bottled and seal-wrapped food manufacturing workers",,,,,,,"Canned, bottled and seal-wrapped food manufacturing workers",Canners and bottlers
+I,11,145,1184,Agg184,1985220,1990201,1995201,2000199,2005189,Milk and milk product manufacturing workers,,,,,,,Milk and milk product manufacturing workers,Dairy product makers
+I,11,145,1185,Agg185,1985221,1990202,1995202,2000200,2005190,Fishery product processing workers,,,,,,,Fishery product processing workers,Seafood processors
+I,11,145,1189,Agg189,1985214,1990194,1995194,2000192,NA,(Sugar makers),,,,,,,(Sugar makers),(Sugar makers)
+I,11,146,1186,Agg186,1985215,1990204,1995204,2000202,2005192,Tea manufacturing workers,,,,,BEVERAGE AND CIGARETTE MANUFACTURING WORKERS,Beverage and tobacco makers,Tea manufacturing workers,Tea makers
+I,11,146,1187,Agg187,1985218,1990205,1995205,2000203,2005193,Liquor manufacturing workers,,,,,,,Liquor manufacturing workers,Liquor makers
+I,11,146,1188,Agg188,1985219,1990206,1995206,2000204,2005194,Cold drinks manufacturing workers,,,,,,,Cold drinks manufacturing workers,Cold beverage makers
+I,11,146,1189,Agg189,1985222,1990196,1995196,2000194,NA,(Oil and fat of animals or plants makers),,,,,,,(Oil and fat of animals or plants makers),(Oil and fat processors)
+I,11,146,1189,Agg189,NA,1990203,1995203,2000201,2005191,(Other food manufacturing makers),,,,,,,(Other food manufacturing makers),(Other food makers)
+I,11,146,1189,Agg189,1985246,1990207,1995207,2000205,2005195,(Tobacco workers),,,,,,,(Tobacco workers),(Tobacco workers)
+I,11,146,1189,Agg189,1985223,1990208,1995208,2000206,2005196,"Other food, beverage and tobacco manufacturing workers",,,,,,,"Other food, beverage and tobacco manufacturing workers","Food, beverage, tobacco makers NEC"
+I,11,147,1190,Agg190,1985157,1990209,1995209,2000207,2005197,Roving and spinning workers,,,,,SPINNERS AND WEAVERS,Spinners and weavers,Roving and spinning workers,Spinners
+I,11,147,1190,Agg190,1985158,1990210,1995210,NA,NA,,,,,,,,,NA
+I,11,147,1191,Agg191,1985159,1990211,1995211,2000208,2005198,"Double yarn,twisted yarn and processed yarn workers",,,,,,,"Double yarn,twisted yarn and processed yarn workers","Doublers, thread, yarn makers"
+I,11,147,1191,Agg191,1985160,1990212,1995212,NA,NA,,,,,,,,,NA
+I,11,147,1192,Agg192,1985161,1990213,1995213,2000209,2005199,Loom preparation workers,,,,,,,Loom preparation workers,Loom warpers
+I,11,147,1193,Agg193,1985162,1990214,1995214,2000210,2005200,Woven fabric workers,,,,,,,Woven fabric workers,Weavers
+I,11,147,1194,Agg194,1985165,1990215,1995215,2000211,2005201,"Refining, bleaching, dyeing and finishing workers",,,,,,,"Refining, bleaching, dyeing and finishing workers",Textile and yarn washers and bleachers
+I,11,147,1194,Agg194,1985166,1990216,1995216,2000212,NA,,,,,,,,,NA
+I,11,147,1195,Agg195,1985163,1990217,1995217,2000213,2005202,Knitting and industrial knitting workers,,,,,,,Knitting and industrial knitting workers,Knitters
+I,11,147,1196,Agg196,1985164,1990218,1995218,2000214,2005203,Rope and net manufacturing workers (fiber),,,,,,,Rope and net manufacturing workers (fiber),Rope and net makers
+I,11,147,1197,Agg197,1985167,1990219,1995219,2000215,2005204,Other spinners and weavers,,,,,,,Other spinners and weavers,Spinners and weavers NEC
+I,11,148,1198,Agg198,1985170,1990220,1995220,2000216,2005205,Adult women's and children's garment tailoring workers,,,,,"APPAREL, FIBER PRODUCT MANUFACTURING WORKERS",Garment and fabric product makers,Adult women's and children's garment tailoring workers,Dressmakers and children's garment makers
+I,11,148,1199,Agg199,1985168,1990221,1995221,2000217,2005206,Adult men's garment tailoring workers,,,,,,,Adult men's garment tailoring workers,Tailors
+I,11,148,1200,Agg200,1985169,1990222,1995222,2000218,2005207,Japanese garment tailoring workers,,,,,,,Japanese garment tailoring workers,Japanese garment makers
+I,11,148,1201,Agg201,1985173,1990223,1995223,2000219,2005208,Embroidery workers,,,,,,,Embroidery workers,Embroiderers
+I,11,148,1202,Agg202,1985171,1990224,1995224,2000220,2005209,Machine sewing workers,,,,,,,Machine sewing workers,Sewers
+I,11,148,1203,Agg203,1985172,1990225,1995225,2000221,2005210,Cutting workers,,,,,,,Cutting workers,Cutters
+I,11,148,1204,Agg204,1985174,1990226,1995226,2000222,2005211,"Other apparel, fiber product manufacturing workers",,,,,,,"Other apparel, fiber product manufacturing workers",Garment workers NEC
+I,11,149,1205,Agg205,1985175,1990227,1995227,2000223,2005212,Timber and chip manufacturing workers,,,,,WOODEN HANDICRAFT WORKERS,Wooden handicraft workers,Timber and chip manufacturing workers,Lumber and chip makers
+I,11,149,1205,Agg205,1985176,1990228,1995228,2000224,NA,,,,,,,,,NA
+I,11,149,1206,Agg206,1985177,1990229,1995229,2000225,2005213,Plywood workers,,,,,,,Plywood workers,Veneer makers
+I,11,149,1207,Agg207,1985178,1990230,1995230,2000226,2005214,Woodworking workers,,,,,,,Woodworking workers,Woodworkers
+I,11,149,1208,Agg208,1985179,1990231,1995231,2000227,2005215,Wooden furniture and architectural furniture manufacturing workers,,,,,,,Wooden furniture and architectural furniture manufacturing workers,Wood furniture makers and related
+I,11,149,1210,Agg210,1985180,1990232,1995232,2000228,NA,,,,,,,,,NA
+I,11,149,1209,Agg209,1985181,1990233,1995233,2000229,2005216,"Bamboo, grass and vine products manufacturing workers",,,,,,,"Bamboo, grass and vine products manufacturing workers","Bamboo, reed and vine workers"
+I,11,149,1209,Agg209,1985182,1990234,1995234,2000230,NA,,,,,,,,,NA
+I,11,149,1210,Agg210,1985183,1990235,1995235,2000231,2005217,"Other wood, bamboo, grass and vine products manufacturing workers",,,,,,,"Other wood, bamboo, grass and vine products manufacturing workers",Wooden handicraft workers NEC
+I,11,150,1211,Agg211,1985184,1990236,1995236,2000232,2005218,Pulp and paper material manufacturing workers,,,,,"PULP, PAPER AND PAPER PRODUCT MANUFACTURING WORKERS",Pulp and papermaking workers,Pulp and paper material manufacturing workers,Pulp and papermaking operators
+I,11,150,1212,Agg212,1985185,1990237,1995237,2000233,2005219,Papermaking workers,,,,,,,Papermaking workers,Papermakers
+I,11,150,1213,Agg213,1985186,1990238,1995238,2000234,2005220,Paper container manufacturing workers,,,,,,,Paper container manufacturing workers,Containerboard makers
+I,11,150,1214,Agg214,1985187,1990239,1995239,2000235,2005221,Paper product manufacturing workers,,,,,,,Paper product manufacturing workers,Paper products makers
+I,11,150,1215,Agg215,1985188,1990240,1995240,2000236,2005222,"Other pulp, paper and paper product manufacturing workers",,,,,,,"Other pulp, paper and paper product manufacturing workers","Pulp, paper and paper product makers NEC"
+I,11,151,1216,Agg216,1985190,1990241,1995241,2000237,2005223,Letter typesetting workers,,,,,PRINTING AND BOOKBINDING WORKERS,Printing and bookbinding workers,Letter typesetting workers,Stereotypers
+I,11,151,1217,Agg217,1985189,1990242,1995242,2000238,2005224,Platemaking workers,,,,,,,Platemaking workers,Stereoplate worker
+I,11,151,1218,Agg218,1985191,1990243,1995243,2000239,2005225,Printing workers,,,,,,,Printing workers,Printing workers
+I,11,151,1219,Agg219,1985192,1990244,1995244,2000240,2005226,Bookbinding workers,,,,,,,Bookbinding workers,Bookbinders
+I,11,151,1220,Agg220,1985193,1990245,1995245,2000241,2005227,Other printing and bookbinding workers,,,,,,,Other printing and bookbinding workers,Printing and bookbinding workers NEC
+I,11,152,1221,Agg221,1985194,1990246,1995246,2000242,2005228,Rubber product manufacturing workers,,,,,RUBBER AND PLASTIC PRODUCT MANUFACTURING WORKERS,Rubber and plastic products makers,Rubber product manufacturing workers,Rubber products workers
+I,11,152,1221,Agg221,1985195,1990247,1995247,2000243,NA,,,,,,,,,NA
+I,11,152,1222,Agg222,1985196,1990248,1995248,2000244,2005229,"Plastic product shapers, processors and finishers",,,,,,,"Plastic product shapers, processors and finishers",Plastic products workers
+I,11,152,1223,Agg223,1985197,1990249,1995249,2000245,2005230,Other rubber and plastic product manufacturing workers,,,,,,,Other rubber and plastic product manufacturing workers,Rubber and plastics products workers NEC
+I,11,153,1224,Agg224,1985198,1990250,1995250,2000246,2005231,Leather manufacturing workers,,,,,LEATHER AND LEATHER PRODUCT MANUFACTURING WORKERS,Leather workers,Leather manufacturing workers,Tanners
+I,11,153,1225,Agg225,1985199,1990251,1995251,2000247,2005232,Shoe manufacture and repair workers,,,,,,,Shoe manufacture and repair workers,Shoe makers and repairers
+I,11,153,1226,Agg226,1985200,1990252,1995252,2000248,2005233,Other leather and leather product manufacturing makers,,,,,,,Other leather and leather product manufacturing makers,Leather and leather product makers NEC
+I,11,154,1227,Agg227,1985255,1990253,1995253,2000249,2005234,Briefcase and bag manufacturing workers,,,,,OTHER MANUFACTURING AND PRODUCTION WORKERS,Other crafts workers,Briefcase and bag manufacturing workers,Luggage and handbag makers
+I,11,154,1228,Agg228,1985256,1990254,1995254,2000250,2005235,Toy manufacturing workers,,,,,,,Toy manufacturing workers,Toymakers
+I,11,154,1229,Agg229,1985248,1990257,1995257,2000252,2005236,Lacquerware manufacturing workers,,,,,,,Lacquerware manufacturing workers,Lacquerware makers
+I,11,154,1230,Agg230,1985252,1990258,1995258,2000253,2005237,"Precious metals, jewely, tortoise shell, antler and other craft workers",,,,,,,"Precious metals, jewely, tortoise shell, antler and other craft workers","Jewelers, gold- and silversmiths"
+I,11,154,1231,Agg231,1985253,1990259,1995259,2000254,2005238,Seal engravers,,,,,,,Seal engravers,Stamp engravers
+I,11,154,1232,Agg232,1985249,1990260,1995260,2000255,2005239,Lining workers,,,,,,,Lining workers,Lining workers
+I,11,154,1233,Agg233,1985250,1990261,1995261,2000256,2005240,Paper hangers,,,,,,,Paper hangers,Paperhangers
+I,11,154,1234,Agg234,1985247,1990262,1995262,2000257,2005241,"Print workers, painters, signboad production workers",,,,,,,"Print workers, painters, signboard production workers","Signwriters, decorative painters"
+I,11,154,1235,Agg235,1985260,1990263,1995263,2000258,2005242,"Photograph development, printing and enlargement workers",,,,,,,"Photograph development, printing and enlargement workers",Photo processing workers
+I,11,154,1236,Agg236,1985257,1990264,1995264,2000259,2005243,"Drafting, tracing and lofted drawing workers",,,,,,,"Drafting, tracing and lofted drawing workers",Drafters
+I,11,154,1236,Agg236,1985258,1990265,1995265,2000260,NA,,,,,,,,,NA
+I,11,154,1237,Agg237,1985259,1990266,1995266,2000261,2005244,Packaging workers,,,,,,,Packaging workers,Packagers
+I,11,154,1238,Agg238,1985261,1990267,1995267,2000262,2005245,Manufacturing and production workers not classified elsewhere,,,,,,,Manufacturing and production workers not classified elsewhere,Manufacturing and production workers NEC
+I,11,154,1238,Agg238,1985251,1990255,1995255,2000251,NA,(Japanese lantern and fan makers),,,,,,,,NA
+I,11,154,1238,Agg238,1985254,1990256,1995256,NA,NA,,,,,,,,,NA
+I,12,155,1239,Agg239,1985237,1990268,1995268,2000263,2005246,Boiler operators,,,STATIONARY ENGINE AND CONSTRUCTION MACHINERY OPERATORS AND ELECTRICITY WORKERS,OPERATORS/ELECTRICITY,"STATIONARY ENGINE, MACHINERY AND CONSTRUCTION MACHINERY OPERATORS",Stationary plant and machinery operators,Boiler operators,Boiler operators
+I,12,155,1240,Agg240,1985238,1990269,1995269,2000264,2005247,Crane and winch operators,,,,,,,Crane and winch operators,Crane and winch operators
+I,12,155,1241,Agg241,1985239,1990270,1995270,2000265,2005248,Construction machinery operators,,,,,,,Construction machinery operators,Construction machinery operators
+I,12,155,1242,Agg242,1985240,1990271,1995271,2000266,2005249,"Other stationary engine, machinery and construction machinery operators",,,,,,,"Other stationary engine, machinery and construction machinery operators",Stationary plant and machine operators NEC
+I,12,156,1243,Agg243,1985241,1990272,1995272,2000267,2005250,Power plant and substation workers,,,,,ELECTRICITY WORKERS,Electrical trade workers,Power plant and substation workers,Power plant and substation workers
+I,12,156,1244,Agg244,1985242,1990273,1995273,2000268,2005251,Line hanging and laying workers,,,,,,,Line hanging and laying workers,Line installers
+I,12,156,1245,Agg245,1985244,1990274,1995274,2000269,2005252,Telecommunication equipment construction workers,,,,,,,Telecommunication equipment construction workers,ICT installers and repairers
+I,12,156,1246,Agg246,1985243,1990275,1995275,2000270,2005253,Electric construction workers,,,,,,,Electric construction workers,Electric construction workers
+I,12,156,1247,Agg247,1985245,1990276,1995276,2000271,2005254,Other electricity workers,,,,,,,Other electricity workers,Electricity workers NEC
+I,13,157,1248,Agg248,1985100,1990140,1995140,2000274,2005255,"Gravel sand, and clay quarrying workers",,,"MINE WORKERS, CONSTRUCTION WORKERS AND LABOURERS","MINING, CONSTRUCTION",MINE WORKERS,Mine workers,"Gravel sand, and clay quarrying workers","Gravel, sand, clay quarry workers"
+I,13,157,1249,Agg249,1985097,1990137,1995137,2000272,NA,,,,,,,,,NA
+I,13,157,1249,Agg249,1985098,1990138,1995138,2000273,NA,,,,,,,,,NA
+I,13,157,1249,Agg249,1985099,1990139,1995139,NA,NA,,,,,,,,,NA
+I,13,157,1249,Agg249,1985101,1990141,1995141,NA,NA,,,,,,,,,NA
+I,13,157,1249,Agg249,1985102,1990142,1995142,NA,NA,,,,,,,,,NA
+I,13,157,1249,Agg249,1985103,1990143,1995143,NA,NA,,,,,,,,,NA
+I,13,157,1249,Agg249,1985104,1990144,1995144,2000275,2005256,Other mine workers,,,,,,,Other mine workers,Other mine workers
+I,13,158,1250,Agg250,1985227,1990277,1995277,2000276,2005257,Carpenters,,,,,CONSTRUCTION WORKERS,Construction workers,Carpenters,Carpenters
+I,13,158,1251,Agg251,1985230,1990278,1995278,2000277,2005258,Scaffolding workers (Tobishoku),,,,,,,Scaffolding workers (Tobishoku),Scaffolding workers
+I,13,158,1252,Agg252,1985231,1990279,1995279,2000278,2005259,Brick and tile laying workers,,,,,,,Brick and tile laying workers,Bricklayers and tile setters
+I,13,158,1253,Agg253,1985228,1990280,1995280,2000279,2005260,Roofing workers,,,,,,,Roofing workers,Roofers
+I,13,158,1254,Agg254,1985229,1990281,1995281,2000280,2005261,Plasterers,,,,,,,Plasterers,Plasterers
+I,13,158,1255,Agg255,1985232,1990282,1995282,2000281,2005262,Pipe laying workers,,,,,,,Pipe laying workers,Pipefitters
+I,13,158,1256,Agg256,1985233,1990283,1995283,2000282,2005263,Tatami workers,,,,,,,Tatami workers,Tatami layers
+I,13,158,1257,Agg257,1985234,1990284,1995284,2000283,2005264,Civil engineering workers,,,,,,,Civil engineering workers,Civil engineering workers
+I,13,158,1258,Agg258,1985235,1990285,1995285,2000284,2005265,Railway line construction workers,,,,,,,Railway line construction workers,Railway construction workers
+I,13,158,1259,Agg259,1985236,1990286,1995286,2000285,2005266,Other construction workers,,,,,,,Other construction workers,Construction workers NEC
+I,13,159,1260,Agg260,1985262,1990287,1995287,2000286,2005267,Onboad and quayside cargo handlers,,,,,TRANSPORT LABOR WORKERS,Transport laborers,Onboad and quayside cargo handlers,Dockworkers
+I,13,159,1261,Agg261,1985263,1990288,1995288,2000287,2005268,Land-based cargo handling and transport workers,,,,,,,Land-based cargo handling and transport workers,Freight handlers
+I,13,159,1262,Agg262,1985264,1990289,1995289,2000288,2005269,Warehouse workers,,,,,,,Warehouse workers,Warehouse workers
+I,13,159,1263,Agg263,1985265,1990290,1995290,2000289,2005270,Delivery workers,,,,,,,Delivery workers,Deliverers
+I,13,159,1264,Agg264,1985266,1990291,1995291,2000290,2005271,Packing workers,,,,,,,Packing workers,Packers
+I,13,160,1265,Agg265,1985267,1990292,1995292,2000291,2005272,Cleaners,,,,,OTHER LABOR WORKERS,Other laborers,Cleaners,Cleaners
+I,13,160,1266,Agg266,1985268,1990293,1995293,2000292,2005273,Labor workers not classified elsewhere,,,,,,,Labor workers not classified elsewhere,Laborer NEC
+J,10,161,1267,Agg267,1985293,1990294,1995294,2000293,2005274,Workers not classifiable by occupation,WORKERS NOT CLASSIFIABLE BY OCCUPATION,WORKERS NEC,WORKERS NOT CLASSIFIABLE BY OCCUPATION,WORKERS NEC,WORKERS NOT CLASSIFIABLE BY OCCUPATION,Workers NEC,Workers not classifiable by occupation,Workers NEC
